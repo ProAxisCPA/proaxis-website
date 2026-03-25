@@ -125,6 +125,40 @@ const bookingHref = 'https://outlook.office.com/book/ProAxisTaxandAccountingServ
 
         <a href="/about/" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-700 rounded-md transition-colors">About</a>
         <a href="/resources/blog/" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-700 rounded-md transition-colors">Resources</a>
+
+        <!-- Client Intake Dropdown -->
+        <div class="relative group">
+          <a
+            href="/tax-intake/"
+            class="flex items-center gap-1 px-3 py-2 text-sm font-semibold rounded-md transition-colors"
+            style="color: #1C1C1E;"
+            aria-haspopup="true"
+          >
+            Client Intake
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <div class="absolute top-full right-0 w-64 rounded-xl shadow-2xl py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150" style="background-color: #1C1C1E; border: 1px solid #2E2E32;">
+            <a href="/tax-intake/" class="block px-4 py-2 text-xs font-semibold uppercase tracking-widest mb-1 border-b" style="color: #C5A55A; border-color: #2E2E32;">All Intake Forms</a>
+            <a href="/tax-intake/individual/" class="intake-nav-link">
+              <span class="block text-sm font-medium" style="color: #E5E4E2;">Individual (1040)</span>
+              <span class="block text-xs mt-0.5" style="color: #6B6E78;">W-2, investments, personal returns</span>
+            </a>
+            <a href="/tax-intake/soleproprietorship/" class="intake-nav-link">
+              <span class="block text-sm font-medium" style="color: #E5E4E2;">Sole Proprietor (Sch C)</span>
+              <span class="block text-xs mt-0.5" style="color: #6B6E78;">Self-employed, freelancers, single-member LLC</span>
+            </a>
+            <a href="/tax-intake/pass-through/" class="intake-nav-link">
+              <span class="block text-sm font-medium" style="color: #E5E4E2;">Pass-Through (S-Corp / 1065)</span>
+              <span class="block text-xs mt-0.5" style="color: #6B6E78;">S-Corps, partnerships, multi-member LLCs</span>
+            </a>
+            <a href="/tax-intake/corporate/" class="intake-nav-link">
+              <span class="block text-sm font-medium" style="color: #E5E4E2;">Corporate (1120)</span>
+              <span class="block text-xs mt-0.5" style="color: #6B6E78;">C-Corporations, Schedule L</span>
+            </a>
+          </div>
+        </div>
       </nav>
 
       <!-- Desktop CTA -->
@@ -258,6 +292,35 @@ const bookingHref = 'https://outlook.office.com/book/ProAxisTaxandAccountingServ
       <a href="/about/" class="block px-3 py-3 text-sm font-semibold text-gray-800 rounded-lg hover:bg-gray-50">About</a>
       <a href="/resources/blog/" class="block px-3 py-3 text-sm font-semibold text-gray-800 rounded-lg hover:bg-gray-50">Resources</a>
 
+      <!-- Mobile: Client Intake -->
+      <div class="mobile-accordion rounded-xl overflow-hidden" style="border: 1px solid #2E2E32;">
+        <button class="mobile-accordion-btn w-full flex items-center justify-between px-4 py-3 text-sm font-semibold rounded-xl" style="background-color: #1C1C1E; color: #E5E4E2;" aria-expanded="false">
+          Client Intake
+          <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="mobile-accordion-content hidden pb-2 space-y-1" style="background-color: #1C1C1E;">
+          <a href="/tax-intake/" class="block px-4 py-2 text-xs font-semibold uppercase tracking-widest border-b mx-2" style="color: #C5A55A; border-color: #2E2E32;">All Intake Forms</a>
+          <a href="/tax-intake/individual/" class="block px-4 py-2.5 mx-1 rounded-lg transition-colors" style="color: #E5E4E2;" onmouseover="this.style.backgroundColor='#2a2a2e'" onmouseout="this.style.backgroundColor='transparent'">
+            <span class="block text-sm font-medium">Individual (1040)</span>
+            <span class="block text-xs mt-0.5" style="color: #6B6E78;">W-2, investments, personal returns</span>
+          </a>
+          <a href="/tax-intake/soleproprietorship/" class="block px-4 py-2.5 mx-1 rounded-lg transition-colors" style="color: #E5E4E2;" onmouseover="this.style.backgroundColor='#2a2a2e'" onmouseout="this.style.backgroundColor='transparent'">
+            <span class="block text-sm font-medium">Sole Proprietor (Sch C)</span>
+            <span class="block text-xs mt-0.5" style="color: #6B6E78;">Self-employed, freelancers, single-member LLC</span>
+          </a>
+          <a href="/tax-intake/pass-through/" class="block px-4 py-2.5 mx-1 rounded-lg transition-colors" style="color: #E5E4E2;" onmouseover="this.style.backgroundColor='#2a2a2e'" onmouseout="this.style.backgroundColor='transparent'">
+            <span class="block text-sm font-medium">Pass-Through (S-Corp / 1065)</span>
+            <span class="block text-xs mt-0.5" style="color: #6B6E78;">S-Corps, partnerships, multi-member LLCs</span>
+          </a>
+          <a href="/tax-intake/corporate/" class="block px-4 py-2.5 mx-1 mb-1 rounded-lg transition-colors" style="color: #E5E4E2;" onmouseover="this.style.backgroundColor='#2a2a2e'" onmouseout="this.style.backgroundColor='transparent'">
+            <span class="block text-sm font-medium">Corporate (1120)</span>
+            <span class="block text-xs mt-0.5" style="color: #6B6E78;">C-Corporations, Schedule L</span>
+          </a>
+        </div>
+      </div>
+
       <!-- Mobile CTAs -->
       <div class="pt-3 pb-2 border-t border-gray-100 space-y-2">
         <a href={phoneHref} class="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg text-sm font-semibold border-2 transition-colors" style="border-color: #1C1C1E; color: #1C1C1E;">
@@ -273,6 +336,17 @@ const bookingHref = 'https://outlook.office.com/book/ProAxisTaxandAccountingServ
     </div>
   </div>
 </header>
+
+<style>
+  .intake-nav-link {
+    display: block;
+    padding: 0.625rem 1rem;
+    transition: background-color 0.12s;
+  }
+  .intake-nav-link:hover {
+    background-color: #2a2a2e;
+  }
+</style>
 
 <script>
   // Mobile menu toggle
