@@ -118,7 +118,7 @@ const schema = {
   <Breadcrumbs items={breadcrumbs} />
 
   <!-- Hero -->
-  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-12 lg:py-16">
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-12 lg:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-3">
         Frequently Asked Questions
@@ -132,13 +132,13 @@ const schema = {
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
     {faqs.map(cat => (
       <section class="mb-10" aria-labelledby={`cat-${cat.category.toLowerCase().replace(/\s+/g, '-')}`}>
-        <h2 id={`cat-${cat.category.toLowerCase().replace(/\s+/g, '-')}`} class="text-xl font-bold font-heading mb-5 pb-3 border-b border-gray-100" style="color: #1B2A4A;">
+        <h2 id={`cat-${cat.category.toLowerCase().replace(/\s+/g, '-')}`} class="text-xl font-bold font-heading mb-5 pb-3 border-b border-gray-100" style="color: #1C1C1E;">
           {cat.category}
         </h2>
         <div class="space-y-3">
           {cat.questions.map(faq => (
             <details class="border border-gray-200 rounded-xl overflow-hidden group">
-              <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold font-heading text-sm list-none" style="color: #1B2A4A;">
+              <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold font-heading text-sm list-none" style="color: #1C1C1E;">
                 {faq.q}
                 <svg class="w-5 h-5 flex-shrink-0 ml-3 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -155,11 +155,11 @@ const schema = {
 
     <!-- Can't find answer -->
     <div class="mt-10 rounded-xl p-6 text-center" style="background-color: #F7F8FA;">
-      <h2 class="font-bold font-heading text-lg mb-2" style="color: #1B2A4A;">Don't See Your Question?</h2>
+      <h2 class="font-bold font-heading text-lg mb-2" style="color: #1C1C1E;">Don't See Your Question?</h2>
       <p class="text-gray-600 text-sm mb-4">Our team is happy to answer any questions about your specific tax or accounting situation.</p>
       <div class="flex flex-wrap justify-center gap-3">
         <a href="/contact/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white" style="background-color: #2E75B6;">Contact Us</a>
-        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold border-2" style="border-color: #1B2A4A; color: #1B2A4A;">Call (201) 800-2330</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold border-2" style="border-color: #1C1C1E; color: #1C1C1E;">Call (201) 800-2330</a>
       </div>
     </div>
   </div>

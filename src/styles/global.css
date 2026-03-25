@@ -2,13 +2,15 @@
 
 @layer base {
   :root {
-    --color-navy: #1B2A4A;
+    --color-navy: #1C1C1E;
     --color-blue: #2E75B6;
     --color-gold: #C5A55A;
     --color-bg: #FFFFFF;
     --color-bg-alt: #F7F8FA;
     --color-text: #1A1A2E;
     --color-green: #22C55E;
+    --color-off-white: #F5F5F7;
+    --color-platinum: #E5E4E2;
   }
 
   html {
