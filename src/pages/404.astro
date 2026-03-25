@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Page Not Found | ProAxis Tax & Accounting Services"
+  description="The page you're looking for doesn't exist. Find tax and accounting services for NJ businesses at ProAxis CPA."
+  noindex={true}
+>
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
+    <div class="text-6xl font-bold font-heading mb-4" style="color: #2E75B6;">404</div>
+    <h1 class="text-2xl sm:text-3xl font-bold font-heading mb-4" style="color: #1B2A4A;">Page Not Found</h1>
+    <p class="text-gray-600 text-lg mb-8">
+      The page you're looking for doesn't exist or may have been moved. If you came from an old ProAxis URL, it may have been updated.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <a href="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-white font-semibold" style="background-color: #2E75B6;">
+        ← Back to Homepage
+      </a>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border-2" style="border-color: #1B2A4A; color: #1B2A4A;">
+        Contact Us
+      </a>
+    </div>
+    <!-- Quick Links -->
+    <div class="rounded-xl border border-gray-100 p-6" style="background-color: #F7F8FA;">
+      <h2 class="font-bold font-heading text-base mb-4" style="color: #1B2A4A;">Popular Pages</h2>
+      <div class="grid grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", href: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", href: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", href: "/business-services/bookkeeping/" },
+          { name: "Fractional CFO", href: "/business-services/fractional-cfo/" },
+          { name: "IRS Resolution", href: "/tax-services/irs-tax-resolution/" },
+          { name: "NJ SALT Consulting", href: "/tax-services/nj-salt-consulting/" },
+          { name: "Schedule Consultation", href: "/contact/" },
+          { name: "Bergen County CPA", href: "/service-areas/bergen-county/" },
+        ].map(link => (
+          <a href={link.href} class="text-sm font-medium hover:text-blue-700 transition-colors" style="color: #2E75B6;">{link.name}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

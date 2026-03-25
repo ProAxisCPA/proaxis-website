@@ -1,0 +1,168 @@
+---
+const currentYear = new Date().getFullYear();
+
+const napSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "logo": "https://www.proaxiscpa.com/logo.png",
+  "image": "https://www.proaxiscpa.com/og-image.png",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hasbrouck Heights",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.8598,
+    "longitude": -74.0776
+  },
+  "areaServed": [
+    { "@type": "County", "name": "Bergen County, NJ" },
+    { "@type": "State", "name": "New Jersey" },
+    { "@type": "State", "name": "New York" }
+  ],
+  "sameAs": [
+    "https://www.proaxiscpa.com"
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(napSchema)} />
+
+<footer class="text-white" style="background-color: #1B2A4A;" role="contentinfo">
+  <!-- Main Footer -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
+
+      <!-- Company Info / NAP -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center flex-shrink-0" style="min-width:2.25rem; min-height:2.25rem;">
+            <span class="font-bold text-sm font-heading" style="color: #1B2A4A;">PA</span>
+          </div>
+          <div>
+            <div class="font-bold font-heading text-white">ProAxis Tax &amp; Accounting Services</div>
+            <div class="text-xs text-gray-400">Bergen County, NJ CPA Firm</div>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Bergen County's technology-first CPA firm. We serve small-to-mid-size businesses, executives, and high-income individuals across New Jersey and the greater New York area — fully virtually.
+        </p>
+        <!-- NAP — consistent across site -->
+        <address class="not-italic space-y-2 text-sm">
+          <div class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="color: #C5A55A; min-width:1rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="text-gray-400">Hasbrouck Heights, NJ 07604<br /><span class="text-xs">(Fully virtual — no office visits required)</span></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="color: #C5A55A; min-width:1rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <a href="tel:+12018002330" class="text-gray-300 hover:text-white transition-colors">(201) 800-2330</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="color: #C5A55A; min-width:1rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <a href="mailto:info@proaxiscpa.com" class="text-gray-300 hover:text-white transition-colors">info@proaxiscpa.com</a>
+          </div>
+        </address>
+
+        <!-- Trust Badges -->
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-white/10 text-gray-300">AICPA Member</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-white/10 text-gray-300">IRS e-File Provider</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-white/10 text-gray-300">QuickBooks ProAdvisor</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-white/10 text-gray-300">256-bit Encryption</span>
+        </div>
+      </div>
+
+      <!-- Tax Services -->
+      <div>
+        <h3 class="text-white font-semibold font-heading text-sm mb-4">Tax Services</h3>
+        <ul class="space-y-2">
+          <li><a href="/tax-services/tax-preparation/" class="text-gray-400 hover:text-white text-sm transition-colors">Tax Preparation</a></li>
+          <li><a href="/tax-services/tax-planning/" class="text-gray-400 hover:text-white text-sm transition-colors">Tax Planning & Strategy</a></li>
+          <li><a href="/tax-services/nj-salt-consulting/" class="text-gray-400 hover:text-white text-sm transition-colors">NJ SALT Consulting</a></li>
+          <li><a href="/tax-services/irs-tax-resolution/" class="text-gray-400 hover:text-white text-sm transition-colors">IRS Tax Resolution</a></li>
+          <li><a href="/tax-services/estate-gift-tax/" class="text-gray-400 hover:text-white text-sm transition-colors">Estate & Gift Tax</a></li>
+          <li><a href="/tax-services/multi-state-tax/" class="text-gray-400 hover:text-white text-sm transition-colors">Multi-State Tax</a></li>
+        </ul>
+        <h3 class="text-white font-semibold font-heading text-sm mt-6 mb-4">Business Services</h3>
+        <ul class="space-y-2">
+          <li><a href="/business-services/bookkeeping/" class="text-gray-400 hover:text-white text-sm transition-colors">Bookkeeping</a></li>
+          <li><a href="/business-services/fractional-cfo/" class="text-gray-400 hover:text-white text-sm transition-colors">Fractional CFO</a></li>
+          <li><a href="/business-services/payroll/" class="text-gray-400 hover:text-white text-sm transition-colors">Payroll Services</a></li>
+          <li><a href="/business-services/startup-advisory/" class="text-gray-400 hover:text-white text-sm transition-colors">Startup Advisory</a></li>
+        </ul>
+      </div>
+
+      <!-- Primary Service Areas (Local SEO Map) -->
+      <div>
+        <h3 class="text-white font-semibold font-heading text-sm mb-4">Primary Service Areas</h3>
+        <ul class="space-y-2">
+          <li><a href="/service-areas/bergen-county/" class="text-gray-400 hover:text-white text-sm transition-colors">Bergen County, NJ</a></li>
+          <li><a href="/service-areas/alpine/" class="text-gray-400 hover:text-white text-sm transition-colors">Alpine, NJ</a></li>
+          <li><a href="/service-areas/ridgewood/" class="text-gray-400 hover:text-white text-sm transition-colors">Ridgewood, NJ</a></li>
+          <li><a href="/service-areas/paramus/" class="text-gray-400 hover:text-white text-sm transition-colors">Paramus, NJ</a></li>
+          <li><a href="/service-areas/englewood-cliffs/" class="text-gray-400 hover:text-white text-sm transition-colors">Englewood Cliffs, NJ</a></li>
+          <li><a href="/service-areas/fort-lee/" class="text-gray-400 hover:text-white text-sm transition-colors">Fort Lee, NJ</a></li>
+          <li><a href="/service-areas/scarsdale/" class="text-gray-400 hover:text-white text-sm transition-colors">Scarsdale, NY</a></li>
+          <li><a href="/service-areas/tribeca/" class="text-gray-400 hover:text-white text-sm transition-colors">Tribeca, NY</a></li>
+          <li><a href="/service-areas/upper-east-side/" class="text-gray-400 hover:text-white text-sm transition-colors">Upper East Side, NY</a></li>
+        </ul>
+        <a href="/service-areas/" class="inline-block mt-3 text-xs font-semibold hover:text-white transition-colors" style="color: #C5A55A;">All Service Areas →</a>
+      </div>
+
+      <!-- Resources & Company -->
+      <div>
+        <h3 class="text-white font-semibold font-heading text-sm mb-4">Industries</h3>
+        <ul class="space-y-2">
+          <li><a href="/industries/real-estate/" class="text-gray-400 hover:text-white text-sm transition-colors">Real Estate</a></li>
+          <li><a href="/industries/healthcare/" class="text-gray-400 hover:text-white text-sm transition-colors">Healthcare</a></li>
+          <li><a href="/industries/ecommerce/" class="text-gray-400 hover:text-white text-sm transition-colors">E-Commerce</a></li>
+          <li><a href="/industries/construction/" class="text-gray-400 hover:text-white text-sm transition-colors">Construction</a></li>
+          <li><a href="/industries/restaurants/" class="text-gray-400 hover:text-white text-sm transition-colors">Restaurants</a></li>
+          <li><a href="/industries/professional-services/" class="text-gray-400 hover:text-white text-sm transition-colors">Professional Services</a></li>
+        </ul>
+        <h3 class="text-white font-semibold font-heading text-sm mt-6 mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="/about/" class="text-gray-400 hover:text-white text-sm transition-colors">About Us</a></li>
+          <li><a href="/about/team/" class="text-gray-400 hover:text-white text-sm transition-colors">Our Team</a></li>
+          <li><a href="/about/why-proaxis/" class="text-gray-400 hover:text-white text-sm transition-colors">Why ProAxis</a></li>
+          <li><a href="/resources/blog/" class="text-gray-400 hover:text-white text-sm transition-colors">Blog</a></li>
+          <li><a href="/resources/faq/" class="text-gray-400 hover:text-white text-sm transition-colors">FAQ</a></li>
+          <li><a href="/contact/" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-gray-400 text-xs text-center sm:text-left">
+        &copy; {currentYear} ProAxis Tax &amp; Accounting Services. All rights reserved. Hasbrouck Heights, NJ 07604.
+      </p>
+      <nav aria-label="Legal navigation">
+        <ul class="flex flex-wrap items-center gap-4">
+          <li><a href="/privacy-policy/" class="text-gray-400 hover:text-white text-xs transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms-of-service/" class="text-gray-400 hover:text-white text-xs transition-colors">Terms of Service</a></li>
+          <li><a href="/disclaimer/" class="text-gray-400 hover:text-white text-xs transition-colors">Disclaimer</a></li>
+          <li><a href="/sitemap-index.xml" class="text-gray-400 hover:text-white text-xs transition-colors">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

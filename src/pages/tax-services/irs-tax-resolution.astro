@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "IRS Tax Resolution NJ | Audit Defense & Tax Relief | ProAxis";
+const description = "IRS tax resolution and representation for NJ taxpayers. Audit defense, tax lien and levy release, penalty abatement, offer in compromise, and unfiled returns. Bergen County CPA.";
+const canonical = "/tax-services/irs-tax-resolution/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "IRS Tax Resolution & Representation",
+    "description": "IRS tax resolution and representation for New Jersey taxpayers including audit defense, tax lien and levy release, penalty abatement, offer in compromise, installment agreements, and unfiled return compliance.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "IRS Tax Resolution"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What should I do if I receive an IRS notice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First, do not ignore it. IRS notices have deadlines, and ignoring a notice can cause a manageable situation to escalate into a more serious one — sometimes very quickly. Read the notice carefully to understand what the IRS is asserting or requesting. Do not call the IRS or respond without first consulting a tax professional, as anything you say or write becomes part of the record. Contact ProAxis as soon as possible so we can review the notice, assess the situation, and develop the appropriate response strategy. Many IRS notices are routine and can be resolved with a straightforward written response; others require more involved action."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you stop a tax lien or levy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, in many cases we can. A bank levy or wage garnishment can often be released or at least delayed by demonstrating hardship, entering an installment agreement, or requesting a Collection Due Process (CDP) hearing, which temporarily halts collection action. A federal tax lien is more difficult to remove outright but can be subordinated or discharged in specific circumstances, and its impact can be mitigated through installment agreements or an Offer in Compromise. Acting quickly is essential — once a levy is issued, the IRS can seize funds in your bank account within a matter of days. If you have received a Final Notice of Intent to Levy, contact us immediately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is an Offer in Compromise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An Offer in Compromise (OIC) is a formal agreement with the IRS that allows a taxpayer to settle their tax debt for less than the full amount owed. The IRS accepts OICs when there is doubt as to collectability (the taxpayer cannot pay the full amount), doubt as to liability (the tax assessed may not be correct), or when collection of the full amount would create an economic hardship. Qualifying for an OIC requires a detailed financial analysis — the IRS uses a formula based on your income, allowable living expenses, and asset equity to determine your Reasonable Collection Potential (RCP). The IRS will only accept an OIC that meets or exceeds the RCP. Not everyone qualifies, and the application process is extensive, but when appropriate it can provide significant relief."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the IRS resolution process typically take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The timeline varies significantly depending on the type of issue. A correspondence audit (where the IRS questions a specific item on your return via letter) might be resolved in 4 to 12 weeks with the right documentation. An installment agreement can often be established within 30 to 60 days. An Offer in Compromise currently takes 9 to 24 months for the IRS to process and evaluate. A full field audit can run anywhere from several months to over a year. During the resolution process, our goal is to keep collection actions suspended wherever possible and move the case forward as efficiently as the IRS allows. We keep you informed throughout the process so you always know where things stand."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "IRS Tax Resolution" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services", url: "/tax-services/" }, { name: "IRS Tax Resolution" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        IRS Tax Resolution &amp; Representation for NJ Taxpayers
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Facing an IRS audit, tax lien, levy, or years of unfiled returns? ProAxis represents New Jersey taxpayers before the IRS and NJ Division of Taxation, protecting your rights and resolving your tax problems at the source.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+          Schedule Free Consultation
+        </a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white hover:bg-white/10 transition-all">
+          Call (201) 800-2330
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- What IRS Tax Resolution Is -->
+    <section class="mb-12" aria-labelledby="what-covers">
+      <h2 id="what-covers" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">What IRS Tax Resolution Is</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        IRS tax resolution refers to the process of addressing an existing or escalating problem with the Internal Revenue Service — whether that is a disputed tax assessment, an inability to pay a tax debt, years of unfiled returns, or active collection enforcement such as a lien or levy. Resolution is different from ordinary tax compliance work: rather than preparing returns for a completed year, it involves navigating the IRS enforcement and appeals system on behalf of a taxpayer who is in a difficult situation with the agency.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Many New Jersey taxpayers find themselves facing IRS problems through no malicious intent — a business cash flow crisis led to payroll taxes not being remitted, or years of self-employment income were underreported because no one explained quarterly estimated taxes, or a divorce or life event created income that was simply never reported. The IRS has a range of resolution programs designed to bring non-compliant taxpayers into compliance and resolve outstanding balances in a manageable way — but navigating these programs effectively requires expertise.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis represents NJ taxpayers at all levels of the IRS process: correspondence audits, in-person examinations, Collection Due Process hearings, Appeals Office conferences, and installment agreement and Offer in Compromise applications. We also represent clients before the New Jersey Division of Taxation, which has its own audit, collections, and dispute resolution processes.
+      </p>
+    </section>
+
+    <!-- Types of IRS Problems Handled -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="problems-handled">
+      <h2 id="problems-handled" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">IRS Problems We Handle</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">IRS Audits &amp; Examination Defense</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">From simple correspondence audits (CP2000 notices) to full field examinations, we prepare your documentation, respond to IRS requests, and advocate for the correct outcome. We handle the communication so you do not have to.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Federal Tax Liens</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">A Notice of Federal Tax Lien attaches to all your property and can damage your credit and prevent asset transfers. We pursue lien withdrawals, subordinations, and discharges, and negotiate resolutions that make lien removal possible.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Bank Levies &amp; Account Seizures</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">When the IRS levies a bank account, it can seize everything in the account up to the tax debt owed. We act quickly to request a levy release or establish an arrangement that halts further seizure while a resolution is pursued.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Wage Garnishments</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">IRS wage garnishments can take a significant portion of your paycheck. We negotiate with the IRS to release or reduce the garnishment while establishing a compliant resolution path forward.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Unfiled Tax Returns</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Years of unfiled returns create serious legal exposure and escalating IRS enforcement risk. We reconstruct income and deduction records, prepare all unfiled returns, and negotiate a resolution that addresses the resulting balances.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Penalty Abatement</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">IRS penalties (failure to file, failure to pay, accuracy-related) can add 20%–25% or more to a tax balance. First-time penalty abatement and reasonable cause abatement can eliminate significant penalties for qualifying taxpayers.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Offer in Compromise</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">For taxpayers who genuinely cannot pay the full amount owed, an Offer in Compromise allows settlement for less. We conduct a thorough financial analysis to determine whether you qualify and prepare the strongest possible OIC application.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Installment Agreements</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">An IRS installment agreement allows you to pay your tax debt in monthly payments over time. We negotiate the terms — including payment amount and duration — to keep payments manageable while bringing you into compliance.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200 sm:col-span-2">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Innocent Spouse Relief</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">When a tax problem stems from errors or omissions on a jointly filed return that were attributable to your spouse or former spouse — and you did not know about them — innocent spouse relief can protect you from liability for taxes you did not cause. We evaluate eligibility and prepare the required IRS Form 8857 application.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What To Do When You Get an IRS Notice -->
+    <section class="mb-12" aria-labelledby="irs-notice">
+      <h2 id="irs-notice" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">What to Do When You Receive an IRS Notice</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Receiving an IRS notice is unsettling, but it does not automatically mean you owe more money or are in serious trouble. The IRS sends millions of notices each year for a wide range of reasons, from routine requests for clarification to formal audit notifications. The most important thing you can do is respond appropriately and on time.
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1B2A4A;">1</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Do not ignore it</h3>
+            <p class="text-sm text-gray-600">Every IRS notice has a deadline — either for responding or for paying. Missing the deadline can eliminate your right to appeal or trigger enforcement action. Even if you believe the notice is wrong, you must respond.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1B2A4A;">2</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Identify the notice type</h3>
+            <p class="text-sm text-gray-600">IRS notices are identified by a number in the upper right corner (e.g., CP2000, CP504, Letter 525). The notice type tells you what the IRS is asserting — a proposed tax change, a balance due, an audit initiation, or imminent collection action.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1B2A4A;">3</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Do not call the IRS or respond without counsel</h3>
+            <p class="text-sm text-gray-600">Anything you say to the IRS can and will be used in the resolution process. A casual comment about income or assets can create problems that did not previously exist. Let a tax professional review the situation first.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1B2A4A;">4</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Contact ProAxis immediately</h3>
+            <p class="text-sm text-gray-600">We will review the notice, explain what it means, and develop a response strategy. In many cases, we can be formally appointed as your representative by filing IRS Form 2848 (Power of Attorney), after which all IRS communication goes through us — not you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Representation Process -->
+    <section class="mb-12" aria-labelledby="our-approach">
+      <h2 id="our-approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">The ProAxis Representation Process</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our IRS resolution engagements begin with a thorough review of your IRS account transcripts, filed returns, any existing notices or liens, and your current financial situation. This gives us a complete picture of the problem and the range of available solutions before we commit to a specific approach.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We file IRS Form 2848 to establish our authority to represent you, which means the IRS contacts us rather than you. This immediately reduces the stress of direct IRS contact and allows us to manage the resolution process efficiently. We handle all communications, information requests, and negotiations — our clients focus on their lives and businesses while we handle the IRS.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Throughout the process, we keep you informed with regular updates on the status of your case, explain all options and trade-offs clearly, and ensure you understand and approve any resolution before it is finalized. We never accept a resolution that is worse than what the law and the facts warrant.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Once a resolution is in place, we also help you establish the tax planning and compliance practices necessary to ensure the problem does not recur. Many taxpayers who face IRS problems get into them partly because of inadequate tax planning — see our <a href="/tax-services/tax-planning/" style="color: #2E75B6;" class="hover:underline">tax planning service</a> for how we help clients stay ahead of their obligations.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What should I do if I receive an IRS notice?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">First, do not ignore it — IRS notices have deadlines, and ignoring one can cause a manageable situation to escalate quickly. Read the notice carefully but do not call the IRS or respond without first consulting a tax professional. Contact ProAxis as soon as possible so we can review the notice, assess the situation, and develop the appropriate response. Many IRS notices are routine and resolved with a straightforward written response; others require more involved action. The notice number in the upper right corner tells us immediately what we are dealing with.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Can you stop a tax lien or levy?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">In many cases, yes. A bank levy or wage garnishment can often be released or delayed by demonstrating hardship, entering an installment agreement, or requesting a Collection Due Process (CDP) hearing, which temporarily halts collection action. A federal tax lien is more difficult to remove outright but can be subordinated or discharged in specific circumstances. Acting quickly is essential — once a levy is issued, the IRS can seize funds within days. If you have received a Final Notice of Intent to Levy (CP504 or Letter 1058), contact us immediately.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is an Offer in Compromise?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">An Offer in Compromise (OIC) is a formal agreement with the IRS that allows a taxpayer to settle their tax debt for less than the full amount owed. The IRS accepts OICs when there is doubt as to collectability, doubt as to liability, or when collection of the full amount would create an economic hardship. Qualifying requires a detailed financial analysis — the IRS calculates your Reasonable Collection Potential (RCP) based on income, allowable living expenses, and asset equity, and will only accept an OIC that meets or exceeds the RCP. Not everyone qualifies, but when appropriate it can provide significant relief on large tax debts.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">How long does the IRS resolution process typically take?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Timelines vary by issue type. A correspondence audit might resolve in 4 to 12 weeks with the right documentation. An installment agreement can often be established within 30 to 60 days. An Offer in Compromise currently takes 9 to 24 months for the IRS to process. A full field audit can run from several months to over a year. Our goal throughout is to keep collection actions suspended where possible and move the case forward as efficiently as the IRS timeline allows — and to keep you informed at every stage.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Proactive planning to prevent IRS problems before they start.</div>
+        </a>
+        <a href="/tax-services/tax-preparation/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Preparation</div>
+          <div class="text-sm text-gray-600">Accurate returns that reduce audit risk and stay fully compliant.</div>
+        </a>
+        <a href="/contact/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Contact Us</div>
+          <div class="text-sm text-gray-600">Speak with a ProAxis CPA about your IRS situation today.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="tax" currentPath="/tax-services/irs-tax-resolution/" />
+  <TestimonialsSection />
+  <CTASection heading="Facing an IRS Problem? We Can Help." subheading="Don't navigate IRS issues alone. ProAxis represents NJ taxpayers before the IRS and state tax authorities. Schedule a confidential consultation today." />
+</BaseLayout>

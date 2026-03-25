@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Scarsdale";
+const state = "NY";
+const title = "CPA for Scarsdale NY Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Scarsdale NY CPA firm specializing in NJ-NY tax nexus, high-net-worth planning, SALT, estate, and multi-state tax for Westchester executives. 100% virtual.";
+const canonical = "/service-areas/scarsdale/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Scarsdale, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Scarsdale's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">Scarsdale, New York consistently ranks among the wealthiest communities in the United States. ZIP code 10583 regularly appears on national lists of highest median household incomes, driven by a resident base dominated by Wall Street executives, hedge fund managers, private equity partners, and senior corporate attorneys. The community's proximity to Midtown Manhattan via the Harlem Line on Metro-North — a roughly 35-minute ride — has made it the preferred address for generations of New York City's financial elite who want suburban living without sacrificing access to the city.</p>
+
+    <p class="mb-4">The tax environment for Scarsdale residents is among the most demanding in the nation. New York State imposes income tax rates as high as 10.9% on income exceeding $25 million, and even middle-bracket earners face rates well above the national average. Westchester County property taxes on Scarsdale's multi-million-dollar homes are famously high, and the federal SALT deduction cap of $10,000 has hit this community particularly hard — a household with $80,000 in combined state, local, and property taxes can only deduct a fraction of what it once could. For Scarsdale residents, proactive tax strategy is not optional; it is essential to preserving family wealth across generations.</p>
+
+    <p class="mb-4">Many Scarsdale residents hold significant real estate and investment assets in New Jersey. Shore homes along the Jersey Shore, investment properties in Bergen County, and business entities registered in NJ are common among this demographic. These cross-state holdings create NJ-NY tax nexus issues that require a CPA with deep expertise in both jurisdictions. Understanding how to properly claim the NJ credit for taxes paid to New York — and structuring NJ rental income to minimize double-taxation — demands specialized knowledge that general practitioners often lack.</p>
+
+    <p class="mb-6">Finance professionals in Scarsdale frequently deal with alternative investment structures — carried interest from private equity or hedge fund partnerships, deferred compensation arrangements, and concentrated stock positions built over decades of service. The interplay between NYC and NY state taxes, federal AMT, and potential NJ nexus for those managing NJ-based investment vehicles adds layers of complexity that demand a coordinated, proactive approach to tax planning throughout the year.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Scarsdale Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services is headquartered in Hasbrouck Heights, NJ — positioning us at the center of NJ-NY tax nexus issues. When a Scarsdale executive owns a rental property in Hoboken, operates a partnership with NJ-source income, or is considering a domicile change to reduce their NYC and NY state tax burden, they need a CPA who understands both sides of the state line in precise detail. Our team works NJ-NY multi-state tax issues every day, giving Scarsdale clients access to expertise that most NY-only or NJ-only firms simply cannot match.</p>
+
+    <p class="mb-4">Our 100% virtual model means Scarsdale clients never need to commute to a CPA's office. Everything — document sharing, tax review sessions, year-round planning calls — is handled securely online. For busy executives who already manage demanding schedules, this is a meaningful advantage. You get the same depth of service as an in-person engagement, delivered on your terms. Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">proactive tax planning and strategy services</a> are designed specifically to accommodate high-net-worth individuals whose financial picture evolves throughout the year.</p>
+
+    <p class="mb-6">Charitable giving is a priority for many Scarsdale families, and the tax implications are significant. We advise on donor-advised funds (DAFs), charitable lead trusts (CLTs), and charitable remainder trusts (CRTs) in the context of both NY and NJ law. Estate planning coordination — working alongside your estate attorney to align income tax and estate tax strategies — is a cornerstone of our <a href="/business-services/" class="text-blue-700 underline font-medium">comprehensive business and financial advisory services</a> for high-net-worth clients.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Scarsdale Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NYC + NY State Income Tax at Top Rates:</strong> Scarsdale residents commuting to NYC as nonresidents face NYC nonresident tax plus NY state income tax, creating combined effective rates that rival any jurisdiction in the country. Strategic income deferral, entity structuring, and timing of capital gains realizations are critical levers for minimizing this burden.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ Credit for Taxes Paid to New York:</strong> Scarsdale residents who earn NJ-source income — from rental properties, business interests, or investments — must navigate the interplay between NJ and NY taxation carefully. Properly claiming and maximizing the credit for taxes paid to NY is essential to avoid paying tax twice on the same income.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>SALT Cap and Alternative Minimum Tax (AMT):</strong> The federal $10,000 SALT deduction cap directly hits Scarsdale households whose property taxes alone can exceed $30,000–$50,000 annually. AMT planning must be integrated with state tax strategy, especially for residents exercising incentive stock options or receiving large capital gain distributions.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Carried Interest and Alternative Investment Taxation:</strong> Private equity partners and hedge fund managers in Scarsdale face unique tax treatment on carried interest, including the three-year holding period requirement under current law. Multi-year income projection and coordination of fund-level K-1 income with state tax obligations requires specialized expertise.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Estate and Charitable Giving Strategies:</strong> Ultra-high-net-worth Scarsdale families face both federal estate tax and NY state estate tax (which kicks in at $7.16 million with a "cliff" provision). Coordinating donor-advised funds, charitable lead trusts, and irrevocable life insurance trusts with an integrated income and estate tax plan is essential for long-term wealth preservation.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Scarsdale Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/bronxville/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Bronxville, NY</a>
+      <a href="/service-areas/rye/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Rye, NY</a>
+      <a href="/service-areas/upper-east-side/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper East Side, NYC</a>
+      <a href="/service-areas/armonk/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Armonk, NY</a>
+    </div>
+
+    <p class="mb-4">Scarsdale residents and business owners deserve a tax partner who matches the sophistication of their financial lives. ProAxis Tax &amp; Accounting Services brings the NJ-NY cross-border expertise, high-net-worth planning experience, and fully virtual delivery model that today's Westchester clients expect. Whether your priority is minimizing your combined NYC and NY state tax burden, optimizing charitable giving, or structuring NJ investments efficiently, we are ready to help.</p>
+
+    <p>To get started, <a href="/contact/" class="text-blue-700 underline font-medium">schedule a free consultation</a> with our team. Explore our full range of <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a> to see how ProAxis can serve your Scarsdale household or business. Call us directly at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or email <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

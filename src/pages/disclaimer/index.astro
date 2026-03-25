@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+const title = "Disclaimer | ProAxis Tax & Accounting Services";
+const description = "Legal disclaimer for ProAxis Tax & Accounting Services website. Information on this site is for general purposes and does not constitute tax or legal advice.";
+const canonical = "/disclaimer/";
+const breadcrumbs = [{ name: "Disclaimer" }];
+---
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <h1 class="text-3xl font-bold font-heading mb-2" style="color: #1B2A4A;">Disclaimer</h1>
+    <p class="text-gray-500 text-sm mb-8">Last Updated: March 2026</p>
+    <div class="prose-proaxis">
+      <h2>General Information Only</h2>
+      <p>The information contained on this website (www.proaxiscpa.com) is provided for general informational purposes only. While we endeavor to keep the information current and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information on this website.</p>
+      <h2>Not Tax or Legal Advice</h2>
+      <p>Nothing on this website constitutes tax advice, legal advice, accounting advice, or any other professional advice. Tax laws are complex, change frequently, and their application depends on each individual's specific circumstances. Always consult with a licensed CPA or tax attorney for advice specific to your situation.</p>
+      <h2>No CPA-Client Relationship</h2>
+      <p>Accessing or using this website does not create a CPA-client relationship between you and ProAxis Tax & Accounting Services. A formal engagement letter is required before any professional services are provided.</p>
+      <h2>IRS Circular 230 Disclosure</h2>
+      <p>To comply with requirements imposed by the IRS under Circular 230: Any U.S. federal tax advice contained in this website is not intended or written to be used, and cannot be used, for the purpose of avoiding tax-related penalties under the Internal Revenue Code, or for promoting, marketing, or recommending any tax-related matter addressed herein.</p>
+      <h2>External Links</h2>
+      <p>This website may contain links to external websites. ProAxis Tax & Accounting Services has no control over the nature, content, or availability of those sites and does not endorse or take responsibility for the content of linked websites.</p>
+      <h2>Tax Law Changes</h2>
+      <p>Tax laws change frequently. Information on this website reflects general information available at the time of writing and may not reflect the most current legal developments. Always verify current rules with a qualified tax professional.</p>
+      <h2>Contact</h2>
+      <p>Questions? Contact us at <a href="mailto:info@proaxiscpa.com">info@proaxiscpa.com</a> or call <a href="tel:+12018002330">(201) 800-2330</a>.</p>
+    </div>
+  </div>
+</BaseLayout>

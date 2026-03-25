@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Tax Preparation Services NJ | ProAxis CPA | Bergen County";
+const description = "Professional tax preparation for NJ individuals, S-corps, LLCs, and partnerships. Bergen County CPA firm specializing in accurate, deadline-driven returns. Fully virtual service.";
+const canonical = "/tax-services/tax-preparation/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Tax Preparation Services",
+    "description": "Professional tax preparation for New Jersey individuals, S-corporations, LLCs, partnerships, and multi-state filers. Accurate, deadline-driven preparation with year-round CPA support.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Tax Preparation"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When is the New Jersey state income tax filing deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New Jersey's individual income tax return (NJ-1040) is generally due on April 15th, which aligns with the federal deadline. If April 15th falls on a weekend or holiday, the deadline shifts to the next business day. Partnerships and S-corporations filing NJ-1065 and CBT-100S returns face a March 15th deadline (or the 15th day of the third month after the fiscal year ends). Automatic extensions are available but do not extend the time to pay any tax owed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get an extension for my NJ tax return?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. New Jersey follows federal extension rules for individual filers — if you receive a federal extension to October 15th, New Jersey automatically honors it for your NJ-1040. For business returns, you must file a separate NJ extension request. Important: an extension gives you more time to file, not more time to pay. If you owe tax, you must pay the estimated amount by the original due date to avoid interest and penalties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the key deadlines for NJ business tax returns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Key NJ business tax deadlines include: S-corporations (CBT-100S) and partnerships (NJ-1065) are due March 15th; C-corporations (CBT-100) are due April 15th; individual returns (NJ-1040) are due April 15th. Estimated tax payments are due quarterly: April 15th, June 15th, September 15th, and January 15th. Missing estimated payment deadlines can result in underpayment penalties even if you file on time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to file a tax return in multiple states if I live in NJ but work in NY?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. New Jersey residents who work in New York are required to file both a New Jersey resident return (NJ-1040) and a New York non-resident return (IT-203). New Jersey provides a credit for taxes paid to other states, but the credit calculation has specific rules and does not always eliminate double taxation entirely — particularly with New York City's local income tax. Properly claiming this credit is essential to avoid overpaying, and ProAxis handles both returns as part of our multi-state tax preparation service."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "Tax Preparation" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services", url: "/tax-services/" }, { name: "Tax Preparation" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Professional Tax Preparation for NJ Individuals &amp; Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Accurate, compliant, and strategically prepared returns for New Jersey individuals, S-corporations, LLCs, partnerships, and multi-state filers — all handled by a Bergen County CPA team you can trust.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- What Tax Preparation Covers -->
+    <section class="mb-12" aria-labelledby="what-covers">
+      <h2 id="what-covers" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">What Our Tax Preparation Service Covers</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Tax preparation is more than data entry. A properly prepared return is a financial document that must accurately reflect your income, deductions, credits, and elections while complying with both federal Internal Revenue Code requirements and New Jersey's own tax statutes — which often diverge from federal rules in important ways.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        At ProAxis, our tax preparation process is built on a thorough intake and review workflow. We gather your financial documents, analyze your situation against current law, identify every deduction and credit you are entitled to, and prepare returns that are both technically accurate and strategically optimized. We review every return before it is filed and communicate with you about any questions or planning opportunities we identify in the process.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our tax preparation services cover the full range of return types filed by New Jersey individuals and businesses:
+      </p>
+      <ul class="space-y-2 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Federal Form 1040</strong> — Individual returns for W-2 employees, self-employed individuals, rental property owners, investors, and retirees</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>NJ-1040 / NJ-1040NR</strong> — New Jersey Gross Income Tax returns for residents and non-residents</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Federal Form 1120-S / NJ CBT-100S</strong> — S-corporation returns, including W-2 and K-1 coordination</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Federal Form 1065 / NJ-1065</strong> — Partnership returns for multi-member LLCs and general partnerships</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Schedule C / Schedule E</strong> — Self-employment and rental income reporting as part of individual returns</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Multi-state returns</strong> — Returns for NJ residents working in NY, PA, or other states, and NJ businesses with out-of-state operations</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>NJ BAIT election returns</strong> — NJ-BAIT filings for eligible pass-through entities electing the Business Alternative Income Tax</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="who-for">
+      <h2 id="who-for" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Who This Service Is For</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our tax preparation service is built for anyone whose return involves complexity beyond what a software-only solution handles well. If you have one of the following situations, you benefit from working with a CPA:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">Business Owners &amp; Self-Employed</h3>
+          <p class="text-sm text-gray-600">S-corp owners, LLC members, sole proprietors, and freelancers who need to correctly report business income, manage self-employment taxes, and coordinate business and personal returns.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">NJ/NY Commuters</h3>
+          <p class="text-sm text-gray-600">New Jersey residents working in New York who need both a NJ resident return and a NY non-resident return filed correctly, with the proper credit for taxes paid to New York.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">Real Estate Investors</h3>
+          <p class="text-sm text-gray-600">Landlords and investors who need Schedule E reporting, depreciation calculations, passive activity rules navigated, and NJ's treatment of rental income addressed properly.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">High-Income Earners</h3>
+          <p class="text-sm text-gray-600">W-2 employees and professionals with investment income, stock options, restricted stock units (RSUs), or other complex income sources that require careful handling.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">Partnerships &amp; Multi-Member LLCs</h3>
+          <p class="text-sm text-gray-600">Entities that file Form 1065 and NJ-1065, requiring K-1 preparation and coordination among multiple partners or members.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1B2A4A;">Multi-State Filers</h3>
+          <p class="text-sm text-gray-600">Businesses and individuals with tax obligations in multiple states, including nexus analysis, apportionment, and state-specific compliance requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Approach -->
+    <section class="mb-12" aria-labelledby="our-approach">
+      <h2 id="our-approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">The ProAxis Approach to Tax Preparation</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We do not treat tax preparation as a high-volume, transactional service where your return is processed by whoever has capacity. At ProAxis, a dedicated CPA reviews every return before it is filed. Our process is methodical and built around accuracy, communication, and identifying planning opportunities alongside the compliance work.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our preparation process begins with a comprehensive intake — we request all necessary documents through our secure client portal and ask targeted questions about any life changes, transactions, or income events that occurred during the year. For business clients, we coordinate your bookkeeping records (or clean them up if needed) before beginning the return.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We pay particular attention to New Jersey-specific issues that commonly trip up taxpayers and preparers unfamiliar with NJ law. For example, New Jersey does not conform to federal bonus depreciation rules — a business that takes significant federal bonus depreciation may have a very different NJ taxable income figure. Similarly, New Jersey's treatment of retirement income, Social Security, and pension exclusions differs from federal rules, and getting these right matters for NJ residents.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For S-corporation and partnership clients, we coordinate the entity return with the individual returns of all owners and partners. This coordination is essential to ensure that K-1 items flow through correctly and that the BAIT election, if applicable, is properly reflected on both the entity return and the individual NJ-1040.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Every client receives a completed return with a summary of key figures, an explanation of any significant findings or planning notes, and electronic signature and filing through our secure platform. We retain copies of your returns and supporting documents for future reference.
+      </p>
+    </section>
+
+    <!-- Common Scenarios -->
+    <section class="mb-12" aria-labelledby="common-scenarios">
+      <h2 id="common-scenarios" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Common Scenarios We Handle</h2>
+      <div class="space-y-4">
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">NJ Business Owner with S-Corp Election</h3>
+          <p class="text-sm text-gray-600">We prepare the federal 1120-S, the NJ CBT-100S, and the owner's personal 1040 and NJ-1040 in a coordinated package, ensuring the reasonable compensation analysis, BAIT election, and K-1 items are all handled correctly.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">NJ Resident Working in New York City</h3>
+          <p class="text-sm text-gray-600">We prepare the NJ-1040 resident return, the NY IT-203 non-resident return, and handle the NJ credit for taxes paid to NY, including the nuances around NYC's local income tax that NJ residents cannot directly credit.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Real Estate Investor with Multiple Rentals</h3>
+          <p class="text-sm text-gray-600">We handle Schedule E for each property, calculate cost segregation-based depreciation where applicable, apply passive activity rules, and ensure NJ's rental income reporting requirements are met alongside federal requirements.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Freelancer or Consultant with Multiple Clients</h3>
+          <p class="text-sm text-gray-600">We prepare Schedule C, calculate self-employment tax, identify all applicable deductions (home office, vehicle, equipment, health insurance), and address quarterly estimated payment planning alongside the annual return.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">When is the New Jersey state income tax filing deadline?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">New Jersey's individual income tax return (NJ-1040) is generally due on April 15th, aligning with the federal deadline. If April 15th falls on a weekend or holiday, the deadline shifts to the next business day. Partnerships and S-corporations filing NJ-1065 and CBT-100S returns face a March 15th deadline. Automatic extensions are available but do not extend the time to pay any tax owed — estimated taxes must be paid by the original deadline to avoid interest and penalties.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Can I get an extension for my NJ tax return?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Yes. New Jersey follows federal extension rules for individual filers — if you receive a federal extension to October 15th, New Jersey automatically honors it for your NJ-1040. For business returns, a separate NJ extension request must be filed. Critically, an extension gives you more time to file, not more time to pay. If you owe tax, you must estimate and pay the balance due by the original deadline to avoid interest charges and potential penalties.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What are the key deadlines for NJ business tax returns?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Key NJ business deadlines: S-corporations (CBT-100S) and partnerships (NJ-1065) are due March 15th; C-corporations (CBT-100) are due April 15th; individual returns (NJ-1040) are due April 15th. Estimated tax payments are due quarterly on April 15th, June 15th, September 15th, and January 15th. Missing estimated payment deadlines can result in underpayment penalties even if the annual return is filed on time — this is a common and costly oversight we help clients avoid.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Do I need to file in multiple states if I live in NJ but work in NY?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Yes. New Jersey residents who work in New York must file both a NJ resident return (NJ-1040) and a New York non-resident return (IT-203). New Jersey provides a credit for taxes paid to New York, but the calculation has specific rules and does not always eliminate double taxation entirely — particularly where New York City's local income tax applies. Properly preparing and coordinating both returns is essential to avoid overpaying, and ProAxis handles both as part of our multi-state tax preparation service.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Proactive year-round tax strategy to minimize your bill before the return is due.</div>
+        </a>
+        <a href="/tax-services/nj-salt-consulting/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">NJ SALT Consulting</div>
+          <div class="text-sm text-gray-600">BAIT election, CBT planning, and NJ state &amp; local tax strategy.</div>
+        </a>
+        <a href="/business-services/bookkeeping/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Bookkeeping Services</div>
+          <div class="text-sm text-gray-600">Clean, tax-ready books that make the preparation process smooth and accurate.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="tax" currentPath="/tax-services/tax-preparation/" />
+  <TestimonialsSection />
+  <CTASection heading="Ready to File with Confidence?" subheading="Get your NJ taxes prepared accurately and on time by a Bergen County CPA. Fully virtual, transparent pricing, and year-round support." />
+</BaseLayout>

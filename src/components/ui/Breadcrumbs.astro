@@ -1,0 +1,52 @@
+---
+export interface Props {
+  items: Array<{ name: string; url?: string }>;
+}
+const { items } = Astro.props;
+
+const siteUrl = 'https://www.proaxiscpa.com';
+
+// Build BreadcrumbList JSON-LD
+const breadcrumbList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": siteUrl + "/"
+    },
+    ...items.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": item.name,
+      ...(item.url ? { "item": siteUrl + item.url } : {})
+    }))
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbList)} />
+
+<nav aria-label="Breadcrumb" class="py-3 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm">
+      <li>
+        <a href="/" class="text-blue-600 hover:text-blue-800 transition-colors">Home</a>
+      </li>
+      {items.map((item) => (
+        <li class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+          {item.url ? (
+            <a href={item.url} class="text-blue-600 hover:text-blue-800 transition-colors">{item.name}</a>
+          ) : (
+            <span class="text-gray-600">{item.name}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>

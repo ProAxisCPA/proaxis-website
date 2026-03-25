@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Englewood Cliffs";
+const title = "CPA in Englewood Cliffs NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Englewood Cliffs NJ — executive compensation, expat tax, NJ corporate business tax, deferred compensation planning, and NJ BAIT. 100% virtual.";
+const canonical = "/service-areas/englewood-cliffs/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Englewood Cliffs, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">About Englewood Cliffs' Business &amp; Tax Landscape</h2>
+    <p class="text-gray-700 mb-4">Englewood Cliffs occupies a unique and strategically important position in Bergen County's business landscape. Perched atop the Palisades cliffs along the Hudson River just minutes from the George Washington Bridge, Englewood Cliffs is best known not for its residential character but for its extraordinary concentration of corporate headquarters. LG Electronics America maintains its North American headquarters in Englewood Cliffs, as do Unilever's North American operations, Pearson Education, and several other global corporations and major regional employers. This corporate corridor makes Englewood Cliffs one of the most economically distinctive municipalities in all of New Jersey — a small borough with a disproportionate share of Fortune 500 and global corporate presence.</p>
+    <p class="text-gray-700 mb-4">The corporate headquarters concentration in Englewood Cliffs creates a rich ecosystem of executive employees, mid-level managers, administrative professionals, and local businesses that service the corporate campuses. For the executives and senior employees of these global corporations — particularly at LG and Unilever, which have large multinational workforces — the tax landscape extends well beyond a standard NJ resident and NY nonresident filing. Executives receiving equity compensation from Korean, British, or other foreign-domiciled parent companies face complex cross-border tax reporting obligations, and the presence of international assignees rotating through the Englewood Cliffs offices creates a steady demand for expat and inbound international tax services. ProAxis provides the expertise in <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">executive tax planning strategies</a> that these complex compensation structures require.</p>
+    <p class="text-gray-700 mb-4">In addition to the corporate anchor tenants, Englewood Cliffs has a thriving community of local businesses that serve the office park population — restaurants, catering companies, car services, professional service firms, property management companies, and a variety of retail and personal service businesses along Palisade Avenue and the surrounding commercial zones. Many of these local businesses have grown significantly as the corporate campuses expanded, and they have outgrown their initial accounting arrangements. Our <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business advisory services</a> bring the financial management infrastructure that growing Englewood Cliffs businesses need: proper bookkeeping, quarterly tax planning, payroll compliance, and strategic financial guidance.</p>
+    <p class="text-gray-700 mb-4">The NJ Corporation Business Tax (CBT) is a significant compliance consideration for businesses operating in Englewood Cliffs. NJ's CBT applies to corporations doing business in NJ, and its apportionment rules — determining what fraction of a multistate corporation's income is taxable in NJ — have undergone significant changes in recent years. Businesses with operations in both NJ and other states must calculate their NJ nexus position, file accurate apportionment schedules, and evaluate whether any applicable tax incentives or credits offset their NJ CBT liability. ProAxis assists both NJ-domiciled and out-of-state businesses with Englewood Cliffs presence to ensure their NJ corporate tax compliance is complete and optimized.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Englewood Cliffs Tax Considerations</h2>
+    <p class="text-gray-700 mb-4">The corporate executive, international assignee, and local business owner populations in Englewood Cliffs generate some of the most complex individual and business tax situations in Bergen County. The following areas are most relevant for Englewood Cliffs clients:</p>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Executive compensation packages — base, bonus, equity, and benefits", text: "Senior executives at LG, Unilever, and other Englewood Cliffs multinationals receive compensation packages that combine salary, annual bonuses, long-term incentive plan (LTIP) awards, equity grants from foreign parent companies, and extensive benefits. Each component has distinct tax timing, character, and withholding implications that require a comprehensive annual tax plan." },
+        { heading: "Expat and international assignee tax compliance", text: "International assignees rotating through Englewood Cliffs corporate offices may be partially exempt from U.S. taxation under applicable tax treaties, subject to FICA exemptions, eligible for foreign tax credits, or required to file both U.S. and home-country returns under a tax equalization arrangement. Each situation is unique and requires expert analysis." },
+        { heading: "NJ Corporation Business Tax nexus and apportionment", text: "Businesses with a physical presence in Englewood Cliffs — even through a single employee or leased office — typically have NJ CBT nexus. The sales factor apportionment method NJ uses can result in significant NJ tax liability for businesses with substantial NJ customer revenue, even if most of the business's activities occur elsewhere." },
+        { heading: "Deferred compensation planning under Section 409A", text: "Senior executives at Englewood Cliffs corporations who participate in non-qualified deferred compensation plans must comply strictly with Section 409A's timing and election rules. A 409A compliance failure triggers immediate income inclusion and a 20% excise tax — making regular compliance review essential." },
+        { heading: "NJ-NY income allocation for dual-jurisdiction employees", text: "Many Englewood Cliffs employees split their time between the NJ corporate campus and a NY city office. The allocation of wages between NJ and NY affects both states' tax liability, and the NJ credit for NY taxes only partially offsets the double-taxation risk. Proper day-count documentation and consistent income allocation are critical." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Englewood Cliffs Businesses &amp; Executives</h2>
+      <p class="text-gray-700 mb-4">ProAxis Tax &amp; Accounting Services brings the expertise that Englewood Cliffs' corporate executive and multinational business community demands. Our virtual practice model is uniquely well-suited to busy executives and business owners who need responsive, expert CPA services without the friction of in-person meetings. We understand the complexity of multinational compensation, NJ corporate tax compliance, and the NJ-NY commuter tax landscape — and we build comprehensive tax strategies around each client's unique situation.</p>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5">
+        {[
+          { name: "Business Services", link: "/business-services/" },
+          { name: "Tax Planning & Strategy", link: "/tax-services/tax-planning/" },
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Supporting the Local Business Community Around the Corporate Corridor</h2>
+    <p class="text-gray-700 mb-4">The large corporate campuses in Englewood Cliffs generate substantial economic activity for the smaller businesses that surround and support them. Restaurants serving the lunch crowd, professional service firms advising the corporate community, property managers maintaining the office parks, and specialized vendors catering to the corporate campuses all represent a layer of local business activity that requires the same quality of accounting and tax support as any other growth-stage business.</p>
+    <p class="text-gray-700 mb-4">Many of these local businesses are structured as S-corporations or LLCs and benefit from the NJ BAIT election to partially restore the federal SALT deduction that the $10,000 cap eliminates at the individual level. For Englewood Cliffs business owners earning meaningful pass-through income, the BAIT election — analyzed annually against projected income and the current NJ BAIT rate — can generate a federal deduction worth thousands of dollars per year. ProAxis evaluates the BAIT election for every eligible business client and implements it where the numbers clearly support the decision.</p>
+    <p class="text-gray-700 mb-6">Commuter benefits taxation is a nuance that affects both local businesses and their employees. Employer-provided parking and transit benefits receive favorable federal tax treatment up to statutory limits — but those limits adjust annually, and compliance requires accurate accounting of the benefit amounts. Businesses that provide parking to employees at or near the Englewood Cliffs corporate campuses should confirm their commuter benefit reporting is current and accurate to avoid payroll tax exposure.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <p class="text-gray-700 mb-4">ProAxis serves businesses and individuals throughout Bergen County's eastern and central communities. Near Englewood Cliffs, we also work with clients in:</p>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Alpine", slug: "alpine" },
+        { name: "Fort Lee", slug: "fort-lee" },
+        { name: "Tenafly", slug: "tenafly" },
+        { name: "Englewood", slug: "englewood" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to work with a CPA who understands Englewood Cliffs' corporate and executive tax landscape? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis today, or explore our <a href="/tax-services/" class="font-medium underline" style="color: #2E75B6;">complete tax services</a> and <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business accounting services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

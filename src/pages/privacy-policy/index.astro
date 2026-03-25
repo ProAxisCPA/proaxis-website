@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+const title = "Privacy Policy | ProAxis Tax & Accounting Services";
+const description = "ProAxis Tax & Accounting Services privacy policy. How we collect, use, and protect your personal and financial information.";
+const canonical = "/privacy-policy/";
+const breadcrumbs = [{ name: "Privacy Policy" }];
+const lastUpdated = "March 2026";
+---
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs} noindex={false}>
+  <Breadcrumbs items={breadcrumbs} />
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <h1 class="text-3xl font-bold font-heading mb-2" style="color: #1B2A4A;">Privacy Policy</h1>
+    <p class="text-gray-500 text-sm mb-8">Last Updated: {lastUpdated}</p>
+    <div class="prose-proaxis">
+      <p>ProAxis Tax & Accounting Services ("ProAxis," "we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at www.proaxiscpa.com or engage our professional services.</p>
+      <h2>Information We Collect</h2>
+      <p>We collect information you provide directly to us, including:</p>
+      <ul>
+        <li>Contact information (name, email address, phone number)</li>
+        <li>Business information (business name, type, revenue range)</li>
+        <li>Financial and tax documents you share with us as part of our professional services</li>
+        <li>Communications you send to us via email, phone, or our contact form</li>
+      </ul>
+      <p>We may also automatically collect certain technical information when you visit our website, including IP address, browser type, pages visited, and time spent on pages.</p>
+      <h2>How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide, maintain, and improve our tax and accounting services</li>
+        <li>Respond to your inquiries and communicate with you about our services</li>
+        <li>Prepare tax returns and financial documents as engaged by you</li>
+        <li>Send you updates about tax deadlines, law changes, or services relevant to your situation (you may opt out at any time)</li>
+        <li>Comply with legal obligations, including tax law and professional standards</li>
+        <li>Improve our website and marketing efforts through analytics</li>
+      </ul>
+      <h2>Information Security</h2>
+      <p>We take the security of your information seriously. We use 256-bit SSL/TLS encryption for all data transmitted between you and our systems. Client documents are stored in secure, encrypted cloud systems. We maintain professional standards required by the AICPA Code of Professional Conduct regarding confidentiality of client information.</p>
+      <h2>Professional Confidentiality</h2>
+      <p>As licensed CPAs, we are bound by professional ethics rules regarding client confidentiality. We do not disclose client information to third parties except as required by law, with your consent, or as necessary to provide the services you have engaged us for (such as filing tax returns with the IRS or NJ Division of Taxation).</p>
+      <h2>Third-Party Services</h2>
+      <p>We may use third-party service providers to help operate our website and deliver our services, including accounting software providers (QuickBooks, etc.), secure document portals, email service providers, and website analytics (Google Analytics). These third parties have their own privacy policies and are contractually required to protect your information.</p>
+      <h2>Cookies</h2>
+      <p>Our website may use cookies to improve your browsing experience and analyze website traffic. You can control cookie settings through your browser settings. Disabling cookies may affect some website functionality.</p>
+      <h2>Your Rights</h2>
+      <p>You may request access to, correction of, or deletion of your personal information by contacting us at info@proaxiscpa.com. Note that certain information must be retained to comply with tax law, professional standards, and legal requirements.</p>
+      <h2>Children's Privacy</h2>
+      <p>Our website and services are not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will post the updated policy on this page with a new "Last Updated" date.</p>
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or our privacy practices, contact us at:</p>
+      <p><strong>ProAxis Tax & Accounting Services</strong><br />
+      Hasbrouck Heights, NJ 07604<br />
+      Email: <a href="mailto:info@proaxiscpa.com">info@proaxiscpa.com</a><br />
+      Phone: <a href="tel:+12018002330">(201) 800-2330</a></p>
+    </div>
+  </div>
+</BaseLayout>

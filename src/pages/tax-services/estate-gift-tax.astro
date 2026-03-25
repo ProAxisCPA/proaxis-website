@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Estate & Gift Tax Planning NJ | ProAxis CPA | Bergen County";
+const description = "Estate and gift tax planning for NJ families and business owners. Federal estate tax exemptions, sunset provisions, gifting strategies, trusts, and family LLC planning. Bergen County CPA.";
+const canonical = "/tax-services/estate-gift-tax/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Estate & Gift Tax Planning",
+    "description": "Comprehensive estate and gift tax planning for New Jersey families and business owners. Federal estate tax exemption planning, gift tax strategies, trust structures, family LLCs, and valuation discount planning.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Estate and Gift Tax Planning"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is there still a New Jersey estate tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New Jersey repealed its state estate tax effective January 1, 2018. Prior to repeal, NJ had one of the lowest estate tax exemptions in the country — only $675,000 — meaning many middle-class NJ families faced state estate taxes. The repeal was a significant relief for NJ estates. However, New Jersey still has an inheritance tax, which is assessed based on the relationship between the decedent and the beneficiary. Class A beneficiaries (spouse, children, grandchildren, parents) are exempt from NJ inheritance tax. Class C and D beneficiaries — siblings, nieces, nephews, and unrelated individuals — face inheritance tax rates ranging from 11% to 16%. Federal estate tax remains applicable to estates exceeding the federal exemption amount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the current federal estate tax exemption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2024 and 2025, the federal estate tax exemption is $13.61 million per individual ($13.99 million in 2025), or approximately $27.22 million for a married couple using portability. This means estates below this threshold owe no federal estate tax. However, the current elevated exemption is scheduled to sunset after December 31, 2025, reverting to approximately $7 million per individual (adjusted for inflation) unless Congress acts to extend or make the current levels permanent. Given this uncertainty, individuals with estates approaching or exceeding $7 million should be actively planning before the potential sunset date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the annual gift tax exclusion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The annual gift tax exclusion allows you to give up to $18,000 per recipient per year in 2024 ($19,000 in 2025) without filing a gift tax return or using any of your lifetime exemption. A married couple can combine their exclusions to give $36,000 per recipient per year through gift splitting. Over time, a systematic annual gifting program can transfer substantial assets out of a taxable estate without touching the lifetime exemption. Gifts exceeding the annual exclusion must be reported on IRS Form 709, and the excess reduces your available lifetime exemption — but no gift tax is actually due until the lifetime exemption is exhausted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I start estate planning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estate planning is not just for the elderly or the ultra-wealthy — it is for anyone who has assets they want to pass to specific people or organizations, minor children who need a guardian named, or a business interest that requires a succession plan. The right time to start is now, regardless of your age or net worth. For individuals with growing business interests or assets approaching the federal exemption level, the urgency is higher because the most effective estate planning strategies (gifting programs, irrevocable trust structures, valuation discounts) work best when implemented over time, not in a last-minute rush. Given the scheduled 2026 exemption sunset, planning in 2024 and 2025 is particularly time-sensitive."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "Estate & Gift Tax Planning" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services", url: "/tax-services/" }, { name: "Estate & Gift Tax Planning" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Estate &amp; Gift Tax Planning for New Jersey Families &amp; Business Owners
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Preserve your wealth across generations with strategic estate and gift tax planning. ProAxis helps NJ families and business owners navigate federal exemptions, gifting programs, and trust strategies — especially important before the 2026 exemption sunset.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Federal Estate Tax Overview -->
+    <section class="mb-12" aria-labelledby="estate-tax-overview">
+      <h2 id="estate-tax-overview" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Federal Estate &amp; Gift Tax: What You Need to Know</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The federal estate and gift tax is a unified transfer tax system that taxes the transfer of wealth from one generation to the next — whether through estates at death or gifts made during your lifetime. Understanding this system, its current exemption levels, and the significant changes on the horizon is essential for anyone with a meaningful estate to protect.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For 2024, the federal estate tax exemption is $13.61 million per individual, rising to approximately $13.99 million in 2025 with inflation adjustments. A married couple can effectively double this amount to approximately $27.22 million using the portability election, which allows a surviving spouse to use any unused portion of a deceased spouse's exemption. Estates below these thresholds owe no federal estate tax. For estates exceeding the exemption, the top federal estate tax rate is 40%.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The current elevated exemption levels were established by the Tax Cuts and Jobs Act of 2017, which doubled the pre-existing exemption. Critically, this provision sunsets after December 31, 2025. Unless Congress acts to extend or make the current levels permanent, the exemption will revert to approximately $7 million per individual (inflation-adjusted from the pre-TCJA $5 million base). For an individual with an estate of $12 million, for example, the difference between a $13.6 million exemption and a $7 million exemption is the difference between owing no federal estate tax and owing approximately $2 million.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        This potential 2026 sunset creates a planning window that is closing. Transferring assets out of your estate now — while the exemption is elevated — can lock in the current exemption amount even if it later decreases. Working with a CPA to understand your estate's exposure and the available strategies is time-sensitive.
+      </p>
+    </section>
+
+    <!-- NJ Estate & Inheritance Tax -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="nj-estate-tax">
+      <h2 id="nj-estate-tax" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">New Jersey Estate Tax &amp; Inheritance Tax</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey repealed its state estate tax effective January 1, 2018. Before the repeal, NJ imposed estate tax on estates exceeding just $675,000 — one of the lowest thresholds in the nation — and many middle-class NJ families faced state estate taxes that residents of most other states did not. The repeal eliminated this burden entirely.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        However, New Jersey still imposes an inheritance tax, which is distinct from an estate tax. The NJ inheritance tax is assessed based on the relationship between the deceased person and the beneficiary:
+      </p>
+      <div class="space-y-3">
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Class A Beneficiaries (Exempt)</h3>
+          <p class="text-sm text-gray-600">Spouse, civil union or domestic partner, child, grandchild, parent, grandparent, stepchild of the decedent. Class A beneficiaries pay no NJ inheritance tax.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Class C Beneficiaries (11%–16%)</h3>
+          <p class="text-sm text-gray-600">Siblings, daughters-in-law, and sons-in-law. These beneficiaries face NJ inheritance tax rates of 11% to 16% on amounts above $25,000.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Class D Beneficiaries (15%–16%)</h3>
+          <p class="text-sm text-gray-600">All other individuals — friends, non-family members, more distant relatives — face NJ inheritance tax rates of 15% to 16% on all taxable transfers. This rate applies with no exemption amount.</p>
+        </div>
+      </div>
+      <p class="text-gray-700 leading-relaxed mt-4">
+        For NJ residents who wish to leave assets to siblings, friends, or more distant relatives, planning around the NJ inheritance tax can be just as important as federal estate tax planning. Careful beneficiary designations, trust structures, and lifetime gifting can reduce or eliminate NJ inheritance tax exposure.
+      </p>
+    </section>
+
+    <!-- Gift Tax Annual Exclusion -->
+    <section class="mb-12" aria-labelledby="gift-tax">
+      <h2 id="gift-tax" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Gift Tax &amp; Lifetime Gifting Strategies</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The federal gift tax and estate tax share a single lifetime exemption — the same $13.61 million (2024) that shields estates from tax also applies to taxable gifts made during your lifetime. However, the annual gift tax exclusion allows you to make gifts up to a certain amount per recipient each year without affecting your lifetime exemption at all.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For 2024, the annual exclusion is $18,000 per recipient. A married couple can combine their exclusions through gift splitting to give $36,000 per recipient annually. For a couple with three adult children, this means $108,000 per year in tax-free wealth transfer — $1 million over approximately nine years — without ever touching the lifetime exemption. When gifts also include grandchildren and other family members, the annual gifting capacity compounds further.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        In addition to annual exclusion gifts, certain payments are excluded from gift tax entirely: direct payments of medical expenses and tuition paid directly to an educational institution or healthcare provider are excluded without limit and do not count against either the annual exclusion or lifetime exemption. These "super exclusion" opportunities are frequently underutilized by families with the means to make them.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Gifts exceeding the annual exclusion require the filing of IRS Form 709 (Gift Tax Return) and reduce the available lifetime exemption by the excess amount. While no gift tax is owed until the exemption is exhausted, reporting is required. ProAxis helps clients structure and document gifting programs to ensure compliance while maximizing the wealth transfer.
+      </p>
+    </section>
+
+    <!-- Estate Planning Strategies -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="strategies">
+      <h2 id="strategies" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Estate Planning Strategies We Support</h2>
+      <div class="space-y-5">
+        <div>
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Irrevocable Life Insurance Trusts (ILITs)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Life insurance proceeds are generally included in your taxable estate if you own the policy. An ILIT owns the policy instead, keeping the proceeds outside your estate while still making them available to your heirs. This is particularly valuable for NJ business owners who carry large life insurance policies for buy-sell purposes.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Spousal Lifetime Access Trusts (SLATs)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">A SLAT allows one spouse to make a gift to an irrevocable trust for the other spouse's benefit, removing the gifted assets from both spouses' taxable estates while retaining indirect access through the beneficiary spouse. With the 2026 sunset approaching, SLATs are one of the most actively discussed strategies for capturing the current elevated exemption before it potentially decreases.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Family Limited Liability Companies (FLLCs) &amp; Valuation Discounts</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Transferring assets — particularly business interests, investment portfolios, or real estate — into a family LLC and then gifting or selling minority interests to family members can allow for valuation discounts (lack of marketability, lack of control) that reduce the value attributed to transferred interests for gift and estate tax purposes. A 20%–30% valuation discount effectively stretches the estate tax exemption further.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Grantor Retained Annuity Trusts (GRATs)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">A GRAT allows you to transfer appreciating assets out of your estate at little to no gift tax cost. You receive annuity payments from the trust for a fixed term, and any growth in trust assets above a hurdle rate (the IRS §7520 rate) passes to beneficiaries free of estate and gift tax. GRATs work best for assets expected to appreciate significantly above the hurdle rate.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Charitable Giving Strategies</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Charitable remainder trusts, charitable lead trusts, and donor-advised funds can help reduce estate and income taxes while supporting causes you care about. For NJ families with significant appreciated assets, charitable planning can be both philanthropically meaningful and financially strategic.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Is there still a New Jersey estate tax?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">New Jersey repealed its state estate tax effective January 1, 2018 — a significant relief for NJ families. However, NJ still has an inheritance tax based on the relationship between the decedent and the beneficiary. Class A beneficiaries (spouse, children, parents, grandchildren) are fully exempt from NJ inheritance tax. Class C beneficiaries (siblings, in-laws) face rates of 11%–16% on amounts above $25,000. Class D beneficiaries (unrelated individuals, more distant relatives) face 15%–16% rates on all transfers. Federal estate tax still applies to estates exceeding the federal exemption amount.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is the current federal estate tax exemption?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">For 2024, the federal estate tax exemption is $13.61 million per individual (approximately $13.99 million in 2025), or approximately $27.22 million for a married couple using portability. The top estate tax rate is 40% on amounts above the exemption. Critically, the current elevated exemption is scheduled to sunset after December 31, 2025, potentially reverting to approximately $7 million per individual — creating an urgent planning opportunity for individuals with estates approaching that threshold.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is the annual gift tax exclusion?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The annual gift tax exclusion for 2024 is $18,000 per recipient ($19,000 in 2025). Gifts within this amount per recipient per year do not require a gift tax return and do not reduce your lifetime exemption. A married couple can give $36,000 per recipient through gift splitting. Direct payments of medical expenses and tuition paid to providers are excluded from gift tax without limit and represent an often-underutilized wealth transfer opportunity for families with the means to use them.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">When should I start estate planning?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Estate planning is not just for the wealthy or elderly — it is appropriate for anyone with assets, dependents, or a business interest. The right time to start is now. The most effective strategies work best when implemented over time rather than in a last-minute rush. Given the scheduled 2026 federal exemption sunset, individuals with estates approaching $7 million per person should be actively reviewing their plans in 2024 and 2025 to capture the current elevated exemption before it potentially decreases. We coordinate with your estate planning attorney to ensure the tax strategy aligns with your legal documents.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Year-round income tax planning that coordinates with your estate strategy.</div>
+        </a>
+        <a href="/business-services/fractional-cfo/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Fractional CFO</div>
+          <div class="text-sm text-gray-600">Strategic financial guidance for business owners planning their exit or succession.</div>
+        </a>
+        <a href="/about/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">About ProAxis</div>
+          <div class="text-sm text-gray-600">Learn about our team and our approach to client relationships.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="tax" currentPath="/tax-services/estate-gift-tax/" />
+  <TestimonialsSection />
+  <CTASection heading="Protect What You've Built for the Next Generation" subheading="The 2026 estate tax exemption sunset is approaching. Schedule a consultation with our Bergen County CPA team to review your estate plan today." />
+</BaseLayout>

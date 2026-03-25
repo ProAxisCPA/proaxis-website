@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Garfield";
+const title = "CPA in Garfield NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Garfield NJ — first-generation immigrant business owner accounting, manufacturing tax planning, restaurant bookkeeping, and multilingual-friendly support. 100% virtual.";
+const canonical = "/service-areas/garfield/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Garfield, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Garfield's Business &amp; Community Landscape</h2>
+    <p class="text-gray-700 mb-4">Garfield sits at the intersection of Bergen and Passaic counties, straddling the Passaic River in a location that has historically made it a hub for industrial production and working-class community life. The city's industrial heritage is visible in the river corridor's former mill buildings and factory sites — many now repurposed for light manufacturing, warehousing, or commercial use — and in the community character that values hard work, entrepreneurialism, and family business ownership.</p>
+    <p class="text-gray-700 mb-4">Garfield's Colombian-American community is one of the most prominent and economically active in all of Bergen County. The concentration of Colombian-owned restaurants, bakeries, grocery stores, beauty salons, travel agencies, import/export businesses, and professional services firms along Outwater Lane, Palisade Avenue, and Main Street makes Garfield one of northern New Jersey's most vibrant Latino business corridors. These businesses represent genuine entrepreneurial achievement — many were started with personal savings by first-generation immigrants who had limited access to traditional small business lending and built their enterprises through years of reinvested earnings and community loyalty.</p>
+    <p class="text-gray-700 mb-4">First-generation immigrant business owners face a distinctive set of accounting challenges that go beyond what standard tax preparation software handles well. The businesses are often cash-intensive, which creates the need for meticulous daily cash reconciliation and bookkeeping systems that can demonstrate revenue accuracy to the IRS if questioned. Many owners are still building their understanding of U.S. tax obligations — the difference between a W-2 employee and a 1099 contractor, what qualifies as a legitimate business deduction versus a personal expense, the self-employment tax implications of operating as a sole proprietor versus electing S-Corp status. A CPA who approaches these clients with patience, clear communication, and a genuine interest in helping them build a sustainable business makes a profound difference.</p>
+    <p class="text-gray-700 mb-4">Some Garfield business owners have ties to businesses or properties in their countries of origin — Colombia, Peru, Ecuador, Mexico, and other Latin American nations. U.S. tax law requires American residents to report worldwide income, and foreign bank accounts with balances exceeding $10,000 at any point during the year must be reported on an annual FBAR filing. Non-compliance with these international reporting requirements can result in substantial penalties, even when there was no tax evasion involved — simply a lack of awareness. ProAxis helps clients understand and meet their international reporting obligations while planning efficiently for the taxes owed.</p>
+    <p class="text-gray-700 mb-4">Garfield's manufacturing sector, while smaller than in its peak decades, still includes meaningful operations: food processing businesses, metal fabrication shops, printing operations, and contract manufacturing. The Route 46 corridor provides commercial access to the broader metro area, and many Garfield businesses serve customers in both Bergen and Passaic counties. The city's border location means some businesses deal with Clifton, Passaic, and Lodi as natural market areas, creating a regional business profile that a good CPA needs to understand.</p>
+    <p class="text-gray-700 mb-8">Garfield's residential community includes a cross-section of working families, many of whom rent rather than own their homes — a demographic that faces its own set of tax issues: Earned Income Tax Credit eligibility, Child Tax Credit optimization, student loan interest deductions, and the decision of whether to itemize or take the standard deduction on their NJ and federal returns. ProAxis is committed to serving all segments of the Garfield community, from the family restaurant owner on Outwater Lane to the longtime resident filing a straightforward W-2 return.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Tax &amp; Accounting Needs in Garfield</h2>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "First-generation business owner support", text: "Clear, patient communication about U.S. tax obligations, entity structuring options, business expense tracking, and the path from sole proprietor to S-Corp when the time is right. We understand that many of our Garfield business owner clients are building their financial literacy alongside their businesses." },
+        { heading: "Cash-intensive business bookkeeping", text: "Restaurants, bakeries, beauty salons, and specialty retail with high cash transaction volumes need rigorous daily reconciliation, point-of-sale system integration, and clean records that can withstand IRS scrutiny." },
+        { heading: "International reporting compliance", text: "Garfield residents with foreign bank accounts, foreign business interests, or income from abroad need proper FBAR filings, Foreign Tax Credit analysis, and in some cases, compliance catch-up for prior years of unreported foreign accounts." },
+        { heading: "Manufacturing business accounting", text: "Garfield's industrial businesses need inventory costing, cost of goods sold tracking, manufacturing equipment depreciation schedules, and proper NJ sales tax treatment of manufactured goods." },
+        { heading: "Individual tax preparation for working families", text: "Accurate, affordable individual tax preparation — maximizing available credits (EITC, Child Tax Credit, education credits), capturing all legitimate deductions, and ensuring correct NJ return preparation for a community of hardworking families." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Garfield Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-4">ProAxis respects the entrepreneurial spirit that drives Garfield's business community. Whether you're a Colombian restaurant owner on your fifth year in business, a manufacturing operation manager navigating NJ tax compliance, or a Garfield family who wants accurate, affordable tax preparation, ProAxis delivers expert service with the clarity and responsiveness you deserve.</p>
+      <p class="text-gray-700 mb-5">Our virtual model means the language of our service is accessible — clear written summaries, video meetings where we walk through your return together, and a client portal where documents are easy to share and find.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Garfield</h2>
+    <p class="text-gray-700 mb-4">Garfield's business owners are working hard — long hours, demanding customers, tight margins. The last thing they need is a CPA relationship that requires taking a morning off and driving to an office across town. ProAxis's virtual model puts expert accounting support in your hands, through your phone or computer, without disrupting your operations.</p>
+    <p class="text-gray-700 mb-6">We take the time to explain what we're doing and why — so you understand your tax situation, not just receive a return to sign. For first-generation entrepreneurs building their first business in the U.S., that education is as valuable as the tax savings themselves.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Fair Lawn", slug: "fair-lawn" },
+        { name: "Rutherford", slug: "rutherford" },
+        { name: "Hasbrouck Heights", slug: "hasbrouck-heights" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or learn more about our <a href="/tax-services/tax-preparation/" class="font-medium underline" style="color: #2E75B6;">tax preparation</a> and <a href="/business-services/bookkeeping/" class="font-medium underline" style="color: #2E75B6;">bookkeeping services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

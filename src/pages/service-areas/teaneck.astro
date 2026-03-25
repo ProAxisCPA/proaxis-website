@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Teaneck";
+const title = "CPA in Teaneck NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Teaneck NJ — nonprofit accounting, diverse small business support, medical practice accounting, and tax planning. 100% virtual.";
+const canonical = "/service-areas/teaneck/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Teaneck, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Teaneck's Business &amp; Community Landscape</h2>
+    <p class="text-gray-700 mb-4">Teaneck is widely regarded as one of New Jersey's most genuinely diverse communities — a distinction that has been a source of community pride since 1964, when Teaneck became the first municipality in the United States to voluntarily desegregate its public schools. Today, that diversity manifests in a rich cultural tapestry that includes significant Jewish, Korean-American, African-American, Latino, and South Asian communities, each with its own commercial corridors, community organizations, houses of worship, and entrepreneurial enterprises that create a uniquely varied business environment for a CPA serving the township.</p>
+    <p class="text-gray-700 mb-4">The Jewish community in Teaneck — particularly the Modern Orthodox community — is one of the largest and most economically active Orthodox communities outside of Brooklyn. Cedar Lane and Teaneck Road serve as the commercial spine of this community, lined with kosher restaurants, Jewish bakeries, Judaica shops, Jewish educational supply stores, and the offices of the many attorneys, accountants, physicians, and financial professionals who serve the community. The community's religious observance patterns create unique business scheduling considerations — Shabbat-observant business owners may have distinctive operating structures and revenue patterns that a knowledgeable CPA can help navigate from a tax planning perspective.</p>
+    <p class="text-gray-700 mb-4">Fairleigh Dickinson University's Metropolitan Campus occupies a significant footprint along the Hackensack River in Teaneck. The university's presence supports a surrounding ecosystem of student housing, food service, tutoring, and other student-oriented businesses, as well as administrative and academic employment. FDU also attracts international students who may have specific tax filing obligations — nonresident alien returns, FICA exemption considerations — that require specialized knowledge.</p>
+    <p class="text-gray-700 mb-4">Holy Name Medical Center, now part of Trinity Health, anchors Teaneck's healthcare corridor. The medical center and its surrounding physician practices, specialty clinics, and allied health businesses represent one of the township's largest employment bases. Medical professionals affiliated with Holy Name face the same complex compensation and practice management accounting challenges that medical communities face everywhere — but with the specific overlay of NJ's tax treatment of professional services businesses, NJ's payroll tax requirements, and the need for proper coordination between practice entity accounting and individual tax returns.</p>
+    <p class="text-gray-700 mb-8">Teaneck's nonprofit sector is unusually robust relative to its size. The density of religious congregations — Orthodox synagogues, churches, mosques — combined with a community tradition of civic engagement has produced a large number of nonprofits focused on education, social services, cultural preservation, and community development. These organizations need professional help with Form 990 preparation, nonprofit bookkeeping under fund accounting principles, grant tracking, and the governance and compliance aspects of maintaining 501(c)(3) status with both the IRS and the NJ Division of Taxation.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Tax &amp; Accounting Needs in Teaneck</h2>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Nonprofit and religious organization accounting", text: "Form 990 preparation, fund accounting bookkeeping, Unrelated Business Taxable Income (UBTI) analysis for nonprofits with revenue-generating activities, and NJ Annual Reports for nonprofits." },
+        { heading: "Diverse small business support", text: "From kosher food businesses to Korean specialty retail to independent professional service firms, Teaneck's small business community benefits from a CPA who understands the specific deductions and accounting challenges in their industry." },
+        { heading: "Medical professional practice management", text: "Holy Name-affiliated physicians and other healthcare professionals in Teaneck need physician compensation planning, retirement plan optimization, and practice sale or valuation services." },
+        { heading: "Residential rental income", text: "Many Teaneck homeowners with larger properties rent accessory units or floors — creating rental income that must be properly reported and against which eligible expenses can be deducted." },
+        { heading: "International student tax filings", text: "FDU's international student population and their families sometimes need guidance on nonresident alien returns, treaty benefits, and the transition from nonresident to resident alien tax status." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Teaneck Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-5">Whether you're running a kosher restaurant on Cedar Lane, managing a religious nonprofit's Form 990, or planning the tax strategy for your Teaneck-based medical practice, ProAxis brings the expertise you need through a convenient, fully virtual delivery model.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Teaneck</h2>
+    <p class="text-gray-700 mb-4">Teaneck's diverse community deserves a CPA firm that takes the time to understand its clients' specific circumstances rather than applying a one-size-fits-all approach. ProAxis's virtual model supports personalized service — each engagement starts with a genuine conversation about your situation, your goals, and the specific tax and accounting challenges your business or household faces.</p>
+    <p class="text-gray-700 mb-6">Our proximity to Teaneck as a Bergen County-based firm, combined with our fully digital delivery model, means you get local expertise without the inconvenience of a traditional in-person CPA relationship.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Hackensack", slug: "hackensack" },
+        { name: "Englewood", slug: "englewood" },
+        { name: "Fort Lee", slug: "fort-lee" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or learn more about our <a href="/tax-services/tax-preparation/" class="font-medium underline" style="color: #2E75B6;">tax preparation</a> and <a href="/business-services/bookkeeping/" class="font-medium underline" style="color: #2E75B6;">bookkeeping services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

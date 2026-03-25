@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/ui/Breadcrumbs.astro';
+import CTASection from '../../../components/ui/CTASection.astro';
+const title = "NJ Tax Deadline Calendar 2025-2026 | ProAxis CPA Bergen County";
+const description = "Key federal and NJ state tax deadlines for 2025-2026. Individual, business, payroll, and estimated tax due dates for NJ taxpayers. Never miss a deadline with ProAxis CPA.";
+const canonical = "/resources/tax-calendar/";
+const breadcrumbs = [{ name: "Resources", url: "/resources/" }, { name: "Tax Calendar" }];
+const deadlines = [
+  { month: "January", items: ["Jan 15 — Q4 Estimated Tax Payment (Form 1040-ES)", "Jan 31 — W-2s and 1099-NECs due to recipients", "Jan 31 — NJ-W3 Annual Reconciliation"] },
+  { month: "February", items: ["Feb 28 — 1099 paper filing deadline with IRS"] },
+  { month: "March", items: ["Mar 15 — S-Corp (1120-S) and Partnership (1065) returns due", "Mar 15 — S-Corp and Partnership extension deadline (Form 7004)", "Mar 31 — 1099 electronic filing deadline with IRS"] },
+  { month: "April", items: ["Apr 15 — Individual (1040) and C-Corp (1120) returns due", "Apr 15 — Q1 Estimated Tax Payment due", "Apr 15 — IRA contribution deadline (for prior year)", "Apr 15 — Individual and C-Corp extension deadline", "Apr 30 — NJ CBT-100 (Corporation Business Tax) if calendar year"] },
+  { month: "June", items: ["Jun 15 — Q2 Estimated Tax Payment due"] },
+  { month: "September", items: ["Sep 15 — Q3 Estimated Tax Payment due", "Sep 15 — Extended S-Corp and Partnership returns due"] },
+  { month: "October", items: ["Oct 15 — Extended Individual (1040) returns due", "Oct 15 — Extended C-Corp (1120) returns due"] },
+  { month: "December", items: ["Dec 31 — Year-end tax planning deadline", "Dec 31 — Last day to make retirement plan contributions for calendar year businesses", "Dec 31 — Last day to implement tax strategies for current tax year"] },
+];
+---
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-3">NJ & Federal Tax Deadline Calendar</h1>
+      <p class="text-lg text-gray-300">Key tax deadlines for NJ individuals and businesses. Bookmark this page — or better yet, let ProAxis manage your deadlines for you.</p>
+    </div>
+  </section>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8">
+      <p class="text-sm text-amber-800"><strong>Note:</strong> Tax deadlines can shift when they fall on weekends or federal holidays. Always confirm specific deadlines with your CPA. This calendar is for general informational purposes.</p>
+    </div>
+    <div class="space-y-6">
+      {deadlines.map(month => (
+        <div class="bg-white rounded-xl border border-gray-100 overflow-hidden">
+          <div class="px-5 py-3" style="background-color: #1B2A4A;">
+            <h2 class="font-bold font-heading text-white">{month.month}</h2>
+          </div>
+          <ul class="p-5 space-y-2">
+            {month.items.map(item => (
+              <li class="flex items-start gap-2 text-sm text-gray-700">
+                <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: #2E75B6;" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-gray-600 mb-4">Worried about missing a deadline? <a href="/contact/" class="font-semibold" style="color: #2E75B6;">Contact ProAxis</a> — we track all deadlines for our clients proactively.</p>
+    </div>
+  </div>
+  <CTASection />
+</BaseLayout>

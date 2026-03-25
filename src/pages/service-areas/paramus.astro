@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Paramus";
+const title = "CPA in Paramus NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Paramus NJ — retail business accounting, sales tax compliance, corporate tax, and bookkeeping for Paramus businesses. 100% virtual.";
+const canonical = "/service-areas/paramus/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Paramus, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Paramus's Business Landscape</h2>
+    <p class="text-gray-700 mb-4">Paramus occupies a singular position in American retail geography. Home to Garden State Plaza (one of the top-grossing shopping centers in the United States), Westfield Paramus Park, Bergen Town Center, and the sprawling Route 17 and Route 4 commercial corridors, Paramus generates retail sales figures that rival entire city centers many times its size. By some measures, the Paramus retail corridor produces more annual retail sales per square mile than any comparable area in the country — a distinction that creates a highly distinctive accounting environment for businesses operating here.</p>
+    <p class="text-gray-700 mb-4">The retail ecosystem in Paramus is not just the major malls. It's the auto dealership row stretching along Route 17, where multi-franchise dealerships track complex floorplan financing, vehicle inventory, F&amp;I revenue streams, and service department profitability centers. It's the corporate headquarters that have clustered in Paramus to take advantage of its central location within the NYC metropolitan area and its excellent Route 17/Route 4/Garden State Parkway access. Names like Schiavone Construction, Toys "R" Us (formerly headquartered here), and dozens of regional corporate offices have called Paramus home. And it's the supporting cast of retailers, restaurants, nail salons, dry cleaners, service stations, and specialty shops that serve both the retail visitors and the permanent Paramus community.</p>
+    <p class="text-gray-700 mb-4">One of Paramus's most unusual characteristics is its blue law restriction: under a local ordinance that traces back to religious Sabbath observance traditions, Paramus prohibits most retail activity on Sundays. This makes Paramus uniquely six-days-a-week retail for traditional stores, which affects staffing models, revenue projections, lease negotiations, and the week-over-week cash flow patterns that any good bookkeeping system needs to capture accurately. For some businesses, the Sunday closure is a genuine financial planning consideration — particularly when landlords price leases based on competitive properties that operate seven days a week.</p>
+    <p class="text-gray-700 mb-4">The commercial real estate market in Paramus is among the most valuable in northern New Jersey. Strip mall owners, mixed-use property investors, and commercial landlords along the Route 17 and Route 4 corridors are managing significant asset values with corresponding depreciation schedules, property tax assessments, CAM charge structures in tenant leases, and occasional 1031 exchange opportunities. These real estate investments require ongoing tax strategy — not just annual return filing.</p>
+    <p class="text-gray-700 mb-8">Beyond retail and real estate, Paramus hosts a substantial cluster of professional services firms, financial advisors, insurance agencies, and healthcare providers serving the large and affluent Bergen County population that surrounds it. These businesses have their own accounting needs around revenue recognition, professional liability, retirement planning for principals, and the ongoing challenge of distinguishing deductible business expenses from personal expenses in the eyes of the IRS.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Tax &amp; Accounting Needs in Paramus</h2>
+    <p class="text-gray-700 mb-4">Paramus businesses face a specific set of accounting and tax challenges driven by the retail-heavy, high-volume commercial environment:</p>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "NJ Sales and Use Tax", text: "Retail businesses in Paramus are among NJ's largest sales tax collectors. Accurate tracking of taxable vs. exempt transactions, proper remittance timing, and clean quarterly filings are essential. The NJ Division of Taxation scrutinizes high-volume retail businesses, and errors compound quickly at Paramus's scale." },
+        { heading: "Inventory Accounting", text: "Retail businesses with physical inventory need accounting systems that accurately capture cost of goods sold, track shrinkage, and provide real-time gross margin visibility. The choice between FIFO, LIFO, and weighted average cost methods has meaningful tax implications — especially in inflationary environments." },
+        { heading: "Franchise Accounting", text: "Many Paramus businesses operate under national franchise agreements, which create royalty payment obligations, marketing fund contributions, and in some cases, franchisor-mandated accounting system requirements. Franchise-specific tax considerations include the deductibility of franchise fees and the treatment of initial franchise purchase costs." },
+        { heading: "Multi-Location Payroll and HR", text: "Larger Paramus retailers and restaurants often operate multiple locations across NJ and potentially in NY. Multi-state payroll compliance, NJ Earned Sick Leave requirements, and proper employee classification (W-2 vs. 1099) are frequent pain points." },
+        { heading: "Commercial Real Estate Tax Strategy", text: "Property owners on the Route 17 and Route 4 corridors benefit from cost segregation studies, proper depreciation scheduling, and proactive planning around the 1031 exchange rules when buying or selling investment properties." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Paramus Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-4">Whether you own a Route 17 dealership, manage a multi-tenant retail property near Garden State Plaza, run a franchise location in Paramus, or are a corporate employee working out of one of Paramus's office parks, ProAxis brings the depth of expertise your financial situation requires.</p>
+      <p class="text-gray-700 mb-5">Our virtual model means you can connect with your CPA team without navigating Paramus's legendary Route 17 traffic. Document sharing, review meetings, and ongoing advisory conversations happen on your schedule, through secure digital channels.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Paramus</h2>
+    <p class="text-gray-700 mb-4">Paramus is one of the most congested commercial corridors in New Jersey. Getting from one end of Route 17 to the other during business hours can consume an hour of your day. For busy business owners managing retail operations, dealership floorplans, or commercial property portfolios, the ability to handle your entire CPA relationship virtually — without ever sitting in Paramus traffic — is a genuine competitive advantage.</p>
+    <p class="text-gray-700 mb-4">ProAxis provides the depth of expertise that Paramus's complex commercial environment demands, delivered with the convenience that modern business owners expect. We're not a seasonal tax preparer — we're a year-round strategic partner who understands the specific accounting and tax challenges of operating in one of New Jersey's most commercially intense environments.</p>
+    <p class="text-gray-700 mb-6">Our cloud-based systems integrate with QuickBooks, Xero, and most point-of-sale platforms used by retail businesses, making the data handoff seamless and the bookkeeping accurate from day one.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Hackensack", slug: "hackensack" },
+        { name: "Ridgewood", slug: "ridgewood" },
+        { name: "Fair Lawn", slug: "fair-lawn" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or explore our <a href="/tax-services/tax-preparation/" class="font-medium underline" style="color: #2E75B6;">tax preparation services</a> and <a href="/business-services/bookkeeping/" class="font-medium underline" style="color: #2E75B6;">bookkeeping solutions</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

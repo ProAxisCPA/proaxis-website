@@ -1,0 +1,395 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrustBadges from '../components/sections/TrustBadges.astro';
+import TestimonialsSection from '../components/sections/TestimonialsSection.astro';
+import CTASection from '../components/ui/CTASection.astro';
+
+const title = "Bergen County CPA Firm | Tax, Accounting & Advisory | ProAxis";
+const description = "ProAxis Tax & Accounting Services — Bergen County's technology-first CPA firm. Expert tax planning, bookkeeping, fractional CFO & IRS resolution for NJ businesses. Schedule a free consultation.";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "AccountingService"],
+    "name": "ProAxis Tax & Accounting Services",
+    "description": "Bergen County's technology-first CPA firm offering tax preparation, tax planning, bookkeeping, fractional CFO services, IRS resolution, and business advisory for small-to-mid-size businesses across New Jersey.",
+    "url": "https://www.proaxiscpa.com",
+    "telephone": "+12018002330",
+    "email": "info@proaxiscpa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hasbrouck Heights",
+      "addressRegion": "NJ",
+      "postalCode": "07604",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.8598",
+      "longitude": "-74.0776"
+    },
+    "areaServed": [
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "County", "name": "Bergen County" },
+      { "@type": "City", "name": "Hasbrouck Heights" },
+      { "@type": "City", "name": "Hackensack" },
+      { "@type": "City", "name": "Paramus" },
+      { "@type": "City", "name": "Fort Lee" },
+      { "@type": "City", "name": "Ridgewood" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "priceRange": "$$",
+    "hasCredential": [
+      "Licensed CPA - State of New Jersey",
+      "AICPA Member",
+      "Authorized IRS e-File Provider",
+      "Certified QuickBooks Online ProAdvisor"
+    ],
+    "serviceType": ["Tax Preparation", "Tax Planning", "Bookkeeping", "Fractional CFO", "IRS Tax Resolution", "Payroll Services"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ProAxis Tax & Accounting Services",
+    "url": "https://www.proaxiscpa.com",
+    "logo": "https://www.proaxiscpa.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+12018002330",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }
+  }
+];
+
+const services = [
+  {
+    icon: "📊",
+    title: "Tax Preparation",
+    description: "Accurate, on-time filing for individuals, businesses, and multi-state returns. We handle the complexity so you don't have to.",
+    href: "/tax-services/tax-preparation/",
+    label: "Learn about tax preparation services"
+  },
+  {
+    icon: "🎯",
+    title: "Tax Planning & Strategy",
+    description: "Year-round, proactive tax strategy to legally minimize your tax burden before the year ends — not after.",
+    href: "/tax-services/tax-planning/",
+    label: "Learn about tax planning"
+  },
+  {
+    icon: "📚",
+    title: "Bookkeeping & Accounting",
+    description: "CPA-supervised bookkeeping, QuickBooks Online optimization, and monthly reconciliations that keep your books spotless.",
+    href: "/business-services/bookkeeping/",
+    label: "Learn about bookkeeping services"
+  },
+  {
+    icon: "💼",
+    title: "Fractional CFO",
+    description: "CFO-level strategic guidance — cash flow forecasting, financial modeling, KPI dashboards, and exit planning — at a fraction of the cost.",
+    href: "/business-services/fractional-cfo/",
+    label: "Learn about fractional CFO services"
+  },
+  {
+    icon: "🛡️",
+    title: "IRS Tax Resolution",
+    description: "Facing an audit, lien, or unfiled returns? We represent you before the IRS and negotiate the best possible outcome.",
+    href: "/tax-services/irs-tax-resolution/",
+    label: "Learn about IRS tax resolution"
+  },
+  {
+    icon: "🏛️",
+    title: "NJ SALT Consulting",
+    description: "Navigate BAIT elections, CBT planning, sales tax compliance, nexus analysis, and SALT cap strategies specific to New Jersey.",
+    href: "/tax-services/nj-salt-consulting/",
+    label: "Learn about NJ SALT tax consulting"
+  },
+];
+
+const differentiators = [
+  {
+    icon: "💻",
+    title: "100% Virtual — Built for Busy Professionals",
+    description: "No commuting, no waiting rooms, no scheduling headaches. Secure document sharing, video meetings, and cloud-based workflows mean you can work with us from anywhere in NJ or nationwide."
+  },
+  {
+    icon: "⚡",
+    title: "Technology-First Approach",
+    description: "We leverage modern accounting software, automation, and real-time reporting to give you cleaner books, faster turnarounds, and insights your previous accountant never provided."
+  },
+  {
+    icon: "🎓",
+    title: "Licensed CPAs — Not Just Bookkeepers",
+    description: "Every engagement is handled by licensed CPAs who understand the full picture — from your daily transactions to your long-term exit strategy. AICPA members. IRS e-File authorized."
+  },
+  {
+    icon: "🔮",
+    title: "Proactive, Not Reactive",
+    description: "We don't wait for tax season to talk to you. Year-round advisory means we catch problems early, identify opportunities, and keep you ahead of regulatory changes."
+  },
+];
+
+const industries = [
+  { name: "Real Estate", href: "/industries/real-estate/", icon: "🏠" },
+  { name: "Healthcare", href: "/industries/healthcare/", icon: "🏥" },
+  { name: "E-Commerce", href: "/industries/ecommerce/", icon: "🛒" },
+  { name: "Construction", href: "/industries/construction/", icon: "🏗️" },
+  { name: "Restaurants", href: "/industries/restaurants/", icon: "🍽️" },
+  { name: "Non-Profits", href: "/industries/non-profits/", icon: "❤️" },
+  { name: "Professional Services", href: "/industries/professional-services/", icon: "💼" },
+];
+---
+
+<BaseLayout {title} {description} canonical="/" {schema}>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-16 lg:py-24" style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" aria-labelledby="hero-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-6" style="background-color: rgba(197, 165, 90, 0.2); color: #C5A55A;">
+            <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+            Bergen County, NJ &bull; Fully Virtual &bull; Serving Clients Nationwide
+          </div>
+          <h1 id="hero-heading" class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white leading-tight mb-6">
+            Bergen County's Technology-First CPA Firm for Businesses That Refuse to Stand Still
+          </h1>
+          <p class="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
+            ProAxis Tax & Accounting Services delivers proactive tax strategy, CPA-supervised bookkeeping, and fractional CFO services to New Jersey businesses — all 100% virtually, with the responsiveness you've always wanted from your accountant.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/contact/"
+              class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-base font-semibold text-white transition-all hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2"
+              style="background-color: #22C55E;"
+            >
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Schedule Your Free Consultation
+            </a>
+            <a
+              href="/tax-services/"
+              class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-base font-semibold text-white border-2 border-white/40 hover:border-white hover:bg-white/10 transition-all focus:outline-none"
+            >
+              Explore Our Services
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-6">
+            <div>
+              <div class="text-2xl font-bold font-heading text-white">100%</div>
+              <div class="text-xs text-gray-400">Virtual Service</div>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div>
+              <div class="text-2xl font-bold font-heading text-white">NJ + Nationwide</div>
+              <div class="text-xs text-gray-400">Clients Served</div>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div>
+              <div class="text-2xl font-bold font-heading text-white">Licensed</div>
+              <div class="text-xs text-gray-400">CPAs &amp; AICPA Members</div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10" style="background: rgba(255,255,255,0.05); min-height: 340px;">
+            <div class="w-full h-full flex flex-col items-center justify-center p-8 text-center min-h-72">
+              <div class="w-20 h-20 rounded-full mb-4 flex items-center justify-center" style="background-color: rgba(197, 165, 90, 0.2);">
+                <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: #C5A55A;" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <p class="text-white/60 text-sm font-medium">Hero Image: Professional CPA team<br />in virtual consultation with client</p>
+              <p class="text-white/40 text-xs mt-2">Replace with professional team photo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badge Bar -->
+  <TrustBadges />
+
+  <!-- Services Overview -->
+  <section class="py-16 lg:py-20" aria-labelledby="services-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 id="services-heading" class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+          Comprehensive Tax &amp; Accounting Services for NJ Businesses
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          From day-to-day bookkeeping to complex multi-state tax strategy, ProAxis delivers expert CPA services tailored to your business.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <a
+            href={service.href}
+            class="group block rounded-xl p-6 border border-gray-100 bg-white hover:border-blue-200 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label={service.label}
+          >
+            <div class="text-3xl mb-3" aria-hidden="true">{service.icon}</div>
+            <h3 class="text-lg font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{service.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-3">{service.description}</p>
+            <span class="inline-flex items-center gap-1 text-sm font-semibold transition-colors" style="color: #2E75B6;">
+              Learn more
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/tax-services/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border-2 transition-all hover:text-white" style="border-color: #1B2A4A; color: #1B2A4A;" onmouseover="this.style.backgroundColor='#1B2A4A'" onmouseout="this.style.backgroundColor='transparent'">
+          View All Tax Services
+        </a>
+        <a href="/business-services/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold border-2 transition-all hover:text-white" style="border-color: #2E75B6; color: #2E75B6;" onmouseover="this.style.backgroundColor='#2E75B6'" onmouseout="this.style.backgroundColor='transparent'">
+          View Business Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why ProAxis -->
+  <section class="py-16 lg:py-20" style="background-color: #F7F8FA;" aria-labelledby="why-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 id="why-heading" class="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+            Why Bergen County Business Owners Choose ProAxis
+          </h2>
+          <p class="text-gray-600 text-lg mb-8">
+            We're not your parents' accounting firm. ProAxis combines the expertise of a traditional CPA firm with the speed, technology, and communication style that modern businesses demand.
+          </p>
+          <a href="/about/why-proaxis/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-white font-semibold transition-all hover:opacity-90" style="background-color: #2E75B6;">
+            Our Full Story
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+        <div class="space-y-5">
+          {differentiators.map((item) => (
+            <div class="flex gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm">
+              <div class="text-2xl flex-shrink-0 mt-0.5" aria-hidden="true">{item.icon}</div>
+              <div>
+                <h3 class="font-bold font-heading text-base mb-1" style="color: #1B2A4A;">{item.title}</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve -->
+  <section class="py-16 lg:py-20" aria-labelledby="industries-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 id="industries-heading" class="text-2xl sm:text-3xl font-bold font-heading mb-3" style="color: #1B2A4A;">
+          CPA Services Tailored to Your Industry
+        </h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          Every industry has unique tax challenges. Our CPAs have deep expertise across the sectors driving Bergen County's economy.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+        {industries.map((industry) => (
+          <a
+            href={industry.href}
+            class="group flex flex-col items-center gap-2 p-4 rounded-xl border border-gray-100 bg-white hover:border-blue-200 hover:shadow-sm transition-all text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="text-2xl" aria-hidden="true">{industry.icon}</span>
+            <span class="text-xs font-semibold group-hover:text-blue-700 transition-colors leading-tight" style="color: #1B2A4A;">{industry.name}</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/industries/" class="inline-flex items-center gap-2 text-sm font-semibold transition-colors" style="color: #2E75B6;">
+          View All Industries We Serve
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <TestimonialsSection heading="What Bergen County Business Owners Are Saying" />
+
+  <!-- Soft Lead Capture -->
+  <section class="py-10 border-y" style="border-color: rgba(197, 165, 90, 0.3); background-color: #FFFBF2;" aria-labelledby="checklist-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <div class="text-4xl" aria-hidden="true">📋</div>
+        <div class="flex-1">
+          <h2 id="checklist-heading" class="text-lg font-bold font-heading mb-1" style="color: #1B2A4A;">
+            Not ready to call? Download our Free NJ Small Business Tax Checklist
+          </h2>
+          <p class="text-sm text-gray-600">The top deductions, deadlines, and planning moves every NJ business owner should know.</p>
+        </div>
+        <a href="/contact/" class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-lg text-white text-sm font-semibold transition-all hover:opacity-90" style="background-color: #C5A55A;">
+          Get Free Checklist
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-14 lg:py-16" style="background-color: #F7F8FA;" aria-labelledby="areas-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 id="areas-heading" class="text-xl sm:text-2xl font-bold font-heading mb-2" style="color: #1B2A4A;">
+          Serving Businesses Across Bergen County &amp; New Jersey
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto">
+          100% virtual means we can serve you wherever you are — find your city below for locally-focused CPA guidance.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2">
+        {[
+          { name: "Bergen County", href: "/service-areas/bergen-county/" },
+          { name: "Hackensack", href: "/service-areas/hackensack/" },
+          { name: "Paramus", href: "/service-areas/paramus/" },
+          { name: "Fort Lee", href: "/service-areas/fort-lee/" },
+          { name: "Ridgewood", href: "/service-areas/ridgewood/" },
+          { name: "Teaneck", href: "/service-areas/teaneck/" },
+          { name: "Hasbrouck Heights", href: "/service-areas/hasbrouck-heights/" },
+          { name: "Englewood", href: "/service-areas/englewood/" },
+          { name: "Fair Lawn", href: "/service-areas/fair-lawn/" },
+          { name: "Rutherford", href: "/service-areas/rutherford/" },
+          { name: "Garfield", href: "/service-areas/garfield/" },
+        ].map(area => (
+          <a href={area.href} class="px-4 py-2 rounded-full text-sm font-medium bg-white border border-gray-200 hover:border-blue-300 hover:text-blue-700 transition-all" style="color: #1B2A4A;">
+            {area.name}, NJ
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CTASection
+    heading="Ready to Work With a CPA Who Actually Understands Your Business?"
+    subheading="Join NJ business owners who switched to ProAxis for proactive tax planning, cleaner books, and real financial strategy. Your free consultation is just one click away."
+  />
+</BaseLayout>

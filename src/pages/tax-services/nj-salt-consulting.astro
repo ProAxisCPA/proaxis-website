@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "NJ SALT Tax Consulting | BAIT Election & CBT Planning | ProAxis";
+const description = "Expert NJ state and local tax consulting: BAIT election, Corporation Business Tax planning, sales tax nexus analysis, and multi-state apportionment for NJ businesses. Bergen County CPA.";
+const canonical = "/tax-services/nj-salt-consulting/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "NJ SALT Tax Consulting",
+    "description": "Expert New Jersey state and local tax consulting including NJ BAIT election analysis, Corporation Business Tax planning, sales tax nexus analysis, and multi-state apportionment for NJ businesses.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "State and Local Tax Consulting"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the NJ BAIT election?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The NJ Business Alternative Income Tax (BAIT) is an elective tax that eligible New Jersey pass-through entities — S-corporations, partnerships, and multi-member LLCs — can choose to pay at the entity level. When an entity elects into the BAIT, it pays NJ income tax on its taxable income at the entity level and deducts those taxes as a business expense for federal purposes. This effectively converts what would otherwise be a non-deductible personal state income tax payment (capped at $10,000 for federal purposes) into a fully deductible business expense. Individual owners receive a New Jersey credit for their share of the BAIT paid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the BAIT election work around the SALT cap?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The federal Tax Cuts and Jobs Act of 2017 capped the individual deduction for state and local taxes at $10,000. For high-income NJ taxpayers who pay far more than $10,000 in state income and property taxes, this cap creates a significant tax cost. The BAIT works around this cap because the federal $10,000 SALT limitation applies only to taxes paid by individuals — not businesses. When a pass-through entity pays NJ income tax at the entity level through the BAIT election, that payment is a business expense deductible without the $10,000 cap. For a business owner paying $30,000 or more in NJ state taxes, this can translate into thousands of dollars in federal tax savings annually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is nexus and how does it affect my NJ business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nexus is the legal threshold of connection between a business and a state that triggers the obligation to collect and remit that state's taxes. Physical nexus arises from having employees, offices, inventory, or other physical presence in a state. Economic nexus — established by the Supreme Court's 2018 South Dakota v. Wayfair decision — arises from exceeding a state's sales or transaction thresholds, even without physical presence. For NJ businesses, nexus in another state can trigger sales tax collection obligations, income tax filing requirements, or both. Understanding where your business has nexus is essential before expanding into new markets or hiring remote workers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need SALT consulting if my business only operates in New Jersey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Even if you only operate in New Jersey, SALT consulting adds value in two important ways. First, the NJ BAIT election is available to all eligible NJ pass-through entities regardless of multi-state operations — and if you have income above the SALT cap threshold, the BAIT may save you significant federal taxes. Second, NJ's Corporation Business Tax has its own complexity, including minimum tax calculations, add-backs for certain federal deductions (like bonus depreciation), and tax credit opportunities. A SALT review ensures you are paying what you legally owe to NJ — and not a dollar more."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "NJ SALT Consulting" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services", url: "/tax-services/" }, { name: "NJ SALT Consulting" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        NJ State &amp; Local Tax (SALT) Consulting for New Jersey Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Navigate New Jersey's complex state tax landscape with confidence. From the BAIT election to CBT planning and sales tax nexus analysis, ProAxis delivers the NJ-specific expertise that generic accountants miss.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- NJ SALT Overview -->
+    <section class="mb-12" aria-labelledby="salt-overview">
+      <h2 id="salt-overview" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">The New Jersey State &amp; Local Tax Landscape</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey imposes a demanding state and local tax burden on both businesses and individuals. Understanding the full scope of NJ's tax obligations — and the strategies available to reduce them — requires specialized expertise that goes beyond federal tax knowledge. ProAxis focuses heavily on NJ state and local tax issues because our clients are concentrated in Bergen County and across New Jersey, and the state tax impact on their overall tax bill is enormous.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey businesses face multiple distinct tax obligations at the state level. Individual owners of pass-through entities pay New Jersey Gross Income Tax (GIT) on their share of business income, at rates up to 10.75%. Corporations pay the Corporation Business Tax (CBT), which has its own rate structure, minimum tax obligations, and important differences from the federal tax base. Both individual taxpayers and businesses may also face New Jersey sales and use tax obligations, particularly if they sell goods or certain services to NJ customers.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Adding to this complexity, the federal Tax Cuts and Jobs Act of 2017 introduced the $10,000 SALT deduction cap, which dramatically increased the effective tax burden on high-income NJ residents by eliminating their ability to fully deduct state taxes on their federal returns. The combination of high NJ state taxes and a limited federal deduction makes NJ SALT planning more valuable than almost anywhere else in the country.
+      </p>
+    </section>
+
+    <!-- Federal SALT Cap & BAIT -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="salt-cap-bait">
+      <h2 id="salt-cap-bait" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">The Federal SALT Cap &amp; the NJ BAIT Election</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Prior to 2018, New Jersey residents who itemized deductions on their federal return could deduct the full amount of their NJ income and property taxes. For a business owner paying $40,000 or $50,000 in NJ state taxes annually, this deduction provided a substantial federal tax reduction. The TCJA capped this deduction at $10,000 per year for all state and local taxes combined — federal taxes, state income taxes, and property taxes — in a single bucket.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For NJ homeowners and high earners, this change was devastating. New Jersey's average property tax bill alone often exceeds $10,000, meaning that many NJ residents exhausted their entire SALT deduction with property taxes alone, receiving zero federal benefit from the NJ income taxes they pay at rates up to 10.75%.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey responded by enacting the Business Alternative Income Tax (BAIT), effective January 1, 2020. The BAIT allows eligible pass-through entities — S-corporations, partnerships, and multi-member LLCs taxed as partnerships — to elect to pay their NJ income tax at the entity level rather than passing the income through to individual owners. Because the payment is made at the entity level, it is characterized as a business deduction, not a personal SALT payment, and is therefore not subject to the $10,000 individual SALT cap.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The mechanics work as follows: the entity calculates NJ BAIT on its taxable income at rates ranging from 5.675% to 10.9% (as of the most recent rate schedule). The entity deducts this BAIT payment as a business expense for federal purposes — fully, without limitation. Individual owners receive a NJ GIT credit for their share of the BAIT paid, eliminating or substantially reducing their personal NJ income tax obligation on that income. The net result is that the NJ state tax effectively becomes a federal deduction, saving the owner their marginal federal income tax rate on the amount of NJ tax paid above $10,000.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        For a New Jersey S-corporation owner in the 37% federal bracket paying $30,000 in NJ income taxes on business income, the BAIT election can generate approximately $7,400 in additional federal tax savings compared to paying the same tax at the individual level (37% × $20,000 in previously non-deductible SALT). Over time, this compounds into significant wealth preservation.
+      </p>
+    </section>
+
+    <!-- CBT Planning -->
+    <section class="mb-12" aria-labelledby="cbt-planning">
+      <h2 id="cbt-planning" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Corporation Business Tax (CBT) Planning</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey's Corporation Business Tax applies to C-corporations, S-corporations, and certain LLCs that have chosen or are required to use the CBT regime. Unlike the federal corporate tax, the NJ CBT has important conformity issues with federal law that require careful attention.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        One of the most significant NJ CBT issues is the add-back of federal bonus depreciation. While federal law currently allows businesses to immediately expense a large portion of qualifying property purchases under Section 168(k) bonus depreciation, New Jersey requires that these deductions be added back to NJ taxable income, with a separate NJ depreciation schedule applied over time. Businesses that take large federal bonus depreciation deductions may have substantially higher NJ taxable income than federal taxable income in the year of the purchase, creating an unexpected NJ tax liability.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The CBT also has a minimum tax structure based on New Jersey gross receipts, which means that even businesses with no net income may owe NJ minimum tax. Additionally, New Jersey imposes a 10% surcharge on CBT liability for certain larger businesses, and has its own set of apportionment rules for determining how much income is allocated to New Jersey for entities with multi-state operations.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis CBT planning focuses on understanding the correct NJ taxable income base, applying appropriate deductions and credits (including the research and development credit, the manufacturing equipment credit, and others), correctly calculating apportionment for multi-state businesses, and minimizing the surprise of year-end CBT liabilities through quarterly estimates and mid-year projections.
+      </p>
+    </section>
+
+    <!-- Sales Tax Nexus -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="sales-tax-nexus">
+      <h2 id="sales-tax-nexus" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Sales Tax Nexus Analysis</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey imposes sales tax at a rate of 6.625% on the sale of tangible personal property and many enumerated services. For NJ-based businesses, determining the scope of NJ sales tax obligations is relatively straightforward. The more complex issue — and one that has grown dramatically in importance since the Supreme Court's 2018 South Dakota v. Wayfair decision — is whether a NJ business has nexus (tax collection obligations) in other states.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Before Wayfair, states could only require businesses to collect sales tax if they had a physical presence in the state. After Wayfair, states can impose sales tax collection obligations based purely on economic activity: selling more than $100,000 in goods to a state's customers, or making more than 200 transactions in the state in a year, typically triggers economic nexus and a sales tax registration and collection obligation.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For a NJ-based business that sells products or services online or across state lines, this means potential sales tax obligations in dozens of states — each with its own registration requirements, filing frequencies, and product taxability rules. Failing to comply with these obligations creates significant exposure: back taxes, interest, and penalties that can be assessed for multiple years of non-compliance.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Our SALT consulting service includes a nexus footprint analysis — a review of your sales by state, the nature of your products or services, your physical presence factors (employees, inventory, offices), and your transaction volumes to determine where you have or may have nexus obligations. We then help you develop a compliance roadmap, including voluntary disclosure agreements where appropriate to limit historical exposure.
+      </p>
+    </section>
+
+    <!-- Multi-State Apportionment -->
+    <section class="mb-12" aria-labelledby="apportionment">
+      <h2 id="apportionment" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Multi-State Income Tax Apportionment</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        When a business operates in multiple states, it cannot simply pay income tax to each state on its total income — that would result in the same income being taxed multiple times. Instead, states use apportionment formulas to divide a business's total taxable income among the states where it operates, with each state taxing only its allocated share.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey uses a single-sales-factor apportionment formula for most businesses: a business's NJ taxable income is calculated by multiplying total net income by the ratio of NJ sales to total sales everywhere. This means that a business with most of its sales outside NJ allocates a smaller share of its total income to NJ, even if significant management and operations occur in NJ. Understanding and correctly applying the NJ apportionment rules — including the rules for sourcing service revenues to NJ vs. other states — can significantly affect your NJ CBT liability.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Our SALT consulting service covers apportionment analysis and planning for NJ businesses with multi-state operations. We work closely with our <a href="/tax-services/multi-state-tax/" style="color: #2E75B6;" class="hover:underline">multi-state tax compliance</a> service to ensure that apportionment positions are consistent and defensible across all state returns filed.
+      </p>
+    </section>
+
+    <!-- Who Needs SALT Consulting -->
+    <section class="mb-12" aria-labelledby="who-needs">
+      <h2 id="who-needs" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Who Needs NJ SALT Consulting?</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #C5A55A;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          <span><strong>NJ S-corporation and partnership owners</strong> who have not yet evaluated whether the BAIT election makes sense for their situation — this is likely the highest-return SALT planning opportunity available.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #C5A55A;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          <span><strong>NJ corporations</strong> subject to the CBT, particularly those with significant federal bonus depreciation, multi-state operations, or questions about minimum tax obligations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #C5A55A;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          <span><strong>E-commerce businesses</strong> and other businesses selling products or services across state lines who are unsure whether they have sales tax nexus in states where they have substantial customers.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #C5A55A;" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+          <span><strong>NJ businesses hiring remote employees</strong> in other states, who may inadvertently create physical nexus and payroll tax obligations in those states.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is the NJ BAIT election?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The NJ Business Alternative Income Tax (BAIT) is an elective tax that eligible New Jersey pass-through entities — S-corporations, partnerships, and multi-member LLCs — can choose to pay at the entity level. When elected, the entity pays NJ income tax on its taxable income and deducts those taxes as a business expense for federal purposes. This effectively converts what would otherwise be a non-deductible personal state income tax payment (capped at $10,000 for federal purposes) into a fully deductible business expense. Individual owners receive a NJ credit for their share of the BAIT paid.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">How does the BAIT election work around the SALT cap?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The federal $10,000 SALT limitation applies only to taxes paid by individuals — not businesses. When a pass-through entity pays NJ income tax at the entity level through the BAIT election, that payment is a business expense deductible without the $10,000 cap. For a business owner paying $30,000 or more in NJ state taxes, this can translate into thousands of dollars in additional federal tax savings annually. The exact savings depend on the owner's federal marginal rate and the amount of NJ taxes paid above the $10,000 cap threshold.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is nexus and how does it affect my NJ business?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Nexus is the legal threshold of connection between a business and a state that triggers the obligation to collect and remit that state's taxes. Physical nexus arises from employees, offices, inventory, or other physical presence. Economic nexus — established after the Supreme Court's 2018 Wayfair decision — arises from exceeding a state's sales or transaction thresholds, even without physical presence. For NJ businesses, nexus in another state can trigger sales tax collection obligations, income tax filing requirements, or both. Understanding your nexus footprint before expanding operations or hiring remotely is critical to managing compliance risk.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Do I need SALT consulting if my business only operates in New Jersey?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Yes. Even if you only operate in NJ, the BAIT election is available to all eligible NJ pass-through entities regardless of multi-state operations — and for high-income owners subject to the SALT cap, the BAIT may generate significant federal savings. Additionally, NJ's Corporation Business Tax has its own complexity: add-backs for federal bonus depreciation, minimum tax calculations, and available credits that many businesses miss. A SALT review ensures you are not overpaying NJ taxes and are taking full advantage of available elections and credits.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Year-round strategies to minimize your combined federal and NJ tax bill.</div>
+        </a>
+        <a href="/tax-services/multi-state-tax/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Multi-State Tax Compliance</div>
+          <div class="text-sm text-gray-600">Nexus analysis, apportionment, and multi-state filing for NJ businesses.</div>
+        </a>
+        <a href="/tax-services/tax-preparation/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Preparation</div>
+          <div class="text-sm text-gray-600">Accurate NJ and federal return preparation with BAIT election coordination.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="tax" currentPath="/tax-services/nj-salt-consulting/" />
+  <TestimonialsSection />
+  <CTASection heading="Maximize Your NJ BAIT Savings" subheading="Find out if the BAIT election is right for your NJ business. Schedule a free consultation with our Bergen County SALT specialists." />
+</BaseLayout>

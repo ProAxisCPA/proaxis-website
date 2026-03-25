@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Bookkeeping Services NJ | QuickBooks CPA-Supervised | ProAxis";
+const description = "CPA-supervised bookkeeping and outsourced accounting for NJ businesses. QuickBooks Online ProAdvisor certified, monthly reconciliation, financial reporting, and catch-up bookkeeping in Bergen County and statewide.";
+const canonical = "/business-services/bookkeeping/";
+const breadcrumbs = [
+  { name: "Business Services", url: "/business-services/" },
+  { name: "Bookkeeping" }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "CPA-Supervised Bookkeeping Services",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "url": "https://www.proaxiscpa.com",
+    "telephone": "(201) 800-2330",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hasbrouck Heights",
+      "addressRegion": "NJ",
+      "postalCode": "07604"
+    }
+  },
+  "areaServed": "New Jersey",
+  "description": "CPA-supervised bookkeeping, QuickBooks Online optimization, monthly reconciliation, accounts payable/receivable management, and financial reporting for NJ businesses."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is CPA-supervised bookkeeping different from hiring a bookkeeper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CPA brings licensed expertise and professional accountability to the review process. With CPA-supervised bookkeeping, every transaction classification, reconciliation, and financial report is reviewed by a licensed CPA — not just processed by a data entry bookkeeper. This means your books are tax-ready, audit-defensible, and actionable for decision-making."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does bookkeeping cost for a small business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly bookkeeping fees depend on transaction volume, the number of bank and credit card accounts, and the complexity of your operations. ProAxis monthly bookkeeping engagements typically start around $400–$600 per month for smaller businesses and scale based on volume. We provide fixed monthly pricing so there are no surprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to switch to QuickBooks Online to work with ProAxis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "QuickBooks Online is our preferred platform because of its real-time collaboration features and bank feed automation, but we can assess your current setup during a free consultation. If you are already on another platform, we will discuss the tradeoffs before recommending a migration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the monthly bookkeeping process work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each month we pull your bank and credit card feeds, categorize all transactions, reconcile every account, and produce a month-end financial package including profit and loss and balance sheet. We flag any unusual items for your review and hold a brief monthly check-in call to walk through the results and identify any planning considerations."
+      }
+    }
+  ]
+};
+
+const schema = [serviceSchema, faqSchema];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        CPA-Supervised Bookkeeping &amp; Outsourced Accounting for NJ Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Clean, accurate books managed by a CPA-led team — so your financial data is always ready for tax season, lender requests, or your next business decision.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">
+          Schedule Free Consultation
+        </a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">
+          Call (201) 800-2330
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Overview -->
+    <section class="mb-12" aria-labelledby="overview">
+      <h2 id="overview" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        What CPA-Supervised Bookkeeping Covers
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Bookkeeping is the foundation of every business financial decision — and when it is done poorly, the consequences ripple through everything from tax filings to cash flow management. At ProAxis, bookkeeping is not an afterthought or a low-cost data entry task. It is a CPA-managed process that produces financial data your business can trust.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our bookkeeping engagements are built around QuickBooks Online, the most widely used cloud accounting platform for small and mid-sized businesses. As QBO ProAdvisor Certified professionals, we implement and optimize your QBO environment, establish a clean chart of accounts, and build a monthly workflow that keeps your books current, reconciled, and tax-ready throughout the year — not just in April.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Here is what a typical ProAxis bookkeeping engagement includes:
+      </p>
+      <ul class="space-y-3 text-gray-700 mb-6">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Monthly bank and credit card reconciliation</strong> — every account reconciled to the statement, every month, with no exceptions</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Bank feed categorization</strong> — transactions automatically imported and categorized against your chart of accounts with CPA review for accuracy</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Accounts payable management</strong> — tracking what you owe, when it is due, and ensuring it is recorded correctly</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Accounts receivable tracking</strong> — monitoring outstanding invoices and flagging aging balances that need follow-up</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Month-end financial reporting</strong> — profit and loss statement, balance sheet, and cash flow summary delivered each month</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Year-end close</strong> — complete close process to prepare your books for tax filing, including depreciation entries and adjusting journal entries</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Catch-up bookkeeping</strong> — for businesses coming in with months or years of backlog that need to be cleaned up before getting current</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Monthly check-in calls</strong> — a brief review of your financials each month so you understand your numbers and have a forum to ask questions</span>
+        </li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed">
+        Every one of these deliverables is reviewed by a licensed CPA before it reaches you. That is not the case with most bookkeeping firms, where the person doing the work and the person reviewing it are the same uncertified bookkeeper.
+      </p>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="who-for">
+      <h2 id="who-for" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        Who This Service Is For
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our bookkeeping clients are typically NJ businesses in the $500,000 to $5 million annual revenue range. They fall into a few categories:
+      </p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">Businesses that have outgrown DIY</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">You started by doing your own bookkeeping in QuickBooks or a spreadsheet. The business has grown, transactions are more complex, and you no longer have the time — or the accounting knowledge — to keep up. Your books may be months behind and you are not confident in the numbers.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">Businesses with messy or incorrect books</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A previous bookkeeper made categorization errors, left accounts unreconciled, or created a chart of accounts that does not reflect your actual business. You are not sure what your financials mean and your CPA has flagged problems at tax time. You need a clean start.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">Businesses preparing for a loan or line of credit</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Your bank is asking for financial statements and a lender review of your books. Lenders want to see clean, reconciled financials prepared or reviewed by a CPA. Poorly maintained books are one of the most common reasons small business loan applications are delayed or denied.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">Businesses that want better financial visibility</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">You want monthly financial reports you can actually read and act on — not just a year-end P&amp;L that arrives in February. You want to know your margins, your cash position, and where your money is going on a rolling basis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Approach -->
+    <section class="mb-12" aria-labelledby="approach">
+      <h2 id="approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        The ProAxis Bookkeeping Approach
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our approach starts with onboarding. We spend the first engagement reviewing your existing books, cleaning up any backlog, rationalizing your chart of accounts, and establishing the correct workflows in QuickBooks Online. For most new clients, this means a one-time catch-up project before we transition to monthly maintenance.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Once current, our monthly workflow runs like clockwork. We pull your bank and credit card feeds, categorize and review every transaction, reconcile every account, and close the month. You receive a standard financial package — P&amp;L, balance sheet, and a brief narrative — by the 15th of the following month. We then hold a short check-in call, typically 20–30 minutes, to walk through the numbers and surface any issues or opportunities.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Because we are a CPA firm and not just a bookkeeping service, we read your books through a tax lens year-round. We flag deductible items that might be misclassified, watch for estimated tax payment triggers, and coordinate directly with our tax team when year-end planning decisions arise. Clean books directly translate into better tax outcomes — fewer errors on your return, fewer missed deductions, and a faster year-end process.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        All of our bookkeeping is cloud-based. You have 24/7 access to your QuickBooks Online file, and our team works collaboratively in the same platform. There are no PDFs emailed back and forth, no version control issues, and no delays. If you need a report or have a question on a Tuesday afternoon, the data is there.
+      </p>
+    </section>
+
+    <!-- Mid-article CTA banner -->
+    <div class="my-10 rounded-xl p-6 text-white" style="background-color: #1B2A4A;">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex-1">
+          <h3 class="font-bold font-heading text-lg mb-1">Ready to get started?</h3>
+          <p class="text-gray-300 text-sm">Schedule a free 30-minute consultation with our team.</p>
+        </div>
+        <a href="/contact/" class="flex-shrink-0 px-6 py-3 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Book Free Call</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq">
+      <h2 id="faq" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">How is CPA-supervised bookkeeping different from hiring a bookkeeper?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">A standalone bookkeeper — even a good one — does not carry a CPA license and does not bring tax planning awareness to the work. With CPA-supervised bookkeeping, every transaction, classification, and reconciliation is reviewed by a licensed CPA who is also thinking about your tax position. This creates financial data that is not only accurate but tax-ready, audit-defensible, and directly useful for business decisions. Many of our clients discovered their previous bookkeeper had been misclassifying expenses for years — a problem that creates both overpaid taxes and potential IRS exposure.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">How much does bookkeeping cost for a small NJ business?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Our monthly bookkeeping fees are fixed and transparent — no hourly billing surprises. Pricing is based on your monthly transaction volume, number of accounts, and service complexity. Typical monthly engagements for small businesses range from $400 to $800 per month. Businesses with higher transaction volumes or more complex operations may be higher. We provide a firm quote after a free initial consultation where we assess your current books and workflow.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">Do I need to switch to QuickBooks Online to work with ProAxis?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">QuickBooks Online is our preferred and recommended platform because it enables real-time collaboration, automated bank feeds, and deep integration with our tax and reporting tools. If you are currently on QuickBooks Desktop, Wave, FreshBooks, or another platform, we will discuss the tradeoffs with you honestly during the onboarding process. For most businesses generating over $500K in revenue, the switch to QBO delivers a measurable workflow improvement. We handle the migration.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">How does the monthly bookkeeping process work once we get started?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">After onboarding, the monthly process runs automatically. We connect to your bank feeds, process transactions daily, reconcile all accounts at month-end, and deliver a financial package including P&amp;L and balance sheet by the 15th of the following month. We schedule a 20–30 minute check-in call to walk through the numbers. If anything unusual comes up mid-month — a large purchase, a new vendor, a payroll question — you can reach us by email or our client portal. The process is designed to require minimal time from you.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-8" aria-labelledby="related">
+      <h2 id="related" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/business-services/fractional-cfo/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Fractional CFO Services</div>
+          <div class="text-sm text-gray-600">Strategic financial leadership — cash flow forecasting, KPI dashboards, and financing preparation for growing businesses.</div>
+        </a>
+        <a href="/tax-services/tax-preparation/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Business Tax Preparation</div>
+          <div class="text-sm text-gray-600">Accurate business tax returns built directly from clean books — faster filing and fewer surprises at year-end.</div>
+        </a>
+        <a href="/business-services/financial-statements/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Financial Statements</div>
+          <div class="text-sm text-gray-600">CPA-prepared compiled financial statements for lenders, investors, and internal reporting.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="business" currentPath="/business-services/bookkeeping/" />
+  <TestimonialsSection />
+  <CTASection heading="Ready to hand off your books to a CPA-led team?" />
+</BaseLayout>

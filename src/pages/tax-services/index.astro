@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "Tax Services for NJ Businesses | ProAxis CPA | Bergen County";
+const description = "Comprehensive tax services for New Jersey businesses and individuals. Tax preparation, planning, IRS resolution, SALT consulting, estate tax, and multi-state compliance from Bergen County CPAs.";
+const canonical = "/tax-services/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Tax Services",
+    "description": "Full-service tax preparation, planning, and compliance for New Jersey businesses and individuals including IRS resolution, NJ SALT consulting, estate and gift tax planning, and multi-state tax compliance.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Tax Services"
+  }
+];
+
+const breadcrumbs = [{ name: "Tax Services", url: "/tax-services/" }];
+
+const services = [
+  {
+    title: "Tax Preparation",
+    href: "/tax-services/tax-preparation/",
+    description: "Accurate, deadline-driven tax preparation for individuals, S-corporations, LLCs, partnerships, and multi-state filers. We handle the complexity so you can focus on your business.",
+    icon: "📋",
+  },
+  {
+    title: "Tax Planning & Strategy",
+    href: "/tax-services/tax-planning/",
+    description: "Proactive, year-round tax strategy designed to legally minimize what you owe. From entity structuring to retirement contributions, we plan ahead so you're never caught off guard.",
+    icon: "📊",
+  },
+  {
+    title: "NJ SALT Consulting",
+    href: "/tax-services/nj-salt-consulting/",
+    description: "Expert guidance on New Jersey's state and local tax landscape — including the NJ BAIT election, Corporation Business Tax planning, sales tax nexus, and multi-state apportionment.",
+    icon: "🏛️",
+  },
+  {
+    title: "IRS Tax Resolution",
+    href: "/tax-services/irs-tax-resolution/",
+    description: "Facing an IRS notice, audit, lien, or levy? We represent NJ taxpayers before the IRS and state tax authorities, negotiating solutions that protect your finances and restore peace of mind.",
+    icon: "⚖️",
+  },
+  {
+    title: "Estate & Gift Tax Planning",
+    href: "/tax-services/estate-gift-tax/",
+    description: "Strategic estate and gift tax planning to preserve your wealth across generations. We address federal exemptions, sunset provisions, gifting strategies, and trust structures.",
+    icon: "🏠",
+  },
+  {
+    title: "Multi-State Tax Compliance",
+    href: "/tax-services/multi-state-tax/",
+    description: "Multi-state tax obligations can sneak up on growing businesses. We manage nexus analysis, income apportionment, and sales tax registration so you stay compliant in every state.",
+    icon: "🗺️",
+  },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Expert Tax Services for New Jersey Businesses &amp; Individuals
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        From annual tax preparation to proactive year-round planning, IRS representation, and complex multi-state compliance — ProAxis Tax &amp; Accounting Services delivers the expertise New Jersey businesses and families need.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Intro Content -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="prose prose-lg max-w-none mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Comprehensive Tax Services Tailored for New Jersey</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey presents a uniquely demanding tax environment. Between the federal tax code, the New Jersey Gross Income Tax, the Corporation Business Tax, the Business Alternative Income Tax (BAIT) election, and the ongoing complexity of operating across multiple states, business owners and individuals in Bergen County and throughout NJ face tax challenges that go far beyond what off-the-shelf software can handle.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis Tax &amp; Accounting Services was founded specifically to serve the NJ business community with CPA-level expertise, delivered in a modern, fully virtual format. Whether you are a solo professional filing your first Schedule C, an S-corporation owner looking to optimize your distributions, or a growing e-commerce brand navigating post-Wayfair sales tax compliance, we have a service designed for your situation.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We believe that taxes should be planned, not just paid. Too many business owners in New Jersey find themselves writing large checks to the IRS and the state every April simply because no one looked at their situation strategically during the year. Our approach is fundamentally different: we work with you throughout the year, not just at filing season, to ensure that every legal deduction is captured, every available election is evaluated, and your overall tax burden is as low as the law allows.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Based in Hasbrouck Heights, NJ, we serve clients across Bergen County, Essex County, Passaic County, Hudson County, and throughout New Jersey — all fully virtually, with no need to come into an office. Our clients include S-corporation owners, LLC members, high-income W-2 earners, real estate investors, e-commerce sellers, healthcare professionals, and multi-generational families with estate planning needs.
+      </p>
+    </div>
+
+    <!-- Service Cards Grid -->
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Our Tax Service Offerings</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+      {services.map((service) => (
+        <a
+          href={service.href}
+          class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group"
+          style="background-color: #F7F8FA;"
+        >
+          <div class="text-3xl mb-3" aria-hidden="true">{service.icon}</div>
+          <h3 class="text-lg font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">
+            {service.title}
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+          <div class="mt-4 text-sm font-semibold" style="color: #2E75B6;">
+            Learn more &rarr;
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Why ProAxis -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Why NJ Businesses Choose ProAxis</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>CPA-level expertise:</strong> Our team holds active CPA credentials and stays current on federal and New Jersey tax law changes, including NJ-specific elections like the BAIT and evolving nexus rules.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Year-round planning:</strong> We do not disappear after April 15th. Ongoing planning calls, quarterly estimates, and proactive alerts keep you informed and prepared all year.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Fully virtual service:</strong> Securely share documents, sign returns electronically, and meet by video — all without ever leaving your home or office.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>NJ-first perspective:</strong> New Jersey's tax code has numerous quirks — conformity issues with federal law, the BAIT pass-through workaround, the NJ Gross Income Tax's unique structure. We know these rules deeply.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Transparent, flat-fee pricing:</strong> No surprise bills. You know what you are paying before we start, so you can budget with confidence.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- NJ Tax Context -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Understanding the New Jersey Tax Landscape</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey consistently ranks among the highest-tax states in the nation. With a top marginal Gross Income Tax rate of 10.75% — one of the highest state income tax rates in the country — and property taxes that average over $9,000 per year statewide, the stakes for proper tax planning are enormous for NJ residents and business owners.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The federal $10,000 cap on state and local tax (SALT) deductions, introduced by the Tax Cuts and Jobs Act of 2017, has had an outsized impact on New Jersey taxpayers, many of whom previously deducted far more than $10,000 in state income and property taxes. New Jersey responded by enacting the Business Alternative Income Tax (BAIT) — a mechanism that allows pass-through entity owners to effectively exceed the SALT cap — and understanding how to leverage this election is one of the most valuable things a NJ business owner can do.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Beyond income taxes, New Jersey businesses must also navigate sales tax obligations, payroll taxes, unemployment insurance taxes, and — if they have employees in or customers from other states — an increasingly complex multi-state compliance landscape. The post-Wayfair economic nexus rules have created new sales tax obligations for many NJ-based e-commerce sellers and service businesses that previously had no out-of-state tax presence.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis specializes in helping NJ businesses and individuals understand this landscape clearly, make smart decisions, and stay compliant — without overpaying. Browse the services below to learn more about how we can help with your specific situation, or <a href="/contact/" style="color: #2E75B6;" class="font-semibold hover:underline">schedule a free consultation</a> to speak with our team directly.
+      </p>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="mb-4" aria-label="All Tax Services">
+      <h2 class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">All Tax Services</h2>
+      <ul class="space-y-2">
+        {services.map((service) => (
+          <li>
+            <a href={service.href} class="font-semibold hover:underline" style="color: #2E75B6;">{service.title}</a>
+            <span class="text-gray-500 text-sm"> — {service.description}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </section>
+
+  <TestimonialsSection />
+  <CTASection heading="Ready to Get Your NJ Taxes Under Control?" subheading="Schedule a free consultation with our Bergen County CPA team. Fully virtual, expert guidance tailored to New Jersey businesses and families." />
+</BaseLayout>

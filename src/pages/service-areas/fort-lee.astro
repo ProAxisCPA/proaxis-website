@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Fort Lee";
+const title = "CPA in Fort Lee NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Fort Lee NJ — NYC commuter tax planning, multistate returns, Korean business accounting, and real estate tax strategy. 100% virtual.";
+const canonical = "/service-areas/fort-lee/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Fort Lee, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Fort Lee's Business Landscape</h2>
+    <p class="text-gray-700 mb-4">Fort Lee sits at the New Jersey approach to the George Washington Bridge — one of the world's busiest vehicular crossings — and that geographic reality defines everything about the borough's economic and residential character. Fort Lee is simultaneously one of New Jersey's most densely populated communities and one of its most economically diverse, housing affluent Manhattan commuters in luxury high-rise towers, a thriving Korean-American business community along Main Street and Lemoine Avenue, immigrant entrepreneurs from across Asia and Latin America, and real estate investors drawn by the borough's distinctive vertical residential market.</p>
+    <p class="text-gray-700 mb-4">The high-rise residential towers that define Fort Lee's skyline are more than a visual landmark — they represent a distinctive real estate investment category. Many units in these towers are investor-owned and rented to the steady stream of professionals who want maximum proximity to Manhattan without paying Manhattan prices. Fort Lee real estate investors managing rental units in these towers face a specific set of accounting considerations: depreciation schedules on high-value condominium units, HOA fee deductibility, repairs versus improvements classification, and the intersection of NJ landlord-tenant law with federal passive activity loss rules. Investors who own multiple units frequently benefit from a cost segregation analysis to accelerate depreciation deductions.</p>
+    <p class="text-gray-700 mb-4">Fort Lee's Korean-American business community is one of the most commercially active ethnic business districts in all of Bergen County. The concentration of Korean restaurants, beauty supply wholesalers, import/export companies, Korean-language media businesses, and specialty food retailers along the Main Street and Lemoine Avenue corridors represents significant economic activity — much of it cash-intensive and complex from a bookkeeping perspective. Many Fort Lee business owners in this community run operations that span both the U.S. and South Korea, creating international tax considerations around foreign bank account reporting (FBAR), Foreign Tax Credits, and in some cases, the treatment of foreign business income under the GILTI rules for controlled foreign corporations.</p>
+    <p class="text-gray-700 mb-4">Fort Lee has a proud — if largely forgotten — place in American cultural history as the site of the early film industry before Hollywood emerged as the dominant production center. The borough's media and entertainment legacy continues today in a modest form, with some media production companies and entertainment-adjacent businesses operating in the borough. These businesses face unique accounting considerations around project-based revenue recognition, talent payments (1099 reporting for performers and crew), and production expense deductibility.</p>
+    <p class="text-gray-700 mb-8">The residential demographic of Fort Lee skews toward high-income Manhattan workers who have chosen Fort Lee for its GWB access, its cosmopolitan dining and retail scene, and its significantly lower cost of living versus comparable Manhattan or Brooklyn neighborhoods. Many of these residents have complex tax situations: six-figure incomes with New York nonresident filing obligations, equity compensation from NYC-based employers, student loan interest deductions, and the perennial question of whether to buy or continue renting in Fort Lee's competitive real estate market.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">The NYC Commuter Tax Issue — A Critical Fort Lee Consideration</h2>
+    <p class="text-gray-700 mb-4">The single most important tax planning issue for the majority of Fort Lee's working residents is the New York State nonresident income tax. If you live in Fort Lee and work in New York City — even partially — you are subject to New York State income tax on the wages you earn in New York. New York's top marginal rate is among the highest in the nation, and unlike some states, New York aggressively pursues nonresident workers who attempt to underreport their New York-sourced income.</p>
+    <p class="text-gray-700 mb-4">New Jersey provides a credit against NJ income tax for taxes paid to other states — but the credit calculation is limited to the lesser of the actual NY tax paid or the NJ tax that would have been due on the same income. Given that NY tax rates often exceed NJ rates for high earners, this means many Fort Lee commuters pay combined state income taxes that significantly exceed what they'd pay in either state alone. There is no magic workaround for this — but there are legitimate planning opportunities around work-from-home day allocation, year-end income timing, and New York's convenience-of-the-employer rule that can optimize the outcome.</p>
+    <p class="text-gray-700 mb-4">The remote work era has added complexity to this picture. If you work from your Fort Lee home on some days and commute to New York City on others, the allocation of your wages between NJ-sourced and NY-sourced income has a direct impact on your combined tax liability. New York's "convenience of the employer" rule is particularly important: if your employer is based in New York and your work-from-home arrangement is for your own convenience rather than a required business necessity, New York may still tax all of your wages as NY-sourced. Getting this analysis right requires a CPA who understands multistate tax allocation — not just a tax software program.</p>
+
+    <ul class="list-none space-y-3 mb-8">
+      {[
+        { heading: "Multistate tax filing", text: "NJ resident return plus NY nonresident return — properly coordinated to claim the full benefit of the NJ credit for taxes paid to NY." },
+        { heading: "International tax compliance", text: "Fort Lee business owners with Korean or other foreign business interests may have FBAR filing obligations, Foreign Tax Credit opportunities, and potentially GILTI exposure that requires specialized international tax expertise." },
+        { heading: "Real estate investor accounting", text: "High-rise condo investment units, rental income tracking, depreciation schedules, passive activity loss rules, and eventual sale planning." },
+        { heading: "Business owner tax planning", text: "S-Corp elections, retirement plan contributions, health insurance deductions, and NJ BAIT elections for Fort Lee pass-through business owners." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Fort Lee Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-5">From NYC commuter tax planning to Korean business accounting to real estate investor services, ProAxis brings the depth of expertise Fort Lee's distinctive community requires.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Fort Lee</h2>
+    <p class="text-gray-700 mb-4">Fort Lee residents who work in Manhattan spend enough time commuting. The last thing you want is to add a trip to a CPA's physical office to your already demanding schedule. ProAxis's entirely virtual model means your entire accounting relationship — document sharing, consultations, tax review, ongoing advisory — happens through secure digital channels on your schedule.</p>
+    <p class="text-gray-700 mb-6">Our expertise in New York and New Jersey multistate taxation, international tax compliance for foreign-connected businesses, and real estate investment accounting makes ProAxis uniquely qualified to serve Fort Lee's complex, cosmopolitan community.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Englewood", slug: "englewood" },
+        { name: "Teaneck", slug: "teaneck" },
+        { name: "Hackensack", slug: "hackensack" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or learn more about our <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">tax planning services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

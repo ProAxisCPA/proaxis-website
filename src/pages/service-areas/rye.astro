@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Rye";
+const state = "NY";
+const title = "CPA for Rye NY Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Rye NY CPA for Westchester Gold Coast executives & families. NY state income tax, SALT cap planning, NJ-NY residency strategy & multi-state returns. 100% virtual.";
+const canonical = "/service-areas/rye/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Rye, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Rye's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">Rye occupies a distinctive position in the Westchester County landscape. Situated along Long Island Sound at the eastern edge of the county, Rye is known as part of Westchester's "Gold Coast" — a cluster of communities with some of the highest property values, most prestigious school districts, and highest household incomes in New York State. The city's beautiful waterfront setting, historic downtown, and direct Metro-North New Haven Line service to Manhattan have made it a premier address for finance professionals, media executives, and technology leaders who want spacious homes and top-tier public schools within commuting distance of the city.</p>
+
+    <p class="mb-4">Rye's tax environment reflects its wealth. New York State's top marginal income tax rate stands at 10.9% for income exceeding $25 million, but meaningful rates apply across a broad range of upper-middle-class and wealthy income levels — rates of 6.85% to 9.65% affect many Rye households. Westchester County property taxes on Rye's high-value homes routinely run $25,000 to $50,000 or more annually, making the federal SALT cap of $10,000 a particularly painful constraint. For a dual-income professional household in Rye with $30,000 in property taxes alone, the effective loss of deductibility translates directly into significantly higher federal taxable income.</p>
+
+    <p class="mb-4">Rye's proximity to Greenwich, Connecticut — a short drive across the state line — adds an interesting dimension to the tax planning calculus. Some Rye residents with Connecticut business ties have multi-state income reporting obligations. Others have considered whether Greenwich's Connecticut tax environment offers advantages, though many ultimately find that NJ domicile planning is a more practical option for families whose income is primarily NYC-sourced. ProAxis specializes in exactly this kind of three-state analysis: NY, NJ, and CT interactions for Westchester clients.</p>
+
+    <p class="mb-6">Real estate plays a central role in Rye residents' financial lives. Beyond their primary residences — which represent enormous embedded capital gains for long-tenured owners — many Rye families maintain investment properties in both New York and New Jersey. The tax treatment of rental income, depreciation recapture on sale, and 1031 exchange strategies for NJ investment properties all require careful coordination between NY and NJ tax rules, a specialty of the ProAxis team.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Rye Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services is based in Hasbrouck Heights, New Jersey, at the heart of the NJ-NY tax nexus. Rye clients who hold NJ investment properties, manage NJ-based business entities, or are actively evaluating a domicile change to New Jersey benefit from our deep, current knowledge of both state tax systems. We are not a generalist firm that happens to prepare multi-state returns — NJ-NY cross-border tax planning is the foundation of our practice, and we bring that specialization to every Rye client engagement.</p>
+
+    <p class="mb-4">Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">proactive tax planning and strategy engagements</a> are structured around the year-round nature of high-income tax management. We do not simply react to what happened in the prior year; we work with clients in real time to identify opportunities and avoid surprises. Investment portfolio tax strategy — including tax-loss harvesting, asset location between taxable and tax-advantaged accounts, and timing of capital gain realizations — is integrated into the annual planning calendar rather than treated as an afterthought.</p>
+
+    <p class="mb-6">Our 100% virtual service model suits Rye's busy professional community perfectly. Client meetings, document reviews, and planning discussions happen through secure video calls and digital platforms — no office commute required. This model allows us to serve clients throughout the entire NY Metro area from our NJ base, delivering the same quality and depth of service as an in-person engagement. Our <a href="/business-services/" class="text-blue-700 underline font-medium">comprehensive business and advisory services</a> are available to Rye entrepreneurs and business owners on the same virtual basis.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Rye Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NY State Income Tax at Top Rates:</strong> New York State imposes some of the highest income tax rates in the country, topping out at 10.9% for ultra-high earners. For most upper-income Rye households, effective state rates of 7%–9% are common. Proactive income timing, deduction acceleration, and entity structure choices can meaningfully reduce this burden over time.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NYC Nonresident Surcharge for Manhattan Commuters:</strong> Rye residents commuting to NYC jobs face New York City's nonresident earnings tax on their NYC-sourced income. Properly allocating income between NYC and non-NYC work days, understanding the impact of remote work on NYC income allocation, and incorporating the NYC nonresident tax into the overall planning model is essential for Rye professionals.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>SALT Cap Impact on Westchester Homeowners:</strong> Rye households routinely exceed the federal $10,000 SALT deduction cap with state and local taxes alone — before accounting for property taxes. Strategies such as prepaying deductible expenses, maximizing above-the-line deductions, and optimizing charitable giving can help offset the lost deductibility at the federal level.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ vs. NY Residency Tax Planning:</strong> Rye is close enough to the New Jersey border that many residents have seriously considered a domicile change. NJ's lack of a New York City income tax can represent significant savings for high-earning NYC nonresidents. ProAxis provides rigorous, audit-defensible domicile change planning that satisfies New York's strict statutory residency and domicile tests.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Multi-State Business Income Allocation:</strong> Rye business owners with operations or clients in multiple states — including NJ — must carefully apportion business income across jurisdictions. Each state applies its own apportionment formula and nexus rules, and errors in multi-state allocation can trigger audits, underpayment penalties, and unexpected tax bills in multiple states simultaneously.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Rye Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+      <a href="/service-areas/bronxville/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Bronxville, NY</a>
+      <a href="/service-areas/armonk/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Armonk, NY</a>
+      <a href="/service-areas/upper-east-side/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper East Side, NYC</a>
+    </div>
+
+    <p class="mb-4">Rye's Gold Coast residents face a genuinely complex tax environment, and navigating it well requires a CPA with both technical depth and a proactive planning mindset. ProAxis Tax &amp; Accounting Services delivers NJ-NY cross-border expertise, year-round planning engagement, and a fully virtual service model that respects the time constraints of today's busy Westchester professionals and families.</p>
+
+    <p>To begin, <a href="/contact/" class="text-blue-700 underline font-medium">schedule your free consultation</a>. Explore the full range of our <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a> for Rye and Westchester clients. Reach us at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

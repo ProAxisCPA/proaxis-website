@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+
+const title = "CPA Service Areas | NJ & NY Tax & Accounting | ProAxis";
+const description = "ProAxis Tax & Accounting Services provides expert virtual CPA services throughout Bergen County NJ, the greater New York metro area, and New York City neighborhoods. Tax prep, planning, bookkeeping, and advisory.";
+const canonical = "/service-areas/";
+const breadcrumbs = [{ name: "Service Areas" }];
+
+const njBergenAreas = [
+  { name: "Bergen County", slug: "bergen-county", description: "Comprehensive CPA services for all of Bergen County, NJ's most populous and diverse county." },
+  { name: "Hackensack", slug: "hackensack", description: "Serving Hackensack businesses and residents — Bergen County's county seat and commercial hub." },
+  { name: "Paramus", slug: "paramus", description: "Expert retail and corporate accounting for Paramus, the retail capital of NJ." },
+  { name: "Fort Lee", slug: "fort-lee", description: "NYC commuter tax planning and business accounting for Fort Lee's diverse community." },
+  { name: "Ridgewood", slug: "ridgewood", description: "High-net-worth tax planning and executive compensation services for Ridgewood residents." },
+  { name: "Teaneck", slug: "teaneck", description: "Diverse small business accounting and nonprofit services throughout Teaneck." },
+  { name: "Hasbrouck Heights", slug: "hasbrouck-heights", description: "ProAxis's home borough — local CPA services for Hasbrouck Heights businesses and families." },
+  { name: "Englewood", slug: "englewood", description: "Arts, medical, and real estate accounting for Englewood's vibrant community." },
+  { name: "Fair Lawn", slug: "fair-lawn", description: "Manufacturing, commercial, and small business CPA services in Fair Lawn." },
+  { name: "Rutherford", slug: "rutherford", description: "Hospitality, retail, and commuter-focused tax services in Rutherford." },
+  { name: "Garfield", slug: "garfield", description: "First-generation business owner support and manufacturing accounting in Garfield." },
+];
+
+const njHighIncomeAreas = [
+  { name: "Alpine", slug: "alpine", description: "Estate planning, trust accounting, and wealth management CPA services for Alpine's ultra-high-net-worth residents." },
+  { name: "Saddle River", slug: "saddle-river", description: "High-net-worth personal tax planning and investment portfolio services for exclusive Saddle River." },
+  { name: "Upper Saddle River", slug: "upper-saddle-river", description: "Executive equity compensation, deferred comp, and RSU planning for Upper Saddle River professionals." },
+  { name: "Franklin Lakes", slug: "franklin-lakes", description: "Medical practice accounting and professional corporation advisory for Franklin Lakes physicians and business owners." },
+  { name: "Wyckoff", slug: "wyckoff", description: "NYC commuter multi-state tax, small business accounting, and QBI planning for Wyckoff residents." },
+  { name: "Ho-Ho-Kus", slug: "ho-ho-kus", description: "High-income SALT planning, investment portfolio taxation, and estate advisory in Ho-Ho-Kus." },
+  { name: "Glen Rock", slug: "glen-rock", description: "NJ-NY commuter tax allocation and SALT strategy for Glen Rock's educated professional community." },
+  { name: "Tenafly", slug: "tenafly", description: "International tax considerations and multi-generational estate planning for Tenafly's diverse affluent community." },
+  { name: "Englewood Cliffs", slug: "englewood-cliffs", description: "Executive compensation and corporate tax advisory for Englewood Cliffs' major corporate headquarters cluster." },
+  { name: "Short Hills", slug: "short-hills", description: "Hedge fund, private equity, and Wall Street professional tax planning in Short Hills, Essex County." },
+];
+
+const nyAreas = [
+  { name: "Scarsdale, NY", slug: "scarsdale", description: "NJ-NY tax nexus and SALT planning for Scarsdale's high-income Westchester households." },
+  { name: "Bronxville, NY", slug: "bronxville", description: "Trust and estate planning, NYC commuter tax, and NJ domicile advisory for Bronxville." },
+  { name: "Rye, NY", slug: "rye", description: "NY state and NYC nonresident tax planning for Rye's Gold Coast professional community." },
+  { name: "Armonk, NY", slug: "armonk", description: "Executive equity compensation and international assignee tax for Armonk's tech and corporate community." },
+  { name: "New City, NY", slug: "new-city", description: "Rockland County small business accounting, payroll, and NY state tax services for New City." },
+  { name: "Upper Nyack, NY", slug: "upper-nyack", description: "NJ-NY cross-border business operations and creative professional tax planning in Upper Nyack." },
+  { name: "Tribeca, NY", slug: "tribeca", description: "NYC UBT strategy, NJ LLC structures, and startup equity planning for Tribeca entrepreneurs." },
+  { name: "Upper East Side, NY", slug: "upper-east-side", description: "Family office coordination, trust accounting, and philanthropic giving strategies for Upper East Side." },
+  { name: "SoHo, NY", slug: "soho", description: "Creative professional tax planning, S-Corp election, and NJ relocation advisory for SoHo entrepreneurs." },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Bergen County, NJ &bull; 100% Virtual CPA Services
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services Throughout Bergen County, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">ProAxis Tax &amp; Accounting Services delivers expert tax preparation, tax planning, bookkeeping, and business advisory to individuals and businesses across all of Bergen County — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map + Intro -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-4" style="color: #1B2A4A;">Your Local Bergen County CPA — Without the Commute</h2>
+          <p class="text-gray-700 mb-4">Bergen County is home to over 950,000 residents, hundreds of thousands of small businesses, and some of New Jersey's most complex tax situations. From NYC commuters navigating multistate tax obligations to retail businesses managing NJ sales tax, the county demands CPAs who understand the local landscape.</p>
+          <p class="text-gray-700 mb-4">ProAxis Tax &amp; Accounting Services is based in Hasbrouck Heights — right in the heart of Bergen County. Our 100% virtual model means you get personalized, expert service without ever sitting in traffic to reach a Hackensack or Paramus office.</p>
+          <p class="text-gray-700">We serve individuals, small businesses, and growing companies across 30 featured service areas throughout NJ and the greater New York metro area. Click your community to learn how ProAxis can help.</p>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.5!2d-74.0776!3d40.8598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sHasbrouck+Heights%2C+NJ+07604!5e0!3m2!1sen!2sus!4v1"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            title="ProAxis CPA office location in Hasbrouck Heights NJ"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Cards — Three sections: Bergen County NJ, NJ High-Income, NY Metro -->
+  <section style="background-color: #F7F8FA;" class="py-12 lg:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-2" style="color: #1B2A4A;">Bergen County, NJ Communities</h2>
+        <p class="text-gray-600">ProAxis is headquartered in Hasbrouck Heights and serves clients across all of Bergen County.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        {njBergenAreas.map((area) => (
+          <a href={`/service-areas/${area.slug}/`} class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(46,117,182,0.1);">
+                <svg class="w-5 h-5" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{area.name}</h3>
+                <p class="text-sm text-gray-600">{area.description}</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-1 text-sm font-semibold" style="color: #2E75B6;">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-2" style="color: #1B2A4A;">NJ High-Income Markets</h2>
+        <p class="text-gray-600">Specialized wealth management, executive compensation, and high-net-worth tax planning across NJ's most affluent communities.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        {njHighIncomeAreas.map((area) => (
+          <a href={`/service-areas/${area.slug}/`} class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(197,165,90,0.12);">
+                <svg class="w-5 h-5" style="color: #C5A55A;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{area.name}</h3>
+                <p class="text-sm text-gray-600">{area.description}</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-1 text-sm font-semibold" style="color: #2E75B6;">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-2" style="color: #1B2A4A;">New York Metro &amp; NYC Clients</h2>
+        <p class="text-gray-600">Virtual NJ-NY tax specialists serving high-income Westchester, Rockland County, and Manhattan clients with cross-border tax expertise.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {nyAreas.map((area) => (
+          <a href={`/service-areas/${area.slug}/`} class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-200 transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background-color: rgba(34,197,94,0.1);">
+                <svg class="w-5 h-5" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{area.name}</h3>
+                <p class="text-sm text-gray-600">{area.description}</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-1 text-sm font-semibold" style="color: #2E75B6;">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-6 text-center" style="color: #1B2A4A;">CPA Services Available Across Bergen County</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {[
+          { service: "Tax Preparation", link: "/tax-services/tax-preparation/", desc: "Federal and NJ state tax returns for individuals and businesses." },
+          { service: "Tax Planning", link: "/tax-services/tax-planning/", desc: "Year-round strategies to minimize your NJ and federal tax burden." },
+          { service: "Bookkeeping", link: "/business-services/bookkeeping/", desc: "Monthly bookkeeping and financial reporting via cloud platforms." },
+          { service: "Business Advisory", link: "/business-services/", desc: "Strategic guidance for growing Bergen County businesses." },
+          { service: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/", desc: "BAIT election and SALT deduction strategies for NJ pass-through entities." },
+          { service: "Fractional CFO", link: "/business-services/fractional-cfo/", desc: "Executive-level financial leadership without the full-time cost." },
+        ].map((item) => (
+          <a href={item.link} class="flex items-start gap-3 p-4 rounded-lg border border-gray-100 hover:border-blue-200 hover:shadow-sm transition-all group">
+            <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+            <div>
+              <div class="font-semibold group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{item.service}</div>
+              <div class="text-sm text-gray-600 mt-0.5">{item.desc}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection heading="Bergen County CPA Services — Schedule Your Free Consultation" />
+</BaseLayout>

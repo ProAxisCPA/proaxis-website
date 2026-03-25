@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "About ProAxis Tax & Accounting | Bergen County CPA Firm";
+const description = "Learn about ProAxis Tax & Accounting Services — a technology-first, fully virtual CPA firm based in Hasbrouck Heights, Bergen County NJ, serving businesses and individuals across New Jersey.";
+const canonical = "/about/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "ProAxis Tax & Accounting Services",
+  "description": "Technology-first, fully virtual CPA firm based in Hasbrouck Heights, Bergen County, New Jersey, serving businesses and individuals across NJ with tax, accounting, and advisory services.",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [{ name: "About" }];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        About ProAxis Tax &amp; Accounting Services
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        A technology-first, fully virtual CPA firm based in Bergen County, NJ — built to deliver expert accounting and tax services to businesses and individuals who expect more from their financial advisors.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Our Story -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-5" style="color: #1B2A4A;">Our Story</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis Tax &amp; Accounting Services was founded with a straightforward belief: that small and mid-sized businesses in New Jersey deserve the same caliber of proactive, strategic financial guidance that large corporations take for granted — delivered in a modern, accessible format that fits how business owners actually work today.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Based in Hasbrouck Heights in Bergen County, we set out to build a CPA firm that was fundamentally different from the traditional model. Where traditional accounting firms schedule a tax appointment once a year and disappear until the next April, ProAxis operates as a year-round partner. Where traditional firms require clients to come in with shoeboxes of receipts, ProAxis uses secure digital workflows, cloud-based accounting platforms, and encrypted document portals to make the process seamless. Where traditional firms staff engagements with unlicensed preparers and use the senior CPA only for review, ProAxis ensures that licensed CPA expertise is present throughout every client relationship.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The businesses we serve — real estate investors, medical practices, e-commerce sellers, restaurants, construction companies, non-profits, professional services firms, and high-income individuals — have complex, specific needs that generic tax software and generalist accountants consistently fail to meet. They needed a firm that understood their industry, anticipated their challenges, and brought actionable tax planning strategies to the relationship rather than simply reporting on what already happened.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        That is the firm we built. And it is the firm we continue to develop every day as we serve clients across Bergen County and throughout New Jersey.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-5" style="color: #1B2A4A;">Our Mission</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our mission is to help New Jersey businesses and individuals take genuine control of their financial lives through proactive, expert CPA guidance delivered with the responsiveness and transparency that modern clients expect.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We do not believe that taxes should be a source of anxiety or surprise. When a client works with ProAxis, we want them to understand exactly where they stand, know what their tax obligation will be before they write the check, and feel confident that every legal strategy to reduce that obligation has been considered. We want them to have clean, reliable financial records that support sound business decisions — not just compliance filings. And we want them to be able to reach their CPA without waiting weeks for a callback.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        That vision of clear, accessible, expert financial guidance is what ProAxis is built to deliver — to every client, every year, regardless of the size of their business or the complexity of their situation.
+      </p>
+    </div>
+
+    <!-- What Makes ProAxis Different -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">What Makes ProAxis Different</h2>
+      <div class="space-y-5">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #1B2A4A;">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold font-heading mb-1" style="color: #1B2A4A;">Technology-First Delivery</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">We use cloud-based accounting platforms, secure document portals, and digital signature workflows to deliver a seamless client experience. No paper, no fax machines, no waiting for the mail.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #1B2A4A;">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold font-heading mb-1" style="color: #1B2A4A;">Licensed CPA Credentials</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">Every client is served by a team that includes licensed CPAs. We stay current on federal tax law, New Jersey-specific rules, and industry developments through ongoing continuing professional education.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #1B2A4A;">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold font-heading mb-1" style="color: #1B2A4A;">Year-Round Proactive Planning</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">We do not disappear after April 15th. Quarterly planning sessions, estimated tax calculations, and proactive alerts keep our clients informed and prepared throughout the year.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #1B2A4A;">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold font-heading mb-1" style="color: #1B2A4A;">Deep NJ Expertise</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">New Jersey has some of the most complex state tax rules in the country. We understand the NJ Gross Income Tax, the Corporation Business Tax, the BAIT election, and NJ's non-conformity rules with the federal code — and we apply that knowledge to every client engagement.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #1B2A4A;">
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold font-heading mb-1" style="color: #1B2A4A;">Responsive Communication</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">We maintain clear response-time commitments and keep clients informed. Reaching your CPA should not feel like an achievement — at ProAxis, responsive communication is a standard feature, not a premium add-on.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About the Firm -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-5" style="color: #1B2A4A;">Serving Bergen County and New Jersey</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis Tax &amp; Accounting Services is based in Hasbrouck Heights, Bergen County, New Jersey — one of the most economically active regions in the state, home to a diverse mix of small businesses, real estate investors, healthcare professionals, and high-income individuals with sophisticated financial needs.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Because we operate as a fully virtual CPA firm, geography is not a barrier. While Bergen County is our home base, we serve clients throughout New Jersey — Essex County, Passaic County, Hudson County, Morris County, Somerset County, and beyond. Our clients include business owners, solo practitioners, W-2 earners with complex investment portfolios, real estate professionals, and multi-generational families with estate planning needs.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Our commitment is the same for every client: expert, proactive, transparent financial guidance delivered with the responsiveness and respect that the professionals and business owners we serve have earned. We look forward to learning about your situation and showing you what a modern, client-focused CPA firm looks like.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <a href="/about/team/" class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+        <h3 class="font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">Meet the Team</h3>
+        <p class="text-sm text-gray-600">Learn about the licensed CPAs and professionals behind ProAxis.</p>
+        <p class="text-sm mt-3 font-semibold" style="color: #2E75B6;">View our team &rarr;</p>
+      </a>
+      <a href="/about/why-proaxis/" class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+        <h3 class="font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">Why Choose ProAxis</h3>
+        <p class="text-sm text-gray-600">Discover what makes ProAxis different from traditional accounting firms.</p>
+        <p class="text-sm mt-3 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+      </a>
+      <a href="/about/testimonials/" class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+        <h3 class="font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">Client Testimonials</h3>
+        <p class="text-sm text-gray-600">Read what business owners and individuals across NJ say about ProAxis.</p>
+        <p class="text-sm mt-3 font-semibold" style="color: #2E75B6;">Read reviews &rarr;</p>
+      </a>
+      <a href="/contact/" class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+        <h3 class="font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">Get in Touch</h3>
+        <p class="text-sm text-gray-600">Schedule a free consultation or send us a message — we respond promptly.</p>
+        <p class="text-sm mt-3 font-semibold" style="color: #2E75B6;">Contact us &rarr;</p>
+      </a>
+    </div>
+  </section>
+
+  <TestimonialsSection />
+  <CTASection heading="Ready to Work with a CPA Firm That's Built for You?" subheading="Schedule a free consultation with ProAxis Tax & Accounting. Fully virtual, no pressure — just expert, proactive guidance for NJ businesses and individuals." />
+</BaseLayout>

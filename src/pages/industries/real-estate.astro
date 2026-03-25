@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for Real Estate Investors NJ | ProAxis | Bergen County";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for real estate investors in New Jersey — rental properties, 1031 exchanges, cost segregation, real estate professional status, and fix-and-flip tax strategy.";
+const canonical = "/industries/real-estate/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Real Estate Accounting & Tax Services",
+  "description": "Specialized accounting and tax services for real estate investors and professionals in New Jersey, including rental property depreciation, 1031 exchanges, real estate professional status, and entity structuring.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "Real Estate" }
+];
+
+const services = [
+  { title: "Real Estate Tax Planning", href: "/tax-services/tax-planning/" },
+  { title: "Bookkeeping for Landlords", href: "/business-services/bookkeeping/" },
+  { title: "Estate & Gift Tax Planning", href: "/tax-services/estate-gift-tax/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for Real Estate Professionals in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        From rental property depreciation and 1031 exchanges to fix-and-flip tax treatment and real estate professional status — ProAxis delivers strategic CPA guidance built for NJ investors.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">The Unique Tax Challenges Facing NJ Real Estate Investors</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Real estate investors in New Jersey face a layered tax environment that combines federal complexity with state-specific rules that often diverge in important ways. Whether you own a single rental unit in Bergen County, manage a multi-property portfolio across multiple NJ counties, or are actively flipping properties, understanding the interplay between depreciation, passive activity rules, NJ income reporting, and capital gains is essential to keeping more of what you earn.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey does not allow certain federal deductions that real estate investors rely on. For example, the federal deduction for a rental property loss under the $25,000 passive activity allowance flows through on your federal return but may be handled differently on your New Jersey Gross Income Tax return. NJ does not conform to many bonus depreciation provisions, meaning your federal and state depreciation schedules will diverge over time, requiring careful tracking on both fronts. These non-conformity issues are compounded across multiple properties and can lead to significant underpayments — or overpayments — if not managed proactively.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Rental Property Depreciation: Schedule E, Cost Segregation, and Beyond</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Depreciation is one of the most powerful tax tools available to real estate investors, and it is also one of the most often underutilized. Under current law, residential rental property is depreciated over 27.5 years and commercial property over 39 years using the straight-line method on Schedule E. This baseline depreciation is just the starting point.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For investors with larger portfolios or higher-value properties, cost segregation studies can dramatically accelerate depreciation by reclassifying components of a building — such as flooring, plumbing fixtures, land improvements, and specialty lighting — into 5-, 7-, or 15-year property categories. This reclassification can generate significant depreciation deductions in the early years of ownership, improving cash flow and deferring taxes. A cost segregation study conducted by a qualified engineer and reviewed by your CPA can often pay for itself many times over on a single property.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Tracking basis across multiple properties is a persistent challenge for NJ investors. Every capital improvement you make to a property increases its basis, reducing your eventual capital gain. Every depreciation deduction you take reduces your basis. Getting this right matters not just at sale but also when refinancing, transferring properties between entities, or calculating recapture tax. We maintain detailed depreciation schedules for all client properties to ensure nothing is missed.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">1031 Exchanges and Tax Deferral Strategy</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        A properly executed Section 1031 like-kind exchange allows NJ investors to defer capital gains taxes indefinitely by rolling proceeds from a sold property into a replacement property of equal or greater value. The rules are strict: you must identify a replacement property within 45 days of the sale and close within 180 days. The exchange must be facilitated by a qualified intermediary, and the proceeds cannot touch your hands during the exchange period.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey has its own 1031 exchange rules, and the state requires that NJ-source gain be reported even in a valid federal exchange if the replacement property is located outside of New Jersey. This is a critical planning consideration for NJ investors looking to diversify into other states. ProAxis works with qualified intermediaries and coordinates the tax treatment on both federal and state returns to ensure your exchange is properly documented and reported.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Depreciation recapture is the often-forgotten counterpart to exchange planning. When you eventually sell without a 1031 exchange, all the depreciation you have claimed — including accelerated depreciation from cost segregation — is subject to recapture at a maximum federal rate of 25%, plus your applicable NJ rate. Planning ahead for recapture is essential, particularly for investors approaching retirement or considering an estate plan.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Passive Activity Rules and Real Estate Professional Status</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The passive activity rules under IRC Section 469 limit the ability of most investors to deduct rental losses against ordinary income. A taxpayer with a modified adjusted gross income above $150,000 cannot deduct any passive rental losses in the current year — those losses must be carried forward to offset future passive income or recognized at the time of sale.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        However, qualifying as a real estate professional under IRS rules changes this equation entirely. To qualify, you must spend more than 750 hours per year in real estate activities and more than half of your total working time in real estate. If you qualify and materially participate in each rental property, your rental losses become non-passive and can offset ordinary income — including wages, business income, and investment income — with no dollar cap.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        This status can be extraordinarily valuable for NJ investors with significant rental losses and high ordinary income, but it requires careful documentation. The IRS scrutinizes real estate professional claims closely, and a failure to document hours properly can result in the disallowance of all non-passive loss treatment. We help clients establish documentation systems — time logs, activity records, and contemporaneous records — to substantiate their status if challenged.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Short-Term Rentals, Fix-and-Flip, and Opportunity Zones</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Short-term rentals — including properties listed on Airbnb, VRBO, and similar platforms — create a different tax profile than traditional long-term rentals. If you rent your property for fewer than 15 days per year, the income is tax-free. If you rent it out and provide substantial services (daily cleaning, concierge, etc.), the income may be treated as active rather than passive, potentially qualifying for the QBI deduction but also subject to self-employment tax. NJ has its own sales tax rules for short-term occupancy, and many Bergen County municipalities have adopted local regulations that add additional compliance complexity.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Fix-and-flip investors face the dealer versus investor classification issue. If the IRS treats you as a dealer — someone who holds properties primarily for sale rather than investment — your gains are taxed as ordinary income rather than capital gains, and you may owe self-employment tax as well. The distinction depends on facts and circumstances, including holding period, your intent, the number of properties flipped per year, and how you use the proceeds. Proper entity structuring and documentation are essential to defending investor status.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey has several Qualified Opportunity Zones where investment can allow taxpayers to defer and potentially reduce capital gains taxes. Investing eligible gain in a Qualified Opportunity Fund within 180 days of a sale allows deferral until 2026 (under current law) and can eliminate tax on post-investment appreciation entirely if the investment is held for at least 10 years. ProAxis can help evaluate whether an opportunity zone investment fits your broader portfolio and tax strategy.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Real Estate LLCs, Partnerships, and NJ-Specific Considerations</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Most NJ real estate investors hold properties in LLCs for liability protection. From a tax perspective, a single-member LLC is a disregarded entity, and a multi-member LLC is taxed as a partnership — both reporting on Schedule E. However, the NJ Annual Report filing obligation and the NJ minimum LLC fee apply regardless of profitability, and investors with multiple LLCs need to track each entity's state obligations separately.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey also imposes a realty transfer fee on the sale of real property, calculated as a percentage of the consideration paid. This fee is deductible as a selling expense and affects your net gain calculation. Understanding how to account for transaction costs — including transfer fees, broker commissions, legal fees, and title insurance — properly reduces your reportable gain and your overall tax bill.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Quarterly estimated taxes are a frequent pain point for real estate investors whose income is uneven — large gains in some years, losses in others. We help clients develop quarterly payment strategies that minimize underpayment penalties without tying up unnecessary cash during the year.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Tax &amp; Accounting Helps Real Estate Investors</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Depreciation schedule maintenance:</strong> We track federal and NJ depreciation separately for every property, catching the non-conformity issues that trip up many investors.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>1031 exchange coordination:</strong> We work alongside your qualified intermediary and closing attorney to ensure proper federal and NJ reporting of your exchange transaction.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Real estate professional status documentation:</strong> We help clients build the contemporaneous hour logs and activity records needed to defend this valuable status.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Entity structuring advice:</strong> From single-property LLCs to multi-entity portfolio structures with management companies, we help investors build tax-efficient ownership structures.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Year-round tax planning:</strong> We run projections before year-end to optimize deductions, time dispositions, and manage estimated tax payments for NJ investors with complex income profiles.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for Real Estate Professionals</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Internal Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/tax-services/tax-planning/" class="font-semibold hover:underline" style="color: #2E75B6;">Tax Planning &amp; Strategy</a> — Year-round proactive tax planning to reduce your NJ and federal tax burden.</li>
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">Bookkeeping for Real Estate</a> — Clean, accurate books across every property and entity in your portfolio.</li>
+        <li><a href="/tax-services/estate-gift-tax/" class="font-semibold hover:underline" style="color: #2E75B6;">Estate &amp; Gift Tax Planning</a> — Preserve real estate wealth across generations with smart estate planning strategies.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/real-estate/" />
+  <TestimonialsSection />
+  <CTASection heading="Ready to Stop Overpaying on Your Real Estate Taxes?" subheading="ProAxis Tax & Accounting works with NJ real estate investors at every level — from single-property landlords to multi-entity portfolio owners. Schedule your free consultation today." />
+</BaseLayout>

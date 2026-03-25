@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Englewood";
+const title = "CPA in Englewood NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Englewood NJ — arts and entertainment accounting, medical practice tax planning, real estate investing, and high-net-worth tax services. 100% virtual.";
+const canonical = "/service-areas/englewood/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Englewood, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Englewood's Business &amp; Community Landscape</h2>
+    <p class="text-gray-700 mb-4">Englewood is one of Bergen County's most culturally rich communities — a city with a proud history of artistic achievement, community activism, and demographic diversity that sets it apart from many of its more homogeneous suburban neighbors. Its location directly north of Fort Lee and just miles from the George Washington Bridge gives it an urban character unusual for Bergen County, and its resident population reflects a genuine cross-section of incomes, backgrounds, and professions that creates a varied and interesting economic ecosystem.</p>
+    <p class="text-gray-700 mb-4">The Bergen Performing Arts Center — Bergen PAC — anchors Englewood's identity as a cultural destination. This 1,400-seat performing arts venue on North Van Brunt Street attracts major touring acts, Broadway productions, and local performances year-round, and it supports a surrounding economy of restaurants, bars, hotels, transportation services, and event production businesses. Bergen PAC itself is a 501(c)(3) nonprofit, and the broader arts community it anchors includes nonprofit theater groups, dance studios, music schools, individual performing artists, and arts educators — all of whom have distinct tax situations that benefit from expert guidance. Musicians and performers, in particular, often have complex gig economy income patterns, home studio deductions, equipment depreciation schedules, and multi-state performance income that requires careful tax planning.</p>
+    <p class="text-gray-700 mb-4">The Grand Avenue commercial corridor is Englewood's main commercial spine, stretching from the downtown business district through several distinct neighborhoods. The corridor hosts a mix of established businesses serving the city's diverse residential population: Caribbean restaurants, African hair braiding salons, Korean grocery stores, professional office suites, insurance agencies, real estate offices, and a variety of independent retail and service businesses that reflect the city's multicultural character. Many of these businesses are owner-operated enterprises whose principals need help with both business and personal tax planning — their business profits flow directly to their personal returns, creating a need for integrated tax strategy.</p>
+    <p class="text-gray-700 mb-4">The Hackensack University Medical Center network — Hackensack Meridian Health — has a significant presence in Englewood through Hackensack Meridian Palisades Medical Center on North Street. The medical center and the physician practices that orbit it represent one of Englewood's largest employment bases and create demand for medical professional accounting services. Physicians with hospital privileges at Palisades frequently have complex compensation structures — base salary from a hospital employment arrangement, supplemental income from a professional corporation, research or consulting income, and investment portfolios — that require a CPA who understands how these income streams interact for both federal and NJ tax purposes.</p>
+    <p class="text-gray-700 mb-8">Englewood Cliffs, immediately adjacent to Englewood, is home to some of the highest-value residential real estate in all of Bergen County and hosts major corporate presences including LG Electronics USA's North American headquarters. The proximity of Englewood Cliffs's executive community creates spillover economic activity in Englewood itself, and some ProAxis clients in this market are Englewood residents who work in or own businesses in Englewood Cliffs or the broader Fort Lee/GWB corridor.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Tax &amp; Accounting Needs in Englewood</h2>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Arts and entertainment business accounting", text: "Performing artists, music teachers, event production companies, and arts nonprofits in the Bergen PAC ecosystem have specialized income reporting needs, home studio deductions, equipment depreciation, and in many cases, nonprofit governance and Form 990 obligations." },
+        { heading: "Medical professional practice accounting", text: "Palisades Medical Center-affiliated physicians and other Englewood healthcare professionals benefit from physician compensation planning, medical practice bookkeeping, and retirement plan optimization." },
+        { heading: "Real estate investment accounting", text: "Englewood's real estate market — particularly on the Englewood Cliffs border — involves significant property values with corresponding depreciation schedules, rental income tracking, and capital gains planning considerations." },
+        { heading: "Diverse small business support", text: "The Grand Avenue corridor's owner-operated businesses need integrated tax planning that coordinates business and personal returns, identifies available deductions, and ensures clean NJ sales tax compliance." },
+        { heading: "High-net-worth residential planning", text: "Englewood's higher-income residential population benefits from investment portfolio tax planning, trust and estate coordination, and year-round proactive tax advisory." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Englewood Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-5">From arts community accounting to medical practice tax planning, ProAxis brings specialized expertise to Englewood's diverse client base through our convenient virtual delivery model.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Englewood</h2>
+    <p class="text-gray-700 mb-4">Englewood's diverse business community deserves CPA services that meet clients where they are — figuratively and literally. ProAxis's virtual model means your accounting relationship is conducted on your terms, through secure digital channels, with a Bergen County-based team that understands the local landscape in depth.</p>
+    <p class="text-gray-700 mb-6">Whether you're a solo performing artist tracking gig income or a physician managing a complex multi-stream compensation structure, ProAxis provides the expertise and the responsiveness to serve you well.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Fort Lee", slug: "fort-lee" },
+        { name: "Teaneck", slug: "teaneck" },
+        { name: "Hackensack", slug: "hackensack" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or explore our <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">tax planning</a> and <a href="/business-services/bookkeeping/" class="font-medium underline" style="color: #2E75B6;">bookkeeping services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

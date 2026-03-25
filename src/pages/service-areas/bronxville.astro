@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Bronxville";
+const state = "NY";
+const title = "CPA for Bronxville NY Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Bronxville NY CPA firm for Metro-North commuters, finance professionals & high earners. NJ-NY domicile planning, trust & estate tax, multi-state returns. Virtual.";
+const canonical = "/service-areas/bronxville/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Bronxville, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Bronxville's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">Bronxville is one of those rare communities where affluence and intimacy coexist. With approximately 6,000 residents packed into just over one square mile in southern Westchester County, this incorporated village consistently records one of the highest per-capita incomes in the United States. Its compact, walkable village center, top-ranked public schools, and direct Metro-North Harlem Line service to Grand Central Terminal — typically under 30 minutes — have made it a magnet for Manhattan's finance, legal, and media elite for well over a century.</p>
+
+    <p class="mb-4">The professional profile of Bronxville residents is remarkably concentrated at the high end of the income distribution. Investment bankers, asset managers, private equity principals, senior partners at Manhattan law firms, and media executives make up a significant share of the taxpaying population. These residents are subject to the full weight of New York State income tax (rates up to 10.9%), NYC nonresident income tax on their Manhattan-sourced earnings, and Westchester County property taxes on homes that frequently sell for $2 million to $5 million or more. The combination creates one of the most demanding personal income tax environments in the world.</p>
+
+    <p class="mb-4">A recurring theme among Bronxville residents is the question of NJ vs. NY domicile planning. The financial calculus is compelling: New Jersey has no NYC income tax, and its state income tax rates, while not trivial, are generally lower than NY's top rates for many income profiles. Many Bronxville residents actively evaluate whether establishing a New Jersey domicile — often tied to the acquisition of a Bergen County or Shore property — could meaningfully reduce their overall tax burden. This evaluation requires sophisticated analysis of both NY's 183-day residency rule and NJ's domicile standards, an area where ProAxis has deep expertise.</p>
+
+    <p class="mb-6">Trust and estate planning is a central concern for Bronxville families who have accumulated substantial wealth across multiple asset classes. Multi-generational estate plans, irrevocable trusts, and coordinated charitable giving strategies interact in complex ways with NY and NJ tax law, requiring a CPA who can engage at the highest levels of planning sophistication while working collaboratively with estate attorneys.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Bronxville Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services operates from Hasbrouck Heights in Bergen County, NJ — directly adjacent to the New York state line. This positioning is not incidental. Our firm was built around the NJ-NY tax nexus, and we serve clients who earn income, own property, or conduct business on both sides of the border. For Bronxville residents evaluating a move to NJ, considering the acquisition of NJ investment property, or managing NJ-source business income, we offer the precise dual-state expertise required to navigate these decisions correctly.</p>
+
+    <p class="mb-4">Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">year-round tax planning and strategy services</a> are designed for the W-2 high earner whose financial picture changes constantly — equity award vesting cycles, bonus timing, deferred compensation elections, and charitable giving decisions all have material tax consequences that must be managed proactively, not discovered at year-end. We maintain a planning calendar synchronized with your life events, not just the April deadline.</p>
+
+    <p class="mb-6">Our fully virtual delivery model is a natural fit for Bronxville's commuter community. Our clients are among the busiest professionals in the country. Driving to a CPA's office is an inefficient use of limited time. Everything ProAxis does — client onboarding, document collection, review meetings, and ongoing planning calls — is executed through secure digital channels. You get the responsive, high-touch service of a boutique CPA firm, accessible from your home, your office, or the Metro-North train. Our <a href="/business-services/" class="text-blue-700 underline font-medium">full suite of business and financial advisory services</a> extends this convenience to every aspect of your financial life.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Bronxville Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NYC Nonresident Tax for Metro-North Commuters:</strong> Bronxville residents who work in Manhattan are subject to New York City's nonresident earnings tax on their NYC-sourced wages. Understanding what constitutes NYC-source income — especially for professionals who work remotely part of the week — and optimizing the allocation between NYC and non-NYC days is a meaningful planning opportunity.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NY vs. NJ Domicile Planning:</strong> The decision to change domicile from NY to NJ carries enormous tax consequences but also strict legal requirements. NY aggressively audits high-income taxpayers who claim to have abandoned NY domicile. ProAxis provides rigorous, defensible domicile planning strategies that satisfy legal requirements while maximizing long-term tax savings.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Executive Deferred Compensation:</strong> Many Bronxville residents participate in nonqualified deferred compensation plans (Section 409A arrangements) that defer significant income into future years. Coordinating these deferral elections with projected tax rates, potential domicile changes, and retirement income planning is a sophisticated multi-year exercise.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Concentrated Stock Position Management:</strong> Long-tenured finance and corporate executives often accumulate highly appreciated, concentrated positions in employer or client company stock. Managing the tax cost of diversification — through exchange funds, charitable strategies, or installment sale structures — is a priority that requires integration with the overall tax plan.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ Real Estate Investment Tax Considerations:</strong> Bergen County, NJ real estate is popular among Bronxville residents seeking rental income or long-term appreciation. NJ rental income is taxable in NJ, and the interaction with NY state's resident credit rules must be managed carefully to avoid unnecessary double taxation and maximize after-tax returns.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Bronxville Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+      <a href="/service-areas/rye/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Rye, NY</a>
+      <a href="/service-areas/upper-east-side/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper East Side, NYC</a>
+      <a href="/service-areas/armonk/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Armonk, NY</a>
+    </div>
+
+    <p class="mb-4">Bronxville's high-earning residents deserve a CPA practice calibrated to the complexity of their financial lives. ProAxis Tax &amp; Accounting Services provides the NJ-NY tax nexus expertise, year-round planning discipline, and fully virtual service model that Bronxville clients need to stay ahead of an increasingly aggressive tax environment. From domicile planning to estate strategy to executive compensation tax management, we are equipped to serve you at every level of complexity.</p>
+
+    <p>Ready to get started? <a href="/contact/" class="text-blue-700 underline font-medium">Schedule your free consultation</a> today. Browse our complete <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a> offerings, or call us directly at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a>. You can also reach us at <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for Non-Profit Organizations NJ | ProAxis | Bergen County";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for non-profit organizations in New Jersey — 501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, and NJ charitable registration.";
+const canonical = "/industries/non-profits/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Non-Profit Organization Accounting Services",
+  "description": "Specialized accounting and tax services for non-profit organizations in New Jersey, including 501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, and board financial reporting.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "Non-Profits" }
+];
+
+const services = [
+  { title: "Non-Profit Bookkeeping", href: "/business-services/bookkeeping/" },
+  { title: "Financial Statements", href: "/business-services/financial-statements/" },
+  { title: "Tax Preparation (Form 990)", href: "/tax-services/tax-preparation/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for Non-Profit Organizations in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Non-profits have unique compliance obligations that differ fundamentally from for-profit businesses. ProAxis helps NJ non-profits navigate Form 990, fund accounting, UBIT, and state charitable registration with confidence.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">The Compliance and Accounting Demands Facing NJ Non-Profits</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Non-profit organizations in New Jersey operate under a unique set of legal, tax, and financial obligations that differ substantially from their for-profit counterparts. While a 501(c)(3) designation exempts an organization from federal income tax on activities related to its exempt purpose, it does not exempt the organization from all tax obligations — nor from extensive annual disclosure requirements. Managing these obligations properly is essential to maintaining exempt status, retaining donor confidence, and complying with NJ state registration requirements.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis works with non-profit organizations of all sizes — from small community foundations and religious organizations to established social service agencies, arts organizations, and advocacy groups throughout Bergen County and New Jersey. We understand that non-profits have missions that matter, and we bring the same level of expertise and attention that we provide to our for-profit clients to our work with the non-profit community.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">501(c)(3) Compliance and Maintaining Exempt Status</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Achieving 501(c)(3) status is just the beginning. Maintaining it requires ongoing compliance with a range of IRS requirements. The organization must continue to operate exclusively for its stated exempt purpose. It must not allow private inurement — meaning no part of its net earnings can benefit any private individual or shareholder. It must avoid excessive lobbying activity and any participation or intervention in political campaigns on behalf of or in opposition to any candidate for public office.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The IRS can revoke a non-profit's tax-exempt status for ongoing failure to file Form 990, for operating in a manner inconsistent with the organization's stated exempt purpose, or for engaging in transactions that constitute private benefit or private inurement. Revocation is a serious consequence that can be difficult and expensive to reverse. We help non-profit clients understand the boundaries of their exempt status and flag potential issues before they become compliance problems.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Form 990 Preparation and Strategy</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Form 990 — the annual information return filed by most tax-exempt organizations — is a uniquely public document. Unlike a for-profit tax return, the Form 990 is publicly available and is scrutinized by donors, grant-makers, watchdog organizations, journalists, and potential board members. A well-prepared Form 990 tells a coherent story about the organization's mission, its programs, its governance, and its financial health. A poorly prepared Form 990 raises questions and can undermine donor confidence or jeopardize grant relationships.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Form 990 is significantly more complex than most organizations anticipate. It requires detailed reporting on executive compensation (including the five highest-paid employees and independent contractors), a narrative description of program accomplishments, governance policies (conflict of interest, whistleblower, document retention), related-party transactions, and financial statements prepared in accordance with non-profit GAAP. Larger organizations — those with gross receipts over $200,000 or total assets over $500,000 — must file the Form 990 (not the abbreviated 990-EZ), which is a substantial document.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The filing deadline for Form 990 is the 15th day of the fifth month after the organization's fiscal year end. An automatic six-month extension is available but must be filed timely. Organizations that fail to file for three consecutive years automatically lose their tax-exempt status — a provision that has affected thousands of small non-profits in New Jersey that lost track of their filing obligations.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Unrelated Business Income Tax (UBIT)</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Tax-exempt status does not mean all income is tax-free. When a non-profit regularly engages in a trade or business that is not substantially related to its exempt purpose, that income is subject to Unrelated Business Income Tax (UBIT). UBIT is calculated at corporate tax rates and reported on Form 990-T.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Common UBIT issues for NJ non-profits include advertising revenue in publications, rental income from debt-financed property, income from services provided to non-members, and profits from certain auxiliary activities. Some investment income — including dividends, interest, and capital gains from non-debt-financed property — is generally excluded from UBIT. However, the rules contain important exceptions, and non-profits with complex investment portfolios or multiple activities must analyze each revenue stream carefully.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Grant Compliance, Fund Accounting, and Donor Acknowledgment</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Non-profits that receive restricted grants must account for those funds separately from unrestricted operating revenue. Fund accounting — the practice of maintaining separate accountability for funds by their restrictions and donor designations — is the standard accounting methodology for non-profit organizations. Under ASC 958, revenue is classified as net assets with donor restrictions or net assets without donor restrictions, and the organization's financial statements must clearly present how restricted funds were used and whether grant conditions were met.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Government grants typically carry the most stringent compliance requirements, including periodic progress reports, allowable cost categories, documentation standards, and audit requirements. A non-profit receiving more than $750,000 in federal awards in a fiscal year is subject to a Single Audit under the Uniform Guidance, which involves a separate compliance audit in addition to the financial statement audit. We help non-profits set up grant tracking systems that support both financial reporting and grant compliance.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Donor acknowledgment letters are a legal requirement for cash contributions of $250 or more and for non-cash contributions, and they are also a best practice for all donors regardless of gift size. The acknowledgment must include the date of the contribution, the amount (for cash gifts), a description of property donated (for non-cash gifts), and a statement of whether any goods or services were provided to the donor in exchange for the gift. Failure to provide required acknowledgments can expose donors to disallowance of their charitable deduction and reflect poorly on the organization.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">NJ Charitable Registration and State Compliance</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey requires most charitable organizations soliciting contributions from NJ residents to register with the NJ Division of Consumer Affairs, Charities Registration Section. Annual renewal is required, and organizations above certain gross receipt thresholds must file audited or reviewed financial statements with their renewal. Organizations that fail to register or renew can be required to pay back-registration fees and penalties and may be enjoined from soliciting in NJ.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Internal controls are a recurring concern for non-profit boards. The absence of basic financial controls — separation of duties between the person who authorizes payments and the person who records them, dual-signature requirements for checks above a threshold, regular bank statement reconciliation by an independent party — creates vulnerability to fraud and misappropriation that has affected many non-profits. We help boards assess their internal control environment and implement practical, cost-effective controls appropriate for an organization's size.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Supports NJ Non-Profit Organizations</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Form 990 preparation:</strong> We prepare complete, accurate, and strategically presented Form 990 filings that support donor confidence and grant applications.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Fund accounting:</strong> We implement and maintain fund accounting systems that properly track restricted and unrestricted net assets for accurate financial reporting.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>UBIT analysis:</strong> We review non-profit revenue streams to identify potential UBIT exposure and help organizations structure activities to minimize unrelated business income.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Board financial reporting:</strong> We prepare clear, board-ready financial reports that give directors the information they need to fulfill their fiduciary obligations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>NJ charitable registration:</strong> We manage annual NJ charitable registration renewal, including the preparation of required financial statements and supplemental schedules.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for Non-Profit Organizations</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">Non-Profit Bookkeeping</a> — Fund accounting and bookkeeping designed for the reporting requirements of non-profit organizations.</li>
+        <li><a href="/business-services/financial-statements/" class="font-semibold hover:underline" style="color: #2E75B6;">Financial Statements</a> — Non-profit financial statements prepared in accordance with ASC 958 for board, donor, and grant reporting.</li>
+        <li><a href="/tax-services/tax-preparation/" class="font-semibold hover:underline" style="color: #2E75B6;">Form 990 Preparation</a> — Complete, accurate, and strategically presented Form 990 filings for NJ non-profit organizations.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/non-profits/" />
+  <TestimonialsSection />
+  <CTASection heading="Non-Profit Accounting That Supports Your Mission" subheading="ProAxis Tax & Accounting provides specialized CPA services for non-profit organizations across New Jersey. Schedule your free consultation today." />
+</BaseLayout>

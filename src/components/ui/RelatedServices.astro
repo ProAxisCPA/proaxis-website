@@ -1,0 +1,72 @@
+---
+export interface Props {
+  silo: 'tax' | 'business' | 'industry';
+  currentPath?: string;
+}
+const { silo, currentPath = '' } = Astro.props;
+
+const taxLinks = [
+  { name: "Tax Preparation", href: "/tax-services/tax-preparation/", desc: "Federal & NJ state returns for individuals and businesses." },
+  { name: "Tax Planning & Strategy", href: "/tax-services/tax-planning/", desc: "Year-round strategies to minimize your NJ and federal tax." },
+  { name: "NJ SALT Consulting", href: "/tax-services/nj-salt-consulting/", desc: "BAIT election and SALT deduction strategies for NJ pass-through entities." },
+  { name: "IRS Tax Resolution", href: "/tax-services/irs-tax-resolution/", desc: "IRS notices, audits, installment agreements, and offers in compromise." },
+  { name: "Estate & Gift Tax", href: "/tax-services/estate-gift-tax/", desc: "Planning for wealth transfer, trusts, and estate tax minimization." },
+  { name: "Multi-State Tax", href: "/tax-services/multi-state-tax/", desc: "NJ-NY and multi-jurisdiction tax filing for commuters and businesses." },
+];
+
+const businessLinks = [
+  { name: "Bookkeeping & Accounting", href: "/business-services/bookkeeping/", desc: "Monthly cloud-based bookkeeping and financial reporting." },
+  { name: "Fractional CFO", href: "/business-services/fractional-cfo/", desc: "Executive-level financial leadership on a part-time basis." },
+  { name: "Payroll Services", href: "/business-services/payroll/", desc: "Full payroll processing and NJ compliance management." },
+  { name: "Financial Statements", href: "/business-services/financial-statements/", desc: "Compiled and reviewed financial statements for your business." },
+  { name: "Startup Advisory", href: "/business-services/startup-advisory/", desc: "Entity selection, structure planning, and launch strategy." },
+  { name: "Financial Technology", href: "/business-services/financial-technology/", desc: "Cloud accounting platform setup and optimization." },
+];
+
+const industryLinks = [
+  { name: "Real Estate", href: "/industries/real-estate/", desc: "1031 exchanges, cost segregation, and rental property accounting." },
+  { name: "Healthcare", href: "/industries/healthcare/", desc: "Medical practice accounting and physician compensation planning." },
+  { name: "E-Commerce", href: "/industries/ecommerce/", desc: "Inventory accounting, multi-state sales tax, and platform reporting." },
+  { name: "Construction", href: "/industries/construction/", desc: "Job costing, contractor payroll, and WIP accounting." },
+  { name: "Restaurants", href: "/industries/restaurants/", desc: "Food cost tracking, tip reporting, and hospitality tax." },
+  { name: "Non-Profits", href: "/industries/non-profits/", desc: "Form 990 preparation and nonprofit financial management." },
+  { name: "Professional Services", href: "/industries/professional-services/", desc: "Attorney, consultant, and professional practice accounting." },
+];
+
+const allLinks = silo === 'tax' ? taxLinks : silo === 'business' ? businessLinks : industryLinks;
+const heading = silo === 'tax'
+  ? 'Related Tax Services'
+  : silo === 'business'
+  ? 'Related Business Services'
+  : 'Other Industries We Serve';
+const hubLink = silo === 'tax'
+  ? { href: '/tax-services/', name: 'All Tax Services' }
+  : silo === 'business'
+  ? { href: '/business-services/', name: 'All Business Services' }
+  : { href: '/industries/', name: 'All Industries' };
+
+const filtered = allLinks.filter(l => l.href !== currentPath);
+---
+
+<section style="background-color: #F7F8FA;" class="py-12 border-t border-gray-100">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-bold font-heading" style="color: #1B2A4A;">{heading}</h2>
+      <a href={hubLink.href} class="text-sm font-semibold hover:underline" style="color: #2E75B6;">{hubLink.name} →</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {filtered.map((link) => (
+        <a
+          href={link.href}
+          class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-sm transition-all group"
+        >
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div>
+            <div class="font-semibold text-sm mb-0.5 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{link.name}</div>
+            <div class="text-xs text-gray-500 leading-relaxed">{link.desc}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

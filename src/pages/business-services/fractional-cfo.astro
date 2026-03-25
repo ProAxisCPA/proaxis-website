@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Fractional CFO Services NJ | Strategic Finance | ProAxis CPA";
+const description = "Fractional CFO and strategic financial advisory for NJ businesses from $1M–$10M. Cash flow forecasting, financial modeling, KPI dashboards, banking relationships, and exit planning — without the cost of a full-time CFO.";
+const canonical = "/business-services/fractional-cfo/";
+const breadcrumbs = [
+  { name: "Business Services", url: "/business-services/" },
+  { name: "Fractional CFO" }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Fractional CFO Services",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "url": "https://www.proaxiscpa.com",
+    "telephone": "(201) 800-2330",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hasbrouck Heights",
+      "addressRegion": "NJ",
+      "postalCode": "07604"
+    }
+  },
+  "areaServed": "New Jersey",
+  "description": "Fractional CFO services for NJ businesses including cash flow forecasting, financial modeling, budget analysis, KPI dashboards, and strategic advisory."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a fractional CFO do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fractional CFO provides the same strategic financial leadership as a full-time Chief Financial Officer — cash flow management, financial forecasting, KPI tracking, banking relationships, and financing strategy — on a part-time or project basis. You get senior financial expertise without the cost of a $150,000+ full-time hire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does my business need a fractional CFO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most businesses benefit from fractional CFO services when they reach approximately $1M in revenue and start facing more complex financial decisions — whether to hire, how to finance growth, what their margins really are, or how to plan for an exit. If your bookkeeper can't answer strategic questions and you can't justify a full-time CFO, a fractional CFO fills the gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a fractional CFO different from my CPA or accountant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CPA or accountant typically focuses on compliance — tax returns, financial statements, and historical reporting. A fractional CFO focuses on the future: where is cash going, what does the next 12 months look like, should we take on debt, are we pricing correctly? ProAxis integrates both roles so your compliance work and your strategic planning are connected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does fractional CFO service cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fractional CFO engagements at ProAxis are priced on a monthly retainer based on scope — the number of hours, the complexity of your business, and which deliverables are included. Typical engagements range from $1,500 to $4,000 per month, a fraction of the cost of a full-time CFO. We scope engagements during a free initial consultation."
+      }
+    }
+  ]
+};
+
+const schema = [serviceSchema, faqSchema];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Fractional CFO &amp; Strategic Financial Advisory for NJ Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Senior financial leadership — without the cost of a full-time hire. ProAxis delivers CFO-level strategy to NJ businesses from $1M to $10M in revenue.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">
+          Schedule Free Consultation
+        </a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">
+          Call (201) 800-2330
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Overview -->
+    <section class="mb-12" aria-labelledby="overview">
+      <h2 id="overview" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        What a Fractional CFO Does — and Why It Matters
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Most NJ business owners growing through the $1M–$10M revenue range hit a wall. The business is too complex to manage financially by gut feel, but it is not yet large enough to justify a full-time Chief Financial Officer — a role that commands $150,000 or more in annual compensation before benefits. The result is a financial leadership gap: no one in the business is dedicated to forward-looking financial analysis, cash planning, or strategic modeling.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        A fractional CFO fills that gap. The term "fractional" simply means part-time or shared — you access senior CFO expertise for a defined number of hours per month without carrying a full-time salary, benefits package, and equity stake. The fractional CFO works alongside your existing team, integrates with your bookkeeping and accounting, and provides the strategic financial layer your business needs to make informed decisions.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        It is important to understand where a fractional CFO fits relative to other financial roles. A bookkeeper records transactions. An accountant prepares historical reports and tax returns. A controller oversees the accounting function and ensures accuracy. A CFO looks forward — modeling scenarios, managing liquidity, building relationships with lenders and investors, and helping the owner think through the financial implications of every major business decision. ProAxis can serve all of these functions under one roof, which means your historical data and your future projections are always integrated.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">Our fractional CFO engagements typically include:</p>
+      <ul class="space-y-3 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">13-week and 12-month cash flow forecasting</strong> — forward visibility into your cash position so you are never caught by surprise</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Budget-to-actual analysis</strong> — monthly comparison of what you planned vs. what happened, with variance explanation and corrective action</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">KPI dashboard development</strong> — identifying the 5–10 metrics that matter most for your business and tracking them on a rolling basis</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Financial modeling and scenario planning</strong> — what happens to your business if you hire two more employees, open a second location, or lose your largest client?</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Banking relationship management</strong> — preparing financial packages for lender meetings, supporting line of credit renewals, and advising on debt structure</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Financing preparation</strong> — SBA loan packaging, investor presentations, and capital raise support</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">M&amp;A advisory</strong> — financial due diligence, deal structure analysis, and integration planning for acquisitions</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Exit planning</strong> — building the financial infrastructure to maximize business value and prepare for a future sale</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="who-for">
+      <h2 id="who-for" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        Who Needs Fractional CFO Services
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our fractional CFO clients are typically NJ businesses in the $1M–$10M revenue range — profitable enough to justify strategic financial support but not yet large enough for a full-time hire. The most common triggers that lead business owners to seek fractional CFO services include:
+      </p>
+      <div class="space-y-3 text-gray-700">
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>You are making major financial decisions — hiring, pricing, financing — without a clear model of the impact on cash flow and profitability</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>Your business is growing but you are not sure why profitability is not growing with it</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>You are preparing to approach a bank for a line of credit, term loan, or SBA financing</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>You are considering acquiring another business or being acquired</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>You want to start planning for an eventual exit or business sale and need to understand what your business is worth today vs. what steps would increase its value</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-1 text-blue-600 font-bold">→</span>
+          <span>You are managing cash flow reactively — covering payroll each cycle but without a clear 90-day or 12-month view of where cash is going</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Approach -->
+    <section class="mb-12" aria-labelledby="approach">
+      <h2 id="approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        The ProAxis Fractional CFO Approach
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        When we begin a fractional CFO engagement, we start with a financial diagnostic. We review your existing books and financial statements, analyze your revenue mix and margin structure, assess your balance sheet health, and identify the key financial risks and opportunities in your business. This gives us a clear starting point and ensures we focus on the right things.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        From there, we build the financial infrastructure your business needs — a rolling cash flow forecast, a budget model, and a KPI dashboard tailored to your industry and business model. We hold monthly strategy calls to review results, walk through the forecast, and discuss any decisions on the horizon. We are also available on an as-needed basis for urgent questions — a bank meeting coming up, a vendor contract negotiation, a hiring decision that needs to be modeled.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Because ProAxis also handles bookkeeping and tax planning for many of our clients, our fractional CFO work is grounded in accurate, real-time financial data and always connected to your tax picture. We do not give you strategic advice in a vacuum — we integrate it with your actual numbers and your real tax obligations.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        For NJ businesses specifically, we bring deep familiarity with the local lending environment, the SBA programs available through NJ-based banks, and the NJ-specific tax considerations that affect business structure and compensation decisions. This regional depth matters when you are making financing and strategic decisions.
+      </p>
+    </section>
+
+    <!-- Mid-article CTA banner -->
+    <div class="my-10 rounded-xl p-6 text-white" style="background-color: #1B2A4A;">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex-1">
+          <h3 class="font-bold font-heading text-lg mb-1">Ready to get started?</h3>
+          <p class="text-gray-300 text-sm">Schedule a free 30-minute consultation with our team.</p>
+        </div>
+        <a href="/contact/" class="flex-shrink-0 px-6 py-3 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Book Free Call</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq">
+      <h2 id="faq" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">What does a fractional CFO actually do for my business?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">A fractional CFO provides strategic financial leadership on a part-time basis. In practice, that means building and maintaining a cash flow forecast, analyzing your business's financial performance against your goals, modeling the financial impact of major decisions, managing banking and investor relationships, and advising you on financing strategy, pricing, cost structure, and exit planning. The fractional CFO is the person who can answer "can we afford to hire?" or "should we take on this line of credit?" with a real financial model — not a gut feeling.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">When does my business need a fractional CFO?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The clearest signal is when your business has grown complex enough that financial decisions require real analysis — but you do not have someone in-house to do that analysis. Most businesses hit this point somewhere between $1M and $3M in revenue. If you find yourself making major decisions based on your bank balance rather than a financial model, or if your bookkeeper and accountant cannot answer forward-looking strategic questions, a fractional CFO is the right next step.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">How is a fractional CFO different from my CPA or regular accountant?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Your CPA or accountant is primarily backward-looking — they record what happened, prepare your tax return, and ensure compliance. A fractional CFO is primarily forward-looking — they model what will happen, prepare you for financing, and advise on strategy. At ProAxis, we integrate both functions: our fractional CFO work is grounded in your actual books and tax picture, which means our projections and recommendations are accurate and tax-aware — not disconnected from your real financial situation.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">What does fractional CFO service cost at ProAxis?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Our fractional CFO engagements are priced on a monthly retainer, typically ranging from $1,500 to $4,000 per month depending on scope, business complexity, and the number of deliverables included. Compare this to a full-time CFO at $150,000–$200,000 per year in salary alone, and the value proposition is clear. We scope engagements based on what your business actually needs — not a one-size-fits-all package — and we review scope every six months as your needs evolve.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-8" aria-labelledby="related">
+      <h2 id="related" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/business-services/bookkeeping/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Bookkeeping Services</div>
+          <div class="text-sm text-gray-600">CPA-supervised monthly bookkeeping — the clean financial foundation that makes CFO-level analysis possible.</div>
+        </a>
+        <a href="/business-services/financial-statements/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Financial Statements</div>
+          <div class="text-sm text-gray-600">CPA-prepared compiled statements for lenders, investors, and management reporting.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Tax Planning</div>
+          <div class="text-sm text-gray-600">Year-round tax strategy integrated with your business's financial model and growth plans.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="business" currentPath="/business-services/fractional-cfo/" />
+  <TestimonialsSection />
+  <CTASection heading="Ready to add CFO-level thinking to your business?" />
+</BaseLayout>

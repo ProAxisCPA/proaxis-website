@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Startup CPA & New Business Advisory NJ | ProAxis Bergen County";
+const description = "CPA advisory for NJ startups and new businesses — entity selection (LLC vs S-Corp), EIN registration, accounting setup, QuickBooks implementation, initial tax elections, and first-year tax planning in Bergen County and statewide.";
+const canonical = "/business-services/startup-advisory/";
+const breadcrumbs = [
+  { name: "Business Services", url: "/business-services/" },
+  { name: "Startup Advisory" }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Startup & New Business CPA Advisory",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "url": "https://www.proaxiscpa.com",
+    "telephone": "(201) 800-2330",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hasbrouck Heights",
+      "addressRegion": "NJ",
+      "postalCode": "07604"
+    }
+  },
+  "areaServed": "New Jersey",
+  "description": "Startup CPA advisory for NJ businesses including entity selection, EIN and state registration, accounting software setup, S-Corp election timing, payroll setup, and first-year tax planning."
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should my NJ startup be an LLC or S-Corp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The right entity depends on your expected profit level, NJ-specific tax considerations, and long-term goals. An LLC taxed as a sole proprietor or partnership is simpler but subjects all net income to self-employment tax. An S-Corp allows you to split income between a reasonable salary and distributions, potentially saving significant self-employment tax — but NJ imposes a minimum tax on S-Corps and requires reasonable compensation, so the analysis is not one-size-fits-all. We run the numbers for your specific situation before making a recommendation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should a NJ business elect S-Corp status?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a new LLC, the S-Corp election should generally be made within 75 days of formation (or within 75 days of the start of the tax year you want it to apply). For an existing LLC, you can make the election prospectively for a future tax year. The election typically makes financial sense when your business generates $50,000 or more in net profit annually, at which point the self-employment tax savings usually outweigh the administrative cost of S-Corp compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a CPA for my startup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The earlier you engage a CPA, the better. Decisions made at formation — entity type, tax elections, fiscal year, accounting method — are much easier to get right from the start than to fix later. A CPA also helps you establish clean books from day one, which simplifies everything from tax prep to financing applications as the business grows. The cost of startup advisory is modest compared to the cost of correcting foundational mistakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What accounting software should my NJ startup use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most NJ startups, QuickBooks Online is the right choice — it scales with your business, integrates with payroll and tax software, and is the platform most CPAs and bookkeepers work in. For very early-stage businesses with minimal transactions, Wave (free) or FreshBooks may be sufficient temporarily. We help new clients choose the right platform for their stage and set it up correctly from the start, avoiding the costly migration and cleanup that comes from outgrowing the wrong tool."
+      }
+    }
+  ]
+};
+
+const schema = [serviceSchema, faqSchema];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        CPA Advisory for Startups &amp; New Businesses in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Get the accounting foundation right from day one — entity selection, tax elections, accounting setup, and first-year planning tailored to NJ's specific business and tax environment.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">
+          Schedule Free Consultation
+        </a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">
+          Call (201) 800-2330
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Overview -->
+    <section class="mb-12" aria-labelledby="overview">
+      <h2 id="overview" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        What Startup &amp; New Business Advisory Covers
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Launching a business in New Jersey involves more financial and tax decisions in the first 90 days than most new owners realize. The choices you make at formation — entity type, tax elections, accounting method, payroll structure — create a foundation that either supports or constrains your business for years. Getting these decisions right at the start is significantly easier and less expensive than unwinding them later.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis CPA works with NJ startups and new business owners to establish that foundation correctly. Our startup advisory engagements cover:
+      </p>
+      <ul class="space-y-3 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Entity selection analysis</strong> — LLC, S-Corp, C-Corp, or sole proprietorship, with NJ-specific tax implications modeled for your situation</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">EIN acquisition and NJ state registration</strong> — Federal EIN, NJ Business Registration, NJ sales tax registration (if applicable), and other required registrations</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Accounting software setup</strong> — QuickBooks Online configuration with the right chart of accounts for your industry</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Initial tax elections</strong> — S-Corp election timing, accounting method selection (cash vs. accrual), and fiscal year considerations</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">Payroll setup</strong> — establishing payroll for the owner (if S-Corp) and any employees, including NJ payroll tax registrations</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 text-green-500 font-bold">✓</span>
+          <span><strong class="font-semibold">First-year tax planning</strong> — estimated tax payment setup, retirement account options, deductible startup costs, and home office considerations</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Entity Selection Deep Dive -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="entity">
+      <h2 id="entity" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        Entity Selection for NJ Businesses: LLC vs. S-Corp vs. C-Corp
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The entity decision is one of the most consequential choices a new NJ business owner makes — and it is one where NJ's specific tax rules create a different calculus than other states.
+      </p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">LLC (Single-Member or Multi-Member)</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A New Jersey LLC is simple to form and maintain. A single-member LLC is a disregarded entity for federal tax purposes — all income flows to your personal return on Schedule C and is subject to self-employment tax. This is the right starting structure for many early-stage businesses, particularly those with modest or uncertain early profits. NJ charges LLCs an annual report fee and an additional per-member fee for multi-member LLCs that can add up for growing businesses.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">S-Corporation (or LLC Taxed as S-Corp)</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">An S-Corp is typically the right structure once a business generates consistent net profit above approximately $50,000–$60,000 annually. The primary benefit is that owners can split their income into a reasonable salary (subject to payroll taxes) and distributions (not subject to self-employment tax), generating meaningful tax savings. In New Jersey, S-Corps are subject to the NJ CBT minimum tax and must pay the owner a reasonable salary before taking distributions — the structure requires more administrative overhead than an LLC, but the tax savings usually justify it. We model the exact savings for your projected income before recommending the election.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold font-heading mb-2" style="color: #1B2A4A;">C-Corporation</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A C-Corp is the right structure for businesses seeking venture capital investment, planning for a future IPO, or where the owner wants to retain earnings in the business at the federal corporate tax rate of 21%. For most NJ small businesses, a C-Corp creates double taxation and is not the right choice. However, it may be the appropriate structure for specific technology startups or businesses with institutional investors who require it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Approach -->
+    <section class="mb-12" aria-labelledby="approach">
+      <h2 id="approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">
+        Common Startup Accounting Mistakes — and How to Avoid Them
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        After working with dozens of NJ startups and early-stage businesses, we see the same mistakes repeatedly. Most are avoidable with upfront planning:
+      </p>
+      <ul class="space-y-3 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Mixing personal and business finances</strong> — using personal accounts for business expenses creates a bookkeeping nightmare, undermines your liability protection, and raises red flags with the IRS. Open a dedicated business checking account immediately.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Missing the S-Corp election window</strong> — the election must be filed within 75 days of the start of the tax year you want it to apply. Missing this window means waiting a full year, potentially leaving significant tax savings on the table.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Not setting up payroll as an S-Corp owner</strong> — taking only distributions from your S-Corp without paying yourself a reasonable salary is an IRS audit trigger and can result in reclassification and back payroll taxes.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Ignoring estimated tax payments</strong> — business owners do not have taxes withheld from their income. Quarterly estimated payments are required to avoid underpayment penalties. We help you calculate and schedule these from year one.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Using the wrong accounting method</strong> — cash vs. accrual accounting has different implications for when income and expenses are recognized, and the choice can significantly affect your tax timing.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-1 font-bold" style="color: #C5A55A;">!</span>
+          <span><strong class="font-semibold">Treating startup costs incorrectly</strong> — startup costs have specific treatment under federal tax law. Up to $5,000 in startup costs can be deducted in year one; the rest must be amortized. Properly categorizing these costs from the start avoids errors on your first return.</span>
+        </li>
+      </ul>
+      <p class="text-gray-700 leading-relaxed">
+        Our startup advisory engagement is designed to address all of these issues proactively. We walk through every decision with you before it becomes a problem — not after you have filed your first return and discovered the error.
+      </p>
+    </section>
+
+    <!-- Mid-article CTA banner -->
+    <div class="my-10 rounded-xl p-6 text-white" style="background-color: #1B2A4A;">
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex-1">
+          <h3 class="font-bold font-heading text-lg mb-1">Ready to get started?</h3>
+          <p class="text-gray-300 text-sm">Schedule a free 30-minute consultation with our team.</p>
+        </div>
+        <a href="/contact/" class="flex-shrink-0 px-6 py-3 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Book Free Call</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq">
+      <h2 id="faq" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">Should my NJ startup be an LLC or an S-Corp?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The honest answer is: it depends on your projected profit. For a business in early stages with uncertain or modest profits, a simple LLC with default tax treatment is usually appropriate — it is easier and cheaper to maintain. Once you expect consistent net profit above $50,000–$60,000 annually, an S-Corp election typically generates enough self-employment tax savings to justify the additional administrative requirements. NJ adds complexity because of its CBT minimum tax on S-Corps and its treatment of S-Corp shareholders — the analysis requires running actual numbers for your situation, which is exactly what we do in a startup advisory engagement.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">When should a NJ business make the S-Corp election?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The S-Corp election (IRS Form 2553) must be filed no later than two months and 15 days after the beginning of the tax year in which you want the election to take effect — that is approximately March 15 for calendar-year businesses. For a new business, the election must be filed within 75 days of formation to be effective for year one. If you miss the deadline, you may qualify for late election relief under IRS Revenue Procedure 2013-30, but this requires demonstration of reasonable cause. Do not guess — call us before you form the entity.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">Do I really need a CPA for a new small business?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">You do not legally need one — but the cost of not having one often exceeds the cost of the engagement many times over. The entity election, tax method, and initial accounting setup are decisions where a one-time mistake can cost thousands in unnecessary taxes or require expensive corrective work later. Our startup advisory engagements are priced specifically for early-stage businesses, and most clients find that the first-year tax savings alone cover the advisory fee. We also help you build the systems you need to grow without outgrowing your accounting infrastructure.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5 group">
+          <summary class="font-semibold cursor-pointer font-heading" style="color: #1B2A4A;">What accounting software should my NJ startup use from day one?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">For most NJ startups with any employees or significant transaction volume, QuickBooks Online is the right answer. It is the industry standard, integrates with payroll, scales with your business, and is the platform most CPAs and bookkeepers can work in. For very early businesses with minimal transactions and no employees, Wave (free) may be sufficient as a temporary measure — but plan to migrate to QBO once you pass $200K in annual revenue or add payroll. We help you make this decision and do the setup correctly during onboarding.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-8" aria-labelledby="related">
+      <h2 id="related" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/business-services/bookkeeping/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Bookkeeping Services</div>
+          <div class="text-sm text-gray-600">Ongoing CPA-supervised bookkeeping — the natural next step after startup accounting is established correctly.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Tax Planning</div>
+          <div class="text-sm text-gray-600">Year-round business tax strategy — estimated payments, retirement planning, and entity optimization as your business grows.</div>
+        </a>
+        <a href="/business-services/payroll/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all">
+          <div class="font-semibold mb-1 font-heading" style="color: #1B2A4A;">Payroll Services</div>
+          <div class="text-sm text-gray-600">NJ payroll setup and ongoing management — including S-Corp owner salary, NJ UI/SDI/FLI compliance, and W-2 preparation.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="business" currentPath="/business-services/startup-advisory/" />
+  <TestimonialsSection />
+  <CTASection heading="Ready to build your NJ business on a solid financial foundation?" />
+</BaseLayout>

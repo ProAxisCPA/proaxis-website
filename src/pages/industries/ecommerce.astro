@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for E-Commerce Businesses NJ | Sales Tax & Accounting | ProAxis";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for e-commerce businesses in New Jersey — post-Wayfair sales tax compliance, multi-platform 1099-K reporting, inventory accounting, and QBI deductions.";
+const canonical = "/industries/ecommerce/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "E-Commerce Accounting & Tax Services",
+  "description": "Specialized accounting and tax services for e-commerce and online businesses in New Jersey, including sales tax nexus analysis, inventory accounting, multi-platform reporting, and federal and state tax compliance.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "E-Commerce" }
+];
+
+const services = [
+  { title: "Multi-State Tax Compliance", href: "/tax-services/multi-state-tax/" },
+  { title: "NJ SALT Consulting", href: "/tax-services/nj-salt-consulting/" },
+  { title: "E-Commerce Bookkeeping", href: "/business-services/bookkeeping/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for E-Commerce &amp; Online Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Selling online creates tax obligations in dozens of states. ProAxis helps NJ-based e-commerce businesses navigate post-Wayfair sales tax, multi-platform reporting, inventory accounting, and year-round federal tax strategy.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">The Tax &amp; Accounting Challenges Facing NJ E-Commerce Businesses</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Running an e-commerce business from New Jersey has never been more complex from a tax perspective. The 2018 Supreme Court decision in South Dakota v. Wayfair fundamentally changed the sales tax landscape for online sellers, eliminating the requirement that a seller have a physical presence in a state before that state can impose a sales tax collection obligation. Today, an e-commerce business based in Bergen County, NJ, selling products across the country can have sales tax obligations in 30 or more states — often without realizing it.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        At the same time, multi-platform selling on Amazon, Shopify, Etsy, eBay, and other channels has created a complex web of 1099-K reporting that many e-commerce owners struggle to reconcile with their books. Add in inventory management across multiple warehouses (including Amazon FBA fulfillment centers), international sourcing and tariff impacts, advertising expense tracking, and the Section 199A qualified business income (QBI) deduction, and it becomes clear why e-commerce accounting benefits from specialized expertise.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Post-Wayfair Sales Tax: Economic Nexus Thresholds</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Since Wayfair, virtually every state with a sales tax has enacted economic nexus rules. While the specific thresholds vary, most states impose a collection obligation once a seller exceeds $100,000 in sales or 200 transactions in that state during the prior or current calendar year. South Dakota's thresholds — which served as the model upheld by the Supreme Court — are now replicated in some form across the country. A handful of states use different thresholds or different calculation methods.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For NJ-based sellers, this means that as your business grows, you continuously approach new nexus thresholds in new states. A business that ships primarily to New York, Pennsylvania, Connecticut, and California will reach nexus thresholds in those high-population states relatively quickly. Once you cross a threshold, you have a registration, collection, and remittance obligation — including filing regular returns and remitting collected taxes on the schedule required by each state. Marketplace facilitator laws complicate this further: platforms like Amazon and Etsy collect and remit sales tax on your behalf in most states, but not all, and the interaction between marketplace-collected sales and your own direct sales requires careful tracking.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey's own sales tax applies to most tangible personal property sold to NJ consumers. The NJ sales tax rate is 6.625%, though certain items — groceries, certain clothing items, and prescription drugs — are exempt. NJ also has reduced-rate urban enterprise zones. Understanding what is taxable, what is exempt, and how to handle partial exemptions is critical for NJ e-commerce sellers whose products span taxable and non-taxable categories.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Multi-Platform Selling and 1099-K Reporting</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The IRS lowered the 1099-K reporting threshold significantly in recent years, and now platforms are required to issue 1099-Ks to sellers with relatively modest transaction volumes. If you sell on multiple platforms — Amazon, Shopify, Etsy, eBay, Walmart Marketplace — you may receive multiple 1099-Ks, each reporting gross receipts that include sales tax collected, marketplace fees that were netted against payouts, refunds that were issued, and chargebacks.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Reconciling 1099-Ks to your books requires understanding that the 1099-K gross amount is not the same as your taxable revenue. Sales tax collected on behalf of customers is not your income. Returns and refunds reduce net revenue. Platform fees represent expenses that must be deducted properly. Many e-commerce sellers — particularly those who handle their own bookkeeping — inadvertently double-count income by recording gross 1099-K amounts without adjusting for these items, resulting in inflated tax bills.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Inventory Accounting Methods and Cost of Goods Sold</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For product-based e-commerce businesses, inventory accounting is a cornerstone of accurate financial reporting. The choice of inventory accounting method — First-In, First-Out (FIFO), Last-In, First-Out (LIFO), or weighted average cost — affects your cost of goods sold, gross profit, and taxable income. In a period of rising costs, LIFO produces higher COGS and lower taxable income, but LIFO is not permitted under international accounting standards and has specific IRS conformity requirements.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Tracking cost of goods sold accurately requires knowing the landed cost of your inventory — the purchase price plus inbound freight, duties, and any other costs of getting the product to your warehouse. International sourcing means dealing with tariffs, customs broker fees, and fluctuating freight costs. With recent tariff changes affecting imports from China and other major sourcing countries, NJ e-commerce businesses need to ensure their COGS calculations reflect actual landed costs, which directly affects both profitability analysis and tax liability.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Advertising Deductions, Home Office, and Section 199A QBI</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        E-commerce businesses are often heavy advertisers — Google Shopping, Meta Ads, Amazon Sponsored Products, TikTok, influencer marketing. All of these advertising expenses are fully deductible as ordinary and necessary business expenses, but they must be properly categorized and documented. Advertising costs are frequently the largest discretionary expense line for e-commerce businesses and can represent 20-40% of revenue for growth-stage companies.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For e-commerce owners who run their business from home, the home office deduction allows you to deduct a proportionate share of home expenses — including mortgage interest or rent, utilities, insurance, and depreciation — based on the percentage of your home used exclusively and regularly for business. This can be calculated using either the simplified method ($5 per square foot, up to 300 square feet) or the actual expense method, which typically yields a larger deduction.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The Section 199A qualified business income (QBI) deduction allows eligible pass-through business owners — sole proprietors, S-Corp shareholders, partnership members — to deduct up to 20% of their qualified business income, subject to income limitations and other restrictions. For an e-commerce owner with $300,000 in net business income, a 20% QBI deduction could reduce taxable income by $60,000. The deduction phases out at higher income levels and has wage and capital investment limitations that require careful calculation — particularly for higher-earning e-commerce business owners.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Quarterly Estimated Taxes for E-Commerce Owners</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Unlike W-2 employees whose taxes are withheld from each paycheck, self-employed e-commerce owners are responsible for making quarterly estimated tax payments to the IRS (and to NJ for state income tax). Underpayment of estimated taxes triggers penalties — and for e-commerce businesses with highly seasonal revenue (particularly those heavily weighted toward Q4 holiday sales), getting the quarterly payment strategy right requires forecasting quarterly income rather than simply dividing the prior year's liability by four.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis works with e-commerce clients to model quarterly income, develop payment schedules that minimize penalties without tying up unnecessary cash, and adjust estimates during the year as actual results develop. This is particularly important for growing businesses whose current-year income may differ substantially from the prior year.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Supports NJ E-Commerce Businesses</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Sales tax nexus review:</strong> We analyze your sales history across states to identify where you have crossed economic nexus thresholds and what registration and remittance obligations you have.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>1099-K reconciliation:</strong> We reconcile multi-platform 1099-Ks to your actual revenue, ensuring you pay tax on what you earned — not on gross processor receipts that include sales tax and returned merchandise.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Inventory and COGS accounting:</strong> We set up inventory accounting systems that properly capture landed costs, including tariffs and freight, for accurate profitability reporting and tax compliance.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>QBI deduction optimization:</strong> We calculate and optimize your Section 199A QBI deduction, ensuring you capture the full 20% deduction where eligible and plan around phase-out thresholds.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Quarterly estimated tax planning:</strong> We model your projected income quarterly and help you make accurate estimated tax payments to avoid underpayment penalties at year-end.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for E-Commerce Businesses</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/tax-services/multi-state-tax/" class="font-semibold hover:underline" style="color: #2E75B6;">Multi-State Tax Compliance</a> — Manage sales tax registration, nexus analysis, and returns across every state where you sell.</li>
+        <li><a href="/tax-services/nj-salt-consulting/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ SALT Consulting</a> — Navigate the NJ BAIT election and state tax obligations for NJ-based e-commerce pass-through entities.</li>
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">E-Commerce Bookkeeping</a> — Clean, reconciled books that properly account for multi-platform revenue, returns, and fees.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/ecommerce/" />
+  <TestimonialsSection />
+  <CTASection heading="Untangle Your E-Commerce Taxes with ProAxis" subheading="From post-Wayfair sales tax compliance to multi-platform 1099-K reconciliation, ProAxis Tax & Accounting serves NJ e-commerce businesses with the depth they need. Schedule your free consultation today." />
+</BaseLayout>

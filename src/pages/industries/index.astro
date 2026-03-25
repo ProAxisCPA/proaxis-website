@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "CPA Services by Industry NJ | ProAxis Tax & Accounting";
+const description = "ProAxis Tax & Accounting Services delivers industry-specific CPA services across New Jersey — real estate, healthcare, e-commerce, construction, restaurants, non-profits, and professional services.";
+const canonical = "/industries/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Industry-Specific CPA & Accounting Services",
+  "description": "Specialized CPA and accounting services tailored to the unique needs of New Jersey businesses in real estate, healthcare, e-commerce, construction, restaurants, non-profits, and professional services.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330",
+    "url": "https://www.proaxiscpa.com"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [{ name: "Industries" }];
+
+const industries = [
+  {
+    title: "Real Estate",
+    href: "/industries/real-estate/",
+    description: "Rental property depreciation, 1031 exchanges, real estate professional status, fix-and-flip tax treatment, and NJ-specific real estate tax strategies.",
+    icon: "🏠",
+  },
+  {
+    title: "Healthcare & Medical Practices",
+    href: "/industries/healthcare/",
+    description: "Medical practice entity structures, physician compensation, Section 179 equipment deductions, retirement plans for high-earning physicians, and practice buy-ins.",
+    icon: "🏥",
+  },
+  {
+    title: "E-Commerce & Online Business",
+    href: "/industries/ecommerce/",
+    description: "Post-Wayfair sales tax compliance, multi-platform 1099-K reporting, inventory accounting, QBI deductions, and quarterly estimated taxes for online sellers.",
+    icon: "🛒",
+  },
+  {
+    title: "Construction & Contractors",
+    href: "/industries/construction/",
+    description: "Job costing, WIP schedules, percentage-of-completion accounting, NJ prevailing wage compliance, subcontractor 1099 management, and equipment depreciation.",
+    icon: "🏗️",
+  },
+  {
+    title: "Restaurants & Hospitality",
+    href: "/industries/restaurants/",
+    description: "FICA tip credits, NJ food & beverage sales tax, daily sales reconciliation, tipped employee payroll compliance, and restaurant-specific entity structuring.",
+    icon: "🍽️",
+  },
+  {
+    title: "Non-Profit Organizations",
+    href: "/industries/non-profits/",
+    description: "501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, NJ charitable registration, and board financial reporting.",
+    icon: "🤝",
+  },
+  {
+    title: "Professional Services",
+    href: "/industries/professional-services/",
+    description: "Revenue recognition for law firms, consultancies, and agencies — including unbilled WIP, retainer accounting, S-Corp vs LLC analysis, and partner compensation structures.",
+    icon: "💼",
+  },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Industry-Specific CPA &amp; Accounting Services in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Every industry carries its own tax obligations, accounting complexities, and compliance risks. ProAxis Tax &amp; Accounting Services brings deep, sector-specific knowledge to serve New Jersey businesses the way generalist firms simply cannot.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Intro Content -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="prose prose-lg max-w-none mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Why Industry Expertise Matters in Accounting</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        General accounting knowledge is a starting point — not a destination. When a restaurant owner tries to navigate tipped employee payroll rules and FICA tip credits with a CPA who primarily serves retail businesses, something inevitably falls through the cracks. When a real estate investor applies for real estate professional status without understanding the 750-hour test and its documentation requirements, they risk costly disallowances in an IRS audit. When an e-commerce business expands nationally without a proper economic nexus analysis, it can face significant back-taxes and penalties across dozens of states.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        At ProAxis Tax &amp; Accounting Services, we have structured our practice around the industries we know best. Based in Hasbrouck Heights in Bergen County, New Jersey, we serve business owners, investors, and professionals across NJ who operate in industries with distinct and demanding accounting and tax requirements. Our team does not try to be everything to everyone — we go deep in the sectors where our expertise delivers the highest value.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey adds another layer of complexity that national or generalist firms often miss. NJ has its own conformity rules with the federal tax code — meaning changes at the federal level do not automatically flow through to your New Jersey return. The NJ Gross Income Tax has a unique rate structure, and the Corporation Business Tax has its own apportionment formula, nexus rules, and filing requirements. For industries like healthcare and construction, there are NJ-specific professional licensing, prevailing wage, and sales tax rules that have direct accounting implications. Understanding these intersections is what separates adequate service from genuinely strategic guidance.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Our industry pages are designed to be educational and practical. Each one covers the specific tax challenges, accounting methods, compliance obligations, and planning opportunities that matter most in that sector — with particular emphasis on how New Jersey law intersects with federal requirements. Whether you are a physician considering a defined benefit plan, a construction company owner trying to understand percentage-of-completion accounting for bonding purposes, or an e-commerce seller trying to untangle your post-Wayfair sales tax exposure, you will find substantive, actionable information in these pages.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis operates as a fully virtual CPA firm, which means you get Bergen County-quality expertise without geographic limitations. We work with clients across New Jersey — Bergen County, Essex County, Passaic County, Hudson County, Morris County, and beyond — all through secure, modern digital workflows. Our clients share documents through encrypted portals, sign returns electronically, and meet with their CPA by video call. The result is a faster, more convenient experience without sacrificing depth or personal attention.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Explore the industries we serve below. If your industry is not listed but your accounting and tax situation is complex, we encourage you to reach out — we regularly serve clients in adjacent sectors and are happy to discuss whether ProAxis is the right fit for your needs.
+      </p>
+    </div>
+
+    <!-- Industry Cards Grid -->
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Industries We Serve</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+      {industries.map((industry) => (
+        <a
+          href={industry.href}
+          class="block rounded-xl border border-gray-200 p-6 hover:border-blue-300 hover:shadow-md transition-all group"
+          style="background-color: #F7F8FA;"
+        >
+          <div class="text-3xl mb-3" aria-hidden="true">{industry.icon}</div>
+          <h3 class="text-lg font-bold font-heading mb-2 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">
+            {industry.title}
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
+          <div class="mt-4 text-sm font-semibold" style="color: #2E75B6;">
+            Learn more &rarr;
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- What to Expect -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">What to Expect When You Work with ProAxis</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Industry-specific onboarding:</strong> We begin every engagement with a thorough review of your industry-specific risks, obligations, and opportunities — not a generic intake form.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Proactive planning:</strong> We do not wait until tax season. Quarterly check-ins, estimated tax calculations, and year-end planning sessions are built into every engagement.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Licensed CPA credentials:</strong> Every client is served by a team that includes licensed CPAs — not bookkeepers or unlicensed preparers presenting themselves as advisors.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>NJ-specific guidance:</strong> We understand how New Jersey tax law interacts with your industry — from NJ BAIT elections for pass-through owners to NJ-specific sales tax rules for restaurants and medical practices.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Responsive communication:</strong> Questions get answered. We maintain clear response-time commitments and keep you informed at every stage of your engagement.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Quick Links -->
+    <section aria-label="All Industries">
+      <h2 class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">All Industries</h2>
+      <ul class="space-y-2">
+        {industries.map((industry) => (
+          <li>
+            <a href={industry.href} class="font-semibold hover:underline" style="color: #2E75B6;">{industry.title}</a>
+            <span class="text-gray-500 text-sm"> — {industry.description}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </section>
+
+  <TestimonialsSection />
+  <CTASection heading="Ready for a CPA Who Knows Your Industry?" subheading="Schedule a free consultation with ProAxis Tax & Accounting. We serve NJ businesses across Bergen County and statewide — fully virtually, with deep industry expertise." />
+</BaseLayout>

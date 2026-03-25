@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Fair Lawn";
+const title = "CPA in Fair Lawn NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Fair Lawn NJ — manufacturing and industrial business accounting, diverse small business tax planning, and bookkeeping. 100% virtual.";
+const canonical = "/service-areas/fair-lawn/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Fair Lawn, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Fair Lawn's Business &amp; Community Landscape</h2>
+    <p class="text-gray-700 mb-4">Fair Lawn is one of Bergen County's largest and most commercially active boroughs — a community with a strong working-class and middle-class identity, a proud manufacturing heritage, and a diverse small business ecosystem that reflects the energy of an entrepreneurially active population. While Fair Lawn may not command the same name recognition as Paramus or Ridgewood in discussions of Bergen County's economic profile, its Route 208 corridor, its industrial waterfront along the Passaic River, and its Fair Lawn Avenue commercial spine make it one of the county's more economically dense municipalities.</p>
+    <p class="text-gray-700 mb-4">Fair Lawn's manufacturing history is substantial and still shapes its industrial character today. The borough was home to some of New Jersey's most significant 20th-century chemical and industrial operations — BASF Corporation maintained a major presence here for decades, and the surrounding industrial corridor along the Passaic River hosted a range of chemical, textile, and light manufacturing enterprises. While many of the largest manufacturers have downsized or departed, Fair Lawn still hosts a meaningful cluster of manufacturing, industrial supply, food processing, and contract manufacturing operations that require specialized accounting systems. Manufacturing business accounting — inventory costing, cost of goods sold tracking, production overhead allocation, work-in-progress valuation — is a distinct discipline that not all CPAs are equipped to handle well.</p>
+    <p class="text-gray-700 mb-4">Radburn, the famous planned community developed in the 1920s by the City Housing Corporation, occupies a distinctive portion of Fair Lawn's residential landscape. Conceived as a model American community with pedestrian-car separation, shared open spaces, and carefully designed housing clusters, Radburn retains a devoted community of residents who take pride in its historic character and cooperative governance structure. The Radburn Association, which manages the community's common areas and amenities, is a community association that requires professional accounting — financial statements, assessment collection tracking, reserve fund management, and annual reporting that members can trust.</p>
+    <p class="text-gray-700 mb-4">Fair Lawn's Jewish community is one of the most organized and commercially active in Bergen County. The community supports an array of kosher food establishments, Jewish educational institutions, Jewish community organizations, and the businesses that serve the community's lifestyle needs. The intersection of Shabbat observance and business ownership creates scheduling and operational patterns that a knowledgeable CPA can help navigate — from the structure of Shabbat-observant professional practices to the accounting for religious school tuition contributions and charitable giving to communal organizations.</p>
+    <p class="text-gray-700 mb-8">The Route 208 corridor provides Fair Lawn with excellent regional accessibility, connecting the borough to the Garden State Parkway, Route 17, and the broader northern New Jersey commercial network. This access makes Fair Lawn attractive for distribution businesses, regional service contractors, and other enterprises that need efficient movement of goods and personnel throughout the metro area. These businesses benefit from proactive accounting around vehicle expense deductions, commercial vehicle depreciation, and the proper classification of transportation costs as deductible business expenses.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Tax &amp; Accounting Needs in Fair Lawn</h2>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Manufacturing and industrial accounting", text: "Inventory costing methods (FIFO, LIFO, weighted average), cost of goods sold tracking, production overhead allocation, Section 179 and bonus depreciation for manufacturing equipment, and NJ's specific treatment of manufacturing machinery exemptions for sales tax purposes." },
+        { heading: "Middle-market business growth", text: "Fair Lawn's growth-stage businesses — those graduating from solo operations to multi-employee companies — often need help establishing proper accounting systems, entity structuring, and financial controls that can scale with the business." },
+        { heading: "Diverse small business support", text: "The broad range of Fair Lawn's owner-operated businesses — from food service to specialty retail to professional services — benefits from integrated tax planning that captures all available deductions and builds a long-term tax-efficient structure." },
+        { heading: "NJ payroll and HR compliance", text: "Businesses with growing payrolls need to stay current with NJ's evolving wage and hour laws, minimum wage requirements, Earned Sick Leave obligations, and UI/TDI/FLI withholding requirements." },
+        { heading: "Community association accounting", text: "The Radburn Association and other community governance structures in Fair Lawn need professional-quality financial statements, reserve fund accounting, and annual reporting." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Fair Lawn Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-5">From manufacturing floor to Main Street retail, ProAxis brings the depth of accounting expertise that Fair Lawn's working business community deserves — delivered through a convenient virtual model so you stay focused on running your business.</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Tax Planning", link: "/tax-services/tax-planning/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "Business Advisory", link: "/business-services/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Choose a Virtual CPA in Fair Lawn</h2>
+    <p class="text-gray-700 mb-4">Fair Lawn's business owners are busy — running manufacturing operations, managing commercial properties, or serving a demanding retail customer base. ProAxis's virtual model means you get expert CPA services without pulling yourself away from your business for a drive across Bergen County.</p>
+    <p class="text-gray-700 mb-6">Our cloud-based document systems, secure client portal, and video meeting capability make the entire CPA relationship efficient and responsive — you get expert advice when you need it, not three weeks after you send an email.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Paramus", slug: "paramus" },
+        { name: "Ridgewood", slug: "ridgewood" },
+        { name: "Garfield", slug: "garfield" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or learn more about our <a href="/tax-services/tax-preparation/" class="font-medium underline" style="color: #2E75B6;">tax preparation</a> and <a href="/business-services/bookkeeping/" class="font-medium underline" style="color: #2E75B6;">bookkeeping</a> services.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

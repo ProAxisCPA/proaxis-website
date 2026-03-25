@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "Multi-State Tax Compliance NJ | ProAxis CPA | Bergen County";
+const description = "Multi-state tax compliance for NJ businesses. Nexus analysis, economic nexus post-Wayfair, income apportionment, sales tax compliance, and remote employee nexus issues. Bergen County CPA.";
+const canonical = "/tax-services/multi-state-tax/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Multi-State Tax Compliance",
+    "description": "Multi-state tax compliance and filing for New Jersey businesses including nexus analysis, economic nexus post-Wayfair, state income tax apportionment, sales tax registration and compliance, and remote employee nexus planning.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Multi-State Tax Compliance"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What triggers nexus in another state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nexus in another state can be triggered in two main ways: physical nexus and economic nexus. Physical nexus arises from having a physical presence in a state — employees working there (including remote workers), an office, a warehouse, inventory stored at a third-party fulfillment center, or sales representatives making calls in the state. Economic nexus, established after the 2018 South Dakota v. Wayfair Supreme Court decision, arises from exceeding a state's economic thresholds — typically $100,000 in sales to the state's customers or 200 or more transactions in the state per year — regardless of any physical presence. Most states have adopted economic nexus standards for sales tax, and many also have economic nexus thresholds for income tax purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to file an income tax return in every state where I have customers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. Having customers in a state creates economic nexus for sales tax purposes in most states, but income tax nexus has a different analysis. For income tax, nexus typically requires either physical presence or, in states that have adopted factor-based nexus standards, reaching certain payroll or property thresholds in addition to sales thresholds. However, if you have income tax nexus in a state, you must apportion your business income to that state and file a return there, even if only a small portion of your income is allocated to that state. The analysis is state-specific, and rules vary significantly. ProAxis conducts a nexus footprint analysis to determine exactly where your business has income tax filing obligations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is apportionment and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apportionment is the process states use to divide a multi-state business's total taxable income among the states where it has nexus, so that each state taxes only its allocated share. Most states use a single-sales-factor apportionment formula: the percentage of your total sales that occur in a given state determines the portion of your total income allocated to that state. Other states still use a three-factor formula incorporating payroll, property, and sales. Some states use a modified formula with sales weighted more heavily than payroll and property. Correctly applying the apportionment formula for each state where you have nexus — including the rules for sourcing different types of service revenues — is essential to determining your correct state income tax liability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How has the Wayfair decision affected my NJ business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Supreme Court's 2018 South Dakota v. Wayfair decision eliminated the physical presence requirement for sales tax nexus. Before Wayfair, a NJ business selling products online to customers in, say, Texas had no obligation to collect Texas sales tax unless it had a physical presence there. After Wayfair, if that business exceeds Texas's economic nexus threshold ($500,000 in Texas sales), it must register for Texas sales tax, collect tax on taxable Texas sales, and file Texas sales tax returns. Nearly every state now has economic nexus standards similar to those upheld in Wayfair. For NJ-based e-commerce sellers and businesses with broad national customer bases, this has created compliance obligations in dozens of states that did not previously exist."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "Multi-State Tax Compliance" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Tax Services", url: "/tax-services/" }, { name: "Multi-State Tax Compliance" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Multi-State Tax Compliance &amp; Filing for NJ Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Growing beyond New Jersey's borders creates tax obligations in other states that many business owners don't realize they have. ProAxis manages your multi-state nexus analysis, income apportionment, and sales tax compliance so you stay compliant everywhere you operate.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Why Businesses Need Multi-State Tax Help -->
+    <section class="mb-12" aria-labelledby="why-multi-state">
+      <h2 id="why-multi-state" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Why NJ Businesses Need Multi-State Tax Expertise</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Many New Jersey business owners are surprised to learn they have tax obligations in states where they have never set foot. The combination of increasingly aggressive state nexus standards, the post-Wayfair economic nexus revolution in sales tax, and the proliferation of remote work has expanded the multi-state tax footprint of even small and mid-sized NJ businesses far beyond what would have been conceivable a decade ago.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The consequences of ignoring multi-state obligations can be severe. States conduct nexus audits, and when they identify a business that has been operating in their state without registering, collecting, or filing, they can assess back taxes for three to seven years — plus interest and penalties that can equal or exceed the original tax. In some cases, officers and owners of closely held businesses face personal liability for uncollected sales taxes.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        At the same time, multi-state compliance is not purely a defensive exercise. Properly managing your multi-state presence — through voluntary disclosure agreements that limit historical exposure, choosing apportionment-friendly business structures, and strategically managing where payroll and property are located — can actually reduce your total state tax burden rather than simply adding to it.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis helps NJ businesses understand their multi-state footprint honestly, come into compliance efficiently, and manage ongoing obligations without surprises. We work closely with our <a href="/tax-services/nj-salt-consulting/" style="color: #2E75B6;" class="hover:underline">NJ SALT consulting</a> service to ensure that NJ-specific elections and positions are consistent with your broader multi-state compliance strategy.
+      </p>
+    </section>
+
+    <!-- Nexus Rules -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="nexus-rules">
+      <h2 id="nexus-rules" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Understanding Nexus: Physical and Economic</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Nexus is the legal connection between a business and a state sufficient to subject the business to that state's taxing authority. Without nexus, a state cannot require a business to collect sales tax or file income tax returns. With nexus, the obligation is clear. The threshold question for any multi-state tax analysis is: where does my business have nexus?
+      </p>
+      <div class="space-y-4">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Physical Nexus</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Physical nexus is the traditional standard — it arises from having a tangible, physical presence in a state. This includes: employees who live or work in the state; an office, store, warehouse, or other facility; inventory stored at a third-party location (including Amazon FBA fulfillment centers, which create nexus in every state where Amazon stores your inventory); independent contractors or agents making sales on your behalf in the state; and temporary presence such as a trade show or job site that exceeds a de minimis threshold in certain states. Physical nexus triggers both sales tax and income tax obligations.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Economic Nexus (Post-Wayfair)</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">The Supreme Court's June 2018 decision in South Dakota v. Wayfair overturned the physical presence requirement for sales tax nexus. The Court held that states can require businesses to collect sales tax based on economic activity alone — specifically, on the volume of sales to the state's residents. Nearly every state has now enacted economic nexus thresholds, most commonly $100,000 in annual sales to the state or 200 or more transactions per year. Some states use different thresholds. A NJ e-commerce business selling $150,000 per year in goods to customers in, say, Colorado has economic nexus in Colorado and must register, collect, and remit Colorado sales tax on those sales.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1B2A4A;">Factor Presence Nexus for Income Tax</h3>
+          <p class="text-sm text-gray-700 leading-relaxed">Many states have also adopted "factor presence" nexus standards for income tax, establishing that a business has income tax nexus in the state if its property, payroll, or sales in the state exceed specified dollar thresholds — even without traditional physical presence. These thresholds vary by state but are typically in the range of $500,000 to $1 million in in-state sales or $50,000 to $100,000 in in-state payroll or property.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- State Income Tax Apportionment -->
+    <section class="mb-12" aria-labelledby="apportionment">
+      <h2 id="apportionment" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">State Income Tax Apportionment</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Once nexus is established in multiple states, the next challenge is correctly apportioning your business income among those states so that each taxes only its fair share. Without apportionment, a business with operations in five states could theoretically be taxed by each state on its total income — resulting in fivefold taxation of the same earnings. Apportionment prevents this by allocating income in proportion to the business activity in each state.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Most states have moved to a single-sales-factor apportionment formula: the percentage of a company's total sales that are sourced to a given state determines the percentage of total income taxable by that state. Under this approach, a NJ business that generates 10% of its revenues from California customers would have 10% of its income apportioned to California for California income tax purposes — regardless of where the employees or physical assets are located.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The sourcing of sales to a particular state depends on the nature of the product or service. For tangible goods, sales are generally sourced to the destination (where the goods are delivered). For services, sourcing rules vary significantly by state — some states source services to where the customer receives the benefit; others source to where the services are performed. For businesses selling software, digital products, or subscription services, sourcing is particularly complex and state-specific.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Correctly computing apportionment in each state where you have nexus requires understanding each state's specific formula, its rules for sourcing different types of receipts, and any industry-specific apportionment rules that may apply to your business. Errors in apportionment can result in either overpayment of state taxes (if you over-allocate income to high-tax states) or underpayment and potential audit exposure.
+      </p>
+    </section>
+
+    <!-- Sales Tax Compliance -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="sales-tax">
+      <h2 id="sales-tax" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Sales Tax Compliance Across States</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Sales tax compliance is arguably the most administratively burdensome aspect of multi-state taxation. Unlike income tax, which is filed annually with quarterly estimated payments, sales tax is typically filed monthly or quarterly in each state where you are registered — with different filing deadlines, different taxable product lists, different exemption certificate requirements, and different remittance procedures.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The product taxability question is particularly treacherous. What is taxable in one state may be exempt in another. New Jersey, for example, exempts most clothing and footwear from sales tax. New York has a similar exemption but with different rules for certain luxury goods. Food is taxable in some states and exempt in others; software-as-a-service (SaaS) is taxable in some states and non-taxable in others; digital downloads face varying treatment.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For NJ businesses with multi-state sales tax exposure, the first priority is registration: you cannot legally collect sales tax in a state until you have registered as a vendor with that state's taxing authority. Collecting without registration, or failing to collect when obligated to do so, both create liability. We help clients establish compliant sales tax registration in all required states, often through the Streamlined Sales Tax (SST) program or through voluntary disclosure when there is historical exposure to manage.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        For ongoing compliance, we help clients establish the systems and processes needed to calculate, collect, file, and remit sales tax accurately across all registered states — whether through automated sales tax software (Avalara, TaxJar) integrated into their e-commerce or ERP platform, or through managed compliance services where we handle the filings directly.
+      </p>
+    </section>
+
+    <!-- Remote Employees -->
+    <section class="mb-12" aria-labelledby="remote-employees">
+      <h2 id="remote-employees" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Remote Employees &amp; Nexus Risk</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The post-pandemic shift to remote work has created significant, often unrecognized multi-state tax exposure for NJ businesses. When a NJ company hires an employee who works from their home in Florida, Texas, Georgia, or any other state, that single employee typically creates physical nexus for the employer in the employee's state — triggering both payroll tax registration obligations and potentially income tax nexus as well.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The payroll implications are immediate and concrete: as soon as an employee works in another state, the employer must register to withhold that state's income tax from the employee's wages, register for unemployment insurance in the employee's state, and potentially comply with that state's paid leave, workers' compensation, and other employment law requirements. Failing to establish these registrations creates liability that grows with each payroll cycle.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Beyond payroll, the remote employee may create income tax nexus for the business itself — particularly in states with factor presence standards where having payroll exceeding a threshold triggers a corporate income tax filing obligation. Before hiring in a new state, understanding the full tax and compliance implications of that hire is essential. ProAxis assists NJ businesses with the nexus analysis and registration process when they expand their remote workforce into new states.
+      </p>
+    </section>
+
+    <!-- Common Multi-State Scenarios -->
+    <section class="mb-12" aria-labelledby="scenarios">
+      <h2 id="scenarios" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">Common Multi-State Scenarios for NJ Businesses</h2>
+      <div class="space-y-4">
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">NJ Business with New York Operations or Employees</h3>
+          <p class="text-sm text-gray-600">Many Bergen County businesses have customers, offices, or employees in New York — making NY income tax and payroll tax compliance routine requirements. We handle NJ and NY return preparation in a coordinated package, including the complex NYC business tax rules for businesses operating within the five boroughs.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">E-Commerce Sellers with Nationwide Sales</h3>
+          <p class="text-sm text-gray-600">An NJ-based online seller shipping to customers nationwide faces economic nexus in most states once thresholds are met. We conduct a state-by-state nexus analysis, prioritize registration based on exposure, and establish ongoing compliance processes to manage the filing obligations across all triggered states.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">Service Businesses with Remote Clients</h3>
+          <p class="text-sm text-gray-600">Professional services firms — consultants, IT firms, design agencies — serving clients in other states may trigger both income tax nexus (if they perform work in those states) and, in some cases, sales tax nexus for taxable services. We analyze the sourcing of service revenues and the nexus implications of client locations and service delivery locations.</p>
+        </div>
+        <div class="border-l-4 pl-4" style="border-color: #2E75B6;">
+          <h3 class="font-semibold mb-1" style="color: #1B2A4A;">NJ Company with Remote Workers Across Multiple States</h3>
+          <p class="text-sm text-gray-600">Companies with remote employees in five or more states face a complex web of payroll withholding registrations, unemployment insurance accounts, and potential income tax nexus. We map out all obligations triggered by the remote workforce and coordinate the registration and compliance process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ProAxis Approach -->
+    <section class="mb-12" aria-labelledby="our-approach">
+      <h2 id="our-approach" class="text-2xl font-bold font-heading mb-4" style="color: #1B2A4A;">The ProAxis Multi-State Approach</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We begin every multi-state engagement with a comprehensive nexus footprint analysis — a systematic review of your operations, employees, customer locations, sales volumes, and any physical presence factors to determine where you have or may have created nexus. We distinguish between states where you have current filing obligations, states where you are approaching nexus thresholds, and states where the risk is minimal.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For clients with historical non-compliance exposure, we evaluate voluntary disclosure options in states with unmet obligations. Most states have voluntary disclosure programs that allow businesses to come forward proactively and limit their look-back period — typically to three or four years rather than the standard statute of limitations — and often waive some or all penalties. Voluntary disclosure is almost always preferable to waiting for an audit.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        On an ongoing basis, we prepare all required state income tax returns, coordinate apportionment calculations, and monitor your nexus thresholds as your business grows. We also alert you when changes in your operations — new hires, new customers, new product lines — create new compliance considerations in states where you were previously below the threshold.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What triggers nexus in another state?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Nexus can be triggered through physical presence — employees, offices, inventory, or sales representatives in the state — or through economic activity alone under post-Wayfair economic nexus rules. Most states have sales tax economic nexus thresholds of $100,000 in annual sales or 200 transactions per year. Physical nexus from remote employees is a particularly common and often overlooked source of nexus for NJ businesses that have expanded their remote workforce in recent years. Both physical and economic nexus can trigger sales tax collection obligations, income tax filing obligations, or both, depending on the state.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">Do I need to file an income tax return in every state where I have customers?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Not necessarily. Having customers in a state creates potential sales tax nexus under Wayfair, but income tax nexus requires a separate analysis. Income tax nexus typically requires physical presence or reaching factor-based thresholds (sales, payroll, or property exceeding specific dollar amounts in a state). That said, if you have income tax nexus in a state, you must apportion your business income to that state and file a return there. The analysis is highly state-specific, and rules vary significantly. ProAxis conducts nexus footprint analyses to determine exactly where your business has income tax filing obligations — and where it does not.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">What is apportionment and how does it work?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Apportionment divides a multi-state business's total taxable income among the states where it operates, so each state taxes only its allocated share. Most states use a single-sales-factor formula: the ratio of in-state sales to total sales determines the portion of total income taxed by that state. Sourcing rules for sales — particularly for services and digital products — vary significantly by state. Correctly computing apportionment requires state-specific knowledge of each jurisdiction's formula, sourcing rules, and any industry-specific modifications. Errors in apportionment lead to either overpayment or underpayment of state taxes.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1B2A4A;">How has the Wayfair decision affected my NJ business?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">The 2018 Wayfair decision eliminated the physical presence requirement for sales tax nexus. Before Wayfair, a NJ business selling online to out-of-state customers had no sales tax obligation in those states without a physical presence there. After Wayfair, if you exceed a state's economic nexus threshold — typically $100,000 in annual sales or 200 transactions — you must register, collect, and remit that state's sales tax. Nearly every state now enforces economic nexus. For NJ-based e-commerce sellers and businesses with broad national customer bases, this has created compliance obligations in dozens of states that did not previously exist, and non-compliance carries significant audit and penalty risk.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1B2A4A;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/nj-salt-consulting/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">NJ SALT Consulting</div>
+          <div class="text-sm text-gray-600">NJ-specific BAIT election, CBT planning, and state tax strategy.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Year-round planning that incorporates multi-state tax considerations.</div>
+        </a>
+        <a href="/industries/ecommerce/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1B2A4A;">
+          <div class="font-semibold mb-1">E-Commerce Industry</div>
+          <div class="text-sm text-gray-600">Specialized tax and accounting services for NJ-based e-commerce businesses.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <RelatedServices silo="tax" currentPath="/tax-services/multi-state-tax/" />
+  <TestimonialsSection />
+  <CTASection heading="Know Where You Have Tax Obligations" subheading="Don't let multi-state tax obligations catch you off guard. Schedule a nexus analysis consultation with our ProAxis CPA team today." />
+</BaseLayout>

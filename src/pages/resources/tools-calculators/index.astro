@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/ui/Breadcrumbs.astro';
+import CTASection from '../../../components/ui/CTASection.astro';
+const title = "Tax Tools & Calculators for NJ Businesses | ProAxis CPA";
+const description = "Free tax tools and calculators for NJ business owners. Estimate self-employment tax, S-Corp savings, mileage deductions, and more. ProAxis CPA Bergen County.";
+const canonical = "/resources/tools-calculators/";
+const breadcrumbs = [{ name: "Resources", url: "/resources/" }, { name: "Tools & Calculators" }];
+const tools = [
+  { title: "Self-Employment Tax Calculator", desc: "Estimate your federal self-employment tax (SE tax) on net self-employment income.", icon: "💰" },
+  { title: "S-Corp Savings Estimator", desc: "See how much you could save in SE taxes by electing S-Corp status for your LLC.", icon: "🏢" },
+  { title: "Standard Mileage Deduction Calculator", desc: "Calculate your vehicle deduction based on business miles driven.", icon: "🚗" },
+  { title: "Estimated Tax Payment Calculator", desc: "Estimate your quarterly estimated tax payments to avoid underpayment penalties.", icon: "📊" },
+  { title: "Section 179 Deduction Estimator", desc: "Estimate your first-year equipment deduction under Section 179.", icon: "⚙️" },
+];
+---
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-3">Tax Tools & Calculators</h1>
+      <p class="text-lg text-gray-300">Quick estimates to help you plan. For precise calculations specific to your situation, consult with our CPA team.</p>
+    </div>
+  </section>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      {tools.map(t => (
+        <div class="bg-white rounded-xl border border-gray-100 p-6">
+          <div class="text-3xl mb-3" aria-hidden="true">{t.icon}</div>
+          <h2 class="font-bold font-heading mb-2" style="color: #1B2A4A;">{t.title}</h2>
+          <p class="text-sm text-gray-600 mb-4">{t.desc}</p>
+          <div class="rounded-lg p-4 text-center" style="background-color: #F7F8FA;">
+            <p class="text-xs text-gray-500 mb-2">Interactive calculator coming soon.</p>
+            <a href="/contact/" class="text-xs font-semibold" style="color: #2E75B6;">Get a personalized estimate from our CPAs →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 rounded-xl p-6 text-center border border-gray-100 bg-white">
+      <h2 class="font-bold font-heading mb-2" style="color: #1B2A4A;">Need More Precise Numbers?</h2>
+      <p class="text-gray-600 text-sm mb-4">Online calculators provide rough estimates. For accurate projections based on your actual income, deductions, and NJ-specific situation, schedule a consultation with our CPA team.</p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white" style="background-color: #2E75B6;">Schedule Free Consultation</a>
+    </div>
+  </div>
+  <CTASection />
+</BaseLayout>

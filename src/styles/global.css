@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #1B2A4A;
+    --color-blue: #2E75B6;
+    --color-gold: #C5A55A;
+    --color-bg: #FFFFFF;
+    --color-bg-alt: #F7F8FA;
+    --color-text: #1A1A2E;
+    --color-green: #22C55E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    color: var(--color-navy);
+  }
+
+  /* Focus indicators for accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  .text-navy { color: var(--color-navy); }
+  .text-blue-brand { color: var(--color-blue); }
+  .text-gold { color: var(--color-gold); }
+  .bg-navy { background-color: var(--color-navy); }
+  .bg-blue-brand { background-color: var(--color-blue); }
+  .bg-gold { background-color: var(--color-gold); }
+  .bg-alt { background-color: var(--color-bg-alt); }
+}
+
+/* Prose styles for blog content */
+.prose-proaxis h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-navy);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-proaxis h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-navy);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-proaxis p {
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.prose-proaxis ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-proaxis ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.prose-proaxis ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-proaxis ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.prose-proaxis a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+.prose-proaxis a:hover {
+  color: var(--color-navy);
+}
+
+.prose-proaxis strong {
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+/* Mega menu animation */
+.mega-menu {
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile menu */
+.mobile-menu-item {
+  transition: max-height 0.3s ease-out;
+}
+
+/* ===== CLS Prevention ===== */
+/* Reserve space for sticky header to prevent layout shift */
+header {
+  contain: layout style;
+}
+
+/* Prevent iframe CLS — explicit aspect-ratio fallback */
+iframe[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* Prevent font-swap CLS: size-adjust the fallback font to match Inter */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  size-adjust: 100%;
+  src: local('system-ui');
+}
+
+/* Prevent layout shift from images by default */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent CLS from toggle/accordion animation */
+.mobile-accordion-content {
+  overflow: hidden;
+}

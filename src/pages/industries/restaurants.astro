@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for Restaurants NJ | Restaurant Accounting | ProAxis Bergen County";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for restaurants and hospitality businesses in New Jersey — FICA tip credits, NJ food and beverage sales tax, daily sales reconciliation, tipped employee payroll, and restaurant tax strategy.";
+const canonical = "/industries/restaurants/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Restaurant & Hospitality Accounting Services",
+  "description": "Specialized accounting and tax services for restaurants and hospitality businesses in New Jersey, including FICA tip credits, NJ sales tax compliance, tipped employee payroll, and restaurant-specific tax planning.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "Restaurants & Hospitality" }
+];
+
+const services = [
+  { title: "Restaurant Bookkeeping", href: "/business-services/bookkeeping/" },
+  { title: "Payroll for Restaurants", href: "/business-services/payroll/" },
+  { title: "Tax Planning & Strategy", href: "/tax-services/tax-planning/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for Restaurants &amp; Hospitality in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Restaurants operate on thin margins, high cash volume, and complex payroll rules. ProAxis brings Bergen County CPA expertise to restaurant owners who need more than a generalist accountant can provide.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">The Accounting Challenges Unique to the Restaurant Industry</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The restaurant business is operationally demanding under the best of circumstances. Accounting and tax compliance add another layer of complexity that owners frequently underestimate. Between tip reporting, food and beverage cost ratios, NJ's specific sales tax rules, tipped employee payroll intricacies, and the perpetual challenge of reconciling high-volume daily cash and card transactions, restaurant owners in New Jersey need a CPA who has spent time in this industry — not one who is learning on the job at your expense.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        ProAxis works with independent restaurants, multi-location restaurant groups, food trucks, catering companies, bars, and hospitality businesses across Bergen County and throughout New Jersey. We understand that the financial rhythms of a restaurant are unlike those of any other business, and our services are built to accommodate those rhythms.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Thin Margins, High Cash Volume, and Daily Sales Reconciliation</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        The average full-service restaurant operates on a net profit margin of 3-9%. This means that small discrepancies in cost tracking, missed deductions, or inaccurate sales reporting can meaningfully affect profitability. High-volume restaurants handling thousands of transactions per day across cash, credit, debit, and third-party delivery platforms (DoorDash, Uber Eats, Grubhub) must reconcile all of these streams accurately to produce reliable daily sales totals.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Daily sales reconciliation is a practice that well-run restaurants adopt to catch discrepancies early. By comparing the point-of-sale (POS) system's reported sales to actual cash counts, credit card settlement reports, and delivery platform payouts each day, management can identify theft, reporting errors, and technical POS issues before they compound. We help restaurants set up reconciliation processes and integrate POS data into their accounting system cleanly.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">FICA Tip Credit: Section 45B</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        One of the most valuable and most frequently overlooked tax benefits available to restaurant employers is the FICA tip credit under Section 45B of the Internal Revenue Code. When customers tip restaurant employees, the employer is required to pay the employer's share of FICA taxes (Social Security and Medicare) on those tip amounts — even though the tips come from customers, not from the employer. The Section 45B credit allows the employer to claim a dollar-for-dollar federal tax credit for the FICA taxes paid on tips that exceed the federal minimum wage amount.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For a restaurant with $1 million in tipped wages, the FICA tip credit can easily total $50,000 to $70,000 or more per year. This is a direct reduction of the employer's federal tax liability — not merely a deduction, but an actual credit. To claim the credit, the restaurant must properly track tips reported by employees, maintain accurate payroll records, and complete Form 8846 as part of the annual tax return. Many restaurant owners — particularly those using non-specialized accountants — are either unaware of this credit or not claiming it fully. ProAxis ensures our restaurant clients capture every dollar of the FICA tip credit they are entitled to.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">NJ Food and Beverage Sales Tax Rules</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey's sales tax treatment of food and beverages is more nuanced than many restaurant owners realize. The general rule is that food sold for immediate consumption at a restaurant is subject to NJ sales tax. However, the specific application of this rule has important exceptions and edge cases.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Cold food items sold to go from a deli or bakery may be exempt from NJ sales tax if they are not "prepared food" under the NJ definition. Heated food items sold for immediate consumption are generally taxable. Catering services are generally taxable, including both the food and any separately charged service or setup fees. Alcoholic beverages sold for consumption are always taxable. The interplay between dine-in, takeout, delivery, and catering creates a complex sales tax picture that requires careful setup in your POS system to ensure proper tax collection and remittance.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Incorrect sales tax collection — collecting too much, collecting too little, or collecting on exempt items — creates problems with both customers and the NJ Division of Taxation. We help restaurants audit their POS tax configurations and ensure their NJ sales tax compliance is accurate and defensible.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Tipped Employee Payroll and NJ Minimum Wage Rules</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Payroll for restaurants is one of the most complex payroll scenarios in any industry. NJ allows a tip credit for tipped employees — meaning employers can pay tipped employees less than the standard minimum wage, provided the employee's wages plus tips together equal or exceed the standard minimum wage. The NJ tipped minimum wage has its own rate that differs from the standard minimum wage, and both rates are subject to scheduled annual increases under NJ's minimum wage law.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Employers must properly allocate tips for payroll tax purposes. Employees are required to report all tips received to their employer on Form 4070 (or equivalent). Employers must include reported tips in the employee's W-2 and pay the employer's share of FICA on those reported tips — which is where the Section 45B credit comes in. If employees are found to have under-reported tips, the employer may face allocated tip obligations under IRS rules.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Overtime calculations for restaurant employees must account for the tipped wage rate, and tip pooling arrangements — including how tips are shared among front-of-house and back-of-house staff — carry their own legal and tax implications under the Fair Labor Standards Act and NJ wage and hour law. We work closely with our restaurant clients to ensure payroll is processed correctly, every pay period, with all required withholdings and remittances.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Inventory Management, Food Cost Ratios, and Entity Structuring</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Food and beverage cost ratios are key performance indicators for any restaurant. Most full-service restaurants target a food cost of 28-35% of food revenue and a beverage cost of 18-24% of beverage revenue. Tracking these ratios weekly requires accurate inventory counts and a disciplined purchasing and invoicing process. Spoilage, theft, employee meals, and comp items must all be accounted for properly to arrive at accurate cost ratios and meaningful profitability analysis.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Restaurant groups operating multiple locations face additional complexity: intercompany transactions, shared staff, centralized purchasing, and consolidated versus location-level financial reporting all require careful accounting structure. We help multi-location operators set up accounting frameworks that provide both consolidated group-level visibility and meaningful per-location performance data.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        From an entity structuring perspective, restaurant owners who own both the operating business and the real property often benefit from separating these into distinct entities — an operating LLC (or S-Corp) and a real estate holding company — for liability protection and tax efficiency. We evaluate each client's situation to determine whether restructuring is beneficial and, if so, how to implement it with minimal disruption.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Supports NJ Restaurant Owners</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>FICA tip credit maximization:</strong> We ensure every eligible restaurant client claims the full Section 45B credit and properly documents tip wages throughout the year.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>NJ sales tax compliance:</strong> We audit POS tax configurations, advise on the taxability of specific menu items and service types, and ensure accurate NJ sales tax filing.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Restaurant payroll processing:</strong> We handle payroll for tipped employees, including proper tip withholding, NJ minimum wage compliance, and overtime calculations.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Daily sales reconciliation:</strong> We set up reconciliation workflows that keep your books accurate and flag discrepancies before they become material problems.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Entity structuring advisory:</strong> We evaluate whether separating your restaurant's operating business from its real estate, or restructuring as an S-Corp, would produce meaningful tax savings.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for Restaurant &amp; Hospitality Businesses</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">Restaurant Bookkeeping</a> — Daily sales reconciliation, food cost tracking, and clean financial statements for your restaurant.</li>
+        <li><a href="/business-services/payroll/" class="font-semibold hover:underline" style="color: #2E75B6;">Restaurant Payroll Services</a> — Payroll processing for tipped employees with NJ minimum wage compliance and tip tax reporting.</li>
+        <li><a href="/tax-services/tax-planning/" class="font-semibold hover:underline" style="color: #2E75B6;">Tax Planning &amp; Strategy</a> — Year-round tax strategy including FICA tip credit maximization and entity structure optimization.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/restaurants/" />
+  <TestimonialsSection />
+  <CTASection heading="Restaurant Accounting That Works as Hard as You Do" subheading="ProAxis Tax & Accounting provides specialized CPA services for NJ restaurant owners and hospitality businesses. Schedule your free consultation today." />
+</BaseLayout>

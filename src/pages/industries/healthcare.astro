@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for Medical Practices NJ | Healthcare Accounting | ProAxis";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for physicians and medical practices in New Jersey — entity structuring, physician compensation, retirement plans, Section 179 deductions, and practice buy-ins.";
+const canonical = "/industries/healthcare/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Healthcare & Medical Practice Accounting Services",
+  "description": "Specialized accounting and tax services for physicians, medical practices, and healthcare organizations in New Jersey, including entity structuring, retirement plan design, and practice financial management.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "Healthcare" }
+];
+
+const services = [
+  { title: "Fractional CFO for Medical Practices", href: "/business-services/fractional-cfo/" },
+  { title: "Tax Planning & Strategy", href: "/tax-services/tax-planning/" },
+  { title: "Medical Practice Bookkeeping", href: "/business-services/bookkeeping/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for Healthcare &amp; Medical Practices in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Physicians and practice administrators in NJ face unique financial challenges. ProAxis delivers CPA expertise tailored to medical practice entity structures, physician compensation planning, and healthcare-specific tax strategy.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">The Financial Complexity of Running a Medical Practice in New Jersey</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Medical professionals in New Jersey operate at the intersection of demanding clinical responsibilities and genuinely complex financial obligations. A physician completing residency and launching an independent practice must simultaneously navigate entity formation under NJ professional corporation rules, negotiate compensation structures, select and fund retirement plans, understand malpractice insurance deductibility, comply with NJ's professional licensing and business registration requirements, and plan for quarterly estimated taxes — all while building a patient base and managing clinical operations.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Established practices face a different but equally demanding set of challenges: practice overhead analysis, billing and collections alignment with cash-basis or accrual bookkeeping, partner buy-in and buy-out agreements, group practice profit distributions, and the ever-present question of whether the current entity structure is still optimal. ProAxis works with solo physicians, group practices, and multi-specialty organizations to address all of these areas with the depth that the healthcare sector demands.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Medical Practice Entity Structures in New Jersey</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey has specific rules governing how licensed professionals — including physicians — may structure their businesses. Medical practices in NJ can be organized as a Professional Corporation (PC), a Professional Limited Liability Company (PLLC), a Partnership of PCs, or in some cases a standard corporation or LLC where permitted under NJ's professional licensing framework. The right choice depends on your specialty, whether you have partners, your income level, and your long-term goals.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        From a tax perspective, many physicians benefit from electing S-Corporation status. Under an S-Corp structure, the physician-owner takes a reasonable salary (subject to payroll taxes) and distributions of remaining profits that are not subject to self-employment tax. For a high-earning physician, the payroll tax savings from a properly structured S-Corp election can be substantial — often $10,000 to $30,000 or more per year depending on income levels. However, NJ has a minimum Corporation Business Tax that applies to S-Corps, and the NJ BAIT election may provide additional savings opportunities for pass-through entity owners. We analyze each physician's situation individually to determine the optimal structure.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Physician Compensation and Practice Overhead Analysis</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For physicians in group practices, compensation structures range from equal splits to productivity-based models (often using RVUs — relative value units) to a blended overhead-sharing approach. The accounting treatment of each model differs, and the tax implications for physician-owners vary significantly based on whether they are employees, partners, or shareholder-employees.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Practice overhead analysis is critical for understanding profitability and identifying opportunities for efficiency. A medical practice that bills $1.5 million per year but has overhead of 75% is in a fundamentally different financial position than one with 55% overhead — and the difference often lies in billing practices, staffing ratios, space costs, and supplier agreements. ProAxis helps practices track and benchmark overhead by category, identify anomalies, and align financial reporting with the KPIs that practice administrators and physician-owners actually need to manage the business.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Healthcare-Specific Tax Deductions</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Physicians and medical practices are eligible for a range of deductions that require careful documentation. Continuing medical education (CME) expenses — including registration fees, travel, lodging, and materials — are deductible as ordinary and necessary business expenses. Medical malpractice insurance premiums are fully deductible for the practice and potentially deductible for individual physicians depending on their employment arrangement. Professional licensing fees, state board dues, and specialty board certification costs are all deductible.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Medical equipment represents one of the largest deduction opportunities. Under Section 179 of the Internal Revenue Code, a medical practice can deduct the full cost of qualifying equipment — diagnostic imaging machines, surgical tools, electronic health record systems, and other depreciable assets — in the year of purchase, up to the annual limit (which adjusts for inflation each year). Bonus depreciation rules under the Tax Cuts and Jobs Act have allowed 100% first-year expensing of qualified equipment, though this percentage has been phasing down in recent years. NJ does not fully conform to federal bonus depreciation rules, requiring separate state depreciation calculations.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        New Jersey has specific sales tax rules for medical equipment. Generally, medical devices that are sold for direct use in patient care are exempt from NJ sales tax, but the exemption applies narrowly and requires proper documentation. Purchases that do not meet the exemption criteria are taxable, and NJ audits of medical practices have resulted in significant sales tax assessments for practices that incorrectly assumed broad exemption applicability.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Retirement Planning for High-Earning Physicians</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Physicians are often among the highest earners in their communities, yet many are late starters in retirement savings due to the length of their training. Maximizing tax-deferred retirement contributions is one of the most effective strategies for reducing a physician's current-year tax burden while building long-term wealth.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        A Solo 401(k) plan is available to self-employed physicians with no full-time W-2 employees other than a spouse. In 2024, a physician can contribute up to $69,000 per year to a Solo 401(k) — including an employee deferral and employer profit-sharing contribution — with an additional $7,500 catch-up contribution if they are age 50 or older. This is one of the highest-contribution retirement vehicles available and can dramatically reduce taxable income.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For physicians with very high incomes who can afford to fund a significant retirement contribution, a defined benefit pension plan — sometimes called a cash balance plan — can allow contributions of $100,000 to $300,000 or more per year depending on age and income. These plans are more complex and expensive to administer than 401(k) plans, but the tax savings for the right candidate are extraordinary. ProAxis works with pension actuaries and retirement plan specialists to design the right plan for each physician's situation.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Practice Buy-Ins, Buy-Outs, and Partnership Transitions</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Entering or exiting a medical practice partnership involves some of the most consequential financial transactions in a physician's career. A poorly structured buy-in agreement can result in a physician paying more than necessary, while a poorly structured buy-out can trigger significant capital gains taxes that a more thoughtful structure could have deferred or minimized.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis advises physicians on the tax implications of practice valuation methodologies, allocation of purchase price among different asset classes (goodwill vs. hard assets vs. accounts receivable), the treatment of contingent payments and earn-outs, and the use of installment sale treatment to spread a seller's gain recognition over time. We work alongside your healthcare attorney to ensure that the business deal and the tax structure are aligned.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Serves NJ Medical Practices</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Entity structure analysis:</strong> We evaluate PC vs. PLLC vs. S-Corp options under NJ professional rules to identify the most tax-efficient structure for your practice.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Retirement plan design:</strong> From Solo 401(k) setup to defined benefit plan implementation, we coordinate with actuaries and plan administrators to maximize your deductions.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Overhead and performance metrics:</strong> We build financial reporting that gives physician-owners and administrators real visibility into practice profitability and efficiency.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Equipment deduction planning:</strong> We time Section 179 and bonus depreciation elections to maximize current-year savings while accounting for NJ's non-conformity rules.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Buy-in and buy-out advisory:</strong> We model the tax consequences of partnership transitions and help physicians structure these transactions to minimize tax friction.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for Healthcare Professionals</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/business-services/fractional-cfo/" class="font-semibold hover:underline" style="color: #2E75B6;">Fractional CFO Services</a> — Strategic financial leadership for growing medical practices without the cost of a full-time CFO.</li>
+        <li><a href="/tax-services/tax-planning/" class="font-semibold hover:underline" style="color: #2E75B6;">Tax Planning &amp; Strategy</a> — Year-round physician tax planning to minimize federal and NJ tax liability.</li>
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">Medical Practice Bookkeeping</a> — Accurate, timely bookkeeping aligned with your billing and revenue cycle systems.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/healthcare/" />
+  <TestimonialsSection />
+  <CTASection heading="Expert CPA Services for NJ Medical Professionals" subheading="ProAxis Tax & Accounting understands the financial complexity of running a medical practice in New Jersey. Schedule your free consultation today." />
+</BaseLayout>

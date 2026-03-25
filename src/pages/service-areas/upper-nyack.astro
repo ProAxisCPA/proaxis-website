@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Upper Nyack";
+const state = "NY";
+const title = "CPA for Upper Nyack NY Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Upper Nyack NY CPA for Rockland County creatives, executives & small business owners. NJ-NY cross-border tax, real estate gains, royalties & multi-state. Virtual.";
+const canonical = "/service-areas/upper-nyack/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Upper Nyack, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Upper Nyack's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">Upper Nyack is an unincorporated hamlet within the Town of Orangetown in Rockland County, situated along the western bank of the Hudson River just north of the village of Nyack. The community is distinguished by its scenic riverfront character, historic homes dating to the 19th and early 20th centuries, and an established tradition as a refuge for artists, writers, creative professionals, and executives seeking respite from the intensity of urban life. The Hudson Valley's natural beauty has long attracted a resident population that defies easy categorization — Upper Nyack is simultaneously a community of old money and new professionals, of working artists and corporate refugees.</p>
+
+    <p class="mb-4">The economic diversity of Upper Nyack's resident population translates directly into a wide range of tax situations. Corporate executives and finance professionals who relocated from Manhattan bring high W-2 incomes subject to NY state's demanding tax rates. Creative professionals — illustrators, architects, writers, musicians, and independent filmmakers — generate income through royalties, licensing fees, freelance project work, and intellectual property arrangements that require more nuanced treatment than standard wage income. Small business owners running everything from art studios to professional services practices to riverfront hospitality businesses all face distinct state and local tax obligations.</p>
+
+    <p class="mb-4">Upper Nyack's proximity to New Jersey is especially relevant for its residents. The Palisades Interstate Parkway, which begins just south of the village, connects Upper Nyack directly to Fort Lee and Bergen County, NJ within minutes. This geographic reality drives significant cross-border activity: NJ real estate investments, NJ business clients for Upper Nyack service providers, and employment at NJ companies are all common among Upper Nyack's professional population. These NJ-source income streams create filing obligations and tax credit complexities that require a CPA with precise knowledge of both NJ and NY tax law.</p>
+
+    <p class="mb-6">The Hudson River waterfront property market adds a layer of capital gains complexity for longer-tenured Upper Nyack homeowners. Properties purchased decades ago have often appreciated dramatically, and a sale can trigger significant federal and NY state capital gains tax obligations. Understanding the primary residence exclusion, timing strategies for a planned sale, and the potential use of installment sale arrangements are all legitimate planning tools for Upper Nyack homeowners considering a move.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Upper Nyack Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services is headquartered in Hasbrouck Heights in Bergen County, NJ — directly accessible from Upper Nyack via the Palisades Interstate Parkway. Our position at the heart of the NJ-NY border region means we encounter NJ-NY cross-border tax issues in daily practice, not as occasional edge cases. Upper Nyack residents with NJ rental properties, NJ business activities, or NJ employer relationships receive the same authoritative dual-state guidance that we provide to clients throughout the NY Metro region.</p>
+
+    <p class="mb-4">Creative professionals in Upper Nyack have tax needs that differ significantly from those of salaried employees. Self-employment income from royalties, licensing arrangements, and freelance projects requires careful quarterly estimated tax planning, and the available deductions — home office, professional development, equipment, and business travel — must be documented and claimed correctly. Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">year-round tax planning and strategy services</a> include proactive guidance on the deductions and income timing decisions that matter most for self-employed creative professionals and small business owners.</p>
+
+    <p class="mb-6">Our fully virtual service model is particularly well-suited to Upper Nyack's self-employed and creative professional community. Artists, consultants, and independent practitioners often work unconventional hours and from home-based studios or offices. ProAxis's digital-first approach means you can engage with your CPA on your schedule, from your creative space, without interrupting the flow of your work. Our <a href="/business-services/" class="text-blue-700 underline font-medium">business services including bookkeeping and financial advisory</a> are structured to support the operational rhythms of independent and creative businesses.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Upper Nyack Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NY State Income Tax for Rockland Residents:</strong> Upper Nyack residents are subject to New York State income tax at rates that climb to 10.9% at the highest income levels. For residents with both W-2 and self-employment income, accurate quarterly estimated payments are essential to avoid underpayment penalties, and annual tax planning must account for the full complexity of mixed-income situations.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ-NY Cross-Border Business Operations:</strong> Upper Nyack business owners and consultants who serve NJ clients or maintain NJ business locations must comply with NJ's corporate business tax, NJ gross income tax (for pass-through entities), and NJ nexus rules. Failing to file NJ returns when required can trigger penalties and interest, while proactive planning can minimize the NJ tax cost of cross-border activity.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Creative Professional Tax Planning (Royalties &amp; IP Income):</strong> Artists, authors, musicians, and other creative professionals earn income through mechanisms — royalties, licensing, work-for-hire contracts, residuals — that have distinct tax characterization implications. Structuring IP ownership through an entity can provide both tax efficiency and asset protection benefits, and the interplay with NY and NJ self-employment tax rules is a key planning consideration.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Real Estate Capital Gains Near Hudson River Waterfront:</strong> Upper Nyack's riverfront properties have appreciated substantially over recent decades. Long-term homeowners considering a sale need to understand the Section 121 primary residence exclusion (up to $500,000 for married couples), NY state's treatment of capital gains, and strategies for managing the tax cost of a sale of a highly appreciated property — including installment sale structures and charitable giving strategies.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ Property Investment Tax Considerations:</strong> Upper Nyack residents investing in NJ rental properties — attractive due to the area's proximity — face a distinct set of tax obligations on both the NJ nonresident side and the NY resident side. Depreciation calculations, mortgage interest deductibility, and the passive activity rules must all be correctly applied, and NJ's own rules on rental income differ in important ways from New York's.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Upper Nyack Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/new-city/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">New City, NY</a>
+      <a href="/service-areas/tribeca/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Tribeca, NYC</a>
+      <a href="/service-areas/soho/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">SoHo, NYC</a>
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+    </div>
+
+    <p class="mb-4">Upper Nyack's diverse community of executives, creative professionals, and small business owners deserves a CPA who can handle the full spectrum of their tax situations — from cross-border NJ-NY issues to self-employment income to real estate capital gains. ProAxis Tax &amp; Accounting Services provides that breadth of expertise through a fully virtual, year-round engagement model that respects the unique rhythms of Upper Nyack's professional and creative community.</p>
+
+    <p>Begin the conversation by <a href="/contact/" class="text-blue-700 underline font-medium">scheduling a free consultation</a> with ProAxis. Explore our complete <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a>. Call <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or email <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

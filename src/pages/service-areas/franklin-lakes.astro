@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Franklin Lakes";
+const title = "CPA in Franklin Lakes NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Franklin Lakes NJ — medical & dental practice accounting, professional corporation tax, S-Corp elections, and NJ BAIT. 100% virtual.";
+const canonical = "/service-areas/franklin-lakes/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Franklin Lakes, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">About Franklin Lakes' Business &amp; Tax Landscape</h2>
+    <p class="text-gray-700 mb-4">Franklin Lakes is one of Bergen County's most established and prosperous residential communities, a borough known for its quality school system, spacious properties, and excellent highway access via Route 208 and the surrounding road network to both New York City and the rest of northern New Jersey. Unlike some of its quieter neighboring boroughs, Franklin Lakes has a notable commercial presence along Franklin Avenue and the surrounding corridors — medical offices, dental practices, professional service firms, and a variety of small-to-mid-size businesses that serve the community's affluent and growing population.</p>
+    <p class="text-gray-700 mb-4">The professional profile of Franklin Lakes tilts strongly toward healthcare. Physicians in private practice, dental group owners, oral surgeons, orthodontists, physical therapists, and other allied health professionals represent a significant and economically important segment of the Franklin Lakes business community. These healthcare professionals face a tax situation that differs fundamentally from the typical small business owner: their practices operate through professional corporations (PCs) or professional LLCs (PLLCs) that must comply with NJ professional licensing restrictions while also optimizing tax outcomes. The selection between a PC and a PLLC, and whether to further elect S-corporation status, has major implications for self-employment tax, salary deductions, and retirement plan contributions. ProAxis specializes in these structures and provides expert <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business advisory services</a> to Franklin Lakes healthcare professionals.</p>
+    <p class="text-gray-700 mb-4">Beyond healthcare, Franklin Lakes has a meaningful population of corporate attorneys, financial advisors, real estate developers, and technology entrepreneurs. Many of these individuals operate their professional activities through single-member LLCs or S-corporations and benefit substantially from <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">year-round tax planning strategies</a> that align their business structure with their personal financial goals. The conversion from a raw self-employment structure to a properly managed S-corp, with a defensible reasonable compensation determination and maximized retirement plan contributions, typically generates several thousand dollars of annual tax savings for qualifying Franklin Lakes professionals.</p>
+    <p class="text-gray-700 mb-4">Franklin Lakes residents also benefit from the borough's strategic location at the intersection of Bergen and Passaic counties, which gives businesses access to a broad regional market while maintaining the community character and lower commercial property costs of an outer Bergen County suburb. Business owners who serve clients across multiple counties — or who employ staff that commutes from Passaic or Morris County — face multi-county payroll compliance and sometimes multi-state tax allocation questions that benefit from expert CPA guidance.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Franklin Lakes Tax Considerations</h2>
+    <p class="text-gray-700 mb-4">Franklin Lakes business owners and high-income residents encounter a distinctive mix of professional practice tax issues and individual wealth planning needs. The following topics consistently arise in our work with Franklin Lakes clients:</p>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Professional corporation vs. LLC entity selection", text: "NJ licensed professionals must use a PC or PLLC structure. The choice between these entities — and whether to layer an S-Corp election on top — affects self-employment tax, deductible salary, fringe benefits, and retirement plan limits in ways that can save or cost tens of thousands of dollars annually." },
+        { heading: "Physician retirement plans — defined benefit plans", text: "High-earning physicians and dentists in Franklin Lakes can contribute far more to a defined benefit (pension) plan than to a 401(k) alone. Annual contributions to a DB plan can exceed $200,000 for the right demographic profile, generating a massive current-year deduction." },
+        { heading: "NJ BAIT election for medical and dental practices", text: "Professional practices operating as S-corporations or partnerships in NJ should evaluate the Business Alternative Income Tax election each year. For Franklin Lakes practice owners earning $500,000+ from their practice, the BAIT election often generates a meaningful federal tax benefit." },
+        { heading: "Business succession and practice valuation", text: "Franklin Lakes healthcare professionals approaching the end of their career need a clear plan for practice sale, buy-in of junior partners, or wind-down. The tax implications of a stock sale vs. asset sale, goodwill allocation, and installment sale structures can dramatically affect net proceeds." },
+        { heading: "Payroll compliance for professional practices", text: "Medical and dental practices with employed staff — including associate physicians, hygienists, medical assistants, and administrative staff — must maintain meticulous payroll tax compliance. NJ's payroll tax system has nuances including temporary disability insurance and family leave insurance that differ from federal requirements." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Franklin Lakes Businesses &amp; Residents</h2>
+      <p class="text-gray-700 mb-4">ProAxis Tax &amp; Accounting Services brings deep experience with medical and dental practice accounting, professional corporation tax compliance, and high-income individual tax planning to Franklin Lakes clients. Our virtual model delivers personalized, responsive service — from initial entity setup and tax elections through annual compliance, retirement plan administration support, and eventual succession planning. We are available year-round, not just during tax season.</p>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5">
+        {[
+          { name: "Business Services", link: "/business-services/" },
+          { name: "Tax Planning & Strategy", link: "/tax-services/tax-planning/" },
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">S-Corp Elections and Reasonable Compensation for Franklin Lakes Professionals</h2>
+    <p class="text-gray-700 mb-4">The S-corporation election is one of the most powerful tax-saving tools available to Franklin Lakes small business owners and healthcare professionals — but it requires careful implementation. An S-corp shareholder-employee must receive a "reasonable compensation" salary before taking additional distributions. The IRS scrutinizes S-corps where compensation appears artificially low relative to the services the owner performs, as low compensation reduces self-employment tax at the cost of proper wage reporting.</p>
+    <p class="text-gray-700 mb-4">For a Franklin Lakes physician earning $600,000 from a solo medical practice structured as an S-corp, the difference between a defensible $200,000 salary and an indefensible $50,000 salary is not just audit risk — it's the entire foundation of the retirement plan contribution calculation. Solo 401(k) and defined benefit plan contributions are based on earned income (compensation), not distributions. Optimizing the reasonable compensation amount requires balancing self-employment tax savings against retirement plan contribution potential, which is exactly the kind of analysis ProAxis performs for our healthcare clients.</p>
+    <p class="text-gray-700 mb-6">Franklin Lakes professionals considering whether to file for an S-election — or reconsidering an existing structure — benefit most from a comprehensive tax projection that models current-year and multi-year tax savings under different salary and distribution scenarios. ProAxis builds these projections as part of our onboarding process for every new professional practice client.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <p class="text-gray-700 mb-4">ProAxis serves professionals and business owners throughout Bergen County's northern communities. Near Franklin Lakes, we also work with clients in:</p>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Wyckoff", slug: "wyckoff" },
+        { name: "Upper Saddle River", slug: "upper-saddle-river" },
+        { name: "Ridgewood", slug: "ridgewood" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to optimize the tax structure of your Franklin Lakes practice or business? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis today, or explore our <a href="/tax-services/" class="font-medium underline" style="color: #2E75B6;">complete tax services</a> and <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business accounting services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

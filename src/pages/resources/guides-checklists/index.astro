@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/ui/Breadcrumbs.astro';
+import CTASection from '../../../components/ui/CTASection.astro';
+const title = "Free NJ Tax Guides & Checklists | ProAxis CPA Bergen County";
+const description = "Download free NJ tax guides and checklists for business owners. Tax preparation checklists, small business deduction guides, and year-end planning resources from ProAxis CPA.";
+const canonical = "/resources/guides-checklists/";
+const breadcrumbs = [{ name: "Resources", url: "/resources/" }, { name: "Guides & Checklists" }];
+const guides = [
+  { title: "NJ Small Business Tax Checklist", desc: "The complete checklist of documents needed to prepare your NJ small business tax return accurately.", badge: "Most Popular" },
+  { title: "Year-End Tax Planning Guide", desc: "Key actions to take before December 31 to minimize your tax bill for the current year." },
+  { title: "QuickBooks Setup Guide for NJ Businesses", desc: "How to set up QuickBooks Online correctly from the start — chart of accounts, sales tax, payroll." },
+  { title: "IRS Audit Preparation Checklist", desc: "What to do when you receive an IRS audit notice — step by step." },
+  { title: "New Business Entity Selection Guide", desc: "LLC vs S-Corp vs C-Corp for NJ businesses — pros, cons, and tax implications." },
+];
+---
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-3">Free Guides & Checklists</h1>
+      <p class="text-lg text-gray-300">Practical resources for NJ business owners — downloadable guides and checklists from our CPA team.</p>
+    </div>
+  </section>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="space-y-4">
+      {guides.map(g => (
+        <div class="bg-white rounded-xl border border-gray-100 p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="text-3xl" aria-hidden="true">📋</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-1">
+              <h2 class="font-bold font-heading" style="color: #1B2A4A;">{g.title}</h2>
+              {g.badge && <span class="px-2 py-0.5 text-xs font-semibold rounded-full text-white" style="background-color: #C5A55A;">{g.badge}</span>}
+            </div>
+            <p class="text-sm text-gray-600">{g.desc}</p>
+          </div>
+          <a href="/contact/" class="flex-shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90" style="background-color: #2E75B6;">
+            Get Free Guide
+          </a>
+        </div>
+      ))}
+    </div>
+    <div class="mt-8 rounded-xl p-6 text-center" style="background-color: #F7F8FA;">
+      <p class="text-gray-600 text-sm">All guides are free. To receive your copy, simply <a href="/contact/" class="font-semibold hover:text-blue-700" style="color: #2E75B6;">contact us</a> and mention which guide you'd like.</p>
+    </div>
+  </div>
+  <CTASection />
+</BaseLayout>

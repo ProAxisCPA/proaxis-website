@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+import RelatedServices from '../../components/ui/RelatedServices.astro';
+
+const title = "CPA for Professional Services Firms NJ | ProAxis Bergen County";
+const description = "ProAxis Tax & Accounting provides specialized CPA services for professional services firms in New Jersey — law firms, consultancies, marketing agencies, and IT firms — including revenue recognition, partner compensation, and S-Corp tax strategy.";
+const canonical = "/industries/professional-services/";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Professional Services Firm Accounting",
+  "description": "Specialized accounting and tax services for professional services firms in New Jersey, including law firms, consulting firms, marketing agencies, and IT companies, with expertise in revenue recognition, partner compensation, and entity structuring.",
+  "provider": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330"
+  },
+  "areaServed": { "@type": "State", "name": "New Jersey" }
+};
+
+const breadcrumbs = [
+  { name: "Industries", url: "/industries/" },
+  { name: "Professional Services" }
+];
+
+const services = [
+  { title: "Fractional CFO Services", href: "/business-services/fractional-cfo/" },
+  { title: "Tax Planning & Strategy", href: "/tax-services/tax-planning/" },
+  { title: "Professional Firm Bookkeeping", href: "/business-services/bookkeeping/" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Accounting &amp; Tax Services for Professional Services Firms in New Jersey
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Law firms, consulting practices, marketing agencies, and IT firms have accounting needs that differ fundamentally from product-based businesses. ProAxis delivers CPA expertise built for service-based businesses in Bergen County and across NJ.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Industry Challenges -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How Professional Services Accounting Differs from Product-Based Businesses</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Professional services firms — law firms, management consulting practices, IT consulting companies, marketing and advertising agencies, financial advisors, architects, engineers, and similar businesses — generate revenue by selling time and expertise rather than products. This fundamental difference has significant implications for how their accounting must be structured, how revenue is recognized, and how the businesses are taxed.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Unlike a product-based business with a clear sale event — the moment a customer buys a widget — professional services firms often have complex revenue recognition scenarios. A law firm that bills hourly collects revenue as services are rendered. A consulting firm that signs a six-month retainer may receive payment upfront but must recognize revenue ratably over the engagement period. An IT firm that bills a fixed fee for a software implementation project must determine whether and when performance obligations are satisfied under ASC 606. Getting revenue recognition right is both an accounting compliance issue and a tax planning issue.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Revenue Recognition, Unbilled WIP, and Retainer Accounting</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For hourly billing firms — law firms, staffing companies, and many consulting practices — work-in-progress (WIP) represents time that has been incurred but not yet billed to the client. Proper WIP accounting requires tracking billable hours at their expected billing value and recognizing revenue when the right to invoice is established. This distinction is important both for GAAP financial reporting and for cash vs. accrual tax accounting decisions.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Law firms in particular face nuanced questions about when to recognize contingency fee revenue — fees that are earned only upon a successful outcome. Under GAAP and tax law, contingency fees are typically recognized upon settlement or judgment rather than during the case, but the timing can be complex when cases settle across multiple periods or payment is received in installments.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Retainer arrangements — upfront payments for ongoing or future services — create deferred revenue on the balance sheet until the services are rendered. If a marketing agency collects $60,000 at the beginning of a six-month engagement, the full $60,000 is not taxable income in the month of collection under the accrual method; it must be recognized as services are provided. Cash-basis taxpayers would recognize the full amount in the year of receipt, which may or may not be the optimal approach. We evaluate each firm's cash vs. accrual election in the context of their billing and collection patterns to determine the most tax-efficient accounting method.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Professional Liability Insurance and Errors &amp; Omissions Coverage</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Professional services firms in New Jersey — particularly attorneys, accountants, engineers, architects, and IT consultants — typically carry professional liability insurance, also known as errors and omissions (E&amp;O) insurance. Premiums for this coverage are fully deductible as ordinary and necessary business expenses. For high-value professional liability policies, annual premiums can be substantial and represent a significant deductible expense.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        In some cases, claims-made policies are renewed or extended mid-year, and the proper deduction of advance premiums across accounting periods requires attention. We ensure that professional liability premiums are properly expensed and that any multi-year prepayments are handled correctly for both GAAP and tax purposes.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Partner and Owner Compensation Structures</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        In professional services partnerships and multi-member LLCs, partner compensation is often the most sensitive and complex financial issue the firm faces. Partners typically receive guaranteed payments — a minimum income amount akin to a salary — plus a share of the firm's profits based on their equity percentage, productivity metrics, or a combination of both. The tax treatment of guaranteed payments differs from ordinary partnership income: guaranteed payments are deductible by the partnership and taxable to the recipient as ordinary income, while profit distributions are allocated based on the partnership agreement and may carry different tax characteristics.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For professional services firms considering an S-Corporation election, the key benefit is the ability to split income between reasonable W-2 compensation (subject to FICA taxes) and S-Corp distributions (not subject to self-employment tax). For a consulting firm owner earning $500,000 per year, proper S-Corp compensation planning can save $15,000 to $25,000 or more in self-employment taxes annually. However, NJ has its own minimum tax and filing requirements for S-Corps, and the NJ BAIT election for pass-through entities may provide additional state tax savings opportunities worth evaluating.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Retirement Plans for Professional Services Firm Owners</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Professional services firm owners are often high earners with significant capacity to fund retirement accounts. The retirement plan options available — SEP-IRA, Simple IRA, Solo 401(k), Safe Harbor 401(k), and defined benefit/cash balance plans — vary significantly in terms of contribution limits, administrative complexity, and the ability to benefit the owner disproportionately relative to employees.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        For sole practitioners or small partnerships without employees, a Solo 401(k) or SEP-IRA can allow contributions of $66,000 to $69,000 per year, dramatically reducing taxable income. For firms with employees, the plan design must comply with non-discrimination rules, and the cost of covering employees affects the plan's overall economics for the owner. A cash balance pension plan layered on top of a 401(k) can allow total annual contributions well above $100,000 for owners in their 50s, creating a powerful tax deferral strategy. We coordinate with ERISA-specialized plan advisors to design the right solution.
+      </p>
+
+      <h3 class="text-xl font-bold font-heading mb-3 mt-6" style="color: #1B2A4A;">Accounts Receivable Management and Professional Development Deductions</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Accounts receivable aging is a critical indicator of financial health for professional services firms. Slow receivables are a structural feature of some sectors — law firms often wait 60-90 days for payment on invoices — but excessive receivables aging can signal billing disputes, client satisfaction issues, or collections problems that have real financial consequences. We provide receivables aging analysis as part of our bookkeeping service and help clients identify collection issues early.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        Professional development expenses — continuing legal education (CLE), professional certifications, industry conferences, subscriptions to professional databases and research tools, and training programs — are deductible as ordinary and necessary business expenses for professional services firms. We help clients identify and document all eligible professional development expenses and ensure they are properly classified and deducted. For client-facing professionals, business development expenses — meals with clients, industry association dues, and reasonable entertainment within current deduction limits — are also deductible with proper documentation.
+      </p>
+    </section>
+
+    <!-- How ProAxis Helps -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">How ProAxis Supports NJ Professional Services Firms</h2>
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Revenue recognition setup:</strong> We configure your accounting system to properly recognize revenue under your billing model — whether hourly, retainer, fixed-fee, or contingency.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Entity structure advisory:</strong> We evaluate S-Corp vs. LLC vs. partnership structures for NJ professional services firms, factoring in NJ professional licensing requirements and the BAIT election.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Retirement plan design:</strong> We design and implement retirement plans that maximize tax-deferred contributions for firm owners while complying with ERISA non-discrimination rules.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Partner compensation modeling:</strong> We model the tax implications of different partner compensation structures and help firms align their partnership agreements with their tax strategy.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span><strong>Fractional CFO services:</strong> For growing professional services firms, we provide strategic financial leadership — cash flow forecasting, KPI dashboards, and growth planning — without the cost of a full-time CFO.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Services -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Key Services for Professional Services Firms</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <a href={s.href} class="block rounded-xl border border-gray-200 p-5 hover:border-blue-300 hover:shadow-md transition-all group" style="background-color: #F7F8FA;">
+            <p class="font-bold font-heading group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{s.title}</p>
+            <p class="text-sm mt-2 font-semibold" style="color: #2E75B6;">Learn more &rarr;</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="mb-4">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Related Services</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li><a href="/business-services/fractional-cfo/" class="font-semibold hover:underline" style="color: #2E75B6;">Fractional CFO Services</a> — Strategic financial leadership for growing professional services firms without the cost of a full-time CFO.</li>
+        <li><a href="/tax-services/tax-planning/" class="font-semibold hover:underline" style="color: #2E75B6;">Tax Planning &amp; Strategy</a> — Year-round tax strategy for NJ professional services firm owners including S-Corp planning and retirement plan optimization.</li>
+        <li><a href="/business-services/bookkeeping/" class="font-semibold hover:underline" style="color: #2E75B6;">Professional Firm Bookkeeping</a> — Accurate bookkeeping for service-based businesses with WIP tracking, retainer accounting, and AR management.</li>
+      </ul>
+    </section>
+  </article>
+
+  <RelatedServices silo="industry" currentPath="/industries/professional-services/" />
+  <TestimonialsSection />
+  <CTASection heading="CPA Services Built for Professional Services Firms in NJ" subheading="ProAxis Tax & Accounting delivers deep expertise to law firms, consulting practices, agencies, and IT firms across Bergen County and New Jersey. Schedule your free consultation today." />
+</BaseLayout>

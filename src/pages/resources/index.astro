@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+
+const title = "Tax & Accounting Resources for NJ Businesses | ProAxis CPA";
+const description = "Free tax resources, guides, checklists, and tools for New Jersey business owners. Blog, FAQ, tax calendar, and calculators from ProAxis Bergen County CPA firm.";
+const canonical = "/resources/";
+const breadcrumbs = [{ name: "Resources" }];
+
+const resources = [
+  { title: "Blog & Articles", desc: "Expert tax and accounting insights for NJ business owners", href: "/resources/blog/", icon: "📝" },
+  { title: "FAQ", desc: "Answers to common tax, accounting, and CPA questions", href: "/resources/faq/", icon: "❓" },
+  { title: "Guides & Checklists", desc: "Free downloadable guides and tax preparation checklists", href: "/resources/guides-checklists/", icon: "📋" },
+  { title: "Tax Calendar", desc: "NJ and federal tax deadlines you need to know", href: "/resources/tax-calendar/", icon: "📅" },
+  { title: "Tools & Calculators", desc: "Estimate your taxes and plan ahead", href: "/resources/tools-calculators/", icon: "🔢" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-3">Tax & Accounting Resources</h1>
+      <p class="text-lg text-gray-300">Free guides, tools, and expert articles to help NJ business owners make smarter tax and financial decisions.</p>
+    </div>
+  </section>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {resources.map(r => (
+        <a href={r.href} class="group block rounded-xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-blue-200 transition-all">
+          <div class="text-3xl mb-3" aria-hidden="true">{r.icon}</div>
+          <h2 class="font-bold font-heading text-base mb-1 group-hover:text-blue-700 transition-colors" style="color: #1B2A4A;">{r.title}</h2>
+          <p class="text-sm text-gray-600">{r.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+  <CTASection variant="dark" />
+</BaseLayout>

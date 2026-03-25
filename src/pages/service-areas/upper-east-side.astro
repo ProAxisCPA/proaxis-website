@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Upper East Side";
+const state = "NY";
+const title = "CPA for Upper East Side NYC Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Upper East Side NYC CPA for family offices, trust planning, art collectors & physicians. GST trusts, CLATs, NYC UBT, estate tax coordination. 100% virtual CPA.";
+const canonical = "/service-areas/upper-east-side/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Upper East Side, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Upper East Side's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">The Upper East Side occupies a singular position in American wealth culture. Spanning ZIP codes 10021, 10028, 10065, and 10075 along Manhattan's eastern corridor from 59th Street to 96th Street, this neighborhood is the traditional home of old money in New York City. For generations, the Upper East Side has been defined by its cultural institutions — the Metropolitan Museum of Art, the Guggenheim, the Frick Collection, and dozens of smaller galleries and foundations — and by the families whose philanthropic endowments sustain them. The resident population today blends this legacy of established wealth with a current generation of investment managers, physicians, corporate attorneys, and trust administrators who have chosen the neighborhood for its unparalleled combination of prestige, convenience, and cultural richness.</p>
+
+    <p class="mb-4">The financial complexity of Upper East Side residents is in a class of its own. Family offices — private entities managing the investments, tax compliance, and philanthropic activities of single ultra-high-net-worth families — are more concentrated here than in almost any other residential neighborhood in the world. Trust attorneys and estate planning professionals maintain dense client networks in this community. Multi-generational wealth management, coordinating assets across family members in different states and different tax situations, is the everyday work of the Upper East Side's financial professionals — and it requires the most sophisticated CPA support available.</p>
+
+    <p class="mb-4">Art collection is a defining feature of Upper East Side culture, and it creates distinct tax implications. Works acquired decades ago by collectors or inherited from prior generations may carry minimal cost basis against today's extraordinary auction valuations. The tax treatment of an art sale, an art donation to a museum, and art included in an estate all differ in important ways, and coordinating art-related tax decisions with the broader income and estate tax plan is a specialty competency that not all CPAs possess. ProAxis works with art collectors on donation strategy, fractional interest planning, and the charitable deduction mechanics for qualified appreciated property gifts.</p>
+
+    <p class="mb-6">Physicians and medical practice owners on the Upper East Side face a distinct set of tax challenges. High W-2 incomes from hospital employment, self-employment income from private practice, practice entity choices, retirement plan contributions (defined benefit plans for high earners), and real estate investment through medical practice real estate LLCs all interact in ways that demand careful annual planning. The combination of NYC resident taxes and the self-employed health insurance deduction, Solo 401(k) or defined benefit plan contributions, and QBI optimization for practice income creates a rich planning landscape for Upper East Side medical professionals.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Upper East Side Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services is headquartered in Hasbrouck Heights, NJ — strategically positioned to serve Upper East Side clients whose wealth and activities extend across the NY-NJ border. Many Upper East Side families maintain NJ investment properties, hold NJ-registered business entities, or have family members who have relocated to New Jersey. Our NJ-NY nexus expertise ensures that these cross-state connections are handled correctly and that every available tax credit — particularly the NY resident credit for taxes paid to NJ — is fully utilized.</p>
+
+    <p class="mb-4">Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">sophisticated tax planning and strategy services</a> engage with the full complexity of Upper East Side family financial life. This means coordinating income tax planning with estate and gift tax strategy, synchronizing charitable giving decisions with income projections, and advising on the tax implications of trust distributions in the context of current-year income levels. We work collaboratively with estate attorneys, investment advisors, and family office administrators to deliver integrated planning — not isolated return preparation.</p>
+
+    <p class="mb-6">Our fully virtual engagement model is well-suited to the Upper East Side's sophisticated clientele, who expect seamless, professional service delivered on their schedule. Secure video consultations, digital document management, and real-time planning tools allow ProAxis to deliver full-service CPA support without the friction of in-person logistics. Our <a href="/business-services/" class="text-blue-700 underline font-medium">comprehensive business and advisory services</a> include support for family office bookkeeping, private foundation compliance, and business entity oversight for Upper East Side entrepreneurs and investors.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Upper East Side Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Family Office Tax Coordination:</strong> Family offices must manage income tax compliance across multiple family members, entities, and jurisdictions — often including trusts with different beneficiary tax profiles, LLCs with multi-state activities, and investment partnerships generating complex K-1 income. ProAxis provides coordinated family office tax services that align entity-level and individual-level tax planning into a single coherent strategy.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Generation-Skipping Trust (GST) Planning:</strong> The generation-skipping transfer tax (GSTT) imposes a separate tax — at the same rate as the estate tax — on transfers that skip a generation, whether outright or in trust. Proper allocation of the GST exemption and structuring of dynasty trusts to hold appreciating assets can shelter enormous future wealth transfer from both estate and GST tax. This is an area where CPA and estate attorney coordination is essential.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Charitable Lead Annuity Trusts (CLATs) and Charitable Remainder Trusts (CRTs):</strong> CLATs and CRTs are sophisticated charitable giving vehicles that allow Upper East Side donors to support their favored institutions while achieving significant income, gift, and estate tax benefits. The design and income tax reporting requirements for these trusts require specialized expertise, and their effectiveness depends on careful upfront modeling of assumed interest rates and asset growth projections.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Art Collection Tax Planning (Donation, Sale &amp; Estate):</strong> Upper East Side art collectors face nuanced decisions at every stage of collection management. Donating appreciated artwork to a public charity generates a deduction equal to fair market value (avoiding capital gains tax), subject to the 30% of AGI limitation. Selling artwork at auction triggers collectibles capital gains at 28% federal. Including art in an estate at date-of-death value provides a step-up in basis. Each decision requires integration with the full income and estate tax picture.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Qualified Charitable Distributions (QCDs) from IRAs:</strong> Upper East Side residents over age 70½ who are charitably inclined can direct up to $105,000 (indexed) annually from their IRAs directly to qualified charities as a qualified charitable distribution. QCDs satisfy required minimum distributions without increasing adjusted gross income — a significant benefit for donors whose income already triggers Medicare surcharges, phase-outs, and NYC and NY state taxes at the highest marginal rates.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Upper East Side Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/tribeca/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Tribeca, NYC</a>
+      <a href="/service-areas/soho/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">SoHo, NYC</a>
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+      <a href="/service-areas/bronxville/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Bronxville, NY</a>
+    </div>
+
+    <p class="mb-4">The Upper East Side's families and professionals navigate some of the most complex personal tax situations in the country. Multi-generational trusts, family offices, charitable institutions, art collections, and diverse investment portfolios all converge in a tax environment that rewards proactive, integrated planning. ProAxis Tax &amp; Accounting Services brings the expertise, attentiveness, and cross-border knowledge to serve this sophisticated community at the highest level.</p>
+
+    <p><a href="/contact/" class="text-blue-700 underline font-medium">Schedule your free consultation</a> with ProAxis today. Explore the full breadth of our <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a>. Reach us at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

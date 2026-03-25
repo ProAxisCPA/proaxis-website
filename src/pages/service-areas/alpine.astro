@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Alpine";
+const title = "CPA in Alpine NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis provides expert CPA services in Alpine NJ — estate & gift tax planning, high-net-worth tax strategy, and wealth advisory for Alpine's most discerning residents. 100% virtual.";
+const canonical = "/service-areas/alpine/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Alpine, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">About Alpine's Business &amp; Tax Landscape</h2>
+    <p class="text-gray-700 mb-4">Alpine, NJ occupies a singular position in American wealth geography. Consistently ranked as one of the wealthiest ZIP codes in the entire United States, this small Bergen County borough of fewer than 2,000 residents is home to some of the most substantial private fortunes in the New York metropolitan area. Median home values routinely exceed $3 million, and the landscape is defined by gated compound-style estates set back from quiet, wooded roads on properties that can span dozens of acres. Unlike most Bergen County communities, Alpine has almost no commercial footprint — there is no downtown, no retail strip, no industrial corridor — which means the tax and financial advisory needs here are almost entirely concentrated on personal wealth, investment portfolios, and multi-generational estate planning.</p>
+    <p class="text-gray-700 mb-4">The resident profile in Alpine skews heavily toward hedge fund managers, Wall Street executives, private equity principals, entertainment industry figures, and retired titans of industry. Many have compensation structures that go well beyond a W-2 paycheck: carried interest allocations from investment partnerships, deferred compensation arrangements, significant equity-based compensation, and complex investment portfolios across taxable, tax-deferred, and tax-exempt accounts. For these individuals, the annual tax return is merely the output of year-round decisions — and the quality of those decisions depends entirely on having proactive <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">tax planning strategies</a> in place well before year-end.</p>
+    <p class="text-gray-700 mb-4">The TCJA (Tax Cuts and Jobs Act) created a series of temporary provisions set to sunset after 2025, and Alpine residents face some of the most significant exposure to those changes of anyone in New Jersey. The current elevated federal estate and gift tax exemption — approximately $13.6 million per individual — is scheduled to revert to roughly half that amount after the sunset, meaning families with taxable estates well in excess of $7 million need to act now to lock in planning strategies before the window closes. Trusts, GRATs, spousal lifetime access trusts, and direct gifting to irrevocable trusts are all tools that ProAxis can help coordinate with your estate attorney.</p>
+    <p class="text-gray-700 mb-4">Although Alpine itself has almost no commercial business activity, many residents are principals, partners, or major investors in business ventures headquartered elsewhere. Investment partnerships structured as LLCs or LPs may be eligible for the New Jersey Business Alternative Income Tax (BAIT) election, which allows pass-through income to be taxed at the entity level and generates a corresponding federal deduction — an important workaround for the $10,000 federal SALT deduction cap that hits high-income NJ residents hard. Our <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business advisory services</a> include evaluating and implementing the NJ BAIT election for clients whose business income flows through partnerships or S-corporations.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Alpine Tax Considerations</h2>
+    <p class="text-gray-700 mb-4">High-net-worth Alpine residents face a unique set of tax challenges that require sophisticated, year-round planning. The following issues consistently arise in our work with clients in Alpine and comparable ultra-affluent communities:</p>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Estate & gift tax planning before TCJA sunset", text: "The federal estate and gift tax exemption is scheduled to revert in 2026. Alpine families with estates exceeding projected post-sunset thresholds should implement irrevocable gifting strategies, GRATs, and trust structures now while the elevated exemption remains available." },
+        { heading: "Charitable giving and Donor-Advised Funds (DAFs)", text: "High-income Alpine residents often have significant philanthropic goals. Donor-Advised Funds allow a large charitable deduction in a single high-income year while spreading actual grant distributions over time — a powerful tool for tax-efficient generosity." },
+        { heading: "Qualified Opportunity Zone (QOZ) investments", text: "Capital gains from portfolio rebalancing or asset sales can be deferred — and potentially reduced — through properly structured QOZ fund investments. Alpine residents with large capital gain events should evaluate QOZ strategies as part of a broader tax plan." },
+        { heading: "Art collections, collectibles, and alternative assets", text: "Artwork, wine, classic automobiles, and other collectibles held by Alpine residents are subject to a 28% federal capital gains rate upon sale — higher than the standard long-term rate. Charitable donation of appreciated art offers significant deduction potential when structured correctly." },
+        { heading: "NJ BAIT election for investment partnerships", text: "General partners and managing members of investment LPs and LLCs operating in NJ can elect BAIT treatment to restore a meaningful state tax deduction at the federal level, partially offsetting the SALT cap impact for high-income partners." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Alpine Residents &amp; Investors</h2>
+      <p class="text-gray-700 mb-4">ProAxis Tax &amp; Accounting Services brings deep expertise in high-net-worth individual taxation, investment partnership accounting, and estate planning coordination to Alpine residents. Our fully virtual model means you never have to leave your property for a meeting — we work around your schedule, communicate through secure channels, and deliver the same caliber of service you'd expect from a Manhattan firm, at a fraction of the overhead cost.</p>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5">
+        {[
+          { name: "Business Services", link: "/business-services/" },
+          { name: "Tax Planning & Strategy", link: "/tax-services/tax-planning/" },
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Generational Wealth Planning for Alpine Families</h2>
+    <p class="text-gray-700 mb-4">The accumulation of substantial wealth creates not just opportunity but obligation — the obligation to protect and transfer that wealth efficiently across generations. For Alpine families, this typically involves coordinating tax strategy across multiple entities: personal holding companies, family limited partnerships, irrevocable trusts, charitable foundations, and individual taxable accounts. ProAxis works closely with your estate attorney and financial advisor to make sure the tax implications of every structure are clearly understood and optimized.</p>
+    <p class="text-gray-700 mb-4">Grantor Retained Annuity Trusts (GRATs) are particularly relevant for Alpine residents holding assets with significant appreciation potential — startup equity, private equity fund interests, or a closely-held business. A properly timed GRAT can transfer substantial future appreciation out of a taxable estate at little or no gift tax cost. Similarly, Spousal Lifetime Access Trusts (SLATs) allow married couples to utilize their current elevated exemption while retaining indirect access to trust assets through the beneficiary spouse. These are strategies that require both legal documentation and careful tax implementation — ProAxis handles the accounting and tax compliance side of these structures.</p>
+    <p class="text-gray-700 mb-6">NJ eliminated its state estate tax in 2018, which was a meaningful improvement for NJ residents compared to neighboring states. However, NJ retains an inheritance tax that applies to transfers to non-lineal heirs — a consideration for Alpine residents with complex family structures or who wish to leave assets to friends, siblings, or more distant relatives. Federal estate tax remains a dominant concern for Alpine families whose estates comfortably exceed the $13 million+ federal threshold even under current law.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <p class="text-gray-700 mb-4">ProAxis serves high-net-worth individuals and families throughout Bergen County's most exclusive communities. If you're near Alpine, we also work with clients in:</p>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Saddle River", slug: "saddle-river" },
+        { name: "Englewood Cliffs", slug: "englewood-cliffs" },
+        { name: "Tenafly", slug: "tenafly" },
+        { name: "Bergen County (all)", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to discuss your Alpine tax and wealth planning needs? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis today, or explore our <a href="/tax-services/" class="font-medium underline" style="color: #2E75B6;">full range of tax services</a> and <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business advisory services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

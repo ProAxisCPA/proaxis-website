@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "SoHo";
+const state = "NY";
+const title = "CPA for SoHo NYC Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "SoHo NYC CPA for creative professionals, fashion founders & tech entrepreneurs. S-Corp election, royalties, NJ LLC for UBT, QBI deduction & SEP-IRA planning. Virtual.";
+const canonical = "/service-areas/soho/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "SoHo, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">SoHo's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">SoHo — South of Houston Street — is one of Manhattan's most economically dynamic and culturally layered neighborhoods. What began as a light manufacturing district, then transformed into Manhattan's bohemian art capital in the 1970s, is today a complex community where luxury retail flagship stores, independent art galleries, boutique fashion labels, tech company offices, and ultra-high-end residential loft conversions coexist on the same cobblestoned streets. The residents and business owners of SoHo span an unusually broad range of economic profiles, from internationally celebrated fashion designers and creative directors to technology founders with recent liquidity events to independent consultants and media professionals who work from residential lofts that double as creative studios.</p>
+
+    <p class="mb-4">What defines SoHo's tax environment — and distinguishes it even from other affluent Manhattan neighborhoods — is the prevalence of entrepreneurial and self-employment income. Unlike Wall Street-adjacent neighborhoods where W-2 compensation dominates, SoHo is populated by people whose income flows from royalties, licensing agreements, design retainers, consulting fees, equity stakes in creative ventures, and commission structures that shift from year to year. This income variability creates both tax planning challenges — quarterly estimated payments must be calibrated against uncertain future income — and significant planning opportunities, particularly around entity structure, retirement account contributions, and the qualified business income deduction.</p>
+
+    <p class="mb-4">SoHo's boutique retail sector adds another layer of tax complexity. Fashion designers, art gallery owners, and specialty retailers must navigate New York's complex sales tax rules, manage inventory accounting, and track cost of goods sold across product lines — all while managing their own self-employment income from creative work. Business owners who attempt to handle these obligations without professional accounting support frequently discover compliance gaps during NY State Department of Taxation and Finance audits, which can be costly and time-consuming to resolve.</p>
+
+    <p class="mb-6">Real estate is a major asset class for SoHo's established residents and entrepreneurs. Luxury real estate investors hold both residential and commercial properties in SoHo and increasingly look to NJ — particularly Hudson County and Bergen County — for investment opportunities that offer more favorable entry prices relative to Manhattan. These NJ investment properties create a direct NJ-NY tax nexus, requiring multi-state filing and careful credit planning to avoid double taxation of rental income.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why SoHo Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services is based in Hasbrouck Heights, Bergen County, NJ — ideally positioned to advise SoHo's entrepreneurs and self-employed professionals on one of the most actionable tax planning strategies available to NYC-based business owners: structuring business activities through a New Jersey LLC to reduce exposure to New York City's unincorporated business tax. NYC imposes a 4% UBT on net income from unincorporated business conducted in the city, and for SoHo's high-earning creative professionals and consultants, this is a significant incremental burden. ProAxis has the NJ-side expertise to structure these arrangements correctly and defensibly.</p>
+
+    <p class="mb-4">Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">year-round tax planning and strategy services</a> are particularly valuable for SoHo's self-employed population. Unlike W-2 earners whose taxes are withheld automatically, freelancers and business owners must project income quarterly, calibrate estimated payments, and time income and deductions deliberately to avoid surprises. We build quarterly planning touchpoints into every client relationship so that SoHo's creative and entrepreneurial professionals stay ahead of their tax obligations throughout the year.</p>
+
+    <p class="mb-6">Our 100% virtual service model aligns naturally with SoHo's tech-comfortable, time-pressed professional community. SoHo residents and business owners conduct their professional lives through digital tools, and they expect their professional service providers to do the same. ProAxis handles the entire client relationship — onboarding, document collection, planning meetings, tax review, and ongoing advisory — through secure digital channels. Our <a href="/business-services/" class="text-blue-700 underline font-medium">comprehensive business services for creative entrepreneurs and boutique businesses</a> extend this digital-first model to bookkeeping, payroll, and business advisory support.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for SoHo Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Creative Professional Tax Planning (Royalties, Licensing &amp; IP Ownership):</strong> Royalty income from fashion designs, art licenses, music, writing, or software is subject to self-employment tax if earned through active efforts, but may be treated as passive income if structured through a proper IP holding entity. SoHo's creative professionals can benefit significantly from a review of how their intellectual property income is structured, owned, and reported to minimize both SE tax and NYC UBT exposure.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>S-Corp Election for High-Earning Freelancers and Consultants:</strong> SoHo freelancers and consultants earning $80,000 or more in net self-employment income often benefit substantially from electing S-Corp status. By paying themselves a reasonable salary and distributing remaining profits, S-Corp owners can reduce the 15.3% self-employment tax on the distribution portion of their income. The savings must be weighed against the costs of S-Corp compliance, payroll administration, and NYC's GCT tax treatment of S-Corps.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>NJ LLC Structure to Reduce NYC UBT Exposure:</strong> SoHo entrepreneurs conducting business through sole proprietorships or single-member LLCs are subject to NYC's 4% unincorporated business tax on net business income. A properly structured NJ LLC — where business is legitimately conducted outside NYC — can shift income outside the UBT's reach. The structure requires legitimate business substance in NJ, not merely a registered agent address, and ProAxis advises on compliant implementations.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Section 199A QBI Deduction for Qualified Trades:</strong> Many SoHo creative and professional businesses qualify for the 20% qualified business income deduction under Section 199A, which can meaningfully reduce the effective federal tax rate on pass-through business income. The deduction's availability and amount depend on income level, W-2 wages paid, and whether the business is a specified service trade or business (SSTB) — a classification that affects designers, consultants, and performers differently and requires careful annual analysis.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>SEP-IRA and Solo 401(k) for High-Earning SoHo Freelancers:</strong> Self-employed SoHo professionals with high net earnings can shelter substantial income from current taxation through SEP-IRA contributions (up to 25% of net self-employment earnings) or Solo 401(k) plans (which allow both employee and employer contributions, potentially enabling larger annual deferrals). Choosing the right plan type, timing contributions for maximum benefit, and coordinating with Roth conversion strategies requires annual planning discipline.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for SoHo Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/tribeca/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Tribeca, NYC</a>
+      <a href="/service-areas/upper-east-side/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper East Side, NYC</a>
+      <a href="/service-areas/upper-nyack/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper Nyack, NY</a>
+      <a href="/service-areas/armonk/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Armonk, NY</a>
+    </div>
+
+    <p class="mb-4">SoHo's creative professionals, entrepreneurs, and boutique business owners live at the intersection of artistic ambition and commercial success — and their tax situations reflect that complexity. ProAxis Tax &amp; Accounting Services provides the NJ-NY cross-border expertise, entrepreneurial tax planning depth, and responsive virtual service model that SoHo's professional community needs to stay tax-efficient and financially organized throughout the year.</p>
+
+    <p>Start by <a href="/contact/" class="text-blue-700 underline font-medium">scheduling a free consultation</a> with ProAxis. Review our full <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a> for SoHo and Manhattan clients. Contact us at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

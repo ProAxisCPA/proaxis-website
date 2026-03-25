@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Armonk";
+const state = "NY";
+const title = "CPA for Armonk NY Clients | NJ-NY Tax Specialists | ProAxis";
+const description = "Armonk NY CPA for IBM executives, tech entrepreneurs & international assignees. Equity comp, RSUs, QSBS, multi-state & NJ nexus tax planning. 100% virtual.";
+const canonical = "/service-areas/armonk/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Armonk, NY" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city} Clients &bull; NJ-NY Tax Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Tax Services for {city} Clients</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis Tax &amp; Accounting Services delivers expert NJ-NY tax planning, multi-state tax preparation, bookkeeping, and business advisory to {city} individuals and businesses — entirely virtually, on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Armonk's Economic Profile &amp; Tax Environment</h2>
+
+    <p class="mb-4">Armonk is an unincorporated hamlet within the Town of North Castle in northern Westchester County, best known nationally as the home of IBM's World Headquarters campus. The IBM presence has shaped Armonk's professional and economic character for decades, filling the surrounding community with corporate officers, senior technology executives, research scientists, and a rotating population of international assignees on temporary U.S. work assignments. The result is a uniquely complex tax environment — one where equity compensation, international tax treaties, and multi-state business income allocation are everyday concerns rather than edge cases.</p>
+
+    <p class="mb-4">Beyond the IBM ecosystem, Armonk has developed a secondary identity as a community of entrepreneurial tech professionals and early-stage technology company founders. The emergence of cloud computing, AI, and enterprise software has drawn a new generation of technology executives and venture-backed entrepreneurs to Armonk's upscale neighborhoods and excellent schools. These individuals often hold complex equity positions — restricted stock units (RSUs), incentive stock options (ISOs), nonqualified stock options (NQSOs), and employer stock purchase plan (ESPP) shares — each with distinct tax treatment under both federal and New York State law.</p>
+
+    <p class="mb-4">New York State's income tax reaches Armonk residents at significant rates, particularly given the income levels typical in this corporate and entrepreneurial community. The interaction between NY state taxation of equity awards — including the timing of income recognition and NY's rules on deferred income sourced to in-state services — creates material planning opportunities that require specialist attention. Many Armonk residents also earn income from NJ-based activities, whether through IBM's NJ operations, NJ-based consulting arrangements, or NJ investment properties, establishing the NJ-NY nexus that defines ProAxis's core expertise.</p>
+
+    <p class="mb-6">International assignees working at IBM's Armonk campus face perhaps the most complex tax situations of any client population we serve. Tax treaty benefits, foreign earned income exclusion analysis, FBAR and FATCA reporting for overseas accounts, and coordination with home-country tax obligations require a CPA with specific international tax training — a capability ProAxis brings to every international client engagement.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Why Armonk Clients Work with a NJ-Based CPA</h2>
+
+    <p class="mb-4">ProAxis Tax &amp; Accounting Services operates from Hasbrouck Heights in Bergen County, NJ — a location that places us squarely within the NJ-NY business and tax corridor. IBM's operations span both New York and New Jersey, and many Armonk-based executives and employees have NJ work activities, business relationships, or investment holdings that create NJ tax filing obligations. Our dual-state expertise ensures that NJ-source income is properly reported, that available credits and deductions are fully utilized, and that multi-state compliance obligations are met without unnecessary tax leakage.</p>
+
+    <p class="mb-4">Our <a href="/tax-services/tax-planning/" class="text-blue-700 underline font-medium">year-round tax planning and strategy services</a> are particularly well-suited to the IBM executive profile. Equity award vesting, ESPP purchase cycles, and deferred compensation elections all require advance planning that extends well beyond the annual return preparation window. We model multi-year tax scenarios, evaluate the optimal exercise timing for stock options, and coordinate equity compensation decisions with the broader financial plan.</p>
+
+    <p class="mb-6">Our fully virtual delivery model is a practical fit for Armonk's corporate community. IBM executives travel extensively, and the last thing a senior technology officer needs is a CPA relationship that requires in-person visits. Everything at ProAxis is handled digitally — secure document sharing, video planning sessions, and real-time tax projections accessible from anywhere in the world. Our <a href="/business-services/" class="text-blue-700 underline font-medium">comprehensive business services for technology companies and entrepreneurs</a> extend this virtual-first philosophy to every aspect of business tax and accounting.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Key Tax Issues for Armonk Residents &amp; Businesses</h2>
+
+    <ul class="list-none space-y-3 mb-6">
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>IBM Employee Equity Compensation (RSUs, ESPPs, Options):</strong> RSU vesting creates ordinary income taxable in NY at the time of vesting, and subsequent appreciation is a capital gain. ESPP shares carry unique holding period rules that determine ordinary income vs. capital gain treatment. ISO exercises can trigger alternative minimum tax. Each instrument requires a distinct strategy, and the interaction among them in a single tax year demands careful coordination.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Executive Deferred Compensation Arrangements:</strong> Many senior IBM executives participate in nonqualified deferred compensation plans under Section 409A. Deferral elections must be made before income is earned, and the timing of eventual distributions must be planned in the context of projected tax rates and potential domicile changes. Errors in 409A compliance carry severe penalties.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>International Assignee Tax Planning:</strong> Non-US IBM employees on temporary U.S. assignments face a complex web of obligations: U.S. federal and NY state income tax, potential tax treaty application, social security totalization agreement analysis, and home-country tax coordination. ProAxis provides thorough inbound international assignee tax preparation and planning services tailored to the Armonk corporate community.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>Qualified Small Business Stock (QSBS) for Tech Entrepreneurs:</strong> Armonk's entrepreneurial tech community frequently engages with Section 1202 QSBS planning, which can exclude up to $10 million (or 10x basis) in gain from federal taxation on the sale of qualifying C-corporation stock. New York does not conform to the federal QSBS exclusion, making careful planning essential to manage NY state tax on the same gain.</div>
+      </li>
+      <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5">&#10003;</span>
+        <div><strong>R&amp;D Tax Credits for Technology Companies:</strong> Technology companies based in or connected to the Armonk area may qualify for significant federal and New York State research and development tax credits. The R&amp;D credit can offset both federal and NY state income tax liability, and proper identification and documentation of qualifying research activities is critical to capturing the full benefit available.</div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for Armonk Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/business-services/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Business Services</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Preparation</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+      <a href="/service-areas/rye/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Rye, NY</a>
+      <a href="/service-areas/bronxville/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Bronxville, NY</a>
+      <a href="/service-areas/tribeca/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Tribeca, NYC</a>
+    </div>
+
+    <p class="mb-4">Armonk's corporate executive and technology entrepreneur population requires CPA services that match the sophistication of their compensation structures, international exposures, and multi-state tax obligations. ProAxis Tax &amp; Accounting Services delivers that expertise through a fully virtual, proactively managed relationship that adapts to your schedule and financial complexity throughout the year.</p>
+
+    <p>Take the first step by <a href="/contact/" class="text-blue-700 underline font-medium">scheduling a free consultation</a> with the ProAxis team. Review our full <a href="/tax-services/" class="text-blue-700 underline font-medium">tax services</a> and <a href="/business-services/" class="text-blue-700 underline font-medium">business services</a> to see exactly how we can help. Call us at <a href="tel:+12018002330" class="text-blue-700 underline font-medium">(201) 800-2330</a> or email <a href="mailto:info@proaxiscpa.com" class="text-blue-700 underline font-medium">info@proaxiscpa.com</a>.</p>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"NJ-NY Tax & Accounting Services for " + city + " Clients — Schedule Your Free Consultation"} />
+</BaseLayout>

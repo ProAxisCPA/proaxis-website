@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const city = "Upper Saddle River";
+const title = "CPA in Upper Saddle River NJ | Tax & Accounting Services | ProAxis";
+const description = "ProAxis delivers expert CPA services in Upper Saddle River NJ — RSU & stock option tax planning, executive compensation, and NJ BAIT for corporate executives. 100% virtual.";
+const canonical = "/service-areas/upper-saddle-river/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: city }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "City", "name": "Upper Saddle River, NJ" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving {city}, NJ &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA &amp; Accounting Services in {city}, NJ</h1>
+      <p class="text-lg text-gray-300 mb-8">ProAxis delivers expert tax preparation, tax planning, bookkeeping, and business advisory to {city} businesses and residents — all virtually, all on your schedule.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">About Upper Saddle River's Business &amp; Tax Landscape</h2>
+    <p class="text-gray-700 mb-4">Upper Saddle River is an upscale Bergen County borough with a character shaped largely by its corporate executive population. Unlike many Bergen County communities with dense commercial corridors and mixed-income demographics, Upper Saddle River is predominantly residential, with spacious properties, quiet roads, and a strong sense of suburban exclusivity. The residential base skews heavily toward senior and mid-level executives from industries including information technology, pharmaceuticals, biotechnology, financial services, and corporate law — many of whom commute to corporate campuses in Morris County or Rockland County, or into New York City's Midtown and downtown business districts.</p>
+    <p class="text-gray-700 mb-4">For these corporate professionals, the annual tax return is not a simple W-2 filing. Executive compensation packages routinely include restricted stock units (RSUs) that vest over multi-year schedules, incentive stock options (ISOs) with complex alternative minimum tax implications, non-qualified stock options (NQSOs) that generate ordinary income upon exercise, deferred compensation arrangements governed by Section 409A, and employer-sponsored retirement plans that may include both 401(k) contributions and company pension benefits. Each of these components has distinct timing, character, and withholding rules — and without year-round <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">tax planning strategies</a>, executives often discover in April that their withholding was substantially inadequate for the prior year.</p>
+    <p class="text-gray-700 mb-4">IBM's historic presence in the Somers, NY area and along the Route 17 corridor, combined with the Bergen County headquarters of multiple pharmaceutical and biotech companies, means that a meaningful segment of Upper Saddle River's working population has exposure to large equity compensation grants. Pfizer, Merck, and Johnson & Johnson all have major NJ-area presences, and their executive populations frequently reside in premium Bergen County communities like Upper Saddle River. Pharma and biotech executives at the VP level and above often have RSU grants in the hundreds of thousands of dollars annually — making equity compensation tax planning a central priority for their household finances.</p>
+    <p class="text-gray-700 mb-4">Upper Saddle River also has a meaningful population of business owners — professionals who left corporate life to start consulting firms, technology companies, or professional service practices. For these individuals, our <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business advisory services</a> cover entity structure selection, NJ BAIT election for pass-through entities, quarterly estimated tax planning, and the transition from W-2 thinking to self-employed tax discipline. The shift from a corporate payroll department handling your withholding to managing your own estimated payments is one that catches many first-time business owners by surprise.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Upper Saddle River Tax Considerations</h2>
+    <p class="text-gray-700 mb-4">Corporate executives and business owners in Upper Saddle River face a distinct set of tax challenges that differ meaningfully from typical W-2 households. The following areas deserve careful attention:</p>
+    <ul class="list-none space-y-3 mb-6">
+      {[
+        { heading: "Restricted Stock Units (RSUs) and NJ withholding", text: "RSUs trigger ordinary income at vesting, but NJ's withholding requirements differ from federal rules. Many employers withhold at flat supplemental rates that are insufficient for high earners, leaving Upper Saddle River executives with large April balances and potential underpayment penalties." },
+        { heading: "Incentive Stock Options (ISOs) and the Alternative Minimum Tax", text: "ISOs receive favorable federal tax treatment if held for the required period, but the spread at exercise creates an AMT preference item. NJ does not recognize ISO treatment at all — NJ taxes the ISO spread as ordinary income at exercise regardless of how long the stock is held afterward." },
+        { heading: "Section 409A compliance for deferred compensation", text: "Deferred compensation plans must comply strictly with Section 409A timing and election rules. Violations trigger immediate income recognition plus a 20% excise tax — making the compliance review of any deferred compensation arrangement critically important before participation." },
+        { heading: "NJ BAIT election for pass-through business owners", text: "Upper Saddle River residents who own interests in S-corporations or partnerships conducting business in NJ should evaluate the BAIT election annually. The election can generate a meaningful federal deduction that partially offsets the $10,000 SALT cap." },
+        { heading: "Retirement plan optimization for high earners", text: "Executives at the top of the income scale should be maximizing all available tax-deferred retirement contributions — 401(k) deferral, employer match, after-tax 401(k) contributions for mega-backdoor Roth conversions, and defined benefit plan contributions for those with self-employment income." },
+      ].map((item) => (
+        <li class="flex items-start gap-3 p-4 rounded-lg" style="background-color: #F7F8FA;">
+          <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #C5A55A;"></div>
+          <div><span class="font-semibold" style="color: #1B2A4A;">{item.heading}:</span> <span class="text-gray-700">{item.text}</span></div>
+        </li>
+      ))}
+    </ul>
+
+    <!-- ProAxis Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">ProAxis Serves Upper Saddle River Executives &amp; Business Owners</h2>
+      <p class="text-gray-700 mb-4">ProAxis Tax &amp; Accounting Services specializes in the tax complexity that comes with corporate executive compensation, equity awards, and business ownership. Our virtual delivery model means Upper Saddle River clients get responsive, year-round advisory support without ever needing to schedule an in-person appointment. We integrate into your financial life as a trusted advisor — not just a once-a-year preparer.</p>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5">
+        {[
+          { name: "Business Services", link: "/business-services/" },
+          { name: "Tax Planning & Strategy", link: "/tax-services/tax-planning/" },
+          { name: "Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "Bookkeeping", link: "/business-services/bookkeeping/" },
+          { name: "NJ SALT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Why Equity Compensation Requires Year-Round Tax Planning</h2>
+    <p class="text-gray-700 mb-4">The single most common mistake corporate executives in Upper Saddle River make is treating equity compensation as a simple line item on their tax return rather than a year-round planning variable. RSU vesting schedules, ISO exercise windows, and NQSO opportunity costs all interact in ways that require modeling multiple scenarios before decisions are made — not after. An ISO exercise in January looks very different from the same exercise in December, depending on the rest of the year's income picture, projected AMT exposure, and whether the stock will be held for the qualifying disposition period.</p>
+    <p class="text-gray-700 mb-4">ProAxis works with Upper Saddle River executives to build a comprehensive equity compensation tax calendar that maps each vesting event, exercise opportunity, and planned sale against projected income, estimated tax payment deadlines, and NJ-specific considerations. This calendar becomes a decision-making tool — when your company announces a new RSU grant or you receive an ISO exercise notice, you already know the tax implications before you act.</p>
+    <p class="text-gray-700 mb-6">For executives who are also managing a side business or consulting practice, the interplay between W-2 income and self-employment income creates additional complexity around estimated tax payments, QBI deductions (federal only — NJ does not allow the Section 199A deduction), and retirement plan contribution limits. ProAxis integrates all income streams into a single, coordinated tax strategy.</p>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1B2A4A;">Nearby Areas We Also Serve</h2>
+    <p class="text-gray-700 mb-4">ProAxis serves executives and business owners throughout Bergen County's premier residential communities. Near Upper Saddle River, we also work with clients in:</p>
+    <div class="flex flex-wrap gap-3 mb-8">
+      {[
+        { name: "Saddle River", slug: "saddle-river" },
+        { name: "Franklin Lakes", slug: "franklin-lakes" },
+        { name: "Wyckoff", slug: "wyckoff" },
+        { name: "Mahwah", slug: "bergen-county" },
+      ].map((area) => (
+        <a href={`/service-areas/${area.slug}/`} class="px-4 py-2 rounded-full text-sm font-medium border hover:shadow-sm transition-all" style="border-color: #2E75B6; color: #2E75B6; background-color: rgba(46,117,182,0.05);">{area.name}</a>
+      ))}
+    </div>
+    <p class="text-gray-700">Ready to take control of your executive compensation tax picture? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis today, or explore our <a href="/tax-services/" class="font-medium underline" style="color: #2E75B6;">full range of tax services</a> and <a href="/business-services/" class="font-medium underline" style="color: #2E75B6;">business accounting services</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />
+</BaseLayout>

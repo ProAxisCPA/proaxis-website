@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+
+const title = "Client Testimonials | ProAxis Tax & Accounting | Bergen County";
+const description = "Read what clients say about ProAxis Tax & Accounting Services in Bergen County, NJ — real reviews from small business owners, real estate investors, and individuals across New Jersey.";
+const canonical = "/about/testimonials/";
+
+const testimonials = [
+  {
+    quote: "Working with ProAxis has made tax season very stress free. Their team is always available to answer questions and the proactive approach to planning means no surprises when April comes around.",
+    author: "Lexi W.",
+    role: "Small Business Owner, Bergen County NJ",
+    rating: 5,
+    date: "2024",
+  },
+  {
+    quote: "Partnering with ProAxis completely changed my experience during tax season. For the first time I actually feel like I understand my tax situation, and I'm saving money because of it.",
+    author: "Navit S.",
+    role: "Real Estate Investor, NJ",
+    rating: 5,
+    date: "2024",
+  },
+  {
+    quote: "Great working with ProAxis Tax & Accounting, super quick turnaround and VERY responsive, highly recommend! They handled our business accounting and made the whole process seamless.",
+    author: "Jorden I.",
+    role: "Business Owner, New Jersey",
+    rating: 5,
+    date: "2024",
+  },
+];
+
+const reviewSchema = testimonials.map((t) => ({
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "reviewBody": t.quote,
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": t.rating,
+    "bestRating": 5,
+  },
+  "author": {
+    "@type": "Person",
+    "name": t.author,
+  },
+  "itemReviewed": {
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "telephone": "+12018002330",
+    "url": "https://www.proaxiscpa.com",
+  },
+  "datePublished": t.date,
+}));
+
+const breadcrumbs = [
+  { name: "About", url: "/about/" },
+  { name: "Testimonials" }
+];
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} schema={reviewSchema} breadcrumbs={breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        What Our Clients Say About ProAxis
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Real reviews from business owners, real estate investors, and individuals across New Jersey who trust ProAxis Tax &amp; Accounting with their finances.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Aggregate Rating -->
+    <div class="flex flex-col sm:flex-row items-center gap-6 mb-12 p-6 rounded-xl border border-gray-200" style="background-color: #F7F8FA;">
+      <div class="text-center sm:text-left">
+        <p class="text-5xl font-bold font-heading" style="color: #1B2A4A;">5.0</p>
+        <div class="flex gap-1 justify-center sm:justify-start my-2" aria-label="5 out of 5 stars" role="img">
+          {Array.from({ length: 5 }).map(() => (
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" style="color: #C5A55A;">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+        <p class="text-sm text-gray-500">Based on client reviews</p>
+      </div>
+      <div class="border-t sm:border-t-0 sm:border-l border-gray-200 pt-4 sm:pt-0 sm:pl-6 flex-1">
+        <p class="text-gray-700 leading-relaxed text-sm">
+          Every ProAxis client is an individual whose financial situation deserves careful attention. We are proud of the relationships we have built with clients across Bergen County and New Jersey, and grateful for the trust they place in our team.
+        </p>
+        <p class="text-sm mt-3">
+          <a href="https://www.google.com/maps/search/ProAxis+Tax+Accounting+Hasbrouck+Heights+NJ" class="font-semibold hover:underline" style="color: #2E75B6;" target="_blank" rel="noopener noreferrer">Leave us a review on Google &rarr;</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1B2A4A;">Client Reviews</h2>
+    <div class="space-y-6 mb-14">
+      {testimonials.map((t) => (
+        <article
+          class="rounded-xl border border-gray-200 p-7"
+          itemscope
+          itemtype="https://schema.org/Review"
+          aria-label={`Review by ${t.author}`}
+        >
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4" aria-label={`${t.rating} out of 5 stars`} role="img">
+            {Array.from({ length: t.rating }).map(() => (
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" style="color: #C5A55A;">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="text-gray-700 leading-relaxed mb-5 text-base italic" itemprop="reviewBody">
+            "{t.quote}"
+          </blockquote>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0" style="background-color: #2E75B6;" aria-hidden="true">
+              {t.author.charAt(0)}
+            </div>
+            <div>
+              <p class="font-bold font-heading text-sm" style="color: #1B2A4A;" itemprop="name">{t.author}</p>
+              <p class="text-xs text-gray-500">{t.role}</p>
+            </div>
+            <div class="ml-auto">
+              <span class="text-xs text-gray-400">{t.date}</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- What Our Clients Value -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-5" style="color: #1B2A4A;">What Our Clients Consistently Tell Us</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Reading through the feedback we receive from clients, a few themes emerge consistently: responsiveness that exceeds expectations, proactive communication that prevents surprises, and the feeling of actually understanding their financial situation — often for the first time.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Many ProAxis clients came to us after frustrating experiences with other accountants — delayed returns, unanswered calls during stressful situations, large surprise tax bills that could have been reduced with better planning. Our goal with every new client is to change that experience fundamentally.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        We are a small team serving a carefully selected roster of clients. We do not try to maximize volume. We try to maximize the value we deliver to the clients we serve. The reviews on this page reflect that priority, and we are proud to share them.
+      </p>
+    </section>
+
+    <!-- Leave a Review CTA -->
+    <section class="text-center py-10 rounded-xl border-2 border-dashed" style="border-color: #2E75B6;">
+      <h2 class="text-xl font-bold font-heading mb-3" style="color: #1B2A4A;">Are You a ProAxis Client?</h2>
+      <p class="text-gray-600 mb-6 max-w-md mx-auto text-sm leading-relaxed">
+        If you have worked with ProAxis and would like to share your experience, we would be very grateful for a Google review. Reviews help other NJ business owners and individuals find the expert CPA guidance they need.
+      </p>
+      <a
+        href="https://www.google.com/maps/search/ProAxis+Tax+Accounting+Hasbrouck+Heights+NJ"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:opacity-90 text-white"
+        style="background-color: #2E75B6;"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Leave a Google review for ProAxis Tax and Accounting"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+        Leave a Google Review
+      </a>
+    </section>
+  </section>
+
+  <CTASection heading="Ready to Join Our Satisfied Clients?" subheading="Schedule a free consultation with ProAxis Tax & Accounting. No pressure — just expert guidance and a fresh perspective on your NJ tax and accounting situation." />
+</BaseLayout>
