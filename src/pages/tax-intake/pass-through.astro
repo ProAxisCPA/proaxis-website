@@ -236,8 +236,8 @@ const canonical = "/tax-intake/pass-through/";
             <legend class="intake-legend">Primary Contact</legend>
             <div class="intake-grid">
               <div>
-                <label class="intake-label" for="contact-name">Name & Title</label>
-                <input class="intake-input" type="text" id="contact-name" name="contact_name_title" placeholder="e.g. Jane Smith, Managing Partner" />
+                <label class="intake-label" for="contact-name">Full Legal Name & Title</label>
+                <input class="intake-input" type="text" id="contact-name" name="contact_full_name_title" placeholder="As it appears on your Social Security card or ID — e.g. Jane A. Smith, Managing Partner" />
               </div>
               <div>
                 <label class="intake-label" for="contact-email">Email Address</label>
@@ -276,8 +276,8 @@ const canonical = "/tax-intake/pass-through/";
           {[1,2,3,4,5,6].map(n => (
             <div class="rounded-xl p-4 sm:p-0 sm:rounded-none grid grid-cols-1 sm:owner-grid gap-3 sm:gap-2 items-end owner-row" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
               <div>
-                <label class="intake-label sm:sr-only" for={`own${n}-name`}>Owner {n} Name</label>
-                <input class="intake-input" type="text" id={`own${n}-name`} name={`owner${n}_name`} placeholder={n === 1 ? "Full legal name" : n <= 2 ? "Full legal name" : ""} />
+                <label class="intake-label sm:sr-only" for={`own${n}-name`}>Owner {n} Full Legal Name</label>
+                <input class="intake-input" type="text" id={`own${n}-name`} name={`owner${n}_full_name`} placeholder="As it appears on SSN card or ID" />
               </div>
               <div>
                 <label class="intake-label sm:sr-only" for={`own${n}-ssn`}>SSN / EIN Last 4</label>
@@ -337,8 +337,8 @@ const canonical = "/tax-intake/pass-through/";
               {[1,2,3].map(n => (
                 <div class="rounded-xl p-3 grid grid-cols-1 sm:grid-cols-3 gap-3 items-end" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
                   <div>
-                    <label class="intake-label" for={`off${n}-name`}>Officer Name</label>
-                    <input class="intake-input" type="text" id={`off${n}-name`} name={`officer${n}_name`} placeholder="Full name" />
+                    <label class="intake-label" for={`off${n}-name`}>Full Legal Name</label>
+                    <input class="intake-input" type="text" id={`off${n}-name`} name={`officer${n}_full_name`} placeholder="As it appears on their Social Security card or ID" />
                   </div>
                   <div>
                     <label class="intake-label" for={`off${n}-w2`}>W-2 Wages Paid</label>
@@ -557,7 +557,7 @@ const canonical = "/tax-intake/pass-through/";
                 <div class="rounded-xl p-3 sm:p-0 sm:rounded-none grid grid-cols-1 sm:dist-grid sm:border-0 gap-3 sm:gap-2 items-center dist-row" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
                   <div class="sm:col-span-4">
                     <label class="intake-label sm:sr-only" for={`dist${n}-name`}>Owner {n}</label>
-                    <input class="intake-input" type="text" id={`dist${n}-name`} name={`dist${n}_owner_name`} placeholder={`Owner ${n} name`} />
+                    <input class="intake-input" type="text" id={`dist${n}-name`} name={`dist${n}_owner_full_name`} placeholder="As it appears on their Social Security card or ID" />
                   </div>
                   <div class="sm:col-span-4">
                     <label class="intake-label sm:sr-only" for={`dist${n}-cash`}>Cash</label>

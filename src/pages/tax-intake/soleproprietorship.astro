@@ -84,7 +84,7 @@ const expenseCategories = [
             <div class="intake-grid">
               <div class="sm:col-span-2">
                 <label class="intake-label" for="tp-name">Full Legal Name</label>
-                <input class="intake-input" type="text" id="tp-name" name="taxpayer_full_name" placeholder="First Middle Last" autocomplete="name" />
+                <input class="intake-input" type="text" id="tp-name" name="taxpayer_full_name" placeholder="As it appears on your Social Security card or ID" autocomplete="name" />
               </div>
               <div>
                 <label class="intake-label" for="tp-dob">Date of Birth</label>
@@ -113,7 +113,7 @@ const expenseCategories = [
             <div class="intake-grid">
               <div class="sm:col-span-2">
                 <label class="intake-label" for="sp-name">Full Legal Name</label>
-                <input class="intake-input" type="text" id="sp-name" name="spouse_full_name" placeholder="First Middle Last" />
+                <input class="intake-input" type="text" id="sp-name" name="spouse_full_name" placeholder="As it appears on their Social Security card or ID" />
               </div>
               <div>
                 <label class="intake-label" for="sp-dob">Date of Birth</label>
@@ -209,8 +209,8 @@ const expenseCategories = [
                   </p>
                   <div class="intake-grid">
                     <div>
-                      <label class="intake-label" for={`dep${n}-name`}>Full Name</label>
-                      <input class="intake-input" type="text" id={`dep${n}-name`} name={`dep${n}_name`} />
+                      <label class="intake-label" for={`dep${n}-name`}>Full Legal Name</label>
+                      <input class="intake-input" type="text" id={`dep${n}-name`} name={`dep${n}_full_name`} placeholder="As it appears on their Social Security card or ID" />
                     </div>
                     <div>
                       <label class="intake-label" for={`dep${n}-dob`}>Date of Birth</label>
