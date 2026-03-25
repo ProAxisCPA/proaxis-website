@@ -8,6 +8,8 @@ author: "ProAxis Team"
 category: "Tax Tips"
 tags: ["NJ small business taxes", "tax deductions", "Bergen County", "small business"]
 featured: true
+image: /imgi_3_car-loan-interest-deduction-2025-taxes-obbb.png
+imageAlt: "Traditional CPA office in Bergen County NJ — ProAxis Tax & Accounting Services helps NJ small business owners identify missed tax deductions"
 readTime: 8
 ---
 
