@@ -28,27 +28,29 @@ const canonical = "/tax-intake/individual/";
       data-netlify="true"
       name="individual-tax-intake"
       method="POST"
+      action="/tax-intake/success/"
       netlify-honeypot="bot-field"
       class="space-y-8"
+      id="ind-intake-form"
     >
-      <!-- Honeypot -->
       <input type="hidden" name="form-name" value="individual-tax-intake" />
-      <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+      <input type="hidden" name="subject" id="form-subject" value="New Individual Intake Submission" />
+      <p class="hidden" aria-hidden="true"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
 
       <!-- ─────────────────────────────────────────────
            SECTION 1 · PERSONAL IDENTITY
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Personal Identity</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Taxpayer & Spouse Information</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Personal Identity</h2>
+          <p class="intake-card-sub">Taxpayer & Spouse Information</p>
         </div>
-        <div class="px-6 py-6 space-y-6" style="background-color: #F7F8FA;">
+        <div class="intake-card-body space-y-6">
 
           <!-- Taxpayer -->
           <fieldset>
-            <legend class="text-sm font-semibold mb-4 uppercase tracking-wide" style="color: #1C1C1E;">Taxpayer (Primary)</legend>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <legend class="intake-legend">Taxpayer (Primary)</legend>
+            <div class="intake-grid">
               <div class="sm:col-span-2">
                 <label class="intake-label" for="tp-name">Full Legal Name</label>
                 <input class="intake-input" type="text" id="tp-name" name="taxpayer_full_name" placeholder="As it appears on your Social Security card or ID" autocomplete="name" />
@@ -80,16 +82,15 @@ const canonical = "/tax-intake/individual/";
             </div>
           </fieldset>
 
-          <hr style="border-color: #E0E0E4;" />
+          <hr class="intake-divider" />
 
           <!-- Spouse -->
           <fieldset>
-            <legend class="text-sm font-semibold mb-1 uppercase tracking-wide" style="color: #1C1C1E;">Spouse / Partner <span class="normal-case font-normal text-xs" style="color: #6B7280;">(if applicable)</span></legend>
-            <p class="text-xs mb-4" style="color: #6B7280;">Complete only if filing jointly or if relevant to your return.</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <legend class="intake-legend">Spouse / Partner <span class="legend-optional">(if applicable)</span></legend>
+            <div class="intake-grid">
               <div class="sm:col-span-2">
                 <label class="intake-label" for="sp-name">Full Legal Name</label>
-                <input class="intake-input" type="text" id="sp-name" name="spouse_full_name" placeholder="As it appears on your Social Security card or ID" />
+                <input class="intake-input" type="text" id="sp-name" name="spouse_full_name" placeholder="As it appears on their Social Security card or ID" />
               </div>
               <div>
                 <label class="intake-label" for="sp-dob">Date of Birth</label>
@@ -115,13 +116,13 @@ const canonical = "/tax-intake/individual/";
       <!-- ─────────────────────────────────────────────
            SECTION 2 · RESIDENCY
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Residency</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Primary home address as of December 31 of the tax year</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Residency</h2>
+          <p class="intake-card-sub">Primary home address as of December 31 of the tax year</p>
         </div>
-        <div class="px-6 py-6" style="background-color: #F7F8FA;">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="intake-card-body">
+          <div class="intake-grid">
             <div class="sm:col-span-2">
               <label class="intake-label" for="addr-street">Street Address</label>
               <input class="intake-input" type="text" id="addr-street" name="address_street" placeholder="123 Main Street, Apt 4B" autocomplete="street-address" />
@@ -158,17 +159,28 @@ const canonical = "/tax-intake/individual/";
       </div>
 
       <!-- ─────────────────────────────────────────────
-           SECTION 3 · FILING STATUS
+           SECTION 3 · FILING STATUS & TAX YEAR
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Filing Status</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Select the status that applies to the tax year being filed</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Filing Status & Tax Year</h2>
+          <p class="intake-card-sub">Select the status and year that apply to this return</p>
         </div>
-        <div class="px-6 py-6" style="background-color: #F7F8FA;">
+        <div class="intake-card-body space-y-6">
+          <div>
+            <label class="intake-label" for="tax-year">Tax Year</label>
+            <select class="intake-input" id="tax-year" name="tax_year" style="max-width: 200px;">
+              <option value="">Select...</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="prior">Prior Year</option>
+            </select>
+          </div>
+          <hr class="intake-divider" />
           <fieldset>
             <legend class="sr-only">Filing Status</legend>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="intake-grid">
               {[
                 { value: "single", label: "Single" },
                 { value: "mfj", label: "Married Filing Jointly (MFJ)" },
@@ -190,135 +202,78 @@ const canonical = "/tax-intake/individual/";
       <!-- ─────────────────────────────────────────────
            SECTION 4 · DEPENDENTS
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Dependents</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">List all dependents you are claiming on this return</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Dependents</h2>
+          <p class="intake-card-sub">List all dependents you are claiming on this return</p>
         </div>
-        <div class="px-6 py-6" style="background-color: #F7F8FA;">
-          <div id="dependents-list" class="space-y-5">
-            <!-- Dependent 1 -->
-            <div class="dependent-row rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
-              <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: #1C1C1E;">Dependent 1</p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label class="intake-label" for="dep1-name">Full Legal Name</label>
-                  <input class="intake-input" type="text" id="dep1-name" name="dep1_full_name" placeholder="As it appears on their Social Security card or ID" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep1-dob">Date of Birth</label>
-                  <input class="intake-input" type="date" id="dep1-dob" name="dep1_dob" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep1-ssn">Last 4 of SSN</label>
-                  <input class="intake-input" type="text" id="dep1-ssn" name="dep1_ssn_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep1-rel">Relationship</label>
-                  <select class="intake-input" id="dep1-rel" name="dep1_relationship">
-                    <option value="">Select...</option>
-                    <option>Child</option>
-                    <option>Stepchild</option>
-                    <option>Parent</option>
-                    <option>Sibling</option>
-                    <option>Other Relative</option>
-                    <option>Non-Relative</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Dependent 2 -->
-            <div class="dependent-row rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
-              <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: #1C1C1E;">Dependent 2 <span class="normal-case font-normal" style="color: #6B7280;">(if applicable)</span></p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label class="intake-label" for="dep2-name">Full Legal Name</label>
-                  <input class="intake-input" type="text" id="dep2-name" name="dep2_full_name" placeholder="As it appears on their Social Security card or ID" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep2-dob">Date of Birth</label>
-                  <input class="intake-input" type="date" id="dep2-dob" name="dep2_dob" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep2-ssn">Last 4 of SSN</label>
-                  <input class="intake-input" type="text" id="dep2-ssn" name="dep2_ssn_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep2-rel">Relationship</label>
-                  <select class="intake-input" id="dep2-rel" name="dep2_relationship">
-                    <option value="">Select...</option>
-                    <option>Child</option>
-                    <option>Stepchild</option>
-                    <option>Parent</option>
-                    <option>Sibling</option>
-                    <option>Other Relative</option>
-                    <option>Non-Relative</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Dependent 3 -->
-            <div class="dependent-row rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
-              <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: #1C1C1E;">Dependent 3 <span class="normal-case font-normal" style="color: #6B7280;">(if applicable)</span></p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label class="intake-label" for="dep3-name">Full Legal Name</label>
-                  <input class="intake-input" type="text" id="dep3-name" name="dep3_full_name" placeholder="As it appears on their Social Security card or ID" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep3-dob">Date of Birth</label>
-                  <input class="intake-input" type="date" id="dep3-dob" name="dep3_dob" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep3-ssn">Last 4 of SSN</label>
-                  <input class="intake-input" type="text" id="dep3-ssn" name="dep3_ssn_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
-                </div>
-                <div>
-                  <label class="intake-label" for="dep3-rel">Relationship</label>
-                  <select class="intake-input" id="dep3-rel" name="dep3_relationship">
-                    <option value="">Select...</option>
-                    <option>Child</option>
-                    <option>Stepchild</option>
-                    <option>Parent</option>
-                    <option>Sibling</option>
-                    <option>Other Relative</option>
-                    <option>Non-Relative</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+        <div class="intake-card-body">
+          <!-- Compact table header -->
+          <div class="hidden sm:grid dep-table-grid gap-2 mb-2 px-1">
+            <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Full Legal Name</p>
+            <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Date of Birth</p>
+            <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">SSN Last 4</p>
+            <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Relationship</p>
           </div>
-          <p class="text-xs mt-4" style="color: #6B7280;">More than 3 dependents? Add a note in the Additional Notes section at the bottom.</p>
+          <div class="space-y-2">
+            {[1, 2, 3, 4].map(n => (
+              <div class="rounded-xl p-3 sm:p-0 sm:rounded-none grid grid-cols-1 sm:dep-table-grid gap-3 sm:gap-2 items-end dep-row" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+                <div>
+                  <label class="intake-label sm:sr-only" for={`dep${n}-name`}>Dependent {n} Full Legal Name</label>
+                  <input class="intake-input" type="text" id={`dep${n}-name`} name={`dep${n}_full_name`} placeholder="Full legal name" />
+                </div>
+                <div>
+                  <label class="intake-label sm:sr-only" for={`dep${n}-dob`}>Date of Birth</label>
+                  <input class="intake-input" type="date" id={`dep${n}-dob`} name={`dep${n}_dob`} />
+                </div>
+                <div>
+                  <label class="intake-label sm:sr-only" for={`dep${n}-ssn`}>SSN Last 4</label>
+                  <input class="intake-input" type="text" id={`dep${n}-ssn`} name={`dep${n}_ssn_last4`} placeholder="XXXX" maxlength="4" inputmode="numeric" />
+                </div>
+                <div>
+                  <label class="intake-label sm:sr-only" for={`dep${n}-rel`}>Relationship</label>
+                  <select class="intake-input" id={`dep${n}-rel`} name={`dep${n}_relationship`}>
+                    <option value="">Relationship...</option>
+                    <option>Child</option>
+                    <option>Stepchild</option>
+                    <option>Parent</option>
+                    <option>Sibling</option>
+                    <option>Other Relative</option>
+                    <option>Non-Relative</option>
+                  </select>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs mt-3" style="color: #6B7280;">More than 4 dependents? Add a note at the bottom.</p>
         </div>
       </div>
 
       <!-- ─────────────────────────────────────────────
-           SECTION 5 · INCOME MATRIX
+           SECTION 5 · INCOME SOURCES
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Income Sources</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Check all income types you received during the tax year</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Income Sources</h2>
+          <p class="intake-card-sub">Check all income types you received during the tax year</p>
         </div>
-        <div class="px-6 py-6" style="background-color: #F7F8FA;">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+        <div class="intake-card-body">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
             {[
               { name: "income_w2", label: "W-2 — Wages & Salary" },
               { name: "income_1099nec", label: "1099-NEC — Freelance / Self-Employment" },
-              { name: "income_1099k", label: "1099-K — Payment Platforms (PayPal, Venmo, etc.)" },
+              { name: "income_1099k", label: "1099-K — Payment Platforms" },
               { name: "income_1099int", label: "1099-INT — Bank Interest" },
               { name: "income_1099div", label: "1099-DIV — Dividends" },
               { name: "income_1099b", label: "1099-B — Brokerage / Capital Gains" },
-              { name: "income_1099r", label: "1099-R — Retirement Distributions (IRA, 401k, Pension)" },
+              { name: "income_1099r", label: "1099-R — Retirement Distributions" },
               { name: "income_ssa1099", label: "SSA-1099 — Social Security Benefits" },
-              { name: "income_k1", label: "K-1 — Partnership, S-Corp, or Trust Income" },
+              { name: "income_k1", label: "K-1 — Partnership, S-Corp, or Trust" },
               { name: "income_schedule_e", label: "Schedule E — Rental Income" },
               { name: "income_alimony", label: "Alimony Received (pre-2019 divorce)" },
               { name: "income_gambling", label: "W-2G — Gambling Winnings" },
               { name: "income_foreign", label: "Foreign Source Income" },
-              { name: "income_other", label: "Other Income (please describe in notes)" },
+              { name: "income_other", label: "Other Income (describe in notes)" },
             ].map(item => (
               <label class="intake-checkbox-row">
                 <input type="checkbox" name={item.name} value="yes" class="intake-checkbox" />
@@ -326,7 +281,7 @@ const canonical = "/tax-intake/individual/";
               </label>
             ))}
           </div>
-          <div class="mt-5">
+          <div class="mt-4">
             <label class="intake-label" for="income-notes">Income notes <span class="font-normal">(optional)</span></label>
             <textarea class="intake-input" id="income-notes" name="income_notes" rows="2" placeholder="e.g. Sold rental property in July, received K-1 from family LLC..."></textarea>
           </div>
@@ -334,14 +289,14 @@ const canonical = "/tax-intake/individual/";
       </div>
 
       <!-- ─────────────────────────────────────────────
-           SECTION 6 · COMPLIANCE CHECK
+           SECTION 6 · COMPLIANCE & DISCLOSURE
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Compliance & Disclosure</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Required IRS disclosures — answer Yes or No for each item</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Compliance & Disclosure</h2>
+          <p class="intake-card-sub">Required IRS disclosures — answer Yes or No for each item</p>
         </div>
-        <div class="px-6 py-6 space-y-4" style="background-color: #F7F8FA;">
+        <div class="intake-card-body space-y-4">
           {[
             {
               name: "compliance_digital_assets",
@@ -359,24 +314,18 @@ const canonical = "/tax-intake/individual/";
               description: "Were you the grantor of, or transferor to, a foreign trust? Did you receive a distribution from, or were treated as an owner of, a foreign trust?",
             },
           ].map(item => (
-            <div class="rounded-xl p-5" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+            <div class="rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
               <p class="text-sm font-semibold mb-0.5" style="color: #1C1C1E;">{item.label}</p>
               <p class="text-xs mb-3 leading-relaxed" style="color: #6B7280;">{item.description}</p>
               <fieldset>
                 <legend class="sr-only">{item.label}</legend>
-                <div class="flex gap-4">
-                  <label class="intake-toggle-option">
-                    <input type="radio" name={item.name} value="yes" class="sr-only" />
-                    <span class="intake-toggle-btn">Yes</span>
-                  </label>
-                  <label class="intake-toggle-option">
-                    <input type="radio" name={item.name} value="no" class="sr-only" />
-                    <span class="intake-toggle-btn">No</span>
-                  </label>
-                  <label class="intake-toggle-option">
-                    <input type="radio" name={item.name} value="unsure" class="sr-only" />
-                    <span class="intake-toggle-btn">Not Sure</span>
-                  </label>
+                <div class="flex gap-3 flex-wrap">
+                  {["Yes", "No", "Not Sure"].map(opt => (
+                    <label class="intake-toggle-option">
+                      <input type="radio" name={item.name} value={opt.toLowerCase().replace(' ', '_')} class="sr-only" />
+                      <span class="intake-toggle-btn">{opt}</span>
+                    </label>
+                  ))}
                 </div>
               </fieldset>
             </div>
@@ -387,24 +336,24 @@ const canonical = "/tax-intake/individual/";
       <!-- ─────────────────────────────────────────────
            SECTION 7 · DEDUCTIONS & CREDITS
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Deductions & Credits</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Check all that may apply — we will confirm eligibility and amounts during your consultation</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Deductions & Credits</h2>
+          <p class="intake-card-sub">Check all that may apply — eligibility and amounts are confirmed during your consultation</p>
         </div>
-        <div class="px-6 py-6 space-y-6" style="background-color: #F7F8FA;">
+        <div class="intake-card-body space-y-6">
 
           <!-- Itemized Deductions -->
           <div>
             <p class="text-sm font-semibold mb-3 uppercase tracking-wide" style="color: #1C1C1E;">Potential Itemized Deductions (Schedule A)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
               {[
                 { name: "ded_mortgage_interest", label: "Mortgage Interest (Form 1098)" },
                 { name: "ded_property_tax", label: "Real Estate / Property Taxes" },
                 { name: "ded_state_income_tax", label: "State & Local Income Tax (SALT)" },
                 { name: "ded_medical", label: "Unreimbursed Medical & Dental Expenses" },
                 { name: "ded_charity_cash", label: "Charitable Contributions — Cash / Check" },
-                { name: "ded_charity_noncash", label: "Charitable Contributions — Non-Cash (goods, vehicles)" },
+                { name: "ded_charity_noncash", label: "Charitable Contributions — Non-Cash" },
                 { name: "ded_charity_appreciated", label: "Charitable Contributions — Appreciated Securities" },
                 { name: "ded_investment_interest", label: "Investment Interest Expense" },
                 { name: "ded_casualty_loss", label: "Casualty / Disaster Loss (federally declared)" },
@@ -417,12 +366,12 @@ const canonical = "/tax-intake/individual/";
             </div>
           </div>
 
-          <hr style="border-color: #E0E0E4;" />
+          <hr class="intake-divider" />
 
           <!-- Above-the-Line Adjustments -->
           <div>
             <p class="text-sm font-semibold mb-3 uppercase tracking-wide" style="color: #1C1C1E;">Above-the-Line Adjustments</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
               {[
                 { name: "adj_hsa", label: "HSA Contributions (Form 8889)" },
                 { name: "adj_student_loan", label: "Student Loan Interest (Form 1098-E)" },
@@ -430,7 +379,7 @@ const canonical = "/tax-intake/individual/";
                 { name: "adj_sep_simple", label: "SEP-IRA / SIMPLE IRA Contributions" },
                 { name: "adj_self_employed_health", label: "Self-Employed Health Insurance Premiums" },
                 { name: "adj_alimony_paid", label: "Alimony Paid (pre-2019 divorce instrument)" },
-                { name: "adj_educator_expenses", label: "Educator Expenses (teachers — up to $300)" },
+                { name: "adj_educator_expenses", label: "Educator Expenses (up to $300)" },
                 { name: "adj_moving_military", label: "Moving Expenses (active duty military only)" },
               ].map(item => (
                 <label class="intake-checkbox-row">
@@ -441,22 +390,21 @@ const canonical = "/tax-intake/individual/";
             </div>
           </div>
 
-          <hr style="border-color: #E0E0E4;" />
+          <hr class="intake-divider" />
 
           <!-- Tax Credits -->
           <div>
             <p class="text-sm font-semibold mb-3 uppercase tracking-wide" style="color: #1C1C1E;">Potential Tax Credits</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
               {[
                 { name: "credit_child_tax", label: "Child Tax Credit / Additional Child Tax Credit" },
                 { name: "credit_ctc_dep", label: "Child & Dependent Care Credit (Form 2441)" },
-                { name: "credit_education_aotc", label: "American Opportunity Credit (AOTC) — college" },
+                { name: "credit_education_aotc", label: "American Opportunity Credit (AOTC)" },
                 { name: "credit_education_llc", label: "Lifetime Learning Credit" },
                 { name: "credit_ev", label: "Clean Vehicle / EV Purchase Credit (Form 8936)" },
                 { name: "credit_energy_home", label: "Energy Efficient Home Improvement Credit" },
-                { name: "credit_retirement_saver", label: "Retirement Savings Contributions Credit (Saver's Credit)" },
+                { name: "credit_retirement_saver", label: "Retirement Savings Contributions (Saver's Credit)" },
                 { name: "credit_foreign_tax", label: "Foreign Tax Credit (Form 1116)" },
-                { name: "credit_adoption", label: "Adoption Credit (Form 8839)" },
                 { name: "credit_eitc", label: "Earned Income Tax Credit (EITC)" },
               ].map(item => (
                 <label class="intake-checkbox-row">
@@ -472,13 +420,13 @@ const canonical = "/tax-intake/individual/";
       <!-- ─────────────────────────────────────────────
            SECTION 8 · LIFE EVENTS
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Life Events</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Check any significant events that occurred during the tax year — each can affect your return</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Life Events</h2>
+          <p class="intake-card-sub">Check any significant events that occurred during the tax year — each can affect your return</p>
         </div>
-        <div class="px-6 py-6" style="background-color: #F7F8FA;">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+        <div class="intake-card-body">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
             {[
               { name: "event_married", label: "Got Married" },
               { name: "event_divorced", label: "Divorced or Separated" },
@@ -507,84 +455,14 @@ const canonical = "/tax-intake/individual/";
       </div>
 
       <!-- ─────────────────────────────────────────────
-           SECTION 9 · FILING PREFERENCES
+           SECTION 9 · PRIOR YEAR & ADDITIONAL NOTES
       ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Filing Preferences</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">How you prefer to handle refunds and payments</p>
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Prior Year & Additional Notes</h2>
+          <p class="intake-card-sub">Optional but helpful context for your CPA</p>
         </div>
-        <div class="px-6 py-6 space-y-6" style="background-color: #F7F8FA;">
-
-          <!-- Refund Preference -->
-          <div>
-            <p class="text-sm font-semibold mb-3" style="color: #1C1C1E;">If you receive a refund, you prefer to:</p>
-            <fieldset>
-              <legend class="sr-only">Refund preference</legend>
-              <div class="flex flex-wrap gap-3">
-                {[
-                  { value: "direct_deposit", label: "Direct Deposit to Bank Account" },
-                  { value: "apply_next_year", label: "Apply to Next Year's Estimated Taxes" },
-                  { value: "paper_check", label: "Paper Check by Mail" },
-                  { value: "discuss", label: "Discuss with CPA" },
-                ].map(opt => (
-                  <label class="intake-radio-card">
-                    <input type="radio" name="refund_preference" value={opt.value} class="sr-only" />
-                    <span class="intake-radio-dot"></span>
-                    <span class="text-sm font-medium" style="color: #1C1C1E;">{opt.label}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-          </div>
-
-          <hr style="border-color: #E0E0E4;" />
-
-          <!-- Payment Preference -->
-          <div>
-            <p class="text-sm font-semibold mb-3" style="color: #1C1C1E;">If you owe a balance, you prefer to pay by:</p>
-            <fieldset>
-              <legend class="sr-only">Payment preference</legend>
-              <div class="flex flex-wrap gap-3">
-                {[
-                  { value: "direct_debit", label: "Direct Debit (ACH from bank account)" },
-                  { value: "online_portal", label: "IRS Direct Pay / Online Portal" },
-                  { value: "check_mail", label: "Check by Mail" },
-                  { value: "installment", label: "IRS Installment Agreement" },
-                  { value: "discuss", label: "Discuss with CPA" },
-                ].map(opt => (
-                  <label class="intake-radio-card">
-                    <input type="radio" name="payment_preference" value={opt.value} class="sr-only" />
-                    <span class="intake-radio-dot"></span>
-                    <span class="text-sm font-medium" style="color: #1C1C1E;">{opt.label}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="intake-label" for="bank-routing">Bank Routing Number <span class="font-normal">(if direct deposit/debit)</span></label>
-                <input class="intake-input" type="text" id="bank-routing" name="bank_routing" placeholder="9 digits" maxlength="9" inputmode="numeric" />
-              </div>
-              <div>
-                <label class="intake-label" for="bank-account">Bank Account Number <span class="font-normal">(last 4 only)</span></label>
-                <input class="intake-input" type="text" id="bank-account" name="bank_account_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ─────────────────────────────────────────────
-           SECTION 10 · PRIOR YEAR & ADDITIONAL NOTES
-      ───────────────────────────────────────────── -->
-      <div class="rounded-2xl overflow-hidden" style="border: 1px solid #2E2E32;">
-        <div class="px-6 py-4" style="background-color: #1C1C1E;">
-          <h2 class="text-lg font-bold font-heading text-white">Prior Year & Additional Notes</h2>
-          <p class="text-xs mt-0.5" style="color: #A0A0A8;">Optional but helpful context for your CPA</p>
-        </div>
-        <div class="px-6 py-6 space-y-4" style="background-color: #F7F8FA;">
+        <div class="intake-card-body space-y-4">
           <div>
             <label class="intake-label" for="prior-cpa">Who prepared your prior year return?</label>
             <input class="intake-input" type="text" id="prior-cpa" name="prior_year_preparer" placeholder="Firm name, software (TurboTax, H&R Block), or Self-prepared" />
@@ -599,17 +477,6 @@ const canonical = "/tax-intake/individual/";
               <option value="owed_small">Owed a small amount (under $2,000)</option>
               <option value="owed_large">Owed a significant amount (over $2,000)</option>
               <option value="unknown">Don't remember</option>
-            </select>
-          </div>
-          <div>
-            <label class="intake-label" for="estimated-taxes">Did you make estimated tax payments this year?</label>
-            <select class="intake-input" id="estimated-taxes" name="estimated_payments_made">
-              <option value="">Select...</option>
-              <option value="yes_federal_nj">Yes — Federal and NJ</option>
-              <option value="yes_federal_only">Yes — Federal only</option>
-              <option value="yes_nj_only">Yes — NJ only</option>
-              <option value="no">No</option>
-              <option value="unsure">Not sure</option>
             </select>
           </div>
           <div>
@@ -648,154 +515,79 @@ const canonical = "/tax-intake/individual/";
 
 </BaseLayout>
 
+<script>
+  const form = document.getElementById('ind-intake-form');
+  const tpNameInput = form?.querySelector<HTMLInputElement>('[name="taxpayer_full_name"]');
+  const subjectInput = form?.querySelector<HTMLInputElement>('[name="subject"]');
+
+  if (tpNameInput && subjectInput) {
+    tpNameInput.addEventListener('input', () => {
+      const name = tpNameInput.value.trim();
+      subjectInput.value = name
+        ? `New Individual Intake Submission: ${name}`
+        : 'New Individual Intake Submission';
+    });
+  }
+
+  const emailInput = form?.querySelector<HTMLInputElement>('[name="taxpayer_email"]');
+  if (emailInput && form) {
+    emailInput.addEventListener('change', () => {
+      let replyTo = form.querySelector<HTMLInputElement>('[name="reply-to"]');
+      if (!replyTo) {
+        replyTo = document.createElement('input');
+        replyTo.type = 'hidden';
+        replyTo.name = 'reply-to';
+        form.appendChild(replyTo);
+      }
+      replyTo.value = emailInput.value;
+    });
+  }
+</script>
+
 <style>
-  /* ── Shared input styles ── */
-  .intake-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #3a3a3e;
-    margin-bottom: 0.375rem;
+  .intake-card { border-radius: 1rem; overflow: hidden; border: 1px solid #2E2E32; }
+  .intake-card-header { padding: 1rem 1.5rem; background-color: #1C1C1E; }
+  .intake-card-title { font-size: 1.125rem; font-weight: 700; color: #ffffff; font-family: var(--font-heading, sans-serif); }
+  .intake-card-sub { font-size: 0.75rem; color: #A0A0A8; margin-top: 0.125rem; }
+  .intake-card-body { padding: 1.5rem; background-color: #F7F8FA; }
+
+  .intake-legend { display: block; font-size: 0.875rem; font-weight: 600; color: #1C1C1E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .legend-optional { text-transform: none; font-weight: 400; font-size: 0.75rem; color: #6B7280; }
+  .intake-divider { border-color: #E0E0E4; }
+
+  .intake-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 640px) { .intake-grid { grid-template-columns: 1fr 1fr; } }
+
+  .intake-label { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #3a3a3e; margin-bottom: 0.375rem; }
+  .intake-input { display: block; width: 100%; padding: 0.75rem 1rem; border-radius: 0.625rem; border: 1.5px solid #DCDCE0; background-color: #ffffff; color: #1C1C1E; font-size: 0.9375rem; line-height: 1.5; transition: border-color 0.15s, box-shadow 0.15s; -webkit-appearance: none; appearance: none; }
+  .intake-input:focus { outline: none; border-color: #2E75B6; box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.15); }
+  .intake-input::placeholder { color: #A0A0A8; }
+  select.intake-input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+  textarea.intake-input { resize: vertical; min-height: 80px; }
+
+  /* Dependent compact table */
+  .dep-table-grid { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1.5fr; }
+  .dep-row { background-color: #EEEEF2 !important; border: 1px solid #DCDCE0 !important; }
+  @media (min-width: 640px) {
+    .dep-row { background-color: transparent !important; border: none !important; border-bottom: 1px solid #EEEEF2 !important; border-radius: 0 !important; padding: 0.375rem 0 !important; }
   }
 
-  .intake-input {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 0.625rem;
-    border: 1.5px solid #DCDCE0;
-    background-color: #ffffff;
-    color: #1C1C1E;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .intake-input:focus {
-    outline: none;
-    border-color: #2E75B6;
-    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.15);
-  }
-  .intake-input::placeholder {
-    color: #A0A0A8;
-  }
-  select.intake-input {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    padding-right: 2.5rem;
-  }
-  textarea.intake-input {
-    resize: vertical;
-    min-height: 80px;
-  }
+  /* Checkboxes */
+  .intake-checkbox-row { display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 0; cursor: pointer; }
+  .intake-checkbox { width: 1.125rem; height: 1.125rem; flex-shrink: 0; border-radius: 0.25rem; border: 1.5px solid #BDBDC4; appearance: none; -webkit-appearance: none; background-color: white; cursor: pointer; transition: background-color 0.1s, border-color 0.1s; position: relative; }
+  .intake-checkbox:checked { background-color: #2E75B6; border-color: #2E75B6; }
+  .intake-checkbox:checked::after { content: ''; position: absolute; top: 1px; left: 4px; width: 5px; height: 9px; border: 2px solid white; border-top: none; border-left: none; transform: rotate(45deg); }
+  .intake-checkbox:focus { outline: none; box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.2); }
 
-  /* ── Checkbox rows ── */
-  .intake-checkbox-row {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 0.5rem 0;
-    cursor: pointer;
-  }
-  .intake-checkbox {
-    width: 1.125rem;
-    height: 1.125rem;
-    flex-shrink: 0;
-    border-radius: 0.25rem;
-    border: 1.5px solid #BDBDC4;
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.1s, border-color 0.1s;
-    position: relative;
-  }
-  .intake-checkbox:checked {
-    background-color: #2E75B6;
-    border-color: #2E75B6;
-  }
-  .intake-checkbox:checked::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 4px;
-    width: 5px;
-    height: 9px;
-    border: 2px solid white;
-    border-top: none;
-    border-left: none;
-    transform: rotate(45deg);
-  }
-  .intake-checkbox:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.2);
-  }
+  /* Radio cards */
+  .intake-radio-card { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1rem; border-radius: 0.625rem; border: 1.5px solid #DCDCE0; background-color: white; cursor: pointer; transition: border-color 0.15s, background-color 0.15s; user-select: none; }
+  .intake-radio-card:has(input:checked) { border-color: #2E75B6; background-color: #EEF3FA; }
+  .intake-radio-dot { width: 1rem; height: 1rem; border-radius: 50%; border: 1.5px solid #BDBDC4; flex-shrink: 0; position: relative; background: white; transition: border-color 0.1s; }
+  .intake-radio-card:has(input:checked) .intake-radio-dot { border-color: #2E75B6; }
+  .intake-radio-card:has(input:checked) .intake-radio-dot::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5rem; height: 0.5rem; border-radius: 50%; background-color: #2E75B6; }
 
-  /* ── Radio cards ── */
-  .intake-radio-card {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.625rem 1rem;
-    border-radius: 0.625rem;
-    border: 1.5px solid #DCDCE0;
-    background-color: white;
-    cursor: pointer;
-    transition: border-color 0.15s, background-color 0.15s;
-    user-select: none;
-  }
-  .intake-radio-card:has(input:checked) {
-    border-color: #2E75B6;
-    background-color: #EEF3FA;
-  }
-  .intake-radio-dot {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border: 1.5px solid #BDBDC4;
-    flex-shrink: 0;
-    position: relative;
-    background: white;
-    transition: border-color 0.1s;
-  }
-  .intake-radio-card:has(input:checked) .intake-radio-dot {
-    border-color: #2E75B6;
-  }
-  .intake-radio-card:has(input:checked) .intake-radio-dot::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #2E75B6;
-  }
-
-  /* ── Yes/No toggle buttons ── */
-  .intake-toggle-option {
-    cursor: pointer;
-  }
-  .intake-toggle-btn {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.5rem;
-    border: 1.5px solid #DCDCE0;
-    background-color: white;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #1C1C1E;
-    transition: all 0.15s;
-    user-select: none;
-  }
-  .intake-toggle-option:has(input:checked) .intake-toggle-btn {
-    background-color: #1C1C1E;
-    border-color: #1C1C1E;
-    color: #E5E4E2;
-  }
+  /* Toggle buttons */
+  .intake-toggle-option { cursor: pointer; }
+  .intake-toggle-btn { display: inline-block; padding: 0.5rem 1.25rem; border-radius: 0.5rem; border: 1.5px solid #DCDCE0; background-color: white; font-size: 0.875rem; font-weight: 500; color: #1C1C1E; transition: all 0.15s; user-select: none; }
+  .intake-toggle-option:has(input:checked) .intake-toggle-btn { background-color: #1C1C1E; border-color: #1C1C1E; color: #E5E4E2; }
 </style>

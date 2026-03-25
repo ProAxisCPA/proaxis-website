@@ -37,8 +37,6 @@ const canonical = "/tax-intake/corporate/";
     >
       <input type="hidden" name="form-name" value="corporate-intake" />
       <input type="hidden" name="subject" id="form-subject" value="New Corporate Intake Submission" />
-
-      <!-- Honeypot -->
       <p class="hidden" aria-hidden="true">
         <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
       </p>
@@ -115,12 +113,14 @@ const canonical = "/tax-intake/corporate/";
             <legend class="intake-legend">Tax Year & Filing Details</legend>
             <div class="intake-grid">
               <div>
-                <label class="intake-label" for="tax-year-begin">Tax Year Beginning</label>
-                <input class="intake-input" type="date" id="tax-year-begin" name="tax_year_begin" />
-              </div>
-              <div>
-                <label class="intake-label" for="tax-year-end">Tax Year Ending</label>
-                <input class="intake-input" type="date" id="tax-year-end" name="tax_year_end" />
+                <label class="intake-label" for="tax-year-select">Tax Year</label>
+                <select class="intake-input" id="tax-year-select" name="tax_year">
+                  <option value="">Select...</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="prior">Prior Year</option>
+                </select>
               </div>
               <div>
                 <label class="intake-label" for="accounting-method">Accounting Method</label>
@@ -132,12 +132,16 @@ const canonical = "/tax-intake/corporate/";
                 </select>
               </div>
               <div>
-                <label class="intake-label" for="naics-code">NAICS / Business Code</label>
-                <input class="intake-input" type="text" id="naics-code" name="naics_code" placeholder="e.g. 541511" />
+                <label class="intake-label" for="tax-year-begin">Tax Year Beginning</label>
+                <input class="intake-input" type="date" id="tax-year-begin" name="tax_year_begin" />
+              </div>
+              <div>
+                <label class="intake-label" for="tax-year-end">Tax Year Ending</label>
+                <input class="intake-input" type="date" id="tax-year-end" name="tax_year_end" />
               </div>
               <div class="sm:col-span-2">
                 <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Is this a first-year return?</p>
-                <div class="flex gap-3">
+                <div class="flex gap-3 flex-wrap">
                   {["Yes — Initial Return", "No — Ongoing", "Final Return (dissolving)"].map(opt => (
                     <label class="intake-toggle-option">
                       <input type="radio" name="return_type" value={opt} class="sr-only" />
@@ -188,7 +192,7 @@ const canonical = "/tax-intake/corporate/";
             <div class="intake-grid">
               <div>
                 <label class="intake-label" for="contact-name">Full Legal Name & Title</label>
-                <input class="intake-input" type="text" id="contact-name" name="contact_full_name_title" placeholder="As it appears on your Social Security card or ID — e.g. Jane A. Smith, CFO" />
+                <input class="intake-input" type="text" id="contact-name" name="contact_full_name_title" placeholder="e.g. Jane A. Smith, CFO" />
               </div>
               <div>
                 <label class="intake-label" for="contact-email">Email Address</label>
@@ -197,10 +201,6 @@ const canonical = "/tax-intake/corporate/";
               <div>
                 <label class="intake-label" for="contact-phone">Phone Number</label>
                 <input class="intake-input" type="tel" id="contact-phone" name="contact_phone" placeholder="(201) 000-0000" />
-              </div>
-              <div>
-                <label class="intake-label" for="contact-website">Corporate Website</label>
-                <input class="intake-input" type="url" id="contact-website" name="corporate_website" placeholder="https://" />
               </div>
             </div>
           </fieldset>
@@ -217,7 +217,6 @@ const canonical = "/tax-intake/corporate/";
         </div>
         <div class="intake-card-body space-y-5">
 
-          <!-- Column headers -->
           <div class="hidden sm:grid officer-grid gap-2 px-1">
             <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Officer Name</p>
             <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Title</p>
@@ -269,7 +268,6 @@ const canonical = "/tax-intake/corporate/";
 
           <hr class="intake-divider" />
 
-          <!-- Shareholder details -->
           <fieldset>
             <legend class="intake-legend">Shareholder Information</legend>
             <div class="intake-grid">
@@ -310,7 +308,7 @@ const canonical = "/tax-intake/corporate/";
               </div>
             </div>
             <div class="mt-4">
-              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Are there any foreign shareholders (>25% foreign ownership)?</p>
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Are there any foreign shareholders (&gt;25% foreign ownership)?</p>
               <div class="flex gap-3">
                 {["Yes", "No"].map(opt => (
                   <label class="intake-toggle-option">
@@ -334,7 +332,6 @@ const canonical = "/tax-intake/corporate/";
         </div>
         <div class="intake-card-body space-y-6">
 
-          <!-- Income -->
           <fieldset>
             <legend class="intake-legend">Gross Income</legend>
             <div class="intake-grid">
@@ -363,7 +360,6 @@ const canonical = "/tax-intake/corporate/";
 
           <hr class="intake-divider" />
 
-          <!-- Deductions -->
           <fieldset>
             <legend class="intake-legend">Corporate Deductions</legend>
             <div class="intake-grid">
@@ -397,7 +393,6 @@ const canonical = "/tax-intake/corporate/";
 
           <hr class="intake-divider" />
 
-          <!-- Tax & Payments -->
           <fieldset>
             <legend class="intake-legend">Taxes Paid & Estimated Payments</legend>
             <div class="intake-grid">
@@ -449,24 +444,19 @@ const canonical = "/tax-intake/corporate/";
         </div>
         <div class="intake-card-body space-y-6">
 
-          <!-- Credit Checkboxes -->
           <fieldset>
             <legend class="intake-legend">Applicable Credits — Check All That Apply</legend>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-6">
               {[
                 { name: "credit_rd", label: "R&D Tax Credit (IRC §41) — Research & Experimentation" },
                 { name: "credit_erc", label: "Employee Retention Credit (ERC / ERTC)" },
                 { name: "credit_wotc", label: "Work Opportunity Tax Credit (WOTC)" },
-                { name: "credit_disabled_access", label: "Disabled Access Credit (§44)" },
                 { name: "credit_energy_investment", label: "Energy Investment Tax Credit (ITC / §48)" },
                 { name: "credit_clean_vehicle_commercial", label: "Commercial Clean Vehicle Credit (§45W)" },
-                { name: "credit_alternative_fuel", label: "Alternative Fuel Vehicle Refueling Credit (§30C)" },
                 { name: "credit_low_income_housing", label: "Low-Income Housing Tax Credit (LIHTC / §42)" },
                 { name: "credit_new_markets", label: "New Markets Tax Credit (NMTC / §45D)" },
                 { name: "credit_foreign_tax", label: "Foreign Tax Credit (§901)" },
                 { name: "credit_general_business", label: "General Business Credit Carryforward (Form 3800)" },
-                { name: "credit_employer_childcare", label: "Employer-Provided Childcare Credit (§45F)" },
-                { name: "credit_family_medical_leave", label: "Paid Family & Medical Leave Credit (§45S)" },
                 { name: "credit_opportunity_zone", label: "Qualified Opportunity Zone Investment" },
               ].map(item => (
                 <label class="intake-checkbox-row">
@@ -579,7 +569,6 @@ const canonical = "/tax-intake/corporate/";
           <fieldset>
             <legend class="intake-legend">Assets</legend>
 
-            <!-- Sub-header row -->
             <div class="hidden sm:grid balance-grid gap-2 mb-2 px-1">
               <p class="col-span-4 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Line Item</p>
               <p class="col-span-4 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Beginning of Year ($)</p>
@@ -591,11 +580,8 @@ const canonical = "/tax-intake/corporate/";
                 { key: "cash", label: "Cash" },
                 { key: "trade_notes_receivable", label: "Trade Notes & Accounts Receivable (net)" },
                 { key: "inventories", label: "Inventories" },
-                { key: "us_govt_obligations", label: "U.S. Government Obligations" },
-                { key: "tax_exempt_securities", label: "Tax-Exempt Securities" },
                 { key: "other_current_assets", label: "Other Current Assets" },
                 { key: "loans_to_shareholders", label: "Loans to Shareholders" },
-                { key: "mortgage_real_estate", label: "Mortgage & Real Estate Loans" },
                 { key: "other_investments", label: "Other Investments" },
                 { key: "buildings_depreciable", label: "Buildings & Other Depreciable Assets (net)" },
                 { key: "depletable_assets", label: "Depletable Assets (net)" },
@@ -646,7 +632,6 @@ const canonical = "/tax-intake/corporate/";
                 { key: "other_liabilities", label: "Other Liabilities" },
                 { key: "capital_stock", label: "Capital Stock" },
                 { key: "additional_paid_in_capital", label: "Additional Paid-In Capital" },
-                { key: "retained_earnings", label: "Retained Earnings — Appropriated" },
                 { key: "retained_earnings_unappropriated", label: "Retained Earnings — Unappropriated" },
                 { key: "treasury_stock", label: "Less: Treasury Stock" },
               ].map(row => (
@@ -719,7 +704,7 @@ const canonical = "/tax-intake/corporate/";
               desc: "Is the corporation subject to the corporate Alternative Minimum Tax (applicable to corporations with average annual gross receipts exceeding $1 billion over 3 years, or applicable prior-year AMT)?",
             },
           ].map(item => (
-            <div class="rounded-xl p-5" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+            <div class="rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
               <p class="text-sm font-semibold mb-1" style="color: #1C1C1E;">{item.label}</p>
               <p class="text-xs mb-3 leading-relaxed" style="color: #6B7280;">{item.desc}</p>
               <fieldset>
@@ -764,15 +749,8 @@ const canonical = "/tax-intake/corporate/";
             </select>
           </div>
           <div>
-            <label class="intake-label" for="dividends-paid">Dividends Declared or Paid to Shareholders This Year</label>
-            <div class="relative">
-              <span class="dollar-prefix">$</span>
-              <input class="intake-input intake-dollar" type="text" id="dividends-paid" name="dividends_paid" placeholder="0.00" inputmode="decimal" />
-            </div>
-          </div>
-          <div>
             <label class="intake-label" for="additional-notes">Additional Notes, Questions, or Context</label>
-            <textarea class="intake-input" id="additional-notes" name="additional_notes" rows="5" placeholder="Acquisitions, divestitures, significant capital expenditures, intercompany transactions, pending litigation, changes in business operations, or anything else your CPA should know before preparing the return..."></textarea>
+            <textarea class="intake-input" id="additional-notes" name="additional_notes" rows="4" placeholder="Acquisitions, divestitures, significant capital expenditures, intercompany transactions, pending litigation, changes in business operations, or anything else your CPA should know before preparing the return..."></textarea>
           </div>
         </div>
       </div>
@@ -836,204 +814,51 @@ const canonical = "/tax-intake/corporate/";
 </script>
 
 <style>
-  .intake-card {
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 1px solid #2E2E32;
-  }
-  .intake-card-header {
-    padding: 1rem 1.5rem;
-    background-color: #1C1C1E;
-  }
-  .intake-card-title {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #ffffff;
-    font-family: var(--font-heading, sans-serif);
-  }
-  .intake-card-sub {
-    font-size: 0.75rem;
-    color: #A0A0A8;
-    margin-top: 0.125rem;
-  }
-  .intake-card-body {
-    padding: 1.5rem;
-    background-color: #F7F8FA;
-  }
-  .intake-legend {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #1C1C1E;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-  }
-  .legend-optional {
-    text-transform: none;
-    font-weight: 400;
-    font-size: 0.75rem;
-    color: #6B7280;
-  }
+  .intake-card { border-radius: 1rem; overflow: hidden; border: 1px solid #2E2E32; }
+  .intake-card-header { padding: 1rem 1.5rem; background-color: #1C1C1E; }
+  .intake-card-title { font-size: 1.125rem; font-weight: 700; color: #ffffff; font-family: var(--font-heading, sans-serif); }
+  .intake-card-sub { font-size: 0.75rem; color: #A0A0A8; margin-top: 0.125rem; }
+  .intake-card-body { padding: 1.5rem; background-color: #F7F8FA; }
+  .intake-legend { display: block; font-size: 0.875rem; font-weight: 600; color: #1C1C1E; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .legend-optional { text-transform: none; font-weight: 400; font-size: 0.75rem; color: #6B7280; }
   .intake-divider { border-color: #E0E0E4; }
 
-  .intake-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  @media (min-width: 640px) {
-    .intake-grid { grid-template-columns: 1fr 1fr; }
-  }
+  .intake-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 640px) { .intake-grid { grid-template-columns: 1fr 1fr; } }
 
-  .intake-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #3a3a3e;
-    margin-bottom: 0.375rem;
-  }
-  .intake-input {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-radius: 0.625rem;
-    border: 1.5px solid #DCDCE0;
-    background-color: #ffffff;
-    color: #1C1C1E;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .intake-input:focus {
-    outline: none;
-    border-color: #2E75B6;
-    box-shadow: 0 0 0 3px rgba(46,117,182,0.15);
-  }
+  .intake-label { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #3a3a3e; margin-bottom: 0.375rem; }
+  .intake-input { display: block; width: 100%; padding: 0.75rem 1rem; border-radius: 0.625rem; border: 1.5px solid #DCDCE0; background-color: #ffffff; color: #1C1C1E; font-size: 0.9375rem; line-height: 1.5; transition: border-color 0.15s, box-shadow 0.15s; -webkit-appearance: none; appearance: none; }
+  .intake-input:focus { outline: none; border-color: #2E75B6; box-shadow: 0 0 0 3px rgba(46,117,182,0.15); }
   .intake-input::placeholder { color: #A0A0A8; }
-  select.intake-input {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    padding-right: 2.5rem;
-  }
+  select.intake-input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
   textarea.intake-input { resize: vertical; min-height: 80px; }
 
-  .dollar-prefix {
-    position: absolute;
-    left: 0.875rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: #6B7280;
-    pointer-events: none;
-  }
+  .dollar-prefix { position: absolute; left: 0.875rem; top: 50%; transform: translateY(-50%); font-size: 0.9375rem; font-weight: 600; color: #6B7280; pointer-events: none; }
   .intake-dollar { padding-left: 1.75rem; }
-
-  .pct-suffix {
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #6B7280;
-    pointer-events: none;
-  }
+  .pct-suffix { position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-size: 0.875rem; font-weight: 500; color: #6B7280; pointer-events: none; }
 
   /* Officer table grid */
-  .officer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1.5fr;
-  }
-  .officer-row {
-    background-color: #EEEEF2 !important;
-    border: 1px solid #DCDCE0 !important;
-  }
+  .officer-grid { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1.5fr; }
+  .officer-row { background-color: #EEEEF2 !important; border: 1px solid #DCDCE0 !important; }
   @media (min-width: 640px) {
-    .officer-row {
-      background-color: transparent !important;
-      border: none !important;
-      border-bottom: 1px solid #EEEEF2 !important;
-      border-radius: 0 !important;
-      padding: 0.5rem 0 !important;
-    }
+    .officer-row { background-color: transparent !important; border: none !important; border-bottom: 1px solid #EEEEF2 !important; border-radius: 0 !important; padding: 0.5rem 0 !important; }
   }
 
   /* Balance sheet grid */
   .balance-grid { display: grid; grid-template-columns: repeat(12, 1fr); }
-  .balance-row {
-    background-color: #EEEEF2 !important;
-    border: 1px solid #DCDCE0 !important;
-  }
+  .balance-row { background-color: #EEEEF2 !important; border: 1px solid #DCDCE0 !important; }
   @media (min-width: 640px) {
-    .balance-row {
-      background-color: transparent !important;
-      border: none !important;
-      border-bottom: 1px solid #EEEEF2 !important;
-      border-radius: 0 !important;
-      padding: 0.375rem 0 !important;
-    }
+    .balance-row { background-color: transparent !important; border: none !important; border-bottom: 1px solid #EEEEF2 !important; border-radius: 0 !important; padding: 0.375rem 0 !important; }
   }
 
   /* Checkboxes */
-  .intake-checkbox-row {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 0.5rem 0;
-    cursor: pointer;
-  }
-  .intake-checkbox {
-    width: 1.125rem;
-    height: 1.125rem;
-    flex-shrink: 0;
-    border-radius: 0.25rem;
-    border: 1.5px solid #BDBDC4;
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: white;
-    cursor: pointer;
-    transition: background-color 0.1s, border-color 0.1s;
-    position: relative;
-  }
-  .intake-checkbox:checked {
-    background-color: #2E75B6;
-    border-color: #2E75B6;
-  }
-  .intake-checkbox:checked::after {
-    content: '';
-    position: absolute;
-    top: 1px; left: 4px;
-    width: 5px; height: 9px;
-    border: 2px solid white;
-    border-top: none;
-    border-left: none;
-    transform: rotate(45deg);
-  }
+  .intake-checkbox-row { display: flex; align-items: center; gap: 0.625rem; padding: 0.5rem 0; cursor: pointer; }
+  .intake-checkbox { width: 1.125rem; height: 1.125rem; flex-shrink: 0; border-radius: 0.25rem; border: 1.5px solid #BDBDC4; appearance: none; -webkit-appearance: none; background-color: white; cursor: pointer; transition: background-color 0.1s, border-color 0.1s; position: relative; }
+  .intake-checkbox:checked { background-color: #2E75B6; border-color: #2E75B6; }
+  .intake-checkbox:checked::after { content: ''; position: absolute; top: 1px; left: 4px; width: 5px; height: 9px; border: 2px solid white; border-top: none; border-left: none; transform: rotate(45deg); }
 
   /* Toggle buttons */
   .intake-toggle-option { cursor: pointer; }
-  .intake-toggle-btn {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.5rem;
-    border: 1.5px solid #DCDCE0;
-    background-color: white;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #1C1C1E;
-    transition: all 0.15s;
-    user-select: none;
-  }
-  .intake-toggle-option:has(input:checked) .intake-toggle-btn {
-    background-color: #1C1C1E;
-    border-color: #1C1C1E;
-    color: #E5E4E2;
-  }
+  .intake-toggle-btn { display: inline-block; padding: 0.5rem 1.25rem; border-radius: 0.5rem; border: 1.5px solid #DCDCE0; background-color: white; font-size: 0.875rem; font-weight: 500; color: #1C1C1E; transition: all 0.15s; user-select: none; }
+  .intake-toggle-option:has(input:checked) .intake-toggle-btn { background-color: #1C1C1E; border-color: #1C1C1E; color: #E5E4E2; }
 </style>

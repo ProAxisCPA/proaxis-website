@@ -40,8 +40,6 @@ const canonical = "/tax-intake/pass-through/";
     >
       <input type="hidden" name="form-name" value="pass-through-intake" />
       <input type="hidden" name="subject" id="form-subject" value="New Pass-Through Submission" />
-
-      <!-- Honeypot -->
       <p class="hidden" aria-hidden="true">
         <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
       </p>
@@ -95,6 +93,16 @@ const canonical = "/tax-intake/pass-through/";
                 <input class="intake-input" type="text" id="entity-ein" name="entity_ein_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
               </div>
               <div>
+                <label class="intake-label" for="tax-year">Tax Year</label>
+                <select class="intake-input" id="tax-year" name="tax_year">
+                  <option value="">Select...</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="prior">Prior Year</option>
+                </select>
+              </div>
+              <div>
                 <label class="intake-label" for="state-formation">State of Formation</label>
                 <select class="intake-input" id="state-formation" name="state_of_formation">
                   <option value="">Select...</option>
@@ -129,16 +137,12 @@ const canonical = "/tax-intake/pass-through/";
                 <label class="intake-label" for="business-activity">Principal Business Activity</label>
                 <input class="intake-input" type="text" id="business-activity" name="business_activity" placeholder="e.g. Medical practice, Real estate, IT consulting" />
               </div>
-              <div>
-                <label class="intake-label" for="naics-code">NAICS / Business Code</label>
-                <input class="intake-input" type="text" id="naics-code" name="naics_code" placeholder="e.g. 541511" />
-              </div>
             </div>
           </fieldset>
 
           <hr class="intake-divider" />
 
-          <!-- S-Election Details (S-Corps only) -->
+          <!-- S-Election Details -->
           <fieldset>
             <legend class="intake-legend">S-Corporation Election <span class="legend-optional">(S-Corps only — skip if partnership)</span></legend>
             <div class="intake-grid">
@@ -237,7 +241,7 @@ const canonical = "/tax-intake/pass-through/";
             <div class="intake-grid">
               <div>
                 <label class="intake-label" for="contact-name">Full Legal Name & Title</label>
-                <input class="intake-input" type="text" id="contact-name" name="contact_full_name_title" placeholder="As it appears on your Social Security card or ID — e.g. Jane A. Smith, Managing Partner" />
+                <input class="intake-input" type="text" id="contact-name" name="contact_full_name_title" placeholder="e.g. Jane A. Smith, Managing Partner" />
               </div>
               <div>
                 <label class="intake-label" for="contact-email">Email Address</label>
@@ -263,7 +267,6 @@ const canonical = "/tax-intake/pass-through/";
         </div>
         <div class="intake-card-body space-y-5">
 
-          <!-- Column headers (desktop) -->
           <div class="hidden sm:grid owner-grid gap-2 px-1">
             <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Full Name</p>
             <p class="text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">SSN / EIN (Last 4)</p>
@@ -323,7 +326,7 @@ const canonical = "/tax-intake/pass-through/";
             </div>
           ))}
 
-          <p class="text-xs" style="color: #6B7280;">More than 6 owners? List additional partners/shareholders in the Additional Notes section at the bottom.</p>
+          <p class="text-xs" style="color: #6B7280;">More than 6 owners? List additional partners/shareholders in the Additional Notes section.</p>
 
           <hr class="intake-divider" />
 
@@ -385,13 +388,6 @@ const canonical = "/tax-intake/pass-through/";
                   <div class="relative">
                     <span class="dollar-prefix">$</span>
                     <input class="intake-input intake-dollar" type="text" id="bait-estimated" name="nj_bait_estimated_payments" placeholder="0.00" inputmode="decimal" />
-                  </div>
-                </div>
-                <div>
-                  <label class="intake-label" for="bait-prior-credit">Prior Year BAIT Credit Carryforward</label>
-                  <div class="relative">
-                    <span class="dollar-prefix">$</span>
-                    <input class="intake-input intake-dollar" type="text" id="bait-prior-credit" name="nj_bait_prior_credit" placeholder="0.00" inputmode="decimal" />
                   </div>
                 </div>
               </div>
@@ -469,7 +465,7 @@ const canonical = "/tax-intake/pass-through/";
 
           <hr class="intake-divider" />
 
-          <!-- Separately Stated Items -->
+          <!-- Separately Stated Items (trimmed to 6 most common) -->
           <fieldset>
             <legend class="intake-legend">Separately Stated Items <span class="legend-optional">(reported directly on owners' K-1s)</span></legend>
             <p class="text-xs mb-4" style="color: #6B7280;">These items are not combined into ordinary income — they flow separately to each owner's individual return and retain their character.</p>
@@ -481,10 +477,6 @@ const canonical = "/tax-intake/pass-through/";
                 { name: "sep_capital_gain_long", label: "Long-Term Capital Gains / Losses" },
                 { name: "sep_section_1231", label: "§1231 Gains / Losses (Form 4797)" },
                 { name: "sep_charitable_contributions", label: "Charitable Contributions" },
-                { name: "sep_foreign_taxes", label: "Foreign Taxes Paid" },
-                { name: "sep_section_179", label: "Section 179 Deduction" },
-                { name: "sep_rental_income", label: "Net Rental Real Estate Income / Loss" },
-                { name: "sep_other_rental", label: "Other Net Rental Income / Loss" },
               ].map(item => (
                 <div>
                   <label class="intake-label" for={item.name}>{item.label}</label>
@@ -514,14 +506,13 @@ const canonical = "/tax-intake/pass-through/";
         </div>
         <div class="intake-card-body space-y-5">
 
-          <div class="rounded-xl p-5" style="background-color: #EEF3FA; border: 1px solid #C8D9EE;">
+          <div class="rounded-xl p-4" style="background-color: #EEF3FA; border: 1px solid #C8D9EE;">
             <p class="text-sm font-semibold mb-1" style="color: #1C1C1E;">Why distributions matter</p>
             <p class="text-xs leading-relaxed" style="color: #4A6080;">
               For S-Corp shareholders, distributions in excess of basis are taxable as capital gains. For partners, distributions affect outside basis and may trigger gain recognition. Accurate distribution data is essential for correct K-1 reporting and basis schedule maintenance.
             </p>
           </div>
 
-          <!-- Total distributions -->
           <fieldset>
             <legend class="intake-legend">Total Distributions — All Owners Combined</legend>
             <div class="intake-grid">
@@ -544,7 +535,6 @@ const canonical = "/tax-intake/pass-through/";
 
           <hr class="intake-divider" />
 
-          <!-- Per-owner distributions -->
           <fieldset>
             <legend class="intake-legend">Per-Owner Distributions</legend>
             <div class="hidden sm:grid dist-grid gap-2 mb-2 px-1">
@@ -557,7 +547,7 @@ const canonical = "/tax-intake/pass-through/";
                 <div class="rounded-xl p-3 sm:p-0 sm:rounded-none grid grid-cols-1 sm:dist-grid sm:border-0 gap-3 sm:gap-2 items-center dist-row" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
                   <div class="sm:col-span-4">
                     <label class="intake-label sm:sr-only" for={`dist${n}-name`}>Owner {n}</label>
-                    <input class="intake-input" type="text" id={`dist${n}-name`} name={`dist${n}_owner_full_name`} placeholder="As it appears on their Social Security card or ID" />
+                    <input class="intake-input" type="text" id={`dist${n}-name`} name={`dist${n}_owner_full_name`} placeholder="Owner name" />
                   </div>
                   <div class="sm:col-span-4">
                     <label class="intake-label sm:sr-only" for={`dist${n}-cash`}>Cash</label>
@@ -580,7 +570,6 @@ const canonical = "/tax-intake/pass-through/";
 
           <hr class="intake-divider" />
 
-          <!-- Loans -->
           <fieldset>
             <legend class="intake-legend">Shareholder / Partner Loans</legend>
             <div class="intake-grid">
@@ -614,7 +603,6 @@ const canonical = "/tax-intake/pass-through/";
         </div>
         <div class="intake-card-body space-y-6">
 
-          <!-- Assets -->
           <fieldset>
             <legend class="intake-legend">Assets (End of Year)</legend>
             <div class="intake-grid">
@@ -649,7 +637,6 @@ const canonical = "/tax-intake/pass-through/";
 
           <hr class="intake-divider" />
 
-          <!-- Liabilities -->
           <fieldset>
             <legend class="intake-legend">Liabilities (End of Year)</legend>
             <div class="intake-grid">
@@ -681,7 +668,6 @@ const canonical = "/tax-intake/pass-through/";
 
           <hr class="intake-divider" />
 
-          <!-- Equity -->
           <fieldset>
             <legend class="intake-legend">Owners' Equity / Partners' Capital (End of Year)</legend>
             <div class="intake-grid">
@@ -759,7 +745,7 @@ const canonical = "/tax-intake/pass-through/";
               desc: "Did the entity receive any IRS or state tax authority notices, audit letters, or compliance communications this year?",
             },
           ].map(item => (
-            <div class="rounded-xl p-5" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+            <div class="rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
               <p class="text-sm font-semibold mb-1" style="color: #1C1C1E;">{item.label}</p>
               <p class="text-xs mb-3 leading-relaxed" style="color: #6B7280;">{item.desc}</p>
               <fieldset>
@@ -779,7 +765,7 @@ const canonical = "/tax-intake/pass-through/";
       </div>
 
       <!-- ─────────────────────────────────────────────
-           SECTION 7 · ADDITIONAL NOTES
+           SECTION 7 · PRIOR YEAR & ADDITIONAL NOTES
       ───────────────────────────────────────────── -->
       <div class="intake-card">
         <div class="intake-card-header">
@@ -791,33 +777,20 @@ const canonical = "/tax-intake/pass-through/";
             <label class="intake-label" for="prior-preparer">Who prepared the prior year return?</label>
             <input class="intake-input" type="text" id="prior-preparer" name="prior_year_preparer" placeholder="Firm name, or In-house / Self-prepared" />
           </div>
-          <div class="intake-grid">
-            <div>
-              <label class="intake-label" for="prior-federal-result">Prior year federal tax result</label>
-              <select class="intake-input" id="prior-federal-result" name="prior_year_federal_result">
-                <option value="">Select...</option>
-                <option value="refund">Refund / Overpayment applied</option>
-                <option value="breakeven">Approximately break-even</option>
-                <option value="balance_due">Balance due</option>
-                <option value="nol">Net Operating Loss generated</option>
-                <option value="unknown">Not sure</option>
-              </select>
-            </div>
-            <div>
-              <label class="intake-label" for="prior-nj-result">Prior year NJ state tax result</label>
-              <select class="intake-input" id="prior-nj-result" name="prior_year_nj_result">
-                <option value="">Select...</option>
-                <option value="refund">Refund</option>
-                <option value="breakeven">Break-even</option>
-                <option value="balance_due">Balance due</option>
-                <option value="na">N/A — not NJ-based</option>
-                <option value="unknown">Not sure</option>
-              </select>
-            </div>
+          <div>
+            <label class="intake-label" for="prior-federal-result">Prior year result (approximate)</label>
+            <select class="intake-input" id="prior-federal-result" name="prior_year_result">
+              <option value="">Select...</option>
+              <option value="refund">Refund / Overpayment applied</option>
+              <option value="breakeven">Approximately break-even</option>
+              <option value="balance_due">Balance due</option>
+              <option value="nol">Net Operating Loss generated</option>
+              <option value="unknown">Not sure</option>
+            </select>
           </div>
           <div>
             <label class="intake-label" for="additional-notes">Additional Notes, Questions, or Context</label>
-            <textarea class="intake-input" id="additional-notes" name="additional_notes" rows="5" placeholder="Additional owners (beyond 6 listed above), pending ownership changes, buyout activity, admission of new partners, entity restructuring, questions about basis schedules, or anything else your CPA should know before the consultation..."></textarea>
+            <textarea class="intake-input" id="additional-notes" name="additional_notes" rows="4" placeholder="Additional owners (beyond 6 listed above), pending ownership changes, buyout activity, admission of new partners, entity restructuring, questions about basis schedules, or anything else your CPA should know before the consultation..."></textarea>
           </div>
         </div>
       </div>
