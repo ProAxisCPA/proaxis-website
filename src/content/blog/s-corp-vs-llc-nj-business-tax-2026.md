@@ -25,6 +25,8 @@ That 15.3% represents both sides of Social Security and Medicare taxes — what 
 
 A multi-member LLC taxed as a partnership has a similar problem for active partners.
 
+![IRS Form 1120-S S-Corporation tax filing process infographic — step-by-step guide to S-Corp return preparation for New Jersey business owners, prepared by ProAxis CPA in Bergen County NJ](/s-corp-form-1120s-tax-filing-process.png)
+
 ## How the S-Corp Election Changes the Math
 
 When a single-member LLC or partnership elects to be taxed as an S-corporation, the owner-operators stop paying self-employment tax on their full profit. Instead, they:
