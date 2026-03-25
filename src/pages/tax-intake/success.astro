@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Intake Form Received | ProAxis CPA";
+const description = "Your tax intake form has been successfully submitted to ProAxis Tax & Accounting Services.";
+const canonical = "/tax-intake/success/";
+---
+
+<BaseLayout {title} {description} {canonical} noindex={true}>
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2a2a2e 100%);" class="min-h-screen flex items-center justify-center py-20 px-4">
+    <div class="max-w-xl w-full text-center">
+      <!-- Checkmark Icon -->
+      <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #22C55E;">
+        <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: #C5A55A;">ProAxis Tax & Accounting Services</p>
+      <h1 class="text-3xl sm:text-4xl font-bold font-heading text-white mb-4">
+        Intake Form Received
+      </h1>
+      <p class="text-base leading-relaxed mb-8" style="color: #A0A0A8;">
+        Thank you — your information has been securely submitted. A member of the ProAxis team will review your intake and reach out within one business day to confirm your consultation details.
+      </p>
+
+      <div class="rounded-2xl px-6 py-6 mb-8 text-left space-y-3" style="background-color: rgba(255,255,255,0.05); border: 1px solid #2E2E32;">
+        <p class="text-sm font-semibold text-white mb-1">What happens next:</p>
+        {[
+          "Our CPA team reviews your intake and identifies planning opportunities.",
+          "We'll contact you to confirm your consultation time and any outstanding documents.",
+          "Your consultation will be focused, efficient, and built around your specific situation.",
+        ].map(step => (
+          <div class="flex items-start gap-3">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <p class="text-sm" style="color: #D0D0D8;">{step}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
+          style="background-color: #E5E4E2; color: #1C1C1E;"
+        >
+          Return Home
+        </a>
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
+          style="background-color: transparent; color: #E5E4E2; border: 1.5px solid #3E3E44;"
+        >
+          Contact Us Directly
+        </a>
+      </div>
+
+      <p class="text-xs mt-8" style="color: #6B6670;">
+        Questions? Call <a href="tel:+12018002330" class="underline" style="color: #C5A55A;">(201) 800-2330</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

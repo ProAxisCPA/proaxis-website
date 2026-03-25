@@ -1,0 +1,1112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Individual & Small Business Tax Intake | ProAxis CPA";
+const description = "Complete your individual and small business tax strategy intake for ProAxis Tax & Accounting Services. Securely share the details we need to identify every deduction and make your consultation as productive as possible.";
+const canonical = "/tax-intake/soleproprietorship/";
+
+const expenseCategories = [
+  { name: "exp_advertising", label: "Advertising & Marketing" },
+  { name: "exp_car_truck", label: "Car & Truck Expenses" },
+  { name: "exp_commissions", label: "Commissions & Fees" },
+  { name: "exp_contract_labor", label: "Contract Labor (1099 workers)" },
+  { name: "exp_depletion", label: "Depletion" },
+  { name: "exp_depreciation", label: "Depreciation (Form 4562)" },
+  { name: "exp_insurance", label: "Business Insurance" },
+  { name: "exp_interest_mortgage", label: "Mortgage Interest (business property)" },
+  { name: "exp_interest_other", label: "Other Business Interest" },
+  { name: "exp_legal_professional", label: "Legal & Professional Fees" },
+  { name: "exp_office", label: "Office Supplies & Expenses" },
+  { name: "exp_pension_profit", label: "Pension / Profit-Sharing Plans" },
+  { name: "exp_rent_lease_vehicle", label: "Rent / Lease — Vehicles & Equipment" },
+  { name: "exp_rent_lease_property", label: "Rent / Lease — Business Property" },
+  { name: "exp_repairs_maintenance", label: "Repairs & Maintenance" },
+  { name: "exp_supplies", label: "Supplies" },
+  { name: "exp_taxes_licenses", label: "Taxes & Licenses" },
+  { name: "exp_travel", label: "Travel (airfare, hotels, etc.)" },
+  { name: "exp_meals", label: "Meals (50% deductible)" },
+  { name: "exp_utilities", label: "Utilities" },
+  { name: "exp_wages", label: "Wages Paid to Employees" },
+  { name: "exp_other", label: "Other Expenses (describe in notes)" },
+];
+---
+
+<BaseLayout {title} {description} {canonical} noindex={true}>
+
+  <!-- Page Header -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2a2a2e 100%);" class="py-14 lg:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: #C5A55A;">ProAxis Tax & Accounting Services</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-5">
+        Individual & Small Business Tax Intake
+      </h1>
+      <p class="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto" style="color: #A0A0A8;">
+        This information allows us to identify every eligible deduction and make your consultation as productive as possible.
+        Please provide the <strong class="text-white">last 4 digits</strong> of sensitive IDs only.
+        Dollar amounts are estimates — exact figures are confirmed from your documents.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <form
+      data-netlify="true"
+      name="business-owner-intake"
+      method="POST"
+      action="/tax-intake/success/"
+      netlify-honeypot="bot-field"
+      class="space-y-8"
+      id="sp-intake-form"
+    >
+      <!-- Netlify hidden fields -->
+      <input type="hidden" name="form-name" value="business-owner-intake" />
+      <input type="hidden" name="subject" id="form-subject" value="New Business Intake Submission" />
+
+      <!-- Honeypot (spam protection) -->
+      <p class="hidden" aria-hidden="true">
+        <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+      </p>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 1 · PERSONAL IDENTITY
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Personal Identity</h2>
+          <p class="intake-card-sub">Taxpayer & Spouse — contact info, address, filing status, and dependents</p>
+        </div>
+        <div class="intake-card-body space-y-6">
+
+          <!-- Taxpayer -->
+          <fieldset>
+            <legend class="intake-legend">Taxpayer (Primary)</legend>
+            <div class="intake-grid">
+              <div class="sm:col-span-2">
+                <label class="intake-label" for="tp-name">Full Legal Name</label>
+                <input class="intake-input" type="text" id="tp-name" name="taxpayer_full_name" placeholder="First Middle Last" autocomplete="name" />
+              </div>
+              <div>
+                <label class="intake-label" for="tp-dob">Date of Birth</label>
+                <input class="intake-input" type="date" id="tp-dob" name="taxpayer_dob" />
+              </div>
+              <div>
+                <label class="intake-label" for="tp-ssn">Last 4 of SSN / ITIN</label>
+                <input class="intake-input" type="text" id="tp-ssn" name="taxpayer_ssn_last4" placeholder="XXXX" maxlength="4" pattern="\d{4}" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="tp-email">Email Address</label>
+                <input class="intake-input" type="email" id="tp-email" name="taxpayer_email" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div>
+                <label class="intake-label" for="tp-phone">Phone Number</label>
+                <input class="intake-input" type="tel" id="tp-phone" name="taxpayer_phone" placeholder="(201) 000-0000" autocomplete="tel" />
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Spouse -->
+          <fieldset>
+            <legend class="intake-legend">Spouse / Partner <span class="legend-optional">(if applicable)</span></legend>
+            <div class="intake-grid">
+              <div class="sm:col-span-2">
+                <label class="intake-label" for="sp-name">Full Legal Name</label>
+                <input class="intake-input" type="text" id="sp-name" name="spouse_full_name" placeholder="First Middle Last" />
+              </div>
+              <div>
+                <label class="intake-label" for="sp-dob">Date of Birth</label>
+                <input class="intake-input" type="date" id="sp-dob" name="spouse_dob" />
+              </div>
+              <div>
+                <label class="intake-label" for="sp-ssn">Last 4 of SSN / ITIN</label>
+                <input class="intake-input" type="text" id="sp-ssn" name="spouse_ssn_last4" placeholder="XXXX" maxlength="4" pattern="\d{4}" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="sp-occupation">Occupation</label>
+                <input class="intake-input" type="text" id="sp-occupation" name="spouse_occupation" />
+              </div>
+              <div>
+                <label class="intake-label" for="sp-employer">Employer</label>
+                <input class="intake-input" type="text" id="sp-employer" name="spouse_employer" />
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Address -->
+          <fieldset>
+            <legend class="intake-legend">Home Address</legend>
+            <div class="intake-grid">
+              <div class="sm:col-span-2">
+                <label class="intake-label" for="addr-street">Street Address</label>
+                <input class="intake-input" type="text" id="addr-street" name="home_address_street" placeholder="123 Main Street" autocomplete="street-address" />
+              </div>
+              <div>
+                <label class="intake-label" for="addr-city">City</label>
+                <input class="intake-input" type="text" id="addr-city" name="home_address_city" placeholder="Hasbrouck Heights" />
+              </div>
+              <div>
+                <label class="intake-label" for="addr-state">State</label>
+                <select class="intake-input" id="addr-state" name="home_address_state">
+                  <option value="">Select...</option>
+                  <option value="NJ" selected>New Jersey</option>
+                  <option value="NY">New York</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="DE">Delaware</option>
+                  <option value="CA">California</option>
+                  <option value="FL">Florida</option>
+                  <option value="TX">Texas</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="intake-label" for="addr-zip">ZIP Code</label>
+                <input class="intake-input" type="text" id="addr-zip" name="home_address_zip" placeholder="07604" maxlength="10" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="addr-county">County</label>
+                <input class="intake-input" type="text" id="addr-county" name="home_address_county" placeholder="Bergen" />
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Filing Status -->
+          <fieldset>
+            <legend class="intake-legend">Filing Status</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
+              {[
+                { value: "single", label: "Single" },
+                { value: "mfj", label: "Married Filing Jointly (MFJ)" },
+                { value: "mfs", label: "Married Filing Separately (MFS)" },
+                { value: "hoh", label: "Head of Household (HOH)" },
+                { value: "qss", label: "Qualifying Surviving Spouse" },
+              ].map(opt => (
+                <label class="intake-radio-card">
+                  <input type="radio" name="filing_status" value={opt.value} class="sr-only" />
+                  <span class="intake-radio-dot"></span>
+                  <span class="text-sm font-medium" style="color: #1C1C1E;">{opt.label}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Dependents -->
+          <fieldset>
+            <legend class="intake-legend">Dependents <span class="legend-optional">(list all you are claiming)</span></legend>
+            <div class="space-y-4 mt-2">
+              {[1, 2, 3].map(n => (
+                <div class="rounded-xl p-4" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+                  <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: #1C1C1E;">
+                    Dependent {n}{n > 1 ? <span class="normal-case font-normal ml-1" style="color: #6B7280;">(if applicable)</span> : ""}
+                  </p>
+                  <div class="intake-grid">
+                    <div>
+                      <label class="intake-label" for={`dep${n}-name`}>Full Name</label>
+                      <input class="intake-input" type="text" id={`dep${n}-name`} name={`dep${n}_name`} />
+                    </div>
+                    <div>
+                      <label class="intake-label" for={`dep${n}-dob`}>Date of Birth</label>
+                      <input class="intake-input" type="date" id={`dep${n}-dob`} name={`dep${n}_dob`} />
+                    </div>
+                    <div>
+                      <label class="intake-label" for={`dep${n}-ssn`}>Last 4 of SSN</label>
+                      <input class="intake-input" type="text" id={`dep${n}-ssn`} name={`dep${n}_ssn_last4`} placeholder="XXXX" maxlength="4" inputmode="numeric" />
+                    </div>
+                    <div>
+                      <label class="intake-label" for={`dep${n}-rel`}>Relationship</label>
+                      <select class="intake-input" id={`dep${n}-rel`} name={`dep${n}_relationship`}>
+                        <option value="">Select...</option>
+                        <option>Child</option>
+                        <option>Stepchild</option>
+                        <option>Parent</option>
+                        <option>Sibling</option>
+                        <option>Other Relative</option>
+                        <option>Non-Relative</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 2 · BUSINESS OVERVIEW
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Business Overview</h2>
+          <p class="intake-card-sub">Schedule C — Profit or Loss from Business (Sole Proprietorship)</p>
+        </div>
+        <div class="intake-card-body space-y-6">
+
+          <!-- Business Identity -->
+          <fieldset>
+            <legend class="intake-legend">Business Identity</legend>
+            <div class="intake-grid">
+              <div class="sm:col-span-2">
+                <label class="intake-label" for="biz-name">Legal Business Name</label>
+                <input class="intake-input" type="text" id="biz-name" name="business_name" placeholder="e.g. Smith Consulting, or your own name if DBA" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-dba">DBA / Trade Name <span class="font-normal">(if different)</span></label>
+                <input class="intake-input" type="text" id="biz-dba" name="business_dba" placeholder="Doing Business As..." />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-ein">EIN <span class="font-normal">(last 4 digits only)</span></label>
+                <input class="intake-input" type="text" id="biz-ein" name="business_ein_last4" placeholder="XXXX" maxlength="4" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-industry">Industry / Business Type</label>
+                <input class="intake-input" type="text" id="biz-industry" name="business_industry" placeholder="e.g. Medical practice, IT consulting, real estate" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-naics">NAICS / Business Code <span class="font-normal">(if known)</span></label>
+                <input class="intake-input" type="text" id="biz-naics" name="business_naics_code" placeholder="e.g. 541211" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-start">Year Business Started</label>
+                <input class="intake-input" type="text" id="biz-start" name="business_start_year" placeholder="e.g. 2018" maxlength="4" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-website">Business Website</label>
+                <input class="intake-input" type="url" id="biz-website" name="business_website" placeholder="https://" />
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Business Address -->
+          <fieldset>
+            <legend class="intake-legend">Business Address <span class="legend-optional">(if different from home address)</span></legend>
+            <div class="intake-grid">
+              <div class="sm:col-span-2">
+                <label class="intake-label" for="biz-street">Street Address</label>
+                <input class="intake-input" type="text" id="biz-street" name="business_address_street" placeholder="Or check 'Same as home address'" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-city">City</label>
+                <input class="intake-input" type="text" id="biz-city" name="business_address_city" />
+              </div>
+              <div>
+                <label class="intake-label" for="biz-state">State</label>
+                <select class="intake-input" id="biz-state" name="business_address_state">
+                  <option value="">Select...</option>
+                  <option value="same">Same as home address</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NY">New York</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="intake-label" for="biz-zip">ZIP Code</label>
+                <input class="intake-input" type="text" id="biz-zip" name="business_address_zip" placeholder="07604" maxlength="10" inputmode="numeric" />
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Accounting Method & Participation -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Accounting Method -->
+            <fieldset>
+              <legend class="intake-legend">Accounting Method</legend>
+              <p class="text-xs mb-3" style="color: #6B7280;">How does your business recognize income and expenses?</p>
+              <div class="space-y-2">
+                {[
+                  { value: "cash", label: "Cash Basis", sub: "Income when received, expenses when paid" },
+                  { value: "accrual", label: "Accrual Basis", sub: "Income when earned, expenses when incurred" },
+                  { value: "unsure", label: "Not Sure / Ask CPA", sub: "" },
+                ].map(opt => (
+                  <label class="intake-radio-card w-full flex-col items-start gap-0.5">
+                    <div class="flex items-center gap-2">
+                      <input type="radio" name="accounting_method" value={opt.value} class="sr-only" />
+                      <span class="intake-radio-dot flex-shrink-0"></span>
+                      <span class="text-sm font-semibold" style="color: #1C1C1E;">{opt.label}</span>
+                    </div>
+                    {opt.sub && <p class="text-xs pl-6" style="color: #6B7280;">{opt.sub}</p>}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            <!-- Material Participation -->
+            <fieldset>
+              <legend class="intake-legend">Material Participation</legend>
+              <p class="text-xs mb-3" style="color: #6B7280;">Do you actively work in this business on a regular, continuous, and substantial basis?</p>
+              <div class="space-y-2">
+                {[
+                  { value: "yes", label: "Yes — I actively run this business" },
+                  { value: "no", label: "No — Passive / Investment role" },
+                  { value: "unsure", label: "Not Sure / Ask CPA" },
+                ].map(opt => (
+                  <label class="intake-radio-card w-full">
+                    <input type="radio" name="material_participation" value={opt.value} class="sr-only" />
+                    <span class="intake-radio-dot flex-shrink-0"></span>
+                    <span class="text-sm font-medium" style="color: #1C1C1E;">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+
+          <hr class="intake-divider" />
+
+          <!-- Gross Revenue -->
+          <fieldset>
+            <legend class="intake-legend">Gross Revenue & Returns</legend>
+            <div class="intake-grid">
+              <div>
+                <label class="intake-label" for="gross-receipts">Gross Receipts / Sales</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="gross-receipts" name="gross_receipts" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="returns-allowances">Returns & Allowances</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="returns-allowances" name="returns_allowances" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="cost-goods-sold">Cost of Goods Sold (COGS)</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="cost-goods-sold" name="cost_of_goods_sold" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="other-income">Other Business Income</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="other-income" name="other_business_income" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 3 · INCOME & OPERATING EXPENSES
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Operating Expenses</h2>
+          <p class="intake-card-sub">Enter approximate annual amounts — exact totals are confirmed from your records. Leave blank if not applicable.</p>
+        </div>
+        <div class="intake-card-body">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+            {expenseCategories.map(cat => (
+              <div>
+                <label class="intake-label" for={cat.name}>{cat.label}</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input
+                    class="intake-input intake-dollar"
+                    type="text"
+                    id={cat.name}
+                    name={cat.name}
+                    placeholder="0.00"
+                    inputmode="decimal"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6">
+            <label class="intake-label" for="expense-notes">Expense Notes <span class="font-normal">(optional)</span></label>
+            <textarea class="intake-input" id="expense-notes" name="expense_notes" rows="3" placeholder="Describe any significant or unusual expenses, subcontractor arrangements, inventory details, etc."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 4 · HOME OFFICE & VEHICLE
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Home Office & Vehicle Use</h2>
+          <p class="intake-card-sub">Form 8829 (Home Office) and Schedule C Part IV / Form 4562 (Vehicle)</p>
+        </div>
+        <div class="intake-card-body space-y-6">
+
+          <!-- Home Office -->
+          <fieldset>
+            <legend class="intake-legend">Home Office</legend>
+            <div class="mb-4">
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Do you use part of your home exclusively and regularly for business?</p>
+              <div class="flex gap-3 flex-wrap">
+                {[
+                  { value: "yes", label: "Yes" },
+                  { value: "no", label: "No" },
+                  { value: "unsure", label: "Not Sure" },
+                ].map(opt => (
+                  <label class="intake-toggle-option">
+                    <input type="radio" name="home_office_use" value={opt.value} class="sr-only" />
+                    <span class="intake-toggle-btn">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div class="intake-grid">
+              <div>
+                <label class="intake-label" for="office-sqft">Office Square Footage (sq ft)</label>
+                <input class="intake-input" type="number" id="office-sqft" name="home_office_sqft" placeholder="e.g. 150" min="0" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="home-sqft">Total Home Square Footage (sq ft)</label>
+                <input class="intake-input" type="number" id="home-sqft" name="home_total_sqft" placeholder="e.g. 2200" min="0" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="home-mortgage-interest">Annual Mortgage Interest or Rent</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="home-mortgage-interest" name="home_mortgage_interest_or_rent" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="home-property-tax">Annual Property Tax</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="home-property-tax" name="home_property_tax" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="home-utilities">Annual Utilities</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="home-utilities" name="home_utilities" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="home-insurance">Annual Homeowners / Renters Insurance</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="home-insurance" name="home_insurance" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Vehicle -->
+          <fieldset>
+            <legend class="intake-legend">Vehicle Use</legend>
+            <div class="intake-grid">
+              <div>
+                <label class="intake-label" for="vehicle-make-model">Vehicle Make & Model</label>
+                <input class="intake-input" type="text" id="vehicle-make-model" name="vehicle_make_model" placeholder="e.g. 2022 Toyota Camry" />
+              </div>
+              <div>
+                <label class="intake-label" for="vehicle-year">Vehicle Year</label>
+                <input class="intake-input" type="text" id="vehicle-year" name="vehicle_year" placeholder="e.g. 2022" maxlength="4" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="business-miles">Business Miles Driven</label>
+                <input class="intake-input" type="number" id="business-miles" name="vehicle_business_miles" placeholder="0" min="0" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="total-miles">Total Miles Driven (all purposes)</label>
+                <input class="intake-input" type="number" id="total-miles" name="vehicle_total_miles" placeholder="0" min="0" inputmode="numeric" />
+              </div>
+              <div>
+                <label class="intake-label" for="vehicle-date-service">Date First Used for Business</label>
+                <input class="intake-input" type="date" id="vehicle-date-service" name="vehicle_date_in_service" />
+              </div>
+              <div>
+                <label class="intake-label" for="vehicle-cost">Original Purchase Price</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="vehicle-cost" name="vehicle_original_cost" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Do you maintain a written mileage log?</p>
+              <p class="text-xs mb-3" style="color: #6B7280;">The IRS requires contemporaneous records for vehicle deductions.</p>
+              <div class="flex gap-3 flex-wrap">
+                {[
+                  { value: "yes", label: "Yes — written or app-based log" },
+                  { value: "partial", label: "Partial records" },
+                  { value: "no", label: "No" },
+                ].map(opt => (
+                  <label class="intake-toggle-option">
+                    <input type="radio" name="mileage_log" value={opt.value} class="sr-only" />
+                    <span class="intake-toggle-btn">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Preferred deduction method</p>
+              <div class="flex gap-3 flex-wrap">
+                {[
+                  { value: "standard_mileage", label: "Standard Mileage Rate" },
+                  { value: "actual_expense", label: "Actual Expense Method" },
+                  { value: "ask_cpa", label: "Let CPA Decide" },
+                ].map(opt => (
+                  <label class="intake-toggle-option">
+                    <input type="radio" name="vehicle_deduction_method" value={opt.value} class="sr-only" />
+                    <span class="intake-toggle-btn">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div class="mt-4">
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Additional vehicles used for business?</p>
+              <div class="flex gap-3">
+                {[
+                  { value: "yes", label: "Yes" },
+                  { value: "no", label: "No" },
+                ].map(opt => (
+                  <label class="intake-toggle-option">
+                    <input type="radio" name="additional_vehicles" value={opt.value} class="sr-only" />
+                    <span class="intake-toggle-btn">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+              <p class="text-xs mt-2" style="color: #6B7280;">If yes, please describe in the Additional Notes section.</p>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 5 · ASSETS & EQUIPMENT
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Assets & Equipment Purchases</h2>
+          <p class="intake-card-sub">List business property or equipment purchased this year with a cost of $2,500 or more — Section 179 / Bonus Depreciation eligible</p>
+        </div>
+        <div class="intake-card-body">
+          <!-- Table header -->
+          <div class="hidden sm:grid grid-cols-12 gap-2 mb-2 px-1">
+            <p class="col-span-4 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Description</p>
+            <p class="col-span-3 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Date Placed in Service</p>
+            <p class="col-span-2 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Cost ($)</p>
+            <p class="col-span-3 text-xs font-semibold uppercase tracking-wide" style="color: #6B7280;">Business Use %</p>
+          </div>
+
+          <!-- Asset rows -->
+          <div class="space-y-3">
+            {[1, 2, 3, 4, 5].map(n => (
+              <div class="rounded-xl p-3 sm:p-0 sm:rounded-none sm:border-0 grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-2 items-end" style="border: 1px solid #DCDCE0; background-color: #FAFAFA;" data-sm-borderless>
+                <div class="sm:col-span-4">
+                  <label class="intake-label sm:sr-only" for={`asset${n}-desc`}>Asset Description</label>
+                  <input class="intake-input" type="text" id={`asset${n}-desc`} name={`asset${n}_description`} placeholder={`e.g. MacBook Pro, medical equipment, office furniture`} />
+                </div>
+                <div class="sm:col-span-3">
+                  <label class="intake-label sm:sr-only" for={`asset${n}-date`}>Date Placed in Service</label>
+                  <input class="intake-input" type="date" id={`asset${n}-date`} name={`asset${n}_date_in_service`} />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="intake-label sm:sr-only" for={`asset${n}-cost`}>Cost ($)</label>
+                  <div class="relative">
+                    <span class="dollar-prefix">$</span>
+                    <input class="intake-input intake-dollar" type="text" id={`asset${n}-cost`} name={`asset${n}_cost`} placeholder="0" inputmode="decimal" />
+                  </div>
+                </div>
+                <div class="sm:col-span-3">
+                  <label class="intake-label sm:sr-only" for={`asset${n}-use`}>Business Use %</label>
+                  <div class="relative">
+                    <input class="intake-input pr-8" type="number" id={`asset${n}-use`} name={`asset${n}_business_use_pct`} placeholder="100" min="0" max="100" inputmode="numeric" />
+                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium" style="color: #6B7280;">%</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-xs mt-4" style="color: #6B7280;">
+            More than 5 items? List additional assets in the Additional Notes section or bring a full asset register to your consultation.
+          </p>
+
+          <div class="mt-5">
+            <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Did you dispose of (sell, trade, or scrap) any business assets this year?</p>
+            <div class="flex gap-3">
+              {[
+                { value: "yes", label: "Yes" },
+                { value: "no", label: "No" },
+              ].map(opt => (
+                <label class="intake-toggle-option">
+                  <input type="radio" name="assets_disposed" value={opt.value} class="sr-only" />
+                  <span class="intake-toggle-btn">{opt.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 6 · HEALTHCARE & RETIREMENT
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Healthcare & Retirement</h2>
+          <p class="intake-card-sub">Two of the most powerful above-the-line deductions available to self-employed individuals</p>
+        </div>
+        <div class="intake-card-body space-y-6">
+
+          <!-- Health Insurance -->
+          <fieldset>
+            <legend class="intake-legend">Self-Employed Health Insurance (SE HI Deduction)</legend>
+            <p class="text-xs mb-4" style="color: #6B7280;">
+              If you paid health insurance premiums for yourself and your family and were not eligible for employer-sponsored coverage, 100% of those premiums may be deductible as an adjustment to income.
+            </p>
+            <div class="intake-grid">
+              <div>
+                <label class="intake-label" for="health-premiums">Annual Premiums Paid (medical + dental + vision)</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="health-premiums" name="se_health_insurance_premiums" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="hsa-contributions">HSA Contributions (your own, not employer)</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="hsa-contributions" name="hsa_contributions" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Were you eligible for health coverage through a spouse's employer at any point during the year?</p>
+                <div class="flex gap-3">
+                  {[
+                    { value: "yes", label: "Yes" },
+                    { value: "no", label: "No" },
+                    { value: "partial", label: "Part of the year" },
+                  ].map(opt => (
+                    <label class="intake-toggle-option">
+                      <input type="radio" name="spouse_employer_coverage_eligible" value={opt.value} class="sr-only" />
+                      <span class="intake-toggle-btn">{opt.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <hr class="intake-divider" />
+
+          <!-- Retirement Plans -->
+          <fieldset>
+            <legend class="intake-legend">Retirement Plan Contributions</legend>
+            <p class="text-xs mb-4" style="color: #6B7280;">
+              Self-employed retirement plans offer some of the largest available deductions. Contributions to a SEP-IRA, Solo 401(k), or SIMPLE IRA reduce both federal and NJ taxable income.
+            </p>
+            <div class="intake-grid">
+              <div>
+                <label class="intake-label" for="sep-ira">SEP-IRA Contributions</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="sep-ira" name="sep_ira_contributions" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="solo401k-employee">Solo 401(k) — Employee Deferrals</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="solo401k-employee" name="solo_401k_employee_deferrals" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="solo401k-employer">Solo 401(k) — Employer Contributions</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="solo401k-employer" name="solo_401k_employer_contributions" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="simple-ira">SIMPLE IRA Contributions</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="simple-ira" name="simple_ira_contributions" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+              <div>
+                <label class="intake-label" for="trad-ira">Traditional IRA Contributions</label>
+                <div class="relative">
+                  <span class="dollar-prefix">$</span>
+                  <input class="intake-input intake-dollar" type="text" id="trad-ira" name="traditional_ira_contributions" placeholder="0.00" inputmode="decimal" />
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <p class="text-sm font-semibold mb-2" style="color: #1C1C1E;">Do you have a retirement plan established for this business?</p>
+              <div class="flex gap-3 flex-wrap">
+                {[
+                  { value: "sep", label: "SEP-IRA" },
+                  { value: "solo401k", label: "Solo 401(k)" },
+                  { value: "simple", label: "SIMPLE IRA" },
+                  { value: "defined_benefit", label: "Defined Benefit Plan" },
+                  { value: "none", label: "No plan yet" },
+                ].map(opt => (
+                  <label class="intake-toggle-option">
+                    <input type="radio" name="retirement_plan_type" value={opt.value} class="sr-only" />
+                    <span class="intake-toggle-btn">{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 7 · IRS COMPLIANCE
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">IRS Compliance & Disclosures</h2>
+          <p class="intake-card-sub">Required disclosures — answer honestly to ensure your return is complete and accurate</p>
+        </div>
+        <div class="intake-card-body space-y-4">
+
+          {[
+            {
+              name: "compliance_digital_assets",
+              label: "Digital Assets & Cryptocurrency",
+              description: "Did you receive, sell, exchange, stake, mine, or otherwise dispose of any digital asset — including cryptocurrency, NFTs, or stablecoin — at any point during the tax year? (IRS Schedule 1, Question 1)",
+            },
+            {
+              name: "compliance_foreign_accounts",
+              label: "Foreign Bank & Financial Accounts (FBAR / FinCEN 114)",
+              description: "Did you have a financial interest in or signature authority over any foreign bank, securities, or other financial account with an aggregate value exceeding $10,000 at any point during the year?",
+            },
+            {
+              name: "compliance_foreign_trusts",
+              label: "Foreign Trusts or Foreign Entities",
+              description: "Were you a grantor of, or transferor to, a foreign trust? Did you receive a distribution from a foreign trust, or were you treated as an owner of a foreign trust under IRC §671–679?",
+            },
+            {
+              name: "compliance_1099_issued",
+              label: "1099-NEC / 1099-MISC Filing (Issued to Contractors)",
+              description: "Did you pay any individual, partnership, or LLC $600 or more for services during the year? If so, you are generally required to issue Form 1099-NEC to each such payee.",
+            },
+            {
+              name: "compliance_irs_notice",
+              label: "IRS or State Tax Notice Received",
+              description: "Did you receive any notices, letters, or audit communications from the IRS or any state tax authority (including NJ Division of Taxation) during the year?",
+            },
+          ].map(item => (
+            <div class="rounded-xl p-5" style="background-color: #EEEEF2; border: 1px solid #DCDCE0;">
+              <p class="text-sm font-semibold mb-1" style="color: #1C1C1E;">{item.label}</p>
+              <p class="text-xs mb-3 leading-relaxed" style="color: #6B7280;">{item.description}</p>
+              <fieldset>
+                <legend class="sr-only">{item.label}</legend>
+                <div class="flex gap-3 flex-wrap">
+                  {[
+                    { value: "yes", label: "Yes" },
+                    { value: "no", label: "No" },
+                    { value: "unsure", label: "Not Sure" },
+                  ].map(opt => (
+                    <label class="intake-toggle-option">
+                      <input type="radio" name={item.name} value={opt.value} class="sr-only" />
+                      <span class="intake-toggle-btn">{opt.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SECTION 8 · ADDITIONAL NOTES
+      ───────────────────────────────────────────── -->
+      <div class="intake-card">
+        <div class="intake-card-header">
+          <h2 class="intake-card-title">Additional Notes & Questions</h2>
+          <p class="intake-card-sub">Anything else your CPA should know before the consultation</p>
+        </div>
+        <div class="intake-card-body space-y-4">
+          <div>
+            <label class="intake-label" for="prior-preparer">Who prepared your prior year return?</label>
+            <input class="intake-input" type="text" id="prior-preparer" name="prior_year_preparer" placeholder="Firm, software (TurboTax, H&R Block), or Self-prepared" />
+          </div>
+          <div>
+            <label class="intake-label" for="prior-result">Prior year result (approximate)</label>
+            <select class="intake-input" id="prior-result" name="prior_year_result">
+              <option value="">Select...</option>
+              <option value="refund_large">Large refund (over $3,000)</option>
+              <option value="refund_small">Small refund (under $3,000)</option>
+              <option value="breakeven">Roughly break-even</option>
+              <option value="owed_small">Owed a small amount (under $2,000)</option>
+              <option value="owed_large">Owed a significant amount (over $2,000)</option>
+              <option value="unknown">Don't remember</option>
+            </select>
+          </div>
+          <div>
+            <label class="intake-label" for="estimated-payments">Did you make quarterly estimated tax payments this year?</label>
+            <select class="intake-input" id="estimated-payments" name="estimated_payments_made">
+              <option value="">Select...</option>
+              <option value="yes_federal_nj">Yes — Federal and NJ</option>
+              <option value="yes_federal_only">Yes — Federal only</option>
+              <option value="yes_nj_only">Yes — NJ only</option>
+              <option value="no">No</option>
+              <option value="unsure">Not sure</option>
+            </select>
+          </div>
+          <div>
+            <label class="intake-label" for="additional-notes">Additional Notes or Questions</label>
+            <textarea class="intake-input" id="additional-notes" name="additional_notes" rows="5" placeholder="Additional dependents, second vehicles, multi-state income, questions about specific expenses, changes planned for next year, or anything else you want your CPA to be prepared to discuss..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─────────────────────────────────────────────
+           SUBMIT
+      ───────────────────────────────────────────── -->
+      <div class="rounded-2xl px-6 py-8 text-center" style="background-color: #1C1C1E; border: 1px solid #2E2E32;">
+        <p class="text-sm mb-6 leading-relaxed max-w-xl mx-auto" style="color: #A0A0A8;">
+          By submitting this form, you authorize ProAxis Tax & Accounting Services to use this information to prepare and plan your tax return.
+          All information is treated as strictly confidential and protected under professional CPA standards and attorney-client adjacent privilege principles.
+        </p>
+        <button
+          type="submit"
+          class="inline-flex items-center gap-3 px-10 py-4 rounded-xl font-bold text-base transition-all hover:opacity-90 active:scale-95"
+          style="background-color: #E5E4E2; color: #1C1C1E; letter-spacing: 0.01em;"
+        >
+          <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Submit Intake Form
+        </button>
+        <p class="text-xs mt-4" style="color: #6B6670;">
+          Questions? Call <a href="tel:+12018002330" class="underline" style="color: #C5A55A;">(201) 800-2330</a> or
+          <a href="/contact/" class="underline" style="color: #C5A55A;">send us a message</a>.
+        </p>
+      </div>
+
+    </form>
+  </div>
+
+</BaseLayout>
+
+<!-- Dynamically populate the subject field with business name -->
+<script>
+  const form = document.getElementById('sp-intake-form');
+  const bizNameInput = form?.querySelector<HTMLInputElement>('[name="business_name"]');
+  const subjectInput = form?.querySelector<HTMLInputElement>('[name="subject"]');
+
+  if (bizNameInput && subjectInput) {
+    bizNameInput.addEventListener('input', () => {
+      const name = bizNameInput.value.trim();
+      subjectInput.value = name
+        ? `New Business Intake Submission: ${name}`
+        : 'New Business Intake Submission';
+    });
+  }
+
+  // Set reply-to dynamically from the taxpayer email field
+  const emailInput = form?.querySelector<HTMLInputElement>('[name="taxpayer_email"]');
+  if (emailInput && form) {
+    emailInput.addEventListener('change', () => {
+      let replyTo = form.querySelector<HTMLInputElement>('[name="reply-to"]');
+      if (!replyTo) {
+        replyTo = document.createElement('input');
+        replyTo.type = 'hidden';
+        replyTo.name = 'reply-to';
+        form.appendChild(replyTo);
+      }
+      replyTo.value = emailInput.value;
+    });
+  }
+</script>
+
+<style>
+  /* ── Card containers ── */
+  .intake-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #2E2E32;
+  }
+  .intake-card-header {
+    padding: 1rem 1.5rem;
+    background-color: #1C1C1E;
+  }
+  .intake-card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--font-heading, sans-serif);
+  }
+  .intake-card-sub {
+    font-size: 0.75rem;
+    color: #A0A0A8;
+    margin-top: 0.125rem;
+  }
+  .intake-card-body {
+    padding: 1.5rem;
+    background-color: #F7F8FA;
+  }
+
+  /* ── Legends & dividers ── */
+  .intake-legend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1C1C1E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .legend-optional {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #6B7280;
+  }
+  .intake-divider {
+    border-color: #E0E0E4;
+  }
+
+  /* ── Grid ── */
+  .intake-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) {
+    .intake-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── Labels & inputs ── */
+  .intake-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #3a3a3e;
+    margin-bottom: 0.375rem;
+  }
+  .intake-input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.625rem;
+    border: 1.5px solid #DCDCE0;
+    background-color: #ffffff;
+    color: #1C1C1E;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .intake-input:focus {
+    outline: none;
+    border-color: #2E75B6;
+    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.15);
+  }
+  .intake-input::placeholder { color: #A0A0A8; }
+  select.intake-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='none' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+  textarea.intake-input { resize: vertical; min-height: 80px; }
+
+  /* ── Dollar prefix inputs ── */
+  .dollar-prefix {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #6B7280;
+    pointer-events: none;
+  }
+  .intake-dollar { padding-left: 1.75rem; }
+
+  /* ── Radio cards ── */
+  .intake-radio-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border-radius: 0.625rem;
+    border: 1.5px solid #DCDCE0;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+    user-select: none;
+  }
+  .intake-radio-card:has(input:checked) {
+    border-color: #2E75B6;
+    background-color: #EEF3FA;
+  }
+  .intake-radio-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1.5px solid #BDBDC4;
+    flex-shrink: 0;
+    position: relative;
+    background: white;
+    transition: border-color 0.1s;
+  }
+  .intake-radio-card:has(input:checked) .intake-radio-dot { border-color: #2E75B6; }
+  .intake-radio-card:has(input:checked) .intake-radio-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem; height: 0.5rem;
+    border-radius: 50%;
+    background-color: #2E75B6;
+  }
+
+  /* ── Yes/No toggle buttons ── */
+  .intake-toggle-option { cursor: pointer; }
+  .intake-toggle-btn {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid #DCDCE0;
+    background-color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1C1C1E;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .intake-toggle-option:has(input:checked) .intake-toggle-btn {
+    background-color: #1C1C1E;
+    border-color: #1C1C1E;
+    color: #E5E4E2;
+  }
+
+  /* ── Asset table rows on mobile ── */
+  @media (max-width: 639px) {
+    [data-sm-borderless] { border-radius: 0.75rem; padding: 0.75rem; }
+  }
+  @media (min-width: 640px) {
+    [data-sm-borderless] { background-color: transparent !important; border: none !important; border-bottom: 1px solid #EEEEF2 !important; border-radius: 0 !important; padding: 0.375rem 0 !important; }
+  }
+</style>
