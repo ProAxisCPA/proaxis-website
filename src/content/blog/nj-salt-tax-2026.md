@@ -15,6 +15,8 @@ Few tax issues have generated more frustration among New Jersey taxpayers than t
 
 This guide covers everything NJ business owners need to know about SALT taxes in 2026 — the history of the cap, the legislative uncertainty around its future, and most importantly, the NJ Business Alternative Income Tax (BAIT) election that has emerged as the most powerful SALT planning tool available to New Jersey pass-through business owners.
 
+![NJ SALT tax changes 2026 — what Bergen County business owners need to know about BAIT elections and SALT deduction strategies, explained by ProAxis CPA in Hasbrouck Heights NJ](/nj-salt-what-business-owners-need-to-know.jpg)
+
 ## Background: The TCJA's $10,000 SALT Cap and Its Impact on NJ
 
 The Tax Cuts and Jobs Act of 2017 (TCJA) introduced a $10,000 annual cap on the federal deduction for state and local taxes — including state income tax and property taxes. For many taxpayers across the country, this limit had little practical effect. But for New Jersey residents, the impact was immediate and substantial.

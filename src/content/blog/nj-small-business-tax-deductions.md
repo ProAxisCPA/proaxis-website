@@ -15,6 +15,8 @@ Every year, New Jersey small business owners overpay their taxes by hundreds —
 
 This guide walks through the ten deductions that Bergen County and NJ small business owners most frequently overlook, with practical explanations of how each works — and critical notes on where New Jersey diverges from federal rules, because those differences can be significant.
 
+![Traditional CPA office in Bergen County NJ — ProAxis Tax & Accounting Services helps NJ small business owners identify missed tax deductions and maximize savings through proactive year-round planning](/traditional-cpa-office-bergen-county-tax-services.jpg)
+
 ## 1. Home Office Deduction
 
 If you use part of your home exclusively and regularly for business, you may be able to deduct those costs. There are two methods:
