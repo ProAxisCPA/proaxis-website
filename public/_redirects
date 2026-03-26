@@ -26,7 +26,13 @@
 /irs-resolution              /tax-services/irs-tax-resolution/ 301
 /irs-resolution/             /tax-services/irs-tax-resolution/ 301
 /salt-consulting             /tax-services/nj-salt-consulting/ 301
+/nj-state-local-tax-salt     /tax-services/nj-salt-consulting/ 301
+/nj-state-local-tax-salt/    /tax-services/nj-salt-consulting/ 301
 /estate-planning             /tax-services/estate-gift-tax/  301
+/bergen-county-tax-preparation    /tax-services/tax-preparation/  301
+/bergen-county-tax-preparation/   /tax-services/tax-preparation/  301
+/irs-tax-problem-resolution       /tax-services/irs-tax-resolution/ 301
+/irs-tax-problem-resolution/      /tax-services/irs-tax-resolution/ 301
 
 # Business service redirects
 /fractional-cfo              /business-services/fractional-cfo/ 301
@@ -35,6 +41,12 @@
 /payroll                     /business-services/payroll/     301
 /payroll/                    /business-services/payroll/     301
 /startup                     /business-services/startup-advisory/ 301
+/bergen-county-bookkeeping        /business-services/bookkeeping/ 301
+/bergen-county-bookkeeping/       /business-services/bookkeeping/ 301
+/fractional-cfo-advisory          /business-services/fractional-cfo/ 301
+/fractional-cfo-advisory/         /business-services/fractional-cfo/ 301
+/financial-systems-technology-consulting    /business-services/financial-technology/ 301
+/financial-systems-technology-consulting/   /business-services/financial-technology/ 301
 
 # About page redirects
 /about-us                    /about/                         301
@@ -55,10 +67,19 @@
 /contact-us                  /contact/                       301
 /contact-us/                 /contact/                       301
 
-# Blog redirects
+# Blog/Insights redirects
 /blog                        /resources/blog/                301
 /blog/                       /resources/blog/                301
 /news                        /resources/blog/                301
+/insights                    /resources/blog/                301
+/insights/                   /resources/blog/                301
+/insights/fractional-cfo-new-jersey          /resources/blog/  301
+/insights/tax-planning-vs-tax-preparation    /resources/blog/  301
+/insights/s-corp-tax-process-form-1120s      /resources/blog/s-corp-vs-llc-nj-business-tax-2026/  301
+/insights/profit-illusion-pl-cash-flow       /resources/blog/  301
+/insights/signs-outgrown-accounting-process  /resources/blog/  301
+/insights/form-1120-corporate-tax-return-guide   /resources/blog/  301
+/insights/form-1065-partnership-tax-return-guide  /resources/blog/  301
 
 # Resources redirects
 /resources                   /resources/blog/                301
