@@ -1,6 +1,31 @@
 import type { Context } from "https://edge.netlify.com";
 
 export default async function geoRestrict(request: Request, context: Context) {
+  const userAgent = request.headers.get("user-agent") || "";
+
+  // Allow known search engine crawlers regardless of location
+  const botPatterns = [
+    "Googlebot",
+    "Bingbot",
+    "Slurp",        // Yahoo
+    "DuckDuckBot",
+    "Baiduspider",
+    "YandexBot",
+    "facebookexternalhit",
+    "Twitterbot",
+    "LinkedInBot",
+    "WhatsApp",
+    "Applebot",
+    "AdsBot-Google",
+    "Mediapartners-Google",
+    "Google-InspectionTool",
+    "Chrome-Lighthouse",
+  ];
+
+  if (botPatterns.some((bot) => userAgent.includes(bot))) {
+    return context.next();
+  }
+
   // Get country code from Netlify's geo object
   const countryCode = context.geo?.country?.code;
 
@@ -18,6 +43,7 @@ export default async function geoRestrict(request: Request, context: Context) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Access Restricted | ProAxis Tax & Accounting Services</title>
+  <meta name="robots" content="noindex">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
