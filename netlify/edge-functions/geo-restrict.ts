@@ -1,6 +1,24 @@
 import type { Context } from "https://edge.netlify.com";
 
 export default async function geoRestrict(request: Request, context: Context) {
+  const userAgent = request.headers.get("user-agent") || "";
+
+  // Allow known search engine crawlers regardless of location
+  const botPatterns = [
+    "Googlebot", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider",
+    "YandexBot", "Sogou", "facebot", "ia_archiver", "AhrefsBot",
+    "Applebot", "LinkedInBot", "Twitterbot", "Pinterestbot",
+    "Googlebot-Image", "Googlebot-Video", "Storebot-Google",
+    "APIs-Google", "AdsBot-Google", "Mediapartners-Google",
+    "Google-InspectionTool", "Chrome-Lighthouse",
+  ];
+  const isBot = botPatterns.some((bot) =>
+    userAgent.toLowerCase().includes(bot.toLowerCase())
+  );
+  if (isBot) {
+    return context.next();
+  }
+
   // Get country code from Netlify's geo object
   const countryCode = context.geo?.country?.code;
 
