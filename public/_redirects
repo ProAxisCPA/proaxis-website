@@ -1,12 +1,12 @@
 # Netlify _redirects file
-# Mapping old Squarespace URL patterns to new ProAxis site URLs
+# Mapping old URL patterns to current ProAxis site URLs
 # Format: old-url  new-url  status-code
 
 # ============================================
 # SQUARESPACE URL PATTERNS → NEW PAGES
 # ============================================
 
-# Common Squarespace patterns (adjust based on actual old URLs)
+# Common Squarespace patterns
 /services                    /tax-services/                  301
 /services/                   /tax-services/                  301
 /tax                         /tax-services/                  301
@@ -61,7 +61,6 @@
 /news                        /resources/blog/                301
 
 # Resources redirects
-/resources                   /resources/blog/                301
 /faq                         /resources/faq/                 301
 /faq/                        /resources/faq/                 301
 
@@ -70,6 +69,123 @@
 /privacy/                    /privacy-policy/                301
 /terms                       /terms-of-service/              301
 /terms/                      /terms-of-service/              301
+
+# ============================================
+# GSC "DISCOVERED - NOT INDEXED" URL FIXES
+# Old/alternate slugs → current canonical pages
+# ============================================
+
+# --- Service Areas (old "-nj-cpa" suffix slugs) ---
+/service-areas/teaneck-nj-cpa           /service-areas/teaneck/         301
+/service-areas/teaneck-nj-cpa/          /service-areas/teaneck/         301
+/service-areas/paramus-nj-cpa           /service-areas/paramus/         301
+/service-areas/paramus-nj-cpa/          /service-areas/paramus/         301
+/service-areas/fort-lee-nj-cpa          /service-areas/fort-lee/        301
+/service-areas/fort-lee-nj-cpa/         /service-areas/fort-lee/        301
+/service-areas/garfield-nj-cpa          /service-areas/garfield/        301
+/service-areas/garfield-nj-cpa/         /service-areas/garfield/        301
+/service-areas/englewood-nj-cpa         /service-areas/englewood/       301
+/service-areas/englewood-nj-cpa/        /service-areas/englewood/       301
+/service-areas/fair-lawn-nj-cpa         /service-areas/fair-lawn/       301
+/service-areas/fair-lawn-nj-cpa/        /service-areas/fair-lawn/       301
+/service-areas/ridgewood-nj-cpa         /service-areas/ridgewood/       301
+/service-areas/ridgewood-nj-cpa/        /service-areas/ridgewood/       301
+/service-areas/hackensack-nj-cpa        /service-areas/hackensack/      301
+/service-areas/hackensack-nj-cpa/       /service-areas/hackensack/      301
+/service-areas/rutherford-nj-cpa        /service-areas/rutherford/      301
+/service-areas/rutherford-nj-cpa/       /service-areas/rutherford/      301
+
+# --- Industries (old descriptive slugs) ---
+/industries/non-profit-accounting-nj                    /industries/non-profits/            301
+/industries/non-profit-accounting-nj/                   /industries/non-profits/            301
+/industries/real-estate-accountant-nj                   /industries/real-estate/            301
+/industries/real-estate-accountant-nj/                  /industries/real-estate/            301
+/industries/professional-services-accounting-nj         /industries/professional-services/  301
+/industries/professional-services-accounting-nj/        /industries/professional-services/  301
+/industries/ecommerce-online-business-accountant        /industries/ecommerce/             301
+/industries/ecommerce-online-business-accountant/       /industries/ecommerce/             301
+/industries/restaurant-hospitality-accountant-nj        /industries/restaurants/            301
+/industries/restaurant-hospitality-accountant-nj/       /industries/restaurants/            301
+/industries/construction-contractor-accountant-nj       /industries/construction/           301
+/industries/construction-contractor-accountant-nj/      /industries/construction/           301
+/industries/healthcare-medical-practice-accountant-nj   /industries/healthcare/            301
+/industries/healthcare-medical-practice-accountant-nj/  /industries/healthcare/            301
+
+# --- Tax Services (old descriptive slugs) ---
+/tax-services/nj-salt-tax-consulting            /tax-services/nj-salt-consulting/       301
+/tax-services/nj-salt-tax-consulting/           /tax-services/nj-salt-consulting/       301
+/tax-services/tax-planning-strategy-nj          /tax-services/tax-planning/             301
+/tax-services/tax-planning-strategy-nj/         /tax-services/tax-planning/             301
+/tax-services/multi-state-tax-compliance        /tax-services/multi-state-tax/          301
+/tax-services/multi-state-tax-compliance/       /tax-services/multi-state-tax/          301
+/tax-services/estate-gift-tax-planning-nj       /tax-services/estate-gift-tax/          301
+/tax-services/estate-gift-tax-planning-nj/      /tax-services/estate-gift-tax/          301
+/tax-services/tax-preparation-bergen-county     /tax-services/tax-preparation/          301
+/tax-services/tax-preparation-bergen-county/    /tax-services/tax-preparation/          301
+/tax-services/overview                          /tax-services/                          301
+/tax-services/overview/                         /tax-services/                          301
+
+# --- Business Services (old descriptive slugs) ---
+/business-services/overview                                 /business-services/                     301
+/business-services/overview/                                /business-services/                     301
+/business-services/payroll-services-nj                      /business-services/payroll/             301
+/business-services/payroll-services-nj/                     /business-services/payroll/             301
+/business-services/fractional-cfo-advisory-nj               /business-services/fractional-cfo/      301
+/business-services/fractional-cfo-advisory-nj/              /business-services/fractional-cfo/      301
+/business-services/financial-statements-reporting           /business-services/financial-statements/ 301
+/business-services/financial-statements-reporting/          /business-services/financial-statements/ 301
+/business-services/startup-new-business-advisory-nj         /business-services/startup-advisory/    301
+/business-services/startup-new-business-advisory-nj/        /business-services/startup-advisory/    301
+/business-services/bookkeeping-accounting-bergen-county     /business-services/bookkeeping/         301
+/business-services/bookkeeping-accounting-bergen-county/    /business-services/bookkeeping/         301
+/business-services/financial-systems-technology-consulting  /business-services/financial-technology/ 301
+/business-services/financial-systems-technology-consulting/ /business-services/financial-technology/ 301
+
+# --- About (old descriptive slugs) ---
+/about/why-choose-proaxis-cpa          /about/why-proaxis/     301
+/about/why-choose-proaxis-cpa/         /about/why-proaxis/     301
+/about/client-testimonials-reviews     /about/testimonials/    301
+/about/client-testimonials-reviews/    /about/testimonials/    301
+/about/overview                        /about/                 301
+/about/overview/                       /about/                 301
+/about/meet-the-team                   /about/team/            301
+/about/meet-the-team/                  /about/team/            301
+
+# --- Resources (old descriptive slugs) ---
+/resources/tax-calendar-deadlines              /resources/tax-calendar/         301
+/resources/tax-calendar-deadlines/             /resources/tax-calendar/         301
+/resources/nj-tax-guides-checklists            /resources/guides-checklists/    301
+/resources/nj-tax-guides-checklists/           /resources/guides-checklists/    301
+/resources/small-business-financial-tools      /resources/tools-calculators/    301
+/resources/small-business-financial-tools/     /resources/tools-calculators/    301
+/resources/overview                            /resources/                      301
+/resources/overview/                           /resources/                      301
+
+# --- Old Blog Post Slugs (no longer exist) ---
+/resources/blog/fractional-cfo-new-jersey              /business-services/fractional-cfo/                  301
+/resources/blog/fractional-cfo-new-jersey/             /business-services/fractional-cfo/                  301
+/resources/blog/s-corp-tax-process-form-1120s          /resources/blog/s-corp-vs-llc-nj-business-tax-2026/ 301
+/resources/blog/s-corp-tax-process-form-1120s/         /resources/blog/s-corp-vs-llc-nj-business-tax-2026/ 301
+/resources/blog/tax-planning-vs-tax-preparation        /tax-services/tax-planning/                         301
+/resources/blog/tax-planning-vs-tax-preparation/       /tax-services/tax-planning/                         301
+/resources/blog/new-tax-deductions-2025-what-to-know   /resources/blog/nj-small-business-tax-deductions/   301
+/resources/blog/new-tax-deductions-2025-what-to-know/  /resources/blog/nj-small-business-tax-deductions/   301
+/resources/blog/profit-illusion-pl-cash-flow           /resources/blog/                                    301
+/resources/blog/profit-illusion-pl-cash-flow/          /resources/blog/                                    301
+/resources/blog/signs-outgrown-accounting-process      /resources/blog/                                    301
+/resources/blog/signs-outgrown-accounting-process/     /resources/blog/                                    301
+/resources/blog/form-1120-corporate-tax-return-guide   /resources/blog/                                    301
+/resources/blog/form-1120-corporate-tax-return-guide/  /resources/blog/                                    301
+
+# --- Special Pages ---
+/thank-you               /contact/               301
+/thank-you/              /contact/               301
+/home                    /                       301
+/home/                   /                       301
+/homepage                /                       301
+/homepage/               /                       301
+/store                   /                       301
+/store/                  /                       301
 
 # ============================================
 # SITEMAP & ROBOTS
