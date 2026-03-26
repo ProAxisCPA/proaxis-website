@@ -6,12 +6,13 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.proaxiscpa.com',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !page.includes('/tax-intake/success') && !page.includes('/disclaimer'),
       serialize(item) {
         if (item.url === 'https://www.proaxiscpa.com/') {
           item.priority = 1.0;
