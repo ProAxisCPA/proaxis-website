@@ -33,6 +33,13 @@
 /bergen-county-tax-preparation/   /tax-services/tax-preparation/  301
 /irs-tax-problem-resolution       /tax-services/irs-tax-resolution/ 301
 /irs-tax-problem-resolution/      /tax-services/irs-tax-resolution/ 301
+# Old long-form tax service slugs
+/tax-services/tax-preparation-bergen-county    /tax-services/tax-preparation/  301
+/tax-services/tax-preparation-bergen-county/   /tax-services/tax-preparation/  301
+/tax-services/nj-salt-tax-consulting           /tax-services/nj-salt-consulting/  301
+/tax-services/nj-salt-tax-consulting/          /tax-services/nj-salt-consulting/  301
+/tax-services/irs-tax-resolution-representation    /tax-services/irs-tax-resolution/  301
+/tax-services/irs-tax-resolution-representation/   /tax-services/irs-tax-resolution/  301
 
 # Business service redirects
 /fractional-cfo              /business-services/fractional-cfo/ 301
@@ -47,10 +54,19 @@
 /fractional-cfo-advisory/         /business-services/fractional-cfo/ 301
 /financial-systems-technology-consulting    /business-services/financial-technology/ 301
 /financial-systems-technology-consulting/   /business-services/financial-technology/ 301
+# Old long-form business service slugs
+/business-services/financial-systems-technology-consulting    /business-services/financial-technology/ 301
+/business-services/financial-systems-technology-consulting/   /business-services/financial-technology/ 301
+/business-services/fractional-cfo-advisory-nj                /business-services/fractional-cfo/ 301
+/business-services/fractional-cfo-advisory-nj/               /business-services/fractional-cfo/ 301
+/business-services/bookkeeping-accounting-bergen-county       /business-services/bookkeeping/ 301
+/business-services/bookkeeping-accounting-bergen-county/      /business-services/bookkeeping/ 301
 
 # About page redirects
 /about-us                    /about/                         301
 /about-us/                   /about/                         301
+/about/overview              /about/                         301
+/about/overview/             /about/                         301
 /team                        /about/team/                    301
 /team/                       /about/team/                    301
 /testimonials                /about/testimonials/            301
@@ -67,6 +83,15 @@
 /contact-us                  /contact/                       301
 /contact-us/                 /contact/                       301
 
+# Homepage aliases
+/home                        /                               301
+/home/                       /                               301
+/homepage                    /                               301
+/homepage/                   /                               301
+
+# Favicon fallback
+/favicon.png                 /favicon.ico                    301
+
 # Blog/Insights redirects
 /blog                        /resources/blog/                301
 /blog/                       /resources/blog/                301
@@ -80,6 +105,22 @@
 /insights/signs-outgrown-accounting-process  /resources/blog/  301
 /insights/form-1120-corporate-tax-return-guide   /resources/blog/  301
 /insights/form-1065-partnership-tax-return-guide  /resources/blog/  301
+
+# Old blog post URLs under /resources/blog/ that no longer exist
+/resources/blog/form-1065-partnership-tax-return-guide    /resources/blog/  301
+/resources/blog/form-1065-partnership-tax-return-guide/   /resources/blog/  301
+/resources/blog/form-1120-corporate-tax-return-guide      /resources/blog/  301
+/resources/blog/form-1120-corporate-tax-return-guide/     /resources/blog/  301
+/resources/blog/signs-outgrown-accounting-process         /resources/blog/  301
+/resources/blog/signs-outgrown-accounting-process/        /resources/blog/  301
+/resources/blog/profit-illusion-pl-cash-flow              /resources/blog/  301
+/resources/blog/profit-illusion-pl-cash-flow/             /resources/blog/  301
+/resources/blog/s-corp-tax-process-form-1120s             /resources/blog/s-corp-vs-llc-nj-business-tax-2026/  301
+/resources/blog/s-corp-tax-process-form-1120s/            /resources/blog/s-corp-vs-llc-nj-business-tax-2026/  301
+/resources/blog/tax-planning-vs-tax-preparation           /resources/blog/  301
+/resources/blog/tax-planning-vs-tax-preparation/          /resources/blog/  301
+/resources/blog/fractional-cfo-new-jersey                 /resources/blog/  301
+/resources/blog/fractional-cfo-new-jersey/                /resources/blog/  301
 
 # Resources redirects
 /resources                   /resources/blog/                301
