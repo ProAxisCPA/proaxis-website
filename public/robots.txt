@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /.netlify/
 
 # Sitemap location
-Sitemap: https://www.proaxiscpa.com/sitemap-index.xml
+Sitemap: https://proaxiscpa.com/sitemap-index.xml
