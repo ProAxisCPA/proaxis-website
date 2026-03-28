@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Disallow admin/private areas
-Disallow: /admin/
-Disallow: /.netlify/
-
-# Sitemap location
 Sitemap: https://proaxiscpa.com/sitemap-index.xml
