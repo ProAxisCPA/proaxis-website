@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.proaxiscpa.com',
+  site: 'https://proaxiscpa.com',
   integrations: [
     sitemap({
       changefreq: 'weekly',
@@ -13,7 +13,7 @@ export default defineConfig({
       lastmod: new Date(),
       filter: (page) => !page.includes('/404'),
       serialize(item) {
-        if (item.url === 'https://www.proaxiscpa.com/') {
+        if (item.url === 'https://proaxiscpa.com/') {
           item.priority = 1.0;
           item.changefreq = 'daily';
         }
