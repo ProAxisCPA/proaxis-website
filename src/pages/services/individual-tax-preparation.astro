@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "Individual Tax Preparation Services | ProAxis CPA Bergen County";
+const description = "Professional individual tax filing and preparation services in NJ and NY. We focus on maximizing your deductions and keeping your filing process simple and secure.";
+const canonical = "/services/individual-tax-preparation/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Individual Tax Preparation Services",
+    "description": "Professional individual tax filing and preparation services for New Jersey and New York residents. Focused on maximizing deductions with a simple, secure filing process.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": [
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "State", "name": "New York" }
+    ],
+    "serviceType": "Individual Tax Preparation"
+  }
+];
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Individual Tax Preparation" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Services", url: "/services/" }, { name: "Individual Tax Preparation" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Individual Tax Preparation &amp; Filing Services
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        At ProAxis CPA, we file taxes for individuals and families across New Jersey and New York. The tax code changes every year, but our goal remains the same: maximizing your deductions so you keep more of what you earn.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Seamless Process -->
+    <section class="mb-12" aria-labelledby="seamless-process">
+      <h2 id="seamless-process" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">A Seamless, Low-Stress Process</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Gathering tax documents shouldn't feel like a part-time job. We have streamlined our intake process to minimize your stress. When organizing your business and personal expenses, you do not need to provide a painstakingly detailed breakdown of every single cost. We just need a simple summary of all your expense categories and your purchase histories. We handle the heavy lifting from there.
+      </p>
+      <ul class="space-y-3 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span>Submit documents through our secure client portal — no fax, no mail, no hassle</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span>A dedicated CPA reviews your return before filing — not a seasonal temp or software algorithm</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span>We identify deductions and credits you may have missed and communicate findings before filing</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span>Electronic signing and e-filing handled entirely through our platform — fully virtual, no office visit required</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Secure Technology -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="secure-tech">
+      <h2 id="secure-tech" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Secure Technology You Can Trust</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Your financial data is highly sensitive. We utilize enterprise-grade software, including DocuSign, to ensure your documents are transmitted, signed, and stored with bank-level encryption.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+        <div class="bg-white rounded-lg p-4 border border-gray-200 text-center">
+          <div class="text-2xl mb-2">🔒</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">Encrypted Portal</div>
+          <div class="text-xs text-gray-600">All document transfers use bank-level SSL encryption</div>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200 text-center">
+          <div class="text-2xl mb-2">✍️</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">DocuSign E-Sign</div>
+          <div class="text-xs text-gray-600">Legally binding electronic signatures with full audit trail</div>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200 text-center">
+          <div class="text-2xl mb-2">🗄️</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">Secure Storage</div>
+          <div class="text-xs text-gray-600">Returns and supporting documents retained for future reference</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready to Maximize -->
+    <section class="mb-12" aria-labelledby="maximize-return">
+      <h2 id="maximize-return" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Ready to Maximize Your Return?</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        With the April 15th deadline approaching, don't leave your deductions to chance. Our CPA team is ready to file your federal and NJ returns accurately and on time.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="tel:+12018002330" class="flex items-center gap-4 p-5 rounded-xl border-2 transition-all hover:shadow-md" style="border-color: #2E75B6; color: #1C1C1E;">
+          <svg class="w-8 h-8 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Call us directly</div>
+            <div class="font-bold text-lg">(201) 800-2330</div>
+          </div>
+        </a>
+        <a href="/contact/" class="flex items-center gap-4 p-5 rounded-xl border-2 transition-all hover:shadow-md" style="border-color: #22C55E; color: #1C1C1E;">
+          <svg class="w-8 h-8 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Book online</div>
+            <div class="font-bold text-lg">Schedule a Consultation</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-preparation/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Business Tax Preparation</div>
+          <div class="text-sm text-gray-600">S-corps, LLCs, partnerships, and multi-state returns prepared by a Bergen County CPA.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Proactive year-round planning to minimize your tax bill before the return is due.</div>
+        </a>
+        <a href="/tax-services/multi-state-tax/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Multi-State Tax Filing</div>
+          <div class="text-sm text-gray-600">NJ residents working in NY or other states — both returns filed correctly.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection
+    heading="File Your Taxes with Confidence This April"
+    subheading="Individual and family tax preparation by a Bergen County CPA. Fully virtual, secure, and focused on maximizing your deductions."
+  />
+</BaseLayout>
