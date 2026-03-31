@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import BlogCTA from '../../components/BlogCTA.astro';
+
+const title = "Expert NY Tax Accountant & CPA Services | ProAxis Tax & Accounting";
+const description = "Professional CPA tax services for New York individuals and businesses. Specializing in NY/NJ multi-state filings, 1040 preparation, and fractional CFO services.";
+const canonical = "/service-areas/new-york/";
+const breadcrumbs = [
+  { name: "Service Areas", url: "/service-areas/" },
+  { name: "New York" }
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AccountingService"],
+  "name": "ProAxis Tax & Accounting Services",
+  "telephone": "+12018002330",
+  "email": "info@proaxiscpa.com",
+  "url": "https://www.proaxiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasbrouck Heights",
+    "addressRegion": "NJ",
+    "postalCode": "07604",
+    "addressCountry": "US"
+  },
+  "areaServed": { "@type": "State", "name": "New York" }
+};
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        Serving New York Clients &bull; NY/NJ Multi-State Specialists &bull; 100% Virtual
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">CPA Tax Services for New York Individuals &amp; Businesses</h1>
+      <p class="text-lg text-gray-300 mb-8">Navigating the complexities of New York tax law requires a specialist. At ProAxis Tax &amp; Accounting Services, we provide expert guidance for NY residents and businesses, ensuring compliance while maximizing your deductions.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Specialized NY &amp; Multi-State Tax Expertise</h2>
+
+    <p class="mb-6">New York's tax environment is one of the most complex in the country. Between New York State income taxes, New York City's additional local tax, and the unique challenges facing residents who work or operate businesses across state lines, a generalist CPA often isn't enough. ProAxis Tax &amp; Accounting Services brings deep expertise in NY-specific tax issues, delivered fully virtually so we can serve clients across the state with the same quality and responsiveness as a local firm.</p>
+
+    <ul class="list-none space-y-4 mb-8">
+      <li class="flex items-start gap-3 p-5 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5 text-lg">&#10003;</span>
+        <div>
+          <strong class="block mb-1" style="color: #1C1C1E;">NY/NJ Multi-State Filings</strong>
+          Specialized support for commuters and businesses operating in both New York and New Jersey. We handle allocation of income between states, ensure credits are properly applied to avoid double taxation, and keep your filings coordinated across both jurisdictions.
+        </div>
+      </li>
+      <li class="flex items-start gap-3 p-5 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5 text-lg">&#10003;</span>
+        <div>
+          <strong class="block mb-1" style="color: #1C1C1E;">NYC Residency Issues</strong>
+          Expert navigation of New York City's unique tax requirements and statutory residency rules. Whether you're a full-time NYC resident, a part-year resident, or a non-resident with NYC-source income, understanding your residency status is critical to avoiding significant unexpected tax liability.
+        </div>
+      </li>
+      <li class="flex items-start gap-3 p-5 rounded-lg" style="background-color: #F7F8FA;">
+        <span class="text-blue-700 font-bold mt-0.5 text-lg">&#10003;</span>
+        <div>
+          <strong class="block mb-1" style="color: #1C1C1E;">Individual 1040 Preparation</strong>
+          High-level tax filing focused on the specific credits and deductions available to NY taxpayers. From STAR property tax credits to NY college tuition deductions and itemized deductions relevant to high-income earners, we ensure your return captures every available benefit.
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">ProAxis Services for New York Clients</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 p-6 rounded-xl" style="background-color: #F7F8FA;">
+      <a href="/tax-services/tax-preparation/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Individual Tax Preparation</a>
+      <a href="/tax-services/tax-planning/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Tax Planning &amp; Strategy</a>
+      <a href="/tax-services/multi-state-tax/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Multi-State Tax Planning</a>
+      <a href="/business-services/fractional-cfo/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Fractional CFO Services</a>
+      <a href="/tax-services/nj-salt-consulting/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">NJ SALT Consulting</a>
+      <a href="/business-services/bookkeeping/" class="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-gray-200 text-blue-700 font-medium hover:border-blue-400 transition-colors">Bookkeeping</a>
+    </div>
+
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading text-navy mb-4">Related Service Areas</h2>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <a href="/service-areas/tribeca/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Tribeca, NYC</a>
+      <a href="/service-areas/upper-east-side/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Upper East Side, NYC</a>
+      <a href="/service-areas/soho/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">SoHo, NYC</a>
+      <a href="/service-areas/scarsdale/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Scarsdale, NY</a>
+      <a href="/service-areas/armonk/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Armonk, NY</a>
+      <a href="/service-areas/bergen-county/" class="px-4 py-2 rounded-full text-sm font-medium text-blue-700 border border-blue-200 hover:bg-blue-50 transition-colors">Bergen County, NJ</a>
+    </div>
+
+    <BlogCTA
+      heading="Ready to Work With a NY/NJ Tax Specialist?"
+      subheading="Our team handles the full complexity of New York tax law — multi-state filings, NYC residency issues, and beyond. Schedule your free consultation today."
+    />
+
+  </article>
+
+  <CTASection heading="Expert NY & NJ Tax Services — Schedule Your Free Consultation" />
+</BaseLayout>
