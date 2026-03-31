@@ -1,41 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
-
-const napSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "AccountingService"],
-  "name": "ProAxis Tax & Accounting Services",
-  "telephone": "+12018002330",
-  "email": "info@proaxiscpa.com",
-  "url": "https://www.proaxiscpa.com",
-  "logo": "https://www.proaxiscpa.com/logo.png",
-  "image": "https://www.proaxiscpa.com/og-image.png",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Hasbrouck Heights",
-    "addressLocality": "Hasbrouck Heights",
-    "addressRegion": "NJ",
-    "postalCode": "07604",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 40.8598,
-    "longitude": -74.0776
-  },
-  "areaServed": [
-    { "@type": "County", "name": "Bergen County, NJ" },
-    { "@type": "State", "name": "New Jersey" },
-    { "@type": "State", "name": "New York" }
-  ],
-  "sameAs": [
-    "https://www.proaxiscpa.com"
-  ]
-};
 ---
-
-<script type="application/ld+json" set:html={JSON.stringify(napSchema)} />
 
 <footer class="text-white" style="background-color: #1C1C1E;" role="contentinfo">
   <!-- Main Footer -->
