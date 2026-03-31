@@ -28,9 +28,20 @@ As we hit the final two-week stretch before the April 15th deadline, many reside
 
 - **Streamlined Filing:** Don't let document hunting slow you down. We only need a summary of your categories and purchase histories — we handle the heavy lifting.
 
-## Ready to File or Need a Professional Extension?
-
-Contact us at **(201) 800-2330** or visit [proaxiscpa.com/contact](https://proaxiscpa.com/contact) to schedule your consultation.
+<div style="background: #F7F8FA; border: 1px solid #E5E7EB; border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+  <h3 style="font-size: 1.2rem; font-weight: 700; color: #1C1C1E; margin-bottom: 0.5rem;">Ready to File or Need a Professional Extension?</h3>
+  <p style="font-size: 0.9rem; color: #6B7280; margin-bottom: 1.5rem;">Our Bergen County CPA team is ready to help. Reach out today for a free consultation.</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+    <a href="tel:2018002330" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #1C1C1E; color: #fff; font-weight: 600; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+      Call (201) 800-2330
+    </a>
+    <a href="/contact/" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #2E75B6; color: #fff; font-weight: 600; font-size: 0.9rem; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+      Book a Consultation
+    </a>
+  </div>
+</div>
 
 ---
 
