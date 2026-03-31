@@ -8,7 +8,7 @@ author: "ProAxis Team"
 category: "Tax Planning"
 tags: ["tax deadline", "April 15", "tax filing", "tax extension", "Bergen County", "NJ taxes", "2025 tax return", "OBBB"]
 featured: false
-image: /last-minute-tax-filing-april-2026.jpg
+image: /last-minute-tax-preparation-bergen-county-nj.jpg
 imageAlt: "Professional CPA reviewing tax documents on desk with calendar showing April 15th deadline circled in red, Bergen County NJ tax preparation services"
 readTime: 9
 excerpt: "With only 16 days until the April 15th tax deadline, many Bergen County taxpayers are scrambling to gather documents and file their 1040 returns. Learn the smartest last-minute strategies to maximize your refund, avoid costly mistakes, and understand your extension options from ProAxis CPA's experienced team."

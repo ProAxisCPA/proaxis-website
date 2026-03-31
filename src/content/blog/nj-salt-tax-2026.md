@@ -8,7 +8,7 @@ author: "ProAxis Team"
 category: "Tax Planning"
 tags: ["NJ SALT tax", "BAIT election", "SALT deduction", "2026 tax changes", "NJ business tax"]
 featured: false
-image: /nj-salt-what-business-owners-need-to-know.jpg
+image: /NJ_SALT.png
 imageAlt: "NJ SALT tax changes 2026 — what Bergen County business owners need to know about BAIT elections — ProAxis CPA"
 readTime: 9
 ---

@@ -8,7 +8,7 @@ author: "ProAxis Team"
 category: "Business Advice"
 tags: ["virtual CPA", "Bergen County", "online accountant NJ", "cloud accounting"]
 featured: true
-image: /imgi_21_signs-outgrown-accounting-process-proaxis-cpa.png
+image: /fractional-cfo-advisory-services-nj-team.webp
 imageAlt: "Signs a Bergen County NJ business has outgrown its traditional accounting process — ProAxis CPA virtual firm"
 readTime: 7
 ---
