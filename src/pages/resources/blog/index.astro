@@ -11,8 +11,6 @@ const breadcrumbs = [{ name: "Resources", url: "/resources/blog/" }, { name: "Bl
 
 const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-const featuredPost = sortedPosts.find(p => p.data.featured) || sortedPosts[0];
-const regularPosts = sortedPosts.filter(p => p.id !== featuredPost?.id);
 
 const schema = {
   "@context": "https://schema.org",
@@ -44,36 +42,12 @@ const schema = {
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
 
-    {/* Featured Post */}
-    {featuredPost && (
-      <div class="mb-12">
-        <h2 class="text-lg font-bold font-heading mb-5" style="color: #1C1C1E;">Featured Article</h2>
-        <a href={`/resources/blog/${featuredPost.id}/`} class="group block rounded-2xl border border-gray-100 bg-white overflow-hidden hover:shadow-lg transition-all">
-          <div class="grid grid-cols-1 lg:grid-cols-2">
-            {featuredPost.data.image
-              ? <img src={featuredPost.data.image} alt={featuredPost.data.imageAlt || featuredPost.data.title} class="w-full object-cover" style="min-height: 13rem;" loading="eager" decoding="async" />
-              : <div class="min-h-52 flex items-center justify-center p-8" style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);"><div class="text-5xl" aria-hidden="true">📝</div></div>
-            }
-            <div class="p-8 flex flex-col justify-center">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white mb-3" style="background-color: #2E75B6;">{featuredPost.data.category}</span>
-              <h3 class="text-xl font-bold font-heading mb-3 group-hover:text-blue-700 transition-colors" style="color: #1C1C1E;">{featuredPost.data.title}</h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">{featuredPost.data.description}</p>
-              <div class="flex items-center gap-4 text-xs text-gray-500">
-                <span>{featuredPost.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                {featuredPost.data.readTime && <span>{featuredPost.data.readTime} min read</span>}
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    )}
-
     {/* All Posts Grid */}
-    {regularPosts.length > 0 && (
+    {sortedPosts.length > 0 && (
       <div>
         <h2 class="text-lg font-bold font-heading mb-5" style="color: #1C1C1E;">All Articles</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {regularPosts.map(post => (
+          {sortedPosts.map(post => (
             <a href={`/resources/blog/${post.id}/`} class="group block rounded-xl border border-gray-100 bg-white overflow-hidden hover:shadow-md transition-all">
               {post.data.image
                 ? <img src={post.data.image} alt={post.data.imageAlt || post.data.title} class="w-full h-40 object-cover" loading="lazy" decoding="async" />
