@@ -8,13 +8,13 @@ author: "ProAxis Team"
 category: "Tax Planning"
 tags: ["tax deadline", "April 15", "Bergen County", "Fair Lawn", "NJ taxes", "1040", "tax deductions", "tax filing"]
 featured: false
-image: /tax-preparation-bergen-county-nj-proaxis.jpg.png
+image: /tax-preparation-bergen-county-nj-proaxis.jpg
 imageAlt: "Tax preparation services in Bergen County NJ - ProAxis Tax & Accounting Services CPA"
 readTime: 4
 excerpt: "As the April 15th deadline approaches, Fair Lawn and Bergen County residents can still take steps to maximize their refund. Here are five key areas to review before you file."
 ---
 
-<img src="/tax-preparation-bergen-county-nj-proaxis.jpg.png" alt="Professional tax preparation services in Fair Lawn and Bergen County, NJ provided by ProAxis Tax & Accounting Services." style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem;" loading="eager" />
+<img src="/tax-preparation-bergen-county-nj-proaxis.jpg" alt="Professional tax preparation services in Fair Lawn and Bergen County, NJ provided by ProAxis Tax & Accounting Services." style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem;" loading="eager" />
 
 As we hit the final two-week stretch before the April 15th deadline, many residents in Fair Lawn and across Bergen County are rushing to finalize their 1040s. At ProAxis Tax & Accounting Services, we specialize in taking the stress out of this window while ensuring you don't leave money on the table.
 
