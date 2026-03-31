@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "Fractional CFO & Bookkeeping Services | ProAxis CPA";
+const description = "Professional fractional CFO and bookkeeping services for businesses in NJ and NY. Scale your operations with expert financial oversight and maximize your deductions.";
+const canonical = "/services/fractional-cfo/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fractional CFO & Bookkeeping Services",
+    "description": "Professional fractional CFO and bookkeeping services for businesses in New Jersey and New York. Expert financial oversight at a fraction of the cost of a full-time hire.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://www.proaxiscpa.com"
+    },
+    "areaServed": [
+      { "@type": "State", "name": "New Jersey" },
+      { "@type": "State", "name": "New York" }
+    ],
+    "serviceType": "Fractional CFO & Bookkeeping"
+  }
+];
+
+const breadcrumbs = [
+  { name: "Services", url: "/services/" },
+  { name: "Fractional CFO & Bookkeeping" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={[{ name: "Services", url: "/services/" }, { name: "Fractional CFO & Bookkeeping" }]} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Fractional CFO &amp; Bookkeeping Services
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Growing a business in New Jersey or New York requires more than just basic accounting—it requires high-level financial oversight. ProAxis CPA provides the financial leadership of a Chief Financial Officer at a fraction of the cost of a full-time hire.
+      </p>
+      <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+        Schedule Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Clear Financial Oversight -->
+    <section class="mb-12" aria-labelledby="financial-oversight">
+      <h2 id="financial-oversight" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Clear Financial Oversight</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We help you look beyond the day-to-day numbers. From managing cash flow and optimizing pricing models to comprehensive bookkeeping, we ensure your financial data is organized and working for you. Our focus is on maximizing your deductions and keeping your bottom line healthy.
+      </p>
+      <ul class="space-y-3 text-gray-700 mb-4">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Cash flow management</strong> — monitor inflows and outflows so you always know where your business stands</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Pricing &amp; margin analysis</strong> — identify where your business makes money and where it leaks</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Monthly bookkeeping</strong> — clean, categorized books that are always tax-ready</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Deduction maximization</strong> — ensure every eligible business expense is captured before year-end</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span><strong>Financial reporting</strong> — monthly P&amp;L, balance sheet, and KPI dashboards in plain language</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="who-for">
+      <h2 id="who-for" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Who This Service Is For</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Fractional CFO and bookkeeping services are built for growing businesses that need more than a tax preparer but aren't ready to hire a full-time CFO.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1C1C1E;">Small &amp; Mid-Size Businesses</h3>
+          <p class="text-sm text-gray-600">Companies with $500K–$10M in revenue that need strategic financial guidance without the cost of a full-time executive.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1C1C1E;">Startups &amp; Fast-Growth Companies</h3>
+          <p class="text-sm text-gray-600">Early-stage businesses preparing for investment, scaling operations, or building financial infrastructure for the first time.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1C1C1E;">Business Owners Wearing Too Many Hats</h3>
+          <p class="text-sm text-gray-600">Founders spending hours on bookkeeping and financial reconciliation who need to reclaim time for the work that grows the business.</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-gray-200">
+          <h3 class="font-semibold mb-2" style="color: #1C1C1E;">Companies Preparing for Exit or Financing</h3>
+          <p class="text-sm text-gray-600">Businesses that need clean, auditable financials for a bank loan, SBA application, investor due diligence, or acquisition process.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech-Forward Integration -->
+    <section class="mb-12" aria-labelledby="tech-integration">
+      <h2 id="tech-integration" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Tech-Forward Integration</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        We integrate seamlessly into your existing operations using secure, industry-standard tools like Microsoft 365 to keep collaboration simple, efficient, and highly secure.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+        <div class="rounded-lg p-4 border border-gray-200 text-center" style="background-color: #F7F8FA;">
+          <div class="text-2xl mb-2">☁️</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">Microsoft 365</div>
+          <div class="text-xs text-gray-600">Secure collaboration via SharePoint, Teams, and OneDrive — no new tools to learn</div>
+        </div>
+        <div class="rounded-lg p-4 border border-gray-200 text-center" style="background-color: #F7F8FA;">
+          <div class="text-2xl mb-2">📊</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">QuickBooks &amp; Xero</div>
+          <div class="text-xs text-gray-600">We work within your existing accounting software or help you set it up correctly from the start</div>
+        </div>
+        <div class="rounded-lg p-4 border border-gray-200 text-center" style="background-color: #F7F8FA;">
+          <div class="text-2xl mb-2">🔒</div>
+          <div class="font-semibold text-sm mb-1" style="color: #1C1C1E;">Encrypted Document Sharing</div>
+          <div class="text-xs text-gray-600">All sensitive financials transmitted through our secure client portal with bank-level encryption</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Talk -->
+    <section class="mb-12" aria-labelledby="lets-talk">
+      <h2 id="lets-talk" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Let's Talk About Your Business</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Whether you need ongoing bookkeeping support or a fractional CFO to guide your growth strategy, we're ready to step in. Reach out to schedule a no-obligation consultation.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="tel:+12018002330" class="flex items-center gap-4 p-5 rounded-xl border-2 transition-all hover:shadow-md" style="border-color: #2E75B6; color: #1C1C1E;">
+          <svg class="w-8 h-8 flex-shrink-0" style="color: #2E75B6;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Call us directly</div>
+            <div class="font-bold text-lg">(201) 800-2330</div>
+          </div>
+        </a>
+        <a href="/contact/" class="flex items-center gap-4 p-5 rounded-xl border-2 transition-all hover:shadow-md" style="border-color: #22C55E; color: #1C1C1E;">
+          <svg class="w-8 h-8 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Book online</div>
+            <div class="font-bold text-lg">Schedule a Consultation</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/business-services/bookkeeping/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Bookkeeping Services</div>
+          <div class="text-sm text-gray-600">Monthly bookkeeping that keeps your books clean, accurate, and tax-ready year-round.</div>
+        </a>
+        <a href="/business-services/fractional-cfo/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Fractional CFO</div>
+          <div class="text-sm text-gray-600">Strategic financial leadership for growing businesses — without the full-time salary.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Tax Planning &amp; Strategy</div>
+          <div class="text-sm text-gray-600">Proactive year-round planning to minimize your tax bill before the return is due.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection
+    heading="Get the Financial Leadership Your Business Needs"
+    subheading="Expert fractional CFO and bookkeeping services for NJ and NY businesses. Transparent pricing, secure technology, and a CPA team that understands your numbers."
+  />
+</BaseLayout>
