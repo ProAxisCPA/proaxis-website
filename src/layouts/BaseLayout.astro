@@ -20,14 +20,14 @@ const {
   title,
   description,
   canonical,
-  ogImage = 'https://www.proaxiscpa.com/og-image.png',
+  ogImage = 'https://proaxiscpa.com/og-image.png',
   ogType = 'website',
   schema,
   breadcrumbs,
   noindex = false,
 } = Astro.props;
 
-const siteUrl = 'https://www.proaxiscpa.com';
+const siteUrl = 'https://proaxiscpa.com';
 const canonicalUrl = canonical ? `${siteUrl}${canonical}` : `${siteUrl}${Astro.url.pathname}`;
 
 // BreadcrumbList JSON-LD is emitted by the Breadcrumbs component to avoid duplication
