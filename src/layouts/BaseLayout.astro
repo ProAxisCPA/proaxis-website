@@ -4,6 +4,7 @@ import Header from '../components/nav/Header.astro';
 import Footer from '../components/nav/Footer.astro';
 import MobileCTABar from '../components/ui/MobileCTABar.astro';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 export interface Props {
   title: string;
@@ -39,6 +40,7 @@ const schemas = [
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <GoogleAnalytics />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
