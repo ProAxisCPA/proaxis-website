@@ -47,8 +47,14 @@ const reviewSchema = testimonials.map((t) => ({
   "itemReviewed": {
     "@type": "AccountingService",
     "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330",
-    "url": "https://proaxiscpa.com",
+    "image": "https://www.proaxiscpa.com/logo.png",
+    "telephone": "+1-201-800-2330",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fair Lawn",
+      "addressRegion": "NJ",
+      "addressCountry": "US"
+    }
   },
   "datePublished": t.date,
 }));
