@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(find /c/Users/doris/my-blog/src/content -name *.md)",
+      "Read(//c/Users/AppData/Local/Temp/claude/C--Users-doris-my-blog/ed26e848-a7c3-4ece-8fbc-3ce8794d2131/tasks/**)",
+      "Read(//c/Users/AppData/Local/Temp/claude/C--Users-doris-my-blog/ed26e848-a7c3-4ece-8fbc-3fc8794d2131/tasks/**)",
+      "Bash(wc:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/doris/my-blog/src/pages/tax-services/**)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(ls -la C:/Users/doris/my-blog/src/pages/service-areas/*.astro)",
+      "Bash(ls C:/Users/doris/my-blog/dist/sitemap-*.xml)",
+      "Bash(node:*)",
+      "Bash(find C:/Users/doris/my-blog/src -name *.jpg -o -name *.png -o -name *.webp -o -name *.svg)",
+      "Bash(find C:/Users/doris/my-blog/public -name *.jpg -o -name *.png -o -name *.webp -o -name *.svg)"
+    ]
+  }
+}
