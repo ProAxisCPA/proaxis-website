@@ -82,3 +82,4 @@ https://www.proaxiscpa.com/* https://proaxiscpa.com/:splat 301!
 # 404 FALLBACK — Astro handles this via 404.astro
 # ============================================
 # /*                         /404                            404
+/* /404.html 404
