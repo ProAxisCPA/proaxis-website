@@ -63,7 +63,7 @@ https://www.proaxiscpa.com/* https://proaxiscpa.com/:splat 301!
 /news                        /resources/blog/                301
 
 # Resources redirects
-/resources                   /resources/blog/                301
+/resources                   /resources/blog/                301!
 /faq                         /resources/faq/                 301
 /faq/                        /resources/faq/                 301
 
