@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "Business Tax Returns NJ | S-Corp, LLC & Partnership | ProAxis CPA";
+const description = "ProAxis files S-Corp (Form 1120-S), partnership (Form 1065), C-Corp (Form 1120), and LLC tax returns for Bergen County and NJ businesses. Expert CPA. Fully virtual.";
+const canonical = "/tax-services/business-tax-returns/";
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "Business Tax Returns" }
+];
+
+const faq = [
+  {
+    q: "What is the tax filing deadline for an S-Corp or partnership in NJ?",
+    a: "S-Corporation returns (Form 1120-S) and partnership returns (Form 1065) are due March 15 — one month before the individual tax deadline. An extension to September 15 is available. Missing the March deadline triggers a $245 per shareholder/partner per month penalty, so timely filing or extension is critical."
+  },
+  {
+    q: "Does my LLC need to file a separate tax return?",
+    a: "It depends on your LLC structure. A single-member LLC is typically reported on Schedule C of your personal 1040 — no separate return. A multi-member LLC files Form 1065 (partnership return) and issues K-1s to each member. An LLC that has elected S-Corp status files Form 1120-S. ProAxis determines the correct filing obligation during the onboarding process."
+  },
+  {
+    q: "What is a K-1 and why does it matter for business owners?",
+    a: "A Schedule K-1 is the document that flows your share of business income, deductions, and credits from a partnership or S-Corp return to your personal 1040. K-1s must be issued by the business before partners or shareholders can complete their individual returns — which is why business returns are due March 15. ProAxis coordinates business and individual filings so nothing falls through the gap."
+  },
+  {
+    q: "Can ProAxis handle both my business return and my personal 1040?",
+    a: "Yes — and this is actually the most efficient approach. When the same CPA prepares your business return (1120-S or 1065) and your personal 1040, we can coordinate timing, ensure your K-1 flows correctly, and identify deductions that span both returns. ProAxis handles both for the majority of our business owner clients."
+  },
+  {
+    q: "What NJ-specific filings does my business need beyond the federal return?",
+    a: "New Jersey has its own business tax filings. S-Corps file NJ-CBT-100S. Partnerships file NJ-1065. C-Corps file NJ-CBT-100. Many pass-through entities also need to consider the NJ BAIT election (Pass-Through Business Alternative Income Tax) — a significant planning opportunity that can reduce the combined state tax burden for owners. ProAxis handles all NJ business filings."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Business Tax Return Preparation",
+    "description": "S-Corp (Form 1120-S), partnership (Form 1065), C-Corp (Form 1120), and LLC tax return preparation for New Jersey businesses. CPA-prepared, deadline-driven, fully virtual.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Business Tax Return Preparation"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(197,165,90,0.2); color: #C5A55A;">
+        S-Corp &bull; LLC &bull; Partnership &bull; C-Corp
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">Business Tax Returns for NJ Companies</h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">CPA-prepared federal and NJ business returns — Form 1120-S, Form 1065, Form 1120, and Schedule C. Accurate, on time, and coordinated with your personal 1040.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white" style="background-color: #22C55E;">Schedule Free Consultation</a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white/40">Call (201) 800-2330</a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Entity Type Cards -->
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-6" style="color: #1C1C1E;">Every Business Entity. One CPA Firm.</h2>
+    <div class="grid sm:grid-cols-2 gap-5 mb-12">
+      {[
+        {
+          form: "Form 1120-S",
+          entity: "S-Corporation",
+          deadline: "March 15 (federal) · March 15 (NJ CBT-100S)",
+          detail: "Pass-through income and loss reported via Schedule K-1 to each shareholder's personal 1040. S-Corp elections, reasonable compensation analysis, and QBID optimization all handled.",
+        },
+        {
+          form: "Form 1065",
+          entity: "Partnership / Multi-Member LLC",
+          deadline: "March 15 (federal) · March 15 (NJ-1065)",
+          detail: "Partnership income allocated to partners via K-1. Includes multi-member LLCs taxed as partnerships. NJ BAIT election analysis included for eligible pass-throughs.",
+        },
+        {
+          form: "Form 1120",
+          entity: "C-Corporation",
+          deadline: "April 15 (federal) · April 15 (NJ CBT-100)",
+          detail: "Corporate income tax return for C-Corps. Includes deferred tax analysis, accumulated earnings considerations, and coordination with owner compensation strategy.",
+        },
+        {
+          form: "Schedule C / SE",
+          entity: "Sole Proprietor / Single-Member LLC",
+          deadline: "April 15 (with personal 1040)",
+          detail: "Self-employment income and deductions reported on Schedule C within your personal return. Business deductions, home office, vehicle, and S-Corp conversion analysis included.",
+        },
+      ].map((item) => (
+        <div class="rounded-xl border border-gray-200 p-6 bg-white">
+          <div class="inline-block text-xs font-bold px-2.5 py-1 rounded mb-3" style="background-color: rgba(46,117,182,0.1); color: #2E75B6;">{item.form}</div>
+          <h3 class="text-lg font-bold font-heading mb-1" style="color: #1C1C1E;">{item.entity}</h3>
+          <p class="text-xs font-semibold mb-3" style="color: #C5A55A;">Due: {item.deadline}</p>
+          <p class="text-gray-700 text-sm leading-relaxed">{item.detail}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- What's Included -->
+    <div class="rounded-2xl p-8 mb-12" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1C1C1E;">What ProAxis Includes in Every Business Return</h2>
+      <p class="text-gray-700 mb-5">A properly prepared business tax return isn't just accurate — it's a planning document. ProAxis CPAs review every return for missed deductions, structural inefficiencies, and year-ahead opportunities. Here's what's included:</p>
+      <ul class="space-y-3">
+        {[
+          { h: "Federal and NJ state return preparation", t: "Every engagement includes both the federal form and the applicable NJ business return — filed together, coordinated, and complete." },
+          { h: "K-1 preparation and distribution", t: "For S-Corps and partnerships, we prepare Schedule K-1s for every shareholder or partner and coordinate timing with their personal 1040 filing." },
+          { h: "Depreciation and Section 179 optimization", t: "We calculate the most advantageous depreciation method and Section 179 election for your equipment and fixed assets, maximizing current-year deductions where appropriate." },
+          { h: "NJ BAIT election analysis", t: "The NJ Pass-Through Business Alternative Income Tax election is one of the highest-value state tax planning moves available to NJ pass-through owners. We evaluate eligibility and projected savings for every eligible client." },
+          { h: "Reasonable compensation review (S-Corps)", t: "S-Corp owners must pay themselves a reasonable salary. We document and substantiate reasonable compensation to withstand IRS scrutiny while minimizing self-employment tax exposure." },
+          { h: "Extension filing when needed", t: "If your return can't be completed by the March 15 deadline, we file a timely extension and communicate clearly about what we need to complete the return." },
+        ].map((item) => (
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #22C55E;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700"><strong style="color: #1C1C1E;">{item.h}:</strong> {item.t}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Why It Matters -->
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1C1C1E;">Why Business Returns Require a CPA — Not Just Software</h2>
+    <p class="text-gray-700 mb-4">Tax software can generate a Form 1120-S. What it cannot do is tell you whether your S-Corp election still makes sense given last year's revenue, whether your reasonable compensation is defensible if audited, or whether a NJ BAIT election would have saved you $8,000 in combined state taxes. Those are judgment calls — and they require a licensed CPA who understands both the federal rules and the NJ-specific layer on top of them.</p>
+    <p class="text-gray-700 mb-4">The late filing penalty for S-Corp and partnership returns is $245 per shareholder or partner per month. An S-Corp with three shareholders that files six months late owes $4,410 in penalties before paying a dollar of tax. ProAxis tracks deadlines, files extensions when needed, and ensures our clients never pay avoidable penalties.</p>
+    <p class="text-gray-700 mb-8">Bergen County has a high concentration of S-Corps and LLCs — attorneys, healthcare practices, contractors, consultants, real estate investors. These businesses generate K-1 income that flows into personal returns with significant complexity. ProAxis handles this intersection every day for clients across Bergen, Passaic, Essex, and Hudson counties.</p>
+
+    <!-- Business Deadlines Reference -->
+    <div class="rounded-xl border border-gray-200 overflow-hidden mb-12">
+      <div class="px-6 py-4 border-b border-gray-100" style="background-color: #1C1C1E;">
+        <h3 class="font-bold font-heading text-white">2026 NJ Business Tax Deadlines at a Glance</h3>
+      </div>
+      <div class="divide-y divide-gray-100">
+        {[
+          { entity: "S-Corporation (1120-S / CBT-100S)", deadline: "March 15, 2026", ext: "September 15, 2026" },
+          { entity: "Partnership / Multi-Member LLC (1065 / NJ-1065)", deadline: "March 15, 2026", ext: "September 15, 2026" },
+          { entity: "C-Corporation (1120 / CBT-100)", deadline: "April 15, 2026", ext: "October 15, 2026" },
+          { entity: "Sole Proprietor / Single-Member LLC (Schedule C)", deadline: "April 15, 2026", ext: "October 15, 2026" },
+          { entity: "Q1 Estimated Tax Payment (1040-ES)", deadline: "April 15, 2026", ext: "N/A" },
+          { entity: "Q2 Estimated Tax Payment (1040-ES)", deadline: "June 16, 2026", ext: "N/A" },
+        ].map((row) => (
+          <div class="grid grid-cols-3 px-6 py-3.5 text-sm">
+            <span class="font-medium" style="color: #1C1C1E;">{row.entity}</span>
+            <span class="text-gray-700">{row.deadline}</span>
+            <span class="text-gray-500">Ext: {row.ext}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Late or Missed Return -->
+    <div class="rounded-xl p-6 mb-12 border-l-4" style="border-color: #C5A55A; background-color: #FFFBF0;">
+      <h3 class="font-bold font-heading text-lg mb-2" style="color: #1C1C1E;">Already Past the Deadline?</h3>
+      <p class="text-gray-700 mb-3">If your business return is late, filing now is still far better than continuing to wait. Every month of delay adds another $245 per shareholder/partner to your penalty balance. First-time penalty abatement is available from the IRS for businesses with a clean compliance history — a CPA can request it once the return is filed.</p>
+      <a href="/contact/" class="inline-flex items-center gap-2 font-semibold text-sm" style="color: #2E75B6;">
+        Talk to a ProAxis CPA about your late return →
+      </a>
+    </div>
+
+    <!-- Who We Serve -->
+    <h2 class="text-2xl sm:text-3xl font-bold font-heading mb-5" style="color: #1C1C1E;">Who ProAxis Serves</h2>
+    <div class="grid sm:grid-cols-3 gap-4 mb-10">
+      {[
+        { label: "Professional Services", desc: "Attorneys, consultants, CPAs, engineers, architects — often structured as S-Corps or LLCs." },
+        { label: "Healthcare Practices", desc: "Physician groups, dental practices, therapy practices with complex compensation structures." },
+        { label: "Real Estate Investors", desc: "LLCs holding rental properties, flippers, short-term rental operators with multi-property portfolios." },
+        { label: "Contractors & Trades", desc: "Construction, electrical, plumbing, HVAC — businesses with heavy equipment and vehicle deductions." },
+        { label: "Restaurants & Retail", desc: "High-volume cash and card businesses needing accurate POS reconciliation and inventory accounting." },
+        { label: "E-Commerce & Tech", desc: "Online sellers and SaaS businesses with multi-state nexus, digital product tax exposure, and inventory." },
+      ].map((item) => (
+        <div class="rounded-lg p-4 border border-gray-200 bg-white">
+          <p class="font-semibold text-sm mb-1" style="color: #1C1C1E;">{item.label}</p>
+          <p class="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Related Services -->
+    <div class="rounded-2xl p-8 mb-10" style="background-color: #F7F8FA;">
+      <h2 class="text-2xl font-bold font-heading mb-5" style="color: #1C1C1E;">Related ProAxis Services</h2>
+      <div class="grid sm:grid-cols-2 gap-3">
+        {[
+          { name: "Tax Planning & Strategy", link: "/tax-services/tax-planning/" },
+          { name: "Individual Tax Preparation", link: "/tax-services/tax-preparation/" },
+          { name: "NJ SALT & BAIT Consulting", link: "/tax-services/nj-salt-consulting/" },
+          { name: "Bookkeeping Services", link: "/business-services/bookkeeping/" },
+          { name: "IRS Tax Resolution", link: "/tax-services/irs-tax-resolution/" },
+          { name: "Fractional CFO", link: "/business-services/fractional-cfo/" },
+        ].map((svc) => (
+          <a href={svc.link} class="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white border border-gray-200 hover:border-blue-300 font-medium transition-all" style="color: #2E75B6;">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            {svc.name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4 mb-8" id="faq">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-gray-700">Ready to work with a Bergen County CPA who handles your business return and personal 1040 in one coordinated engagement? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> or call <a href="tel:+12018002330" class="font-medium underline" style="color: #2E75B6;">(201) 800-2330</a>.</p>
+  </article>
+
+  <TestimonialsSection />
+  <CTASection heading="Business Tax Returns — Accurate, On Time, and Built Around Your Entity" subheading="ProAxis prepares S-Corp, partnership, C-Corp, and LLC returns for Bergen County businesses. Schedule a free consultation today." />
+</BaseLayout>
