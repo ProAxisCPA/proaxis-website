@@ -1,0 +1,320 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/ui/CTASection.astro';
+import Breadcrumbs from '../../components/ui/Breadcrumbs.astro';
+import TestimonialsSection from '../../components/sections/TestimonialsSection.astro';
+
+const title = "Tax Extension Filing NJ | File Form 4868 | ProAxis CPA Bergen County";
+const description = "Need more time to file your taxes? ProAxis files federal and NJ state tax extensions for individuals and businesses in Bergen County and across New Jersey. Act before April 15 — call (201) 800-2330.";
+const canonical = "/tax-services/tax-extension/";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Tax Extension Filing",
+    "description": "Federal and New Jersey state tax extension preparation and filing for individuals, S-corporations, LLCs, and partnerships. Includes Form 4868, NJ-630, estimated payment calculation, and full-year tax preparation.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330",
+      "url": "https://proaxiscpa.com"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "serviceType": "Tax Extension Filing"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does a tax extension give me more time to pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A tax extension gives you more time to file your return, but it does not extend the deadline to pay any taxes owed. If you owe taxes and do not pay by April 15, the IRS will charge interest and a failure-to-pay penalty (0.5% per month) on the unpaid balance, even if your extension is valid. To avoid these charges, you must estimate your tax liability and pay any balance due by the original deadline. ProAxis helps clients calculate a safe estimated payment so the extension is as penalty-free as possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a federal tax extension last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A federal tax extension filed on Form 4868 gives you an automatic 6-month extension to file your individual return, moving the deadline from April 15 to October 15. For business returns, the extension period varies: partnerships (Form 1065) and S-corporations (Form 1120-S) receive a 6-month extension to September 15; C-corporations (Form 1120) also receive a 6-month extension. Extensions are automatic — the IRS does not need to approve them — as long as Form 4868 (or the appropriate business extension form) is filed by the original due date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to file a separate extension for New Jersey?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For individuals, New Jersey grants an automatic 6-month extension if you have paid at least 80% of your final NJ tax liability by the original due date — no separate NJ extension form is required. However, if you have not met the 80% payment threshold, you must file NJ Form NJ-630 and make a payment to avoid NJ underpayment penalties. For NJ business returns, the extension rules mirror the federal schedule. ProAxis handles both federal and NJ extensions together so nothing falls through the cracks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will filing an extension trigger an audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Filing a tax extension is completely routine and does not increase your audit risk. The IRS does not flag extension filers for scrutiny — millions of taxpayers and businesses file extensions every year. In fact, a well-prepared return filed on extension is often lower risk than a rushed return filed under deadline pressure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I already missed the April 15 deadline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "File as soon as possible. The failure-to-file penalty (5% per month, up to 25%) is much more costly than the failure-to-pay penalty (0.5% per month). Even if you cannot pay the full amount owed, filing immediately stops the larger penalty from accumulating. ProAxis can prepare and file late returns, calculate the penalties and interest owed, and in qualifying cases pursue penalty abatement to reduce what you owe."
+        }
+      }
+    ]
+  }
+];
+
+const breadcrumbs = [
+  { name: "Tax Services", url: "/tax-services/" },
+  { name: "Tax Extension Filing" }
+];
+---
+
+<BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
+  <Breadcrumbs items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, #1C1C1E 0%, #2E75B6 100%);" class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white mb-4" style="background-color: #C5A55A;">
+        April 15 Deadline Approaching
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white mb-4">
+        Tax Extension Filing for NJ Individuals &amp; Businesses
+      </h1>
+      <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+        Not ready to file by April 15? ProAxis files federal and New Jersey tax extensions so you get the time you need — without penalties, missed deadlines, or guesswork on your estimated payment.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/contact/" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white transition-all hover:opacity-90" style="background-color: #22C55E;">
+          File My Extension Now
+        </a>
+        <a href="tel:+12018002330" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg font-semibold text-white border-2 border-white hover:bg-white/10 transition-all">
+          Call (201) 800-2330
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+
+    <!-- Critical Warning Box -->
+    <div class="rounded-xl border-2 p-6 mb-12 flex items-start gap-4" style="border-color: #C5A55A; background-color: #FFFBF0;">
+      <svg class="w-6 h-6 flex-shrink-0 mt-0.5" style="color: #C5A55A;" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      <div>
+        <p class="font-bold mb-1" style="color: #1C1C1E;">An extension gives you more time to file — not more time to pay.</p>
+        <p class="text-gray-700 text-sm leading-relaxed">Any taxes owed must still be paid by April 15 to avoid IRS interest and penalties. ProAxis calculates your estimated balance due so your extension is filed correctly and your payment covers what you owe.</p>
+      </div>
+    </div>
+
+    <!-- What an Extension Is -->
+    <section class="mb-12" aria-labelledby="what-is-extension">
+      <h2 id="what-is-extension" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">What a Tax Extension Actually Does</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        A tax extension is a formal request for additional time to complete and submit your tax return. For individual federal returns, filing IRS Form 4868 by April 15 moves your filing deadline to October 15 — a full six additional months. The extension is automatic, meaning the IRS does not need to approve it; as long as the form is filed on time, the extension is granted.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Importantly, an extension to file is not an extension to pay. If you owe taxes for the year and do not pay by April 15, the IRS will begin charging interest (currently 8% annually, compounded daily) and a failure-to-pay penalty of 0.5% per month on the unpaid balance. These charges accrue from April 15 regardless of whether your extension is valid. This is the single most common misunderstanding about tax extensions, and it is why working with a CPA to calculate your estimated liability before filing is critical.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        When an extension is filed correctly — with an accurate estimated payment accompanying it — it is a straightforward, penalty-free way to buy time to gather documents, resolve questions, or simply ensure your return is prepared accurately rather than rushed. Millions of taxpayers and businesses file extensions each year. It is completely routine, carries no audit risk, and in many cases leads to more accurate returns than those prepared under deadline pressure.
+      </p>
+    </section>
+
+    <!-- Who Should File -->
+    <section class="mb-12 rounded-xl p-8" style="background-color: #F7F8FA;" aria-labelledby="who-should-file">
+      <h2 id="who-should-file" class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Who Should File a Tax Extension</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Missing K-1s or Investment Statements</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Partners, S-corp shareholders, and trust beneficiaries often cannot file until they receive Schedule K-1s, which frequently arrive after April 15. An extension gives your entities time to finalize their returns before yours is due.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Self-Employed Individuals &amp; Freelancers</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">When you have multiple income streams, 1099s from numerous clients, and deductible business expenses to document, an extension allows you to organize your records properly rather than filing an incomplete or incorrect return.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Business Owners &amp; Pass-Through Entities</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">LLCs, S-corporations, and partnerships with complex financials often need additional time for bookkeeping reconciliation, especially if year-end records were not finalized until recently.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Life Events: Marriage, Divorce, Death</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Major life changes in the prior year can significantly complicate a return — filing status changes, asset transfers, estate income, and name or address changes all require careful handling that benefits from extra time.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Real Estate Investors</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Rental property depreciation schedules, cost segregation studies, 1031 exchange documentation, and partnership K-1s from real estate syndications often extend well past April, making extensions routine for real estate investors.</p>
+        </div>
+        <div class="bg-white rounded-lg p-5 border border-gray-200">
+          <h3 class="font-bold mb-2" style="color: #1C1C1E;">Anyone Who Simply Needs More Time</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">There is no requirement to explain why you need an extension. If you are not ready to file — for any reason — an extension is the right move. A rushed, inaccurate return is far more costly than a properly filed extension.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Federal vs NJ Extension -->
+    <section class="mb-12" aria-labelledby="federal-vs-nj">
+      <h2 id="federal-vs-nj" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Federal Extension vs. New Jersey Extension</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Federal and New Jersey extensions are separate filings with different rules. ProAxis handles both simultaneously so you do not miss either deadline.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr style="background-color: #1C1C1E;">
+              <th class="text-left text-white px-4 py-3 rounded-tl-lg"></th>
+              <th class="text-left text-white px-4 py-3">Federal</th>
+              <th class="text-left text-white px-4 py-3 rounded-tr-lg">New Jersey</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-semibold" style="color: #1C1C1E; background-color: #F7F8FA;">Individual Form</td>
+              <td class="px-4 py-3 text-gray-700">Form 4868</td>
+              <td class="px-4 py-3 text-gray-700">Automatic if ≥80% paid; Form NJ-630 otherwise</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-semibold" style="color: #1C1C1E; background-color: #F7F8FA;">Extended Deadline</td>
+              <td class="px-4 py-3 text-gray-700">October 15</td>
+              <td class="px-4 py-3 text-gray-700">October 15</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-semibold" style="color: #1C1C1E; background-color: #F7F8FA;">Extension Length</td>
+              <td class="px-4 py-3 text-gray-700">6 months</td>
+              <td class="px-4 py-3 text-gray-700">6 months</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-semibold" style="color: #1C1C1E; background-color: #F7F8FA;">Payment Required?</td>
+              <td class="px-4 py-3 text-gray-700">Yes — estimated balance due</td>
+              <td class="px-4 py-3 text-gray-700">Yes — 80% of total NJ liability</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-4 py-3 font-semibold" style="color: #1C1C1E; background-color: #F7F8FA;">S-Corp / Partnership</td>
+              <td class="px-4 py-3 text-gray-700">Form 7004 — extended to Sept 15</td>
+              <td class="px-4 py-3 text-gray-700">Mirrors federal extended date</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-semibold rounded-bl-lg" style="color: #1C1C1E; background-color: #F7F8FA;">C-Corporation</td>
+              <td class="px-4 py-3 text-gray-700">Form 7004 — extended to Oct 15</td>
+              <td class="px-4 py-3 text-gray-700 rounded-br-lg">Mirrors federal extended date</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- What Happens After -->
+    <section class="mb-12" aria-labelledby="after-extension">
+      <h2 id="after-extension" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">What Happens After Your Extension Is Filed</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Filing an extension is the beginning of the process, not the end. The six months between April 15 and October 15 are working months — the goal is to use the time to prepare a complete, accurate return, not simply to defer the task until the last moment.
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1C1C1E;">1</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1C1C1E;">Extension filed &amp; estimated payment submitted</h3>
+            <p class="text-sm text-gray-600">ProAxis files your federal Form 4868 (and NJ-630 if needed) by April 15 and helps you make the appropriate estimated payment to stop penalty and interest accrual.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1C1C1E;">2</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1C1C1E;">Document gathering &amp; bookkeeping completion</h3>
+            <p class="text-sm text-gray-600">You collect outstanding documents — K-1s, brokerage statements, business records — at a reasonable pace. If your books need cleanup, there is now time to do it properly.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1C1C1E;">3</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1C1C1E;">Return preparation &amp; review</h3>
+            <p class="text-sm text-gray-600">ProAxis prepares your complete return with the full set of documents. You review the draft, ask questions, and approve before anything is filed.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm" style="background-color: #1C1C1E;">4</div>
+          <div>
+            <h3 class="font-semibold mb-1" style="color: #1C1C1E;">Filing &amp; final payment (if any)</h3>
+            <p class="text-sm text-gray-600">Your return is e-filed before October 15. If your actual liability exceeds the estimated payment made in April, you pay the remaining balance at this time. If you overpaid, you receive a refund.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missed Deadline -->
+    <section class="mb-12 rounded-xl p-8 border-2" style="background-color: #F7F8FA; border-color: #e5e7eb;" aria-labelledby="missed-deadline">
+      <h2 id="missed-deadline" class="text-2xl font-bold font-heading mb-4" style="color: #1C1C1E;">Already Past the Deadline? File Immediately.</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If April 15 has already passed and you have not filed or requested an extension, the most important thing to do is file as soon as possible. The failure-to-file penalty is 5% of unpaid taxes per month (up to 25%) — far more damaging than the failure-to-pay penalty of 0.5% per month. Every month you wait, the penalty grows.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        If you owe nothing or are due a refund, there is no failure-to-file penalty — but you still need to file to receive your refund, and refunds can only be claimed within three years of the original due date.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        ProAxis handles late filing situations including penalty abatement requests. First-time penalty abatement (FTA) can eliminate the failure-to-file and failure-to-pay penalties for taxpayers with a clean compliance history — even if the return is significantly late. See our <a href="/tax-services/irs-tax-resolution/" style="color: #2E75B6;" class="hover:underline font-semibold">IRS Tax Resolution</a> service for details.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-12" aria-labelledby="faq-heading">
+      <h2 id="faq-heading" class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1C1C1E;">Does a tax extension give me more time to pay?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">No. An extension gives you more time to file your return, but not more time to pay. Any taxes owed must still be paid by April 15 to avoid IRS interest and the failure-to-pay penalty (0.5% per month). ProAxis calculates your estimated balance due so your extension is filed with an accurate payment and penalty exposure is minimized.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1C1C1E;">How long does a federal tax extension last?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">A federal individual extension (Form 4868) gives you six additional months — moving the filing deadline from April 15 to October 15. Business returns follow a similar schedule: partnerships and S-corporations are extended to September 15; C-corporations to October 15. All extensions are automatic upon timely filing — the IRS does not need to approve them.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1C1C1E;">Do I need to file a separate extension for New Jersey?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">For individuals, New Jersey grants an automatic 6-month extension if you have paid at least 80% of your final NJ tax liability by April 15 — no separate form required. If you have not met that threshold, you must file Form NJ-630 with a payment. ProAxis handles both federal and NJ extensions together so no deadline is missed.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1C1C1E;">Will filing an extension increase my audit risk?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">No. Extensions are completely routine — millions of taxpayers file them every year. The IRS does not flag extension filers for audit. In fact, a carefully prepared return filed on extension often presents less audit risk than a rushed return filed under deadline pressure with missing or estimated figures.</p>
+        </details>
+        <details class="border border-gray-200 rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer" style="color: #1C1C1E;">What if I already missed the April 15 deadline?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">File as soon as possible. The failure-to-file penalty (5% per month, up to 25%) is far more damaging than the failure-to-pay penalty (0.5% per month). Even if you cannot pay the full amount owed, filing immediately stops the larger penalty from growing. ProAxis handles late filing, calculates penalties owed, and pursues first-time penalty abatement for qualifying taxpayers.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="mb-12" aria-labelledby="related-heading">
+      <h2 id="related-heading" class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <a href="/tax-services/tax-preparation/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Tax Preparation</div>
+          <div class="text-sm text-gray-600">Full return preparation once your documents are ready — individual, S-corp, partnership, and more.</div>
+        </a>
+        <a href="/tax-services/irs-tax-resolution/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">IRS Tax Resolution</div>
+          <div class="text-sm text-gray-600">Penalty abatement, installment agreements, and representation if you owe back taxes.</div>
+        </a>
+        <a href="/tax-services/tax-planning/" class="block p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-sm transition-all" style="color: #1C1C1E;">
+          <div class="font-semibold mb-1">Tax Planning</div>
+          <div class="text-sm text-gray-600">Year-round strategy so next year's April 15 comes with fewer surprises.</div>
+        </a>
+      </div>
+    </section>
+
+  </article>
+
+  <TestimonialsSection />
+  <CTASection
+    heading="Need to File an Extension? We Can Help Today."
+    subheading="Don't let April 15 pass without taking action. ProAxis files federal and NJ tax extensions quickly and accurately — with the estimated payment calculation you need to avoid penalties. Contact us now."
+  />
+</BaseLayout>

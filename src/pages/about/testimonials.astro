@@ -109,8 +109,6 @@ const breadcrumbs = [
       {testimonials.map((t) => (
         <article
           class="rounded-xl border border-gray-200 p-7"
-          itemscope
-          itemtype="https://schema.org/Review"
           aria-label={`Review by ${t.author}`}
         >
           <!-- Stars -->
@@ -123,17 +121,17 @@ const breadcrumbs = [
           </div>
 
           <!-- Quote -->
-          <blockquote class="text-gray-700 leading-relaxed mb-5 text-base italic" itemprop="reviewBody">
+          <blockquote class="text-gray-700 leading-relaxed mb-5 text-base italic">
             "{t.quote}"
           </blockquote>
 
           <!-- Author -->
-          <div class="flex items-center gap-3" itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0" style="background-color: #2E75B6;" aria-hidden="true">
               {t.author.charAt(0)}
             </div>
             <div>
-              <p class="font-bold font-heading text-sm" style="color: #1C1C1E;" itemprop="name">{t.author}</p>
+              <p class="font-bold font-heading text-sm" style="color: #1C1C1E;">{t.author}</p>
               <p class="text-xs text-gray-500">{t.role}</p>
             </div>
             <div class="ml-auto">
