@@ -7,15 +7,45 @@ const title = "Our CPA Team | ProAxis Tax & Accounting | Bergen County NJ";
 const description = "Meet the licensed CPAs and accounting professionals at ProAxis Tax & Accounting Services in Hasbrouck Heights, Bergen County, NJ — a technology-first team dedicated to proactive client service.";
 const canonical = "/about/team/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "AccountingService",
-  "name": "ProAxis Tax & Accounting Services",
-  "description": "Bergen County CPA firm with a team of licensed CPAs and accounting professionals serving businesses and individuals across New Jersey.",
-  "telephone": "+12018002330",
-  "url": "https://proaxiscpa.com",
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "ProAxis Tax & Accounting Services",
+    "description": "Bergen County CPA firm with a team of licensed CPAs and accounting professionals serving businesses and individuals across New Jersey.",
+    "telephone": "+12018002330",
+    "url": "https://proaxiscpa.com",
+    "areaServed": { "@type": "State", "name": "New Jersey" },
+    "founder": {
+      "@type": "Person",
+      "name": "Dor Israel",
+      "jobTitle": "Certified Public Accountant",
+      "url": "https://proaxiscpa.com/about/team/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dor Israel",
+    "jobTitle": "Certified Public Accountant",
+    "honorificSuffix": "CPA",
+    "url": "https://proaxiscpa.com/about/team/",
+    "worksFor": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "url": "https://proaxiscpa.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hasbrouck Heights",
+      "addressRegion": "NJ",
+      "postalCode": "07604",
+      "addressCountry": "US"
+    },
+    "knowsAbout": ["Tax Planning", "Tax Preparation", "NJ SALT", "S-Corp Elections", "IRS Tax Resolution", "Bookkeeping", "Business Advisory"],
+    "sameAs": ["https://share.google/KNWsK1XsD4OWKdgPi"]
+  }
+];
 
 const breadcrumbs = [
   { name: "About", url: "/about/" },
