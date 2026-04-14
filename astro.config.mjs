@@ -11,7 +11,14 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
-      filter: (page) => !page.includes('/404'),
+      filter: (page) =>
+        !page.includes('/404') &&
+        !page.includes('/tax-intake/corporate') &&
+        !page.includes('/tax-intake/individual') &&
+        !page.includes('/tax-intake/soleproprietorship') &&
+        !page.includes('/tax-intake/success') &&
+        page !== 'https://proaxiscpa.com/tax-intake/' &&
+        page !== 'https://proaxiscpa.com/tax-intake',
       serialize(item) {
         if (item.url === 'https://proaxiscpa.com/') {
           item.priority = 1.0;

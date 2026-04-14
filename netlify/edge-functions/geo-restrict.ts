@@ -1,6 +1,18 @@
 import type { Context } from "https://edge.netlify.com";
 
 export default async function geoRestrict(request: Request, context: Context) {
+  const url = new URL(request.url);
+  const userAgent = request.headers.get("user-agent") ?? "";
+
+  // Always allow search engine crawlers and SEO-critical paths
+  if (
+    url.pathname.startsWith("/sitemap") ||
+    url.pathname === "/robots.txt" ||
+    /googlebot|bingbot|slurp|duckduckbot|baiduspider|yandex|sogou|facebot|ia_archiver/i.test(userAgent)
+  ) {
+    return context.next();
+  }
+
   // Get country code from Netlify's geo object
   const countryCode = context.geo?.country?.code;
 
