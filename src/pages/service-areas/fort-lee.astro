@@ -12,7 +12,14 @@ const breadcrumbs = [
   { name: "Service Areas", url: "/service-areas/" },
   { name: city }
 ];
-const schema = {
+const faq = [
+  { q: `Does ProAxis provide CPA services to clients in Fort Lee?`, a: `Yes. ProAxis Tax & Accounting Services provides expert CPA services to individuals and businesses in Fort Lee. Our fully virtual model means there's no commute — we work with Fort Lee clients through secure document sharing, video meetings, and cloud-based accounting tools.` },
+  { q: `What tax and accounting services are available to Fort Lee businesses and residents?`, a: `ProAxis offers tax preparation, year-round tax planning, bookkeeping, payroll, fractional CFO, IRS tax resolution, NJ SALT consulting, multi-state tax filing, and business advisory. We serve individuals, sole proprietors, LLCs, S-Corps, and partnerships in Fort Lee.` },
+  { q: `Does ProAxis help Fort Lee residents who commute to New York City?`, a: `Yes. Many Fort Lee area residents commute to NYC and have NJ and NY nonresident filing obligations. ProAxis prepares both state returns, ensures correct wage allocation between states, and advises on work-from-home day tracking to minimize your combined NJ and NY tax liability.` },
+  { q: `How do I get started with ProAxis as a Fort Lee client?`, a: `Visit proaxiscpa.com/contact to schedule a free consultation or call (201) 800-2330. We'll review your tax situation and explain exactly how ProAxis can help — with no obligation.` },
+];
+
+const schema = [
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "AccountingService"],
   "name": "ProAxis Tax & Accounting Services",
@@ -27,7 +34,13 @@ const schema = {
     "addressCountry": "US"
   },
   "areaServed": { "@type": "City", "name": "Fort Lee, NJ" }
-};
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+  }
+];
 ---
 
 <BaseLayout {title} {description} {canonical} {schema} {breadcrumbs}>
@@ -116,6 +129,20 @@ const schema = {
     </div>
     <p class="text-gray-700">Ready to get started? <a href="/contact/" class="font-medium underline" style="color: #2E75B6;">Schedule a free consultation</a> with ProAxis, or learn more about our <a href="/tax-services/tax-planning/" class="font-medium underline" style="color: #2E75B6;">tax planning services</a>.</p>
   </article>
+
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
   <TestimonialsSection />
   <CTASection heading={"CPA Services in " + city + ", NJ — Schedule Your Free Consultation"} />

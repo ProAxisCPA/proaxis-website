@@ -35,7 +35,7 @@ const {
 
 const siteUrl = 'https://proaxiscpa.com';
 const canonical = `/resources/blog/${slug}/`;
-const ogImage = image || `${siteUrl}/og-image.png`;
+const ogImage = image || `${siteUrl}/proaxis-cpa-bergen-county-nj-sunset.png`;
 const publishDate = date.toISOString();
 const breadcrumbs = [
   { name: "Resources", url: "/resources/blog/" },
@@ -52,16 +52,17 @@ const schema = [
     "datePublished": publishDate,
     "dateModified": publishDate,
     "author": {
-      "@type": "Organization",
-      "name": author,
-      "url": siteUrl
+      "@type": "Person",
+      "name": "Dor Israel",
+      "jobTitle": "Certified Public Accountant",
+      "url": `${siteUrl}/about/team/`
     },
     "publisher": {
       "@type": "Organization",
       "name": "ProAxis Tax & Accounting Services",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/logo.png`
+        "url": `${siteUrl}/proaxis-logo.png`
       }
     },
     "mainEntityOfPage": {

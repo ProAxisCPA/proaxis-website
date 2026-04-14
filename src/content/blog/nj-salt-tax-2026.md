@@ -168,3 +168,15 @@ The BAIT election is made by the pass-through entity on its annual NJ Business R
 ---
 
 *ProAxis Tax & Accounting Services helps Bergen County business owners navigate NJ's complex SALT and BAIT rules with year-round tax planning that maximizes legitimate savings. Learn more about our [NJ SALT consulting services](/tax-services/nj-salt-consulting/), [tax planning practice](/tax-services/tax-planning/), and [fractional CFO services](/business-services/fractional-cfo/).*
+
+---
+
+## Related ProAxis Services
+
+Ready to evaluate the NJ BAIT election for your business? ProAxis can help:
+
+- [NJ SALT Consulting](/tax-services/nj-salt-consulting/) — BAIT election analysis, CBT planning, and SALT deduction strategy for NJ pass-through entities
+- [Tax Planning & Strategy](/tax-services/tax-planning/) — Year-round NJ and federal tax strategy for business owners
+- [CPA for Real Estate Investors](/industries/real-estate/) — SALT planning for NJ real estate pass-through entities and partnerships
+- [CPA for Professional Services Firms](/industries/professional-services/) — BAIT election for NJ law firms, consultancies, and professional partnerships
+- [Schedule a Free Consultation](/contact/) — Get a BAIT election analysis tailored to your NJ business

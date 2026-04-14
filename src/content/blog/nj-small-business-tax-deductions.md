@@ -159,3 +159,15 @@ The most effective approach is a business-only credit or debit card used exclusi
 ---
 
 *ProAxis Tax & Accounting Services helps Bergen County small businesses capture every legitimate deduction and build a proactive tax strategy that goes beyond year-end filing. Learn more about our [tax planning services](/tax-services/tax-planning/) and [bookkeeping solutions](/business-services/bookkeeping/).*
+
+---
+
+## Related ProAxis Services
+
+Want help capturing every deduction you're entitled to? ProAxis can help:
+
+- [Tax Planning & Strategy](/tax-services/tax-planning/) — Proactive year-round planning to maximize deductions before year-end
+- [Tax Preparation](/tax-services/tax-preparation/) — Accurate federal and NJ state filing that captures every legitimate deduction
+- [Bookkeeping & Accounting](/business-services/bookkeeping/) — Clean monthly books that make deduction tracking effortless
+- [CPA for NJ Small Businesses](/service-areas/bergen-county/) — Bergen County CPA services for small business owners
+- [Schedule a Free Consultation](/contact/) — Review your deductions with a licensed NJ CPA

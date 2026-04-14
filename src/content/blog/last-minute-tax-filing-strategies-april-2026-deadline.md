@@ -159,3 +159,14 @@ The April 15th deadline isn't negotiable. Your financial peace of mind shouldn't
 </div>
 
 Let's get your 2025 taxes done right — before time runs out.
+
+---
+
+## Act Now — ProAxis Can Help
+
+Don't wait until April 14. ProAxis can file your return or extension today:
+
+- [Tax Extension Filing](/tax-services/tax-extension/) — File Form 4868 and NJ-630 before April 15 to get 6 more months to file
+- [Tax Preparation](/tax-services/tax-preparation/) — Last-minute 1040 and NJ return preparation by licensed Bergen County CPAs
+- [IRS Tax Resolution](/tax-services/irs-tax-resolution/) — If you have unfiled prior-year returns, we can help you get compliant
+- [Schedule a Free Consultation](/contact/) — Available now — don't miss the deadline

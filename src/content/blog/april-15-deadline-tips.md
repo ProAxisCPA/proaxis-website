@@ -46,3 +46,14 @@ As we hit the final two-week stretch before the April 15th deadline, many reside
 ---
 
 <small>ProAxis Tax & Accounting Services is a trade name of Dor Israel, CPA LLC.</small>
+
+---
+
+## Get Help Before the Deadline
+
+ProAxis can get your return filed accurately and on time:
+
+- [Tax Preparation](/tax-services/tax-preparation/) — Federal 1040, NJ-1040, and business returns prepared by licensed CPAs
+- [Tax Extension Filing](/tax-services/tax-extension/) — File a federal and NJ extension before April 15 to avoid late-filing penalties
+- [Tax Planning & Strategy](/tax-services/tax-planning/) — Capture last-minute deductions before you file
+- [Schedule a Free Consultation](/contact/) — Speak with a Bergen County CPA before the deadline

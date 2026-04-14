@@ -127,3 +127,15 @@ If you are a New Jersey business owner earning consistent profit and you have no
 ---
 
 *ProAxis Tax & Accounting Services is a CPA firm based in Hasbrouck Heights, Bergen County, NJ, serving businesses and individuals throughout New Jersey. We specialize in entity structure planning, S-Corp elections, NJ BAIT strategies, and year-round tax planning for business owners.*
+
+---
+
+## Related ProAxis Services
+
+If this post raised questions about your own entity structure, ProAxis can help:
+
+- [Tax Planning & Strategy](/tax-services/tax-planning/) — Year-round NJ tax strategy, including S-Corp election analysis and salary optimization
+- [Tax Preparation](/tax-services/tax-preparation/) — S-Corp Form 1120-S, individual 1040, and NJ CBT filing
+- [CPA for Professional Services Firms](/industries/professional-services/) — Entity structuring for NJ consultants, attorneys, and service businesses
+- [CPA for Construction Companies](/industries/construction/) — S-Corp and entity planning for NJ contractors
+- [Schedule a Free Consultation](/contact/) — Get a personalized S-Corp vs. LLC analysis for your specific income and situation

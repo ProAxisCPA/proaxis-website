@@ -133,3 +133,15 @@ Yes. Licensed CPAs are authorized to represent clients before the IRS in audits,
 ---
 
 *ProAxis Tax & Accounting Services is a Bergen County-based virtual CPA firm serving NJ businesses and individuals with expert tax preparation, tax planning, and cloud accounting services. Explore our [tax preparation services](/tax-services/tax-preparation/), [bookkeeping solutions](/business-services/bookkeeping/), and learn more [about why clients choose ProAxis](/about/why-proaxis/).*
+
+---
+
+## Explore ProAxis Services
+
+Ready to work with a Bergen County virtual CPA? Here's where to start:
+
+- [Bergen County CPA Services](/service-areas/bergen-county/) — Tax, accounting, and advisory services for Bergen County businesses and residents
+- [Tax Planning & Strategy](/tax-services/tax-planning/) — Year-round proactive tax planning from a virtual Bergen County CPA
+- [Bookkeeping & Accounting](/business-services/bookkeeping/) — Cloud-based bookkeeping with CPA oversight
+- [Fractional CFO](/business-services/fractional-cfo/) — Virtual CFO services for growing Bergen County businesses
+- [Schedule a Free Consultation](/contact/) — See how ProAxis works differently from a traditional CPA firm
