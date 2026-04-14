@@ -9,18 +9,48 @@ const title = "CPA for E-Commerce Businesses NJ | Sales Tax & Accounting | ProAx
 const description = "ProAxis Tax & Accounting provides specialized CPA services for e-commerce businesses in New Jersey — post-Wayfair sales tax compliance, multi-platform 1099-K reporting, inventory accounting, and QBI deductions.";
 const canonical = "/industries/ecommerce/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "E-Commerce Accounting & Tax Services",
-  "description": "Specialized accounting and tax services for e-commerce and online businesses in New Jersey, including sales tax nexus analysis, inventory accounting, multi-platform reporting, and federal and state tax compliance.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "How does the post-Wayfair ruling affect NJ e-commerce businesses?",
+    a: "After the Supreme Court's 2018 South Dakota v. Wayfair decision, states can require online sellers to collect sales tax even without a physical presence. Most states now have economic nexus thresholds — typically $100,000 in sales or 200 transactions per year. NJ e-commerce businesses selling into other states may have sales tax obligations in dozens of jurisdictions. ProAxis performs nexus analyses to determine where you have collection obligations and helps you register and file in required states."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "Does ProAxis handle multi-state sales tax compliance for online sellers?",
+    a: "Yes. ProAxis manages sales tax nexus analysis, registration in required states, and ongoing compliance for NJ-based e-commerce businesses. We work with sales tax automation tools that integrate with Shopify, Amazon, WooCommerce, and other platforms to calculate tax, file returns, and remit payments across multiple states — simplifying a compliance burden that would otherwise require dozens of separate state registrations."
+  },
+  {
+    q: "How are Amazon and Shopify 1099-K forms handled for NJ sellers?",
+    a: "Form 1099-K is issued by payment platforms like Amazon, PayPal, and Shopify when you exceed reporting thresholds. The gross amount on a 1099-K includes all sales — before platform fees, refunds, and cost of goods — so it is not your taxable income. ProAxis reconciles 1099-K amounts against your actual income, ensures all deductible platform fees and costs are captured, and properly reports the net income on your tax return."
+  },
+  {
+    q: "What is the QBI deduction and can my NJ e-commerce business claim it?",
+    a: "The Qualified Business Income (QBI) deduction under IRC Section 199A allows eligible pass-through business owners to deduct up to 20% of qualified business income. Most e-commerce businesses structured as sole proprietorships, LLCs, S-Corps, or partnerships are eligible, subject to income thresholds and W-2 wage limitations. ProAxis maximizes the QBI deduction for e-commerce clients through income planning and entity structure optimization."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "E-Commerce Accounting & Tax Services",
+    "description": "Specialized accounting and tax services for e-commerce and online businesses in New Jersey, including sales tax nexus analysis, inventory accounting, multi-platform reporting, and federal and state tax compliance.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -171,6 +201,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/nj-salt-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ SALT Tax 2026: What Business Owners Need to Know</a> — How multi-state NJ businesses and e-commerce sellers can use the BAIT election.</li>
+      <li><a href="/resources/blog/nj-small-business-tax-deductions/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ Small Business Tax Deductions</a> — Tax deductions every NJ e-commerce business owner should be capturing.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/ecommerce/" />
   <TestimonialsSection />

@@ -9,18 +9,48 @@ const title = "CPA for Non-Profit Organizations NJ | ProAxis | Bergen County";
 const description = "ProAxis Tax & Accounting provides specialized CPA services for non-profit organizations in New Jersey — 501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, and NJ charitable registration.";
 const canonical = "/industries/non-profits/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Non-Profit Organization Accounting Services",
-  "description": "Specialized accounting and tax services for non-profit organizations in New Jersey, including 501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, and board financial reporting.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "Does ProAxis prepare Form 990 for non-profit organizations in NJ?",
+    a: "Yes. ProAxis prepares Form 990, Form 990-EZ, and Form 990-N (e-Postcard) for NJ non-profit organizations based on their size and filing requirements. We ensure accurate reporting of revenue, expenses, program accomplishments, governance policies, and executive compensation — all areas subject to public scrutiny and IRS review. We also prepare the NJ CHAR500 charitable registration renewal required by the NJ Division of Consumer Affairs."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "What is Unrelated Business Income Tax (UBIT) and how does it affect NJ non-profits?",
+    a: "UBIT applies when a tax-exempt organization regularly conducts activities that are unrelated to its exempt purpose and generates income from those activities. Common UBIT triggers for NJ non-profits include advertising revenue, rental income from debt-financed property, and certain partnership income. UBIT is reported on Form 990-T and taxed at corporate rates. ProAxis analyzes each non-profit's revenue streams to identify UBIT exposure and advise on structuring to minimize tax liability."
+  },
+  {
+    q: "Does ProAxis help with NJ charitable registration compliance?",
+    a: "Yes. New Jersey requires most charitable organizations soliciting contributions in the state to register with the NJ Division of Consumer Affairs and renew annually by filing Form CHAR500. ProAxis prepares the CHAR500 renewal, which must be filed within six months of the fiscal year-end, and ensures the financial information reported matches the Form 990."
+  },
+  {
+    q: "How does ProAxis help non-profits with grant fund accounting?",
+    a: "Grant fund accounting requires tracking restricted and unrestricted funds separately and ensuring grant expenditures comply with funder restrictions. ProAxis sets up fund accounting systems for NJ non-profits that track revenue and expenses by program and grant, produce grant-specific financial reports for funders, and support the Schedule of Expenditures of Federal Awards (SEFA) required for organizations receiving federal grants subject to single audit requirements."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Non-Profit Organization Accounting Services",
+    "description": "Specialized accounting and tax services for non-profit organizations in New Jersey, including 501(c)(3) compliance, Form 990 preparation, UBIT analysis, grant fund accounting, and board financial reporting.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -171,6 +201,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/bergen-county-virtual-cpa/" class="font-semibold hover:underline" style="color: #2E75B6;">Bergen County Virtual CPA</a> — How NJ non-profits and organizations benefit from working with a virtual CPA firm.</li>
+      <li><a href="/resources/blog/april-15-deadline-tips/" class="font-semibold hover:underline" style="color: #2E75B6;">Tax Deadline Tips for NJ Organizations</a> — Key filing deadlines and tips for NJ non-profits and tax-exempt organizations.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/non-profits/" />
   <TestimonialsSection />

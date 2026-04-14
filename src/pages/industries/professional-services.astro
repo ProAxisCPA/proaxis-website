@@ -9,18 +9,48 @@ const title = "CPA for Professional Services Firms NJ | ProAxis Bergen County";
 const description = "ProAxis Tax & Accounting provides specialized CPA services for professional services firms in New Jersey — law firms, consultancies, marketing agencies, and IT firms — including revenue recognition, partner compensation, and S-Corp tax strategy.";
 const canonical = "/industries/professional-services/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Professional Services Firm Accounting",
-  "description": "Specialized accounting and tax services for professional services firms in New Jersey, including law firms, consulting firms, marketing agencies, and IT companies, with expertise in revenue recognition, partner compensation, and entity structuring.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "How can an S-Corp election benefit a NJ professional services firm?",
+    a: "For professional services business owners earning $150,000 or more in net income, an S-Corp election can reduce self-employment (SE) taxes significantly. The owner pays SE taxes only on their W-2 salary — not on S-Corp distributions. The optimal salary-to-distribution split depends on income level, industry, and IRS reasonable compensation standards. ProAxis evaluates S-Corp feasibility and handles the election, payroll setup, and ongoing compliance."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "What is the QBI deduction and does it apply to professional services firms in NJ?",
+    a: "The Qualified Business Income (QBI) deduction allows eligible pass-through business owners to deduct up to 20% of qualified business income. However, most professional services firms — including law firms, accounting firms, consulting firms, and financial advisors — are classified as Specified Service Trades or Businesses (SSTBs), which means the QBI deduction phases out at higher income levels. ProAxis identifies strategies to maximize QBI for professional services clients within the SSTB limitations."
+  },
+  {
+    q: "Does ProAxis help law firms and consulting firms with partner compensation planning?",
+    a: "Yes. Partner compensation in professional services firms — including guaranteed payments, profit allocations, and draw structures — has significant tax implications. ProAxis advises on partnership agreement structures, guaranteed payment characterization, self-employment tax exposure, and partner retirement plan contributions. We also help firms transitioning partners in or out with buy-sell planning and interest valuation."
+  },
+  {
+    q: "How does ProAxis handle the NJ BAIT election for professional services partnerships?",
+    a: "The NJ Business Alternative Income Tax (BAIT) allows pass-through entities — including partnerships and S-Corps — to pay NJ income tax at the entity level, giving owners a full federal deduction for the NJ tax paid and effectively working around the $10,000 SALT cap. For NJ professional services partners earning above the SALT threshold, the BAIT election can produce meaningful federal tax savings. ProAxis evaluates the BAIT election for every eligible professional services client."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Professional Services Firm Accounting",
+    "description": "Specialized accounting and tax services for professional services firms in New Jersey, including law firms, consulting firms, marketing agencies, and IT companies, with expertise in revenue recognition, partner compensation, and entity structuring.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -168,6 +198,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/s-corp-vs-llc-nj-business-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">S-Corp vs. LLC: NJ Business Tax Guide 2026</a> — Why NJ consultants, attorneys, and professional services owners choose S-Corp structuring.</li>
+      <li><a href="/resources/blog/nj-salt-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ SALT Tax 2026: What Business Owners Need to Know</a> — How the NJ BAIT election helps professional services partners beat the SALT cap.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/professional-services/" />
   <TestimonialsSection />

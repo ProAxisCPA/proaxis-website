@@ -9,18 +9,48 @@ const title = "CPA for Restaurants NJ | Restaurant Accounting | ProAxis Bergen C
 const description = "ProAxis Tax & Accounting provides specialized CPA services for restaurants and hospitality businesses in New Jersey — FICA tip credits, NJ food and beverage sales tax, daily sales reconciliation, tipped employee payroll, and restaurant tax strategy.";
 const canonical = "/industries/restaurants/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Restaurant & Hospitality Accounting Services",
-  "description": "Specialized accounting and tax services for restaurants and hospitality businesses in New Jersey, including FICA tip credits, NJ sales tax compliance, tipped employee payroll, and restaurant-specific tax planning.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "What is the FICA tip credit and how can my NJ restaurant claim it?",
+    a: "The FICA tip credit (IRC Section 45B) allows restaurants to claim a federal tax credit equal to the employer's share of FICA taxes paid on employee tips that exceed the minimum wage. For a restaurant with significant tipped staff, this credit can amount to thousands of dollars per year and directly reduces your federal income tax liability dollar-for-dollar. ProAxis calculates the FICA tip credit as part of every restaurant client's annual tax preparation."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "How does ProAxis handle payroll for tipped employees in NJ?",
+    a: "ProAxis sets up and manages payroll systems that handle the complexities of tipped employee payroll in NJ — including tip reporting, the tipped minimum wage differential, tip credit calculations, and proper Form W-2 reporting of tip income. We ensure compliance with both federal FLSA requirements and NJ labor law, which has its own tipped wage rules and service charge regulations."
+  },
+  {
+    q: "What NJ sales tax rules apply to restaurants and food service businesses?",
+    a: "New Jersey imposes sales tax on prepared food and beverages served in restaurants. Cold food sold to-go may qualify for a sales tax exemption, while hot prepared food is generally taxable regardless of how it's served. Catering services, delivery charges, and liquor sales each have specific NJ sales tax treatment. ProAxis helps NJ restaurants set up point-of-sale systems with correct tax configurations and ensures accurate sales tax remittance to the NJ Division of Taxation."
+  },
+  {
+    q: "Does ProAxis help restaurants with daily sales reconciliation and bookkeeping?",
+    a: "Yes. ProAxis provides daily or weekly sales reconciliation for NJ restaurants, matching POS system reports to bank deposits, tracking food and beverage costs by category, and producing monthly profit-and-loss statements with the key metrics restaurants use — food cost percentage, labor cost percentage, and prime cost. Accurate, timely books are essential for managing a restaurant's thin margins."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Restaurant & Hospitality Accounting Services",
+    "description": "Specialized accounting and tax services for restaurants and hospitality businesses in New Jersey, including FICA tip credits, NJ sales tax compliance, tipped employee payroll, and restaurant-specific tax planning.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -174,6 +204,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/nj-small-business-tax-deductions/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ Small Business Tax Deductions</a> — Key deductions NJ restaurant owners and hospitality businesses should not miss.</li>
+      <li><a href="/resources/blog/s-corp-vs-llc-nj-business-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">S-Corp vs. LLC: NJ Business Tax Guide 2026</a> — Entity structuring strategies for NJ restaurant and hospitality business owners.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/restaurants/" />
   <TestimonialsSection />

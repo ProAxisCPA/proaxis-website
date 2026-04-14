@@ -9,18 +9,48 @@ const title = "CPA for Construction Companies NJ | Contractor Accounting | ProAx
 const description = "ProAxis Tax & Accounting provides specialized CPA services for construction companies and contractors in New Jersey — job costing, WIP schedules, percentage-of-completion accounting, NJ prevailing wage compliance, and contractor tax strategy.";
 const canonical = "/industries/construction/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Construction & Contractor Accounting Services",
-  "description": "Specialized accounting and tax services for construction companies and contractors in New Jersey, including job costing, WIP schedules, percentage-of-completion accounting, and NJ prevailing wage compliance.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "What accounting methods do NJ construction companies use for revenue recognition?",
+    a: "NJ construction companies typically use either the percentage-of-completion method (PCM) or the completed contract method (CCM). PCM recognizes revenue as work progresses based on costs incurred, while CCM defers all revenue until project completion. The right method depends on your gross receipts, contract size, and tax strategy. ProAxis evaluates each contractor's situation to determine the optimal method under both GAAP and IRS rules."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "Does ProAxis prepare WIP schedules for construction companies?",
+    a: "Yes. ProAxis prepares monthly or quarterly work-in-progress (WIP) schedules in the format required by surety bonding companies and lenders. WIP schedules show contract value, costs incurred, percent complete, revenue earned, and billings for each open job — a critical report for contractors seeking to maintain or increase bonding capacity."
+  },
+  {
+    q: "How does ProAxis help NJ contractors with prevailing wage compliance?",
+    a: "ProAxis helps NJ contractors set up payroll systems that capture prevailing wage rates by trade and county, generate certified payroll reports for public works projects, and ensure compliance with the NJ Prevailing Wage Act. We also manage subcontractor W-9 collection and year-end 1099-NEC filing."
+  },
+  {
+    q: "Can ProAxis help a construction business structure as an S-Corp to save on taxes?",
+    a: "Yes. For construction business owners generating $300,000 or more in net income, an S-Corp election can produce significant payroll tax savings while maintaining liability protection. ProAxis evaluates each contractor's income profile and recommends the optimal entity structure for both current tax efficiency and long-term business goals."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Construction & Contractor Accounting Services",
+    "description": "Specialized accounting and tax services for construction companies and contractors in New Jersey, including job costing, WIP schedules, percentage-of-completion accounting, and NJ prevailing wage compliance.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -174,6 +204,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/s-corp-vs-llc-nj-business-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">S-Corp vs. LLC: NJ Business Tax Guide 2026</a> — Which entity structure saves NJ business owners the most in taxes?</li>
+      <li><a href="/resources/blog/nj-small-business-tax-deductions/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ Small Business Tax Deductions</a> — Key deductions NJ contractors and business owners should be claiming.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/construction/" />
   <TestimonialsSection />

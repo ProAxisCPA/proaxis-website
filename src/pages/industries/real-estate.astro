@@ -9,18 +9,48 @@ const title = "CPA for Real Estate Investors NJ | ProAxis | Bergen County";
 const description = "ProAxis Tax & Accounting provides specialized CPA services for real estate investors in New Jersey — rental properties, 1031 exchanges, cost segregation, real estate professional status, and fix-and-flip tax strategy.";
 const canonical = "/industries/real-estate/";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Real Estate Accounting & Tax Services",
-  "description": "Specialized accounting and tax services for real estate investors and professionals in New Jersey, including rental property depreciation, 1031 exchanges, real estate professional status, and entity structuring.",
-  "provider": {
-    "@type": "AccountingService",
-    "name": "ProAxis Tax & Accounting Services",
-    "telephone": "+12018002330"
+const faq = [
+  {
+    q: "How does ProAxis help NJ real estate investors reduce their tax burden?",
+    a: "ProAxis uses strategies including rental property depreciation, cost segregation studies, real estate professional status elections, 1031 exchange planning, and entity structuring to minimize taxes for NJ real estate investors. We also advise on the NJ BAIT election for pass-through entities that hold real estate."
   },
-  "areaServed": { "@type": "State", "name": "New Jersey" }
-};
+  {
+    q: "Does ProAxis handle 1031 exchanges for NJ real estate investors?",
+    a: "Yes. ProAxis advises NJ real estate investors on IRC Section 1031 like-kind exchanges, including identifying replacement properties within the 45-day window, meeting the 180-day closing deadline, and properly reporting the exchange on your tax return. We coordinate with qualified intermediaries to ensure the exchange qualifies for tax deferral."
+  },
+  {
+    q: "What is real estate professional status and how does it affect my NJ taxes?",
+    a: "Real estate professional status (REPS) under IRC Section 469 allows qualifying taxpayers to treat rental activity losses as non-passive, potentially offsetting ordinary income without limitation. To qualify, you must spend more than 750 hours per year in real estate activities and real estate must be your primary occupation. ProAxis helps investors determine eligibility and document the hours required to support the election."
+  },
+  {
+    q: "Can ProAxis help with cost segregation studies for NJ investment properties?",
+    a: "Yes. Cost segregation accelerates depreciation deductions by reclassifying components of a building — such as fixtures, finishes, and land improvements — into shorter depreciation lives (5, 7, or 15 years instead of 27.5 or 39 years). For NJ investors with properties valued at $500,000 or more, cost segregation can generate significant current-year tax savings. ProAxis coordinates cost segregation studies and integrates the results into your tax strategy."
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Real Estate Accounting & Tax Services",
+    "description": "Specialized accounting and tax services for real estate investors and professionals in New Jersey, including rental property depreciation, 1031 exchanges, real estate professional status, and entity structuring.",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "ProAxis Tax & Accounting Services",
+      "telephone": "+12018002330"
+    },
+    "areaServed": { "@type": "State", "name": "New Jersey" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": { "@type": "Answer", "text": a }
+    }))
+  }
+];
 
 const breadcrumbs = [
   { name: "Industries", url: "/industries/" },
@@ -180,6 +210,28 @@ const services = [
       </ul>
     </section>
   </article>
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="faq">
+    <h2 class="text-2xl font-bold font-heading mb-6" style="color: #1C1C1E;">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {faq.map(({ q, a }) => (
+        <div class="border border-gray-200 rounded-xl p-6 bg-white">
+          <h3 class="font-bold font-heading mb-2" style="color: #1C1C1E;">{q}</h3>
+          <p class="text-gray-700 leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- From Our Blog -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <h2 class="text-xl font-bold font-heading mb-4" style="color: #1C1C1E;">From Our Blog</h2>
+    <ul class="space-y-2 text-gray-700">
+      <li><a href="/resources/blog/nj-salt-tax-2026/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ SALT Tax 2026: What Business Owners Need to Know</a> — How the BAIT election affects NJ real estate investors and pass-through entities.</li>
+      <li><a href="/resources/blog/nj-small-business-tax-deductions/" class="font-semibold hover:underline" style="color: #2E75B6;">NJ Small Business Tax Deductions</a> — Tax deductions NJ real estate investors and property owners should be capturing.</li>
+    </ul>
+  </section>
 
   <RelatedServices silo="industry" currentPath="/industries/real-estate/" />
   <TestimonialsSection />
