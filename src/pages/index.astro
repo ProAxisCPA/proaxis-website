@@ -12,10 +12,13 @@ const schema = [
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "AccountingService"],
     "name": "ProAxis Tax & Accounting Services",
+    "legalName": "Dor Israel, CPA LLC",
     "description": "Bergen County's technology-first CPA firm offering tax preparation, tax planning, bookkeeping, fractional CFO services, IRS resolution, and business advisory for small-to-mid-size businesses across New Jersey.",
     "url": "https://proaxiscpa.com",
     "telephone": "+12018002330",
     "email": "info@proaxiscpa.com",
+    "logo": "https://proaxiscpa.com/logo.png",
+    "image": "https://proaxiscpa.com/og-image.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hasbrouck Heights",
@@ -52,7 +55,23 @@ const schema = [
       "Authorized IRS e-File Provider",
       "Certified QuickBooks Online ProAdvisor"
     ],
-    "serviceType": ["Tax Preparation", "Tax Planning", "Bookkeeping", "Fractional CFO", "IRS Tax Resolution", "Payroll Services"]
+    "serviceType": ["Tax Preparation", "Tax Planning", "Bookkeeping", "Fractional CFO", "IRS Tax Resolution", "Payroll Services"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "4",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "sameAs": [
+      "https://share.google/KNWsK1XsD4OWKdgPi",
+      "https://www.facebook.com/profile.php?id=61587605317276"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Dor Israel",
+      "jobTitle": "Certified Public Accountant"
+    }
   },
   {
     "@context": "https://schema.org",
@@ -60,12 +79,80 @@ const schema = [
     "name": "ProAxis Tax & Accounting Services",
     "url": "https://proaxiscpa.com",
     "logo": "https://proaxiscpa.com/logo.png",
+    "sameAs": [
+      "https://share.google/KNWsK1XsD4OWKdgPi",
+      "https://www.facebook.com/profile.php?id=61587605317276"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+12018002330",
       "contactType": "customer service",
       "areaServed": "US",
       "availableLanguage": "English"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does ProAxis Tax & Accounting Services offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProAxis offers tax preparation, tax planning and strategy, bookkeeping, fractional CFO services, IRS tax resolution, payroll, NJ SALT consulting, multi-state tax, estate and gift tax, and business advisory services for individuals and small-to-mid-size businesses across New Jersey."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is ProAxis located and do they work virtually?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProAxis Tax & Accounting Services is based in Hasbrouck Heights, NJ (Bergen County) and operates 100% virtually. They serve clients throughout New Jersey and nationwide using secure cloud-based tools, video meetings, and digital document sharing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ProAxis a licensed CPA firm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ProAxis is operated by Dor Israel, a Certified Public Accountant licensed in the State of New Jersey. The firm is an AICPA member, an Authorized IRS e-File Provider, and a Certified QuickBooks Online ProAdvisor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with ProAxis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can schedule a free consultation directly on the ProAxis website at proaxiscpa.com/contact or call (201) 800-2330. The initial consultation is complimentary and typically covers your tax situation, business needs, and how ProAxis can help."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ProAxis serve clients outside Bergen County?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While ProAxis is headquartered in Bergen County, NJ, the firm serves clients throughout New Jersey and across the United States. Their fully virtual model allows them to work with businesses and individuals anywhere in the country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does ProAxis specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProAxis has deep expertise serving real estate investors, healthcare professionals, e-commerce businesses, restaurants, construction companies, non-profits, and professional services firms throughout New Jersey."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bergen County CPA Firm | Tax, Accounting & Advisory | ProAxis",
+    "url": "https://proaxiscpa.com/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["#hero-heading", "#services-heading", "#why-heading"]
     }
   }
 ];

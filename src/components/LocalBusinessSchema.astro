@@ -23,13 +23,40 @@ const schema = {
     "latitude": 40.8598,
     "longitude": -74.0776
   },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "4",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "areaServed": [
     { "@type": "County", "name": "Bergen County, NJ" },
     { "@type": "City", "name": "New York, NY" }
   ],
   "sameAs": [
-    "https://proaxiscpa.com"
-  ]
+    "https://share.google/KNWsK1XsD4OWKdgPi",
+    "https://www.facebook.com/profile.php?id=61587605317276"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Dor Israel",
+    "jobTitle": "Certified Public Accountant",
+    "hasCredential": [
+      "Licensed CPA - State of New Jersey",
+      "AICPA Member",
+      "Authorized IRS e-File Provider",
+      "Certified QuickBooks Online ProAdvisor"
+    ]
+  }
 };
 ---
 
